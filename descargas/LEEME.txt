@@ -1,0 +1,16 @@
+FRIDAY para la compu (Windows 10 u 11) — BufaLabs
+=================================================
+
+CÓMO INSTALARLA
+1. Copiá esta carpeta a C:\FRIDAY (o donde quieras).
+2. Doble clic en INSTALAR-FRIDAY.bat: crea el ícono de FRIDAY en el escritorio y hace que
+   arranque sola al prender la compu.
+3. Abrí FRIDAY desde ese ícono. Si Windows avisa que es un programa desconocido:
+   «Más información» → «Ejecutar de todas formas».
+4. Seguí el tutorial. Te pide una llave gratis de Groq (el cerebro): se saca en
+   console.groq.com → API Keys.
+5. Opcional: instalar-voz.bat descarga una voz local para hablar sin internet.
+
+Para la tablet y el celu: https://bufalabs-arg.github.io/#instalar
+
+¿Algo no anda? Decile «Friday, hacé un chequeo»: se prueba sola y te dice qué falla.
