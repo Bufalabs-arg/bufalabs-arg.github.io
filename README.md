@@ -1,3 +1,3 @@
-# BUFALABS
+# BufaLabs
 
-La página de BUFALABS y de FRIDAY: https://pedropiratita134.github.io/bufalabs/
+La página de BufaLabs y de FRIDAY: https://pedropiratita134.github.io/bufalabs/
