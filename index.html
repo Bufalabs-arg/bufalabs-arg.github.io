@@ -52,14 +52,61 @@ h1,h2,h3{text-wrap:balance}
   radial-gradient(60% 70% at 0% 100%, #2457C9 0%, transparent 70%), var(--azul)}
 .hero::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.16) 1.2px, transparent 1.5px);background-size:30px 30px;
   -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 80%);mask-image:linear-gradient(180deg,#000 0%,transparent 80%)}
-nav{position:relative;z-index:2;display:flex;align-items:center;gap:28px;padding-block:26px}
+
 .marca{display:flex;align-items:center;gap:12px;text-decoration:none;border-radius:14px}
 .marca .ico{width:46px;height:46px;flex:none;border-radius:13px;box-shadow:0 8px 16px -6px rgba(8,26,80,.5)}
 .marca .pal{width:auto;height:25px;flex:none}
-nav ul{display:flex;gap:24px;list-style:none;margin:0 0 0 auto;padding:0}
-nav ul a{text-decoration:none;font-weight:700;font-size:17px;opacity:.88}
-nav ul a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
-.hgrid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:30px;padding-block:40px 120px}
+/* la barra de arriba: siempre a mano, en todas las secciones */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:31;background:var(--azul)}
+.barra{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--azul);color:var(--blanco);transition:box-shadow .3s}
+.barra.sombra{box-shadow:0 10px 30px -14px rgba(8,26,80,.65)}
+.barra-in{display:flex;align-items:center;gap:22px;min-height:78px}
+.barra nav{margin-left:auto;min-width:0}
+.barra ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.barra ul a{display:block;position:relative;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:16.5px;color:var(--claro);white-space:nowrap;transition:background .2s,color .2s}
+.barra ul a:hover{background:rgba(255,255,255,.12);color:var(--blanco)}
+.barra ul a[aria-current="page"]{background:var(--blanco);color:var(--azul-3)}
+.barra-cta.btn{min-height:46px;padding:0 22px;font-size:16.5px}
+.barra-cta[aria-current="page"]{box-shadow:0 0 0 3px rgba(255,255,255,.7)}
+
+/* cada sección es una página */
+.vista[hidden]{display:none}
+.vista.entra{animation:vistaEntra .5s cubic-bezier(.2,.8,.3,1)}
+@keyframes vistaEntra{from{opacity:0;transform:translateY(18px)}}
+.cab{position:relative;overflow:hidden;color:var(--blanco);background:radial-gradient(70% 120% at 85% 0%, #4D86F0 0%, transparent 60%),var(--azul);padding-block:56px 64px}
+.cab::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.14) 1.2px, transparent 1.5px);background-size:30px 30px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.cab .wrap{position:relative;z-index:1}
+.cab-t{margin:0;font:800 clamp(52px,8vw,110px)/.9 var(--disp);font-variation-settings:"opsz" 96,"wdth" 92;letter-spacing:-.022em}
+.cab-p{margin:18px 0 0;max-width:46ch;font-size:clamp(19px,1.7vw,22px);color:var(--claro)}
+.cab+section{padding-top:76px}
+.oculto{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.oculto+.intro{margin-top:0}
+.sig{display:block;text-decoration:none;background:var(--azul-3);color:var(--blanco);padding-block:44px;transition:background .25s}
+.sig:hover{background:var(--azul-4)}
+.sig .wrap{display:grid;gap:4px}
+.sig small{font-size:16px;color:var(--claro-2)}
+.sig b{font:800 clamp(36px,5vw,60px)/1 var(--disp);font-variation-settings:"wdth" 94;letter-spacing:-.015em;color:var(--sol)}
+.sig em{font-style:normal;font-size:18px;color:var(--claro-3)}
+
+/* inicio: las puertas a cada sección */
+.atajos{background:var(--papel)}
+.atgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;margin-top:44px}
+.at{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:18px;min-height:250px;padding:26px 26px 0;border-radius:28px;text-decoration:none;color:var(--tinta);background:var(--blanco);border:1px solid var(--linea);transition:transform .25s cubic-bezier(.3,1.3,.5,1),box-shadow .25s}
+.at:hover{transform:translateY(-4px);box-shadow:0 26px 50px -30px rgba(14,27,61,.55)}
+.at-tx b{display:block;font:800 clamp(28px,2.6vw,36px)/1 var(--disp);font-variation-settings:"wdth" 94;letter-spacing:-.01em}
+.at-tx em{display:block;margin-top:8px;font-style:normal;font-size:17px;line-height:1.4;color:var(--tinta-2);max-width:30ch}
+.at img{align-self:stretch;margin-inline:-6px;border-radius:14px 14px 0 0;box-shadow:0 0 0 6px var(--tinta)}
+.at-hace,.at-nuevo{grid-column:span 3}
+.at-dentro,.at-nos,.at-inst{grid-column:span 2;padding-bottom:26px}
+.at-hace{background:var(--papel-2)}
+.at-nuevo{background:var(--tinta);color:var(--blanco);border-color:var(--tinta)}.at-nuevo .at-tx em{color:var(--claro-2)}
+.at-dentro{background:var(--azul);color:var(--blanco);border-color:var(--azul)}.at-dentro .at-tx em{color:var(--claro)}
+.at-ico{width:96px;height:96px;margin:0!important;align-self:flex-end!important;box-shadow:none!important;border-radius:26px!important}
+.at-num{align-self:flex-end;font:800 92px/.8 var(--disp);font-variation-settings:"wdth" 90;letter-spacing:-.03em;color:var(--azul-3)}
+.at-inst{background:var(--sol);border-color:var(--sol);color:var(--sol-tinta)}.at-inst .at-tx em{color:#5a4300}
+.at-flecha{align-self:flex-end;width:62px;height:62px;border-radius:50%;background:var(--sol-tinta);position:relative}
+.at-flecha::before{content:"";position:absolute;left:50%;top:50%;width:16px;height:16px;border-right:4px solid var(--sol);border-bottom:4px solid var(--sol);transform:translate(-65%,-50%) rotate(-45deg)}
+.hgrid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:30px;padding-block:30px 120px}
 .hero h1{margin:0;font:800 clamp(62px,9.4vw,138px)/.86 var(--disp);font-variation-settings:"opsz" 96,"wdth" 92;letter-spacing:-.022em;text-wrap:initial}
 .hero h1 span{display:block}
 .hero .bajada{max-width:32ch;margin:30px 0 0;font-size:clamp(19px,1.7vw,23px);line-height:1.45;color:var(--claro)}
@@ -108,7 +155,8 @@ nav ul a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
 @keyframes corre{to{transform:translateX(calc(-50% - 6px))}}
 
 /* ---------- secciones ---------- */
-section{padding-block:110px;scroll-margin-top:10px}
+section{padding-block:110px;scroll-margin-top:90px}
+section.hero{padding-block:0}
 .titulo{margin:0;font:800 clamp(40px,5.4vw,72px)/.95 var(--disp);font-variation-settings:"opsz" 80,"wdth" 94;letter-spacing:-.018em;max-width:16ch}
 .intro{max-width:46ch;margin:22px 0 0;color:var(--tinta-2);font-size:20px}
 
@@ -312,7 +360,16 @@ section{padding-block:110px;scroll-margin-top:10px}
   .puntos{grid-template-columns:repeat(25,minmax(0,1fr))}
 }
 @media (max-width:900px){
-  nav ul{display:none}
+  .barra-in{flex-wrap:wrap;gap:4px 14px;min-height:0;padding-block:12px 8px}
+  .barra nav{order:3;flex-basis:100%;margin:0 calc(-1 * max(var(--gut), env(safe-area-inset-left, 0px))) 0;overflow-x:auto;scrollbar-width:none;padding-inline:max(var(--gut), env(safe-area-inset-left, 0px))}
+  .barra nav::-webkit-scrollbar{display:none}
+  .barra ul a{padding:8px 13px;font-size:15.5px}
+  .barra-cta.btn{margin-left:auto;min-height:42px;padding:0 18px;font-size:15.5px}
+  .atgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .at-hace,.at-nuevo{grid-column:span 2}
+  .at-dentro,.at-nos{grid-column:span 1}
+  .at-inst{grid-column:span 2}
+  .cab{padding-block:40px 46px}
   .hgrid{grid-template-columns:minmax(0,1fr);padding-block:10px 130px}
   .ella{width:min(330px,76vw);margin-top:44px}
   .globo{left:auto;right:-6%;bottom:-18%}
@@ -333,6 +390,9 @@ section{padding-block:110px;scroll-margin-top:10px}
   section{padding-block:80px}
 }
 @media (max-width:640px){
+  .atgrid{grid-template-columns:minmax(0,1fr)}
+  .at-hace,.at-nuevo,.at-dentro,.at-nos,.at-inst{grid-column:auto}
+  .at{min-height:0}
   .cifras{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:8px}
   .cifras div{padding:14px 12px}
   .cifras dt{font-size:14px}
@@ -361,13 +421,25 @@ section{padding-block:110px;scroll-margin-top:10px}
 </style>
 </head>
 <body>
-<a class="skip" href="#hace">Saltar al contenido</a>
-<header class="hero">
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="barra" id="arriba">
+  <div class="wrap barra-in">
+    <a class="marca" href="#inicio" aria-label="BufaLabs, inicio"><img class="ico" src="img/bufalabs-icono.svg" width="46" height="46" alt=""><img class="pal" src="img/bufalabs-palabra.svg" width="136" height="25" alt="BufaLabs"></a>
+    <nav aria-label="Secciones"><ul id="menu">
+      <li><a href="#inicio" data-ir="inicio">Inicio</a></li>
+      <li><a href="#hace" data-ir="hace">Qué hace</a></li>
+      <li><a href="#nuevo" data-ir="nuevo">Lo nuevo</a></li>
+      <li><a href="#cerebros" data-ir="cerebros">Por dentro</a></li>
+      <li><a href="#nosotros" data-ir="nosotros">Nosotros</a></li>
+    </ul></nav>
+    <a class="btn si barra-cta" href="#instalar" data-ir="instalar">Instalala</a>
+  </div>
+</header>
+
+<main id="contenido">
+<div class="vista" data-vista="inicio" id="v-inicio">
+<section class="hero" aria-label="FRIDAY">
   <div class="wrap">
-    <nav aria-label="Principal">
-      <a class="marca" href="#" aria-label="BufaLabs, inicio"><img class="ico" src="img/bufalabs-icono.svg" width="46" height="46" alt=""><img class="pal" src="img/bufalabs-palabra.svg" width="136" height="25" alt="BufaLabs"></a>
-      <ul><li><a href="#nosotros">Nosotros</a></li><li><a href="#hace">Qué hace</a></li><li><a href="#nuevo">Lo nuevo</a></li><li><a href="#cerebros">Por dentro</a></li><li><a href="#instalar">Instalala</a></li></ul>
-    </nav>
     <div class="hgrid">
       <div class="min0">
         <h1><span>FRIDAY</span><span>vive en</span><span>tu casa.</span></h1>
@@ -381,38 +453,33 @@ section{padding-block:110px;scroll-margin-top:10px}
       </div>
     </div>
   </div>
-</header>
+</section>
 <div class="cinta" aria-hidden="true"><div class="fila">
   <span>Te escucha</span><span>Pone caras</span><span>Protocolos</span><span>Modo guardia</span><span>Noticiero</span><span>Videollamadas</span><span>Intercom</span><span>Maneja la compu</span><span>Cocina manos libres</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Windows y Linux</span><span>Hecha en Argentina</span>
   <span>Te escucha</span><span>Pone caras</span><span>Protocolos</span><span>Modo guardia</span><span>Noticiero</span><span>Videollamadas</span><span>Intercom</span><span>Maneja la compu</span><span>Cocina manos libres</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Windows y Linux</span><span>Hecha en Argentina</span>
 </div></div>
-
-<main>
-  <section class="nos" id="nosotros">
-    <div class="wrap nosgrid">
-      <div class="min0">
-        <h2 class="titulo">Un laboratorio chico que hace IA para usar todos los días.</h2>
-        <p class="intro"><b>BufaLabs</b> es un laboratorio independiente de Argentina. Nuestra primera creación es <b>FRIDAY</b>: una inteligencia artificial que vive en tu casa, habla como nosotros y hace cosas de verdad.</p>
-        <p class="intro">La armamos versión por versión. Cada cosa nueva se prueba en casa, se rompe, se arregla y recién ahí se queda.</p>
-        <dl class="cifras">
-          <div><dt>versiones</dt><dd data-vergrande>101</dd></div>
-          <div><dt>aparatos, una sola FRIDAY</dt><dd>3</dd></div>
-          <div><dt>pesos por mes</dt><dd>$0</dd></div>
-        </dl>
+  <section class="atajos" aria-label="Secciones">
+    <div class="wrap">
+      <h2 class="titulo">Elegí por dónde arrancar.</h2>
+      <div class="atgrid">
+        <a class="at at-hace" href="#hace" data-ir="hace"><span class="at-tx"><b>Qué hace</b><em>La tablet del living, la compu y el celu: todo lo que le podés pedir.</em></span><img src="img/tablet-inicio.webp" width="1280" height="800" loading="lazy" alt=""></a>
+        <a class="at at-nuevo" href="#nuevo" data-ir="nuevo"><span class="at-tx"><b>Lo nuevo</b><em>Protocolos, modo guardia, noticiero y más.</em></span><img src="img/tablet-protocolo.webp" width="1280" height="800" loading="lazy" alt=""></a>
+        <a class="at at-dentro" href="#cerebros" data-ir="cerebros"><span class="at-tx"><b>Por dentro</b><em>BUFIA y sus tres cerebros. Probalo.</em></span><img class="at-ico" src="img/bufalabs-icono.svg" width="120" height="120" loading="lazy" alt=""></a>
+        <a class="at at-nos" href="#nosotros" data-ir="nosotros"><span class="at-tx"><b>Nosotros</b><em>Un laboratorio chico y más de cien versiones.</em></span><span class="at-num" data-vergrande>101</span></a>
+        <a class="at at-inst" href="#instalar" data-ir="instalar"><span class="at-tx"><b>Instalala gratis</b><em>Windows, Linux, la tablet y el celu.</em></span><span class="at-flecha" aria-hidden="true"></span></a>
       </div>
-      <ul class="princ">
-        <li style="--c:var(--sol)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01"/></svg></span>
-          <div><h3>Que hable como vos</h3><p>Nada de español de manual. FRIDAY entiende cómo hablamos acá, che.</p></div></li>
-        <li style="--c:var(--menta)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l12 8-5.5 1.2L15 18l-2.6 1.2-2.6-5.7L6 17z"/></svg></span>
-          <div><h3>Que haga cosas de verdad</h3><p>Prende las luces, pone la música, abre programas, maneja la tele y apaga la compu.</p></div></li>
-        <li style="--c:var(--azul-2)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v4.5h-4.5"/></svg></span>
-          <div><h3>Que nunca te deje colgado</h3><p>Si un cerebro se cae, salta otro. Y si algo falla, se hace un chequeo y te dice qué pasa.</p></div></li>
-        <li style="--c:var(--azul);--ci:var(--blanco)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2.5"/><path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg></span>
-          <div><h3>Que lo tuyo sea tuyo</h3><p>Lo que comparten tus aparatos viaja cifrado. Las caras y las voces de la familia no salen de la tablet.</p></div></li>
-      </ul>
     </div>
   </section>
+  <div class="cierre" id="chau"><div class="wrap">
+    <div class="chau">
+      <div id="cara3" class="cara" aria-hidden="true"></div>
+      <div class="min0"><h2>Decí «Friday».</h2><p>Y charlamos un rato.</p><div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a></div></div>
+    </div>
+  </div></div>
+</div>
 
+<div class="vista" data-vista="hace" id="v-hace" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Qué hace</h1><p class="cab-p">Todo lo que FRIDAY hace en tu casa: en la tablet del living, en la compu y en el celu.</p></div></div>
   <section class="lugares-sec" id="lugares">
     <div class="wrap">
       <h2 class="titulo">Una sola FRIDAY, en tres lugares.</h2>
@@ -435,7 +502,6 @@ section{padding-block:110px;scroll-margin-top:10px}
       </div>
     </div>
   </section>
-
   <section class="hace" id="hace">
     <div class="wrap">
       <h2 class="titulo">Le hablás. Y hace.</h2>
@@ -457,10 +523,14 @@ section{padding-block:110px;scroll-margin-top:10px}
       </div>
     </div>
   </section>
+  <a class="sig" href="#nuevo" data-ir="nuevo"><span class="wrap"><small>Seguí con</small><b>Lo nuevo</b><em>Protocolos, modo guardia y el noticiero.</em></span></a>
+</div>
 
+<div class="vista" data-vista="nuevo" id="v-nuevo" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Lo nuevo</h1><p class="cab-p">Lo último que aprendió FRIDAY. Se actualiza sola, así que ya lo tenés.</p></div></div>
   <section class="nuevo" id="nuevo">
     <div class="wrap">
-      <h2 class="titulo">Lo nuevo de FRIDAY.</h2>
+      <h2 class="titulo oculto">Lo nuevo de FRIDAY</h2>
       <p class="intro">Ahora FRIDAY hace varias cosas con una sola frase, cuida la casa cuando no hay nadie y te cuenta las noticias como en la tele.</p>
       <div class="novedades">
         <div class="novedad">
@@ -492,7 +562,11 @@ section{padding-block:110px;scroll-margin-top:10px}
       </ul>
     </div>
   </section>
+  <a class="sig" href="#cerebros" data-ir="cerebros"><span class="wrap"><small>Seguí con</small><b>Por dentro</b><em>Cómo piensa FRIDAY y por qué es distinta.</em></span></a>
+</div>
 
+<div class="vista" data-vista="cerebros" id="v-cerebros" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Por dentro</h1><p class="cab-p">Cómo piensa FRIDAY, cómo sigue andando si algo falla y en qué se diferencia.</p></div></div>
   <section class="cerebros" id="cerebros">
     <div class="wrap cgrid">
       <div class="min0 ctexto">
@@ -556,7 +630,6 @@ section{padding-block:110px;scroll-margin-top:10px}
       </div>
     </div>
   </section>
-
   <section class="diferente" id="diferente">
     <div class="wrap">
       <h2 class="titulo">Por qué FRIDAY es distinta.</h2>
@@ -579,7 +652,35 @@ section{padding-block:110px;scroll-margin-top:10px}
       <p class="cita">FRIDAY vive en tu casa y te da una mano, <span>como alguien más de la familia.</span></p>
     </div>
   </section>
+  <a class="sig" href="#nosotros" data-ir="nosotros"><span class="wrap"><small>Seguí con</small><b>Nosotros</b><em>Quiénes la hacemos y cómo llegó hasta acá.</em></span></a>
+</div>
 
+<div class="vista" data-vista="nosotros" id="v-nosotros" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Nosotros</h1><p class="cab-p">BufaLabs es un laboratorio chico de Argentina. Hacemos a FRIDAY, versión por versión.</p></div></div>
+  <section class="nos" id="nosotros">
+    <div class="wrap nosgrid">
+      <div class="min0">
+        <h2 class="titulo">Un laboratorio chico que hace IA para usar todos los días.</h2>
+        <p class="intro"><b>BufaLabs</b> es un laboratorio independiente de Argentina. Nuestra primera creación es <b>FRIDAY</b>: una inteligencia artificial que vive en tu casa, habla como nosotros y hace cosas de verdad.</p>
+        <p class="intro">La armamos versión por versión. Cada cosa nueva se prueba en casa, se rompe, se arregla y recién ahí se queda.</p>
+        <dl class="cifras">
+          <div><dt>versiones</dt><dd data-vergrande>101</dd></div>
+          <div><dt>aparatos, una sola FRIDAY</dt><dd>3</dd></div>
+          <div><dt>pesos por mes</dt><dd>$0</dd></div>
+        </dl>
+      </div>
+      <ul class="princ">
+        <li style="--c:var(--sol)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01"/></svg></span>
+          <div><h3>Que hable como vos</h3><p>Nada de español de manual. FRIDAY entiende cómo hablamos acá, che.</p></div></li>
+        <li style="--c:var(--menta)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l12 8-5.5 1.2L15 18l-2.6 1.2-2.6-5.7L6 17z"/></svg></span>
+          <div><h3>Que haga cosas de verdad</h3><p>Prende las luces, pone la música, abre programas, maneja la tele y apaga la compu.</p></div></li>
+        <li style="--c:var(--azul-2)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v4.5h-4.5"/></svg></span>
+          <div><h3>Que nunca te deje colgado</h3><p>Si un cerebro se cae, salta otro. Y si algo falla, se hace un chequeo y te dice qué pasa.</p></div></li>
+        <li style="--c:var(--azul);--ci:var(--blanco)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2.5"/><path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg></span>
+          <div><h3>Que lo tuyo sea tuyo</h3><p>Lo que comparten tus aparatos viaja cifrado. Las caras y las voces de la familia no salen de la tablet.</p></div></li>
+      </ul>
+    </div>
+  </section>
   <section class="versiones" id="versiones">
     <div class="wrap">
       <div class="vtop">
@@ -600,10 +701,14 @@ section{padding-block:110px;scroll-margin-top:10px}
       </ol>
     </div>
   </section>
+  <a class="sig" href="#instalar" data-ir="instalar"><span class="wrap"><small>Seguí con</small><b>Instalala</b><em>Gratis, en Windows, Linux, la tablet y el celu.</em></span></a>
+</div>
 
+<div class="vista" data-vista="instalar" id="v-instalar" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Instalala</h1><p class="cab-p">Gratis, en la compu con Windows o con Linux, en la tablet de la casa y en el celu.</p></div></div>
   <section class="instalar" id="instalar">
     <div class="wrap">
-      <h2 class="titulo">Instalala.</h2>
+      <h2 class="titulo oculto">Instalala</h2>
       <p class="intro">Empezá por la compu, con Windows o con Linux: después la tablet y el celu se unen a ella con un código.</p>
       <div class="donde">
         <article><h3>La compu, con Windows</h3><p class="para">Windows 10 u 11</p>
@@ -622,17 +727,13 @@ section{padding-block:110px;scroll-margin-top:10px}
       <p class="nota">¿Algo no anda? Decile a FRIDAY «hacé un chequeo»: se prueba sola y arma un informe con lo que funciona y lo que no.</p>
     </div>
   </section>
+  <a class="sig" href="#inicio" data-ir="inicio"><span class="wrap"><small>Seguí con</small><b>El inicio</b><em>Volvé a ver a FRIDAY.</em></span></a>
+</div>
 </main>
 
 <footer>
-  <div class="cierre"><div class="wrap">
-    <div class="chau">
-      <div id="cara3" class="cara" aria-hidden="true"></div>
-      <div class="min0"><h2>Decí «Friday».</h2><p>Y charlamos un rato.</p><div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a></div></div>
-    </div>
-  </div></div>
   <div class="pie"><div class="wrap pgrid">
-    <a class="logo" href="#" aria-label="BufaLabs, volver arriba"><img decoding="async" src="img/bufalabs-logo.svg" width="1623" height="512" loading="lazy" alt="BufaLabs: tecnología, inteligencia artificial"></a>
+    <a class="logo" href="#inicio" data-ir="inicio" aria-label="BufaLabs, inicio"><img decoding="async" src="img/bufalabs-logo.svg" width="1623" height="512" loading="lazy" alt="BufaLabs: tecnología, inteligencia artificial"></a>
     <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>101.03</span>, Casa 4.1 y Móvil 2.3. © 2026 BufaLabs</p></div>
   </div></div>
 </footer>
@@ -769,6 +870,34 @@ fetch('actualizaciones/friday.json',{cache:'no-store'}).then(r=>r.ok?r.json():nu
   document.querySelectorAll('[data-ver]').forEach(e=>e.textContent=full);
   if(v!==VER){ VER=v; document.querySelectorAll('[data-vergrande]').forEach(e=>e.textContent=String(v)); pintarPuntos(); }
 }).catch(()=>{});
+
+
+// ---- cada sección es una página: #hace, #nuevo, #cerebros, #nosotros, #instalar (y #inicio)
+const VISTAS=[...document.querySelectorAll('.vista')];
+const PAGINAS={inicio:'BufaLabs · FRIDAY', hace:'Qué hace · FRIDAY', nuevo:'Lo nuevo · FRIDAY', cerebros:'Por dentro · FRIDAY', nosotros:'Nosotros · BufaLabs', instalar:'Instalala · FRIDAY'};
+let vistaActual=null;
+function vistaDe(id){
+  if(!id || PAGINAS[id]) return PAGINAS[id] ? id : 'inicio';
+  const el=document.getElementById(id), v=el && el.closest('.vista');
+  return v ? v.dataset.vista : 'inicio';
+}
+function ir(hash){
+  const id=decodeURIComponent((hash||'').replace(/^#/,'')), v=vistaDe(id);
+  if(v!==vistaActual){
+    VISTAS.forEach(x=>{ const on=x.dataset.vista===v; x.hidden=!on; if(on && vistaActual!==null && !quieto){ x.classList.remove('entra'); void x.offsetWidth; x.classList.add('entra'); } });
+    vistaActual=v; document.title=PAGINAS[v];
+    document.querySelectorAll('[data-ir]').forEach(a=>{ if(a.closest('.barra')){ if(a.dataset.ir===v) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); } });
+    const act=document.querySelector('.barra ul a[aria-current]'); if(act) act.scrollIntoView({block:'nearest', inline:'center'});
+  }
+  const el=!PAGINAS[id] && id ? document.getElementById(id) : null;
+  if(el) requestAnimationFrame(()=>el.scrollIntoView({behavior:quieto?'auto':'smooth'}));
+  else window.scrollTo({top:0, behavior:'auto'});
+}
+addEventListener('hashchange', ()=>ir(location.hash));
+document.addEventListener('click', e=>{ const a=e.target.closest('a[href^="#"]'); if(a && a.getAttribute('href')===location.hash){ e.preventDefault(); ir(location.hash); } });
+ir(location.hash);
+const barra=document.querySelector('.barra');
+addEventListener('scroll', ()=>barra.classList.toggle('sombra', scrollY>8), {passive:true});
 
 // ---- tres cerebros: BUFIA, el núcleo, en el medio
 const P={nucleo:[320,230], groq:[112,110], gemini:[528,110], ollama:[320,362]};
