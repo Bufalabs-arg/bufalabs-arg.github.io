@@ -337,6 +337,8 @@ section.hero{padding-block:0}
 .donde li::before{content:counter(p);position:absolute;left:0;top:-2px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--papel-2);color:var(--azul-3);font:800 17px var(--disp)}
 .donde li b{color:var(--tinta)}
 .donde .btn{margin-top:8px;min-height:52px;font-size:17px;background:var(--azul);color:var(--blanco)}
+.donde .otra{margin:14px 0 0;color:var(--tinta-3);font-size:15px}
+.donde .otra a{color:var(--azul-3);text-underline-offset:3px}
 .nota{margin:30px 0 0;color:var(--tinta-2);font-size:17px;max-width:70ch}
 
 /* el cierre */
@@ -443,11 +445,11 @@ section.hero{padding-block:0}
     <div class="hgrid">
       <div class="min0">
         <h1><span>FRIDAY</span><span>vive en</span><span>tu casa.</span></h1>
-        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad: en la compu, en la tablet del living y en el celu. Gratis, ya va por la versión <span data-ver>101.03</span> y se actualiza sola.</p>
+        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad: en la compu, en la tablet del living y en el celu. Gratis, ya va por la versión <span data-ver>101.04</span> y se actualiza sola.</p>
         <div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a><a class="btn no" href="#hace">Ver qué hace</a></div>
       </div>
       <div class="ella">
-        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>101.03</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
+        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>101.04</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
         <button id="cara" class="cara" type="button" aria-label="La cara de FRIDAY. Tocala para cambiarle la expresión."></button>
         <div class="globo" id="globo" aria-live="polite"><q id="gQ">Friday, prendé la luz del living</q><p id="gR">Listo. ¿Bajo un poco el brillo para la cena?</p></div>
       </div>
@@ -712,8 +714,9 @@ section.hero{padding-block:0}
       <p class="intro">Empezá por la compu, con Windows o con Linux: después la tablet y el celu se unen a ella con un código.</p>
       <div class="donde">
         <article><h3>La compu, con Windows</h3><p class="para">Windows 10 u 11</p>
-          <ol><li><b>Descargá FRIDAY</b> y descomprimí el archivo.</li><li>Abrí <b>FRIDAY.exe</b>: queda andando sola, también en segundo plano.</li><li>Seguí el tutorial. Te pide una <b>llave gratis de Groq</b>, que es el cerebro.</li><li>Listo: de ahí en adelante <b>se actualiza sola</b>.</li></ol>
-          <a class="btn" href="descargas/FRIDAY.zip" download>Descargar para Windows</a></article>
+          <ol><li><b>Descargá FRIDAY-Setup</b> y abrilo. Si Windows dice que «protegió su PC», tocá <b>Más información</b> y <b>Ejecutar de todas formas</b>.</li><li>Tocá <b>Instalar</b>. No pide administrador: crea los íconos y queda en <b>Aplicaciones instaladas</b>, como cualquier programa.</li><li>Seguí el tutorial. Te pide una <b>llave gratis de Groq</b>, que es el cerebro.</li><li>Listo: de ahí en adelante <b>se actualiza sola</b>.</li></ol>
+          <a class="btn" href="descargas/FRIDAY-Setup.exe" download>Descargar para Windows</a>
+          <p class="otra">¿Sin instalar nada? Bajá la <a href="descargas/FRIDAY.zip" download>versión portátil (.zip)</a>, descomprimila y abrí FRIDAY.exe.</p></article>
         <article><h3>La compu, con Linux</h3><p class="para">Ubuntu, Mint, Debian, Fedora y parecidas (64 bits)</p>
           <ol><li><b>Descargá FRIDAY</b> y descomprimí el archivo.</li><li>En una terminal, en esa carpeta: <b>sh instalar.sh</b>. No pide contraseña.</li><li>Queda en el <b>menú de aplicaciones</b> y arranca sola. Se abre en Chrome, Edge o Chromium.</li><li>Listo: de ahí en adelante <b>se actualiza sola</b>.</li></ol>
           <a class="btn" href="descargas/FRIDAY-linux.tar.gz" download>Descargar para Linux</a></article>
@@ -734,7 +737,7 @@ section.hero{padding-block:0}
 <footer>
   <div class="pie"><div class="wrap pgrid">
     <a class="logo" href="#inicio" data-ir="inicio" aria-label="BufaLabs, inicio"><img decoding="async" src="img/bufalabs-logo.svg" width="1623" height="512" loading="lazy" alt="BufaLabs: tecnología, inteligencia artificial"></a>
-    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>101.03</span>, Casa 4.1 y Móvil 2.3. © 2026 BufaLabs</p></div>
+    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>101.04</span>, Casa 4.1 y Móvil 2.3. © 2026 BufaLabs</p></div>
   </div></div>
 </footer>
 

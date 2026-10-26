@@ -4,7 +4,8 @@
 Para cada sistema arma su aviso firmado (actualizaciones/friday.json para Windows,
 actualizaciones/friday-linux.json para Linux) y copia a actualizaciones/v<versión>/ solo los archivos
 que cambiaron (los que quedaron igual apuntan a la versión donde ya estaban). También rehace las
-descargas completas (descargas/FRIDAY.zip y descargas/FRIDAY-linux.tar.gz).
+descargas completas (descargas/FRIDAY-Setup.exe, descargas/FRIDAY.zip y descargas/FRIDAY-linux.tar.gz).
+Antes, compilá todo con codigo-exe/compilar.sh (FRIDAY.exe, friday de Linux y FRIDAY-Setup.exe).
 
 Uso: python3 publicar_pc.py <carpeta de FRIDAY> <repo de la página> <archivo con la clave privada> [windows,linux]
 La carpeta de FRIDAY tiene friday.html, FRIDAY.exe, codigo-exe/ y linux/ (friday, friday.png, instalar.sh, LEEME.txt).
@@ -92,6 +93,19 @@ def publicar(sis, fri, sitio, firmar, ver, grande, exe, nov, ya):
                 if os.path.exists(p):
                     z.write(p, 'FRIDAY/' + n)
         os.replace(zp + '.nuevo', zp)
+        # el instalador de un solo archivo (FRIDAY-Setup.exe), si está compilado con esta misma versión
+        setup = os.path.join(fri, 'FRIDAY-Setup.exe')
+        carga = os.path.join(fri, 'codigo-exe', 'setup', 'payload.zip')
+        if os.path.exists(setup):
+            with zipfile.ZipFile(carga) as z:
+                adentro = re.search(r"const FRIDAY_VER\s*=\s*'([\d.]+)'", z.read('friday.html').decode('utf-8')).group(1)
+                h_exe = hashlib.sha256(z.read('FRIDAY.exe')).hexdigest()
+            if adentro != ver or h_exe != huella(os.path.join(fri, 'FRIDAY.exe')):
+                sys.exit(f'FRIDAY-Setup.exe lleva la {adentro} (u otro FRIDAY.exe): recompilalo con compilar.sh')
+            if os.path.getmtime(setup) < os.path.getmtime(carga):
+                sys.exit('FRIDAY-Setup.exe es más viejo que su payload.zip: recompilalo con compilar.sh')
+            shutil.copy2(setup, os.path.join(desc, 'FRIDAY-Setup.exe'))
+            print(f'windows: FRIDAY-Setup.exe ({os.path.getsize(setup) // 1048576} MB) en descargas.')
     else:
         tp = os.path.join(desc, 'FRIDAY-linux.tar.gz')
         with tarfile.open(tp + '.nuevo', 'w:gz', compresslevel=9) as t:
