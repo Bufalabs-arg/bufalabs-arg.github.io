@@ -219,6 +219,23 @@ section.hero{padding-block:0}
 .extras li{padding:24px 22px 26px;border-radius:24px;background:var(--papel-2)}
 .extras h3{margin:0 0 8px;font:800 23px/1.1 var(--disp);font-variation-settings:"wdth" 96}
 .extras p{margin:0;color:var(--tinta-2);font-size:17px;line-height:1.45}
+/* la compu, versión por versión */
+.hist{margin-top:110px}
+.hist .intro{margin-top:16px}
+.vlista{list-style:none;margin:44px 0 0;padding:0;display:grid;gap:10px}
+.vlista>li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 28px;padding:24px 28px;border-radius:24px;background:var(--blanco);border:1px solid var(--linea)}
+.vlista .vn{font:800 40px/1 var(--disp);font-variation-settings:"wdth" 88;letter-spacing:-.02em;color:var(--azul-3)}
+.vlista .vn small{display:block;margin-top:8px;font:400 15px var(--text);letter-spacing:0;color:var(--tinta-3)}
+.vlista h3{margin:2px 0 0;font:800 24px/1.1 var(--disp);font-variation-settings:"wdth" 96}
+.vlista p{margin:8px 0 0;color:var(--tinta-2);font-size:17px;max-width:62ch}
+.vlista ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.vlista ul li{color:var(--tinta-2);font-size:17px;line-height:1.45;max-width:62ch}
+.vlista ul b{color:var(--tinta)}
+.vlista>li.ultima{background:var(--azul);border-color:var(--azul);color:var(--blanco);padding-block:30px}
+.vlista>li.ultima .vn{color:var(--sol);font-size:52px}
+.vlista>li.ultima .vn small{color:var(--claro-2)}
+.vlista>li.ultima p,.vlista>li.ultima ul li{color:var(--claro)}
+.vlista>li.ultima ul b{color:var(--blanco)}
 
 /* tres cerebros */
 .cerebros{background:var(--papel-2)}
@@ -340,6 +357,20 @@ section.hero{padding-block:0}
 .donde .otra{margin:14px 0 0;color:var(--tinta-3);font-size:15px}
 .donde .otra a{color:var(--azul-3);text-underline-offset:3px}
 .nota{margin:30px 0 0;color:var(--tinta-2);font-size:17px;max-width:70ch}
+.donde .peso{margin:10px 0 0;color:var(--tinta-3);font-size:15px;min-height:1.4em}
+.donde article.tuya{border:2px solid var(--azul);box-shadow:0 22px 40px -26px rgba(30,79,192,.55);position:relative}
+.donde .tuyat{display:none}
+.donde article.tuya .tuyat{display:inline-block;margin:0 0 12px;padding:5px 12px;border-radius:999px;background:var(--sol);color:var(--sol-tinta);font:700 14px var(--text)}
+.dudas{margin-top:80px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:clamp(24px,5vw,64px);align-items:start}
+.dudas h2{margin:0;font:800 clamp(34px,4vw,52px)/.95 var(--disp);font-variation-settings:"wdth" 94;letter-spacing:-.015em}
+.dudas details{border-top:1px solid var(--claro-2)}
+.dudas details:last-child{border-bottom:1px solid var(--claro-2)}
+.dudas summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 2px;font:700 20px/1.25 var(--disp);font-variation-settings:"wdth" 96}
+.dudas summary::-webkit-details-marker{display:none}
+.dudas summary::after{content:"";flex:none;width:12px;height:12px;border-right:2.5px solid var(--azul-3);border-bottom:2.5px solid var(--azul-3);transform:rotate(45deg) translate(-3px,-3px);transition:transform .2s}
+.dudas details[open] summary::after{transform:rotate(225deg) translate(-2px,-2px)}
+.dudas details p{margin:0 0 22px;color:var(--tinta-2);font-size:18px;max-width:58ch}
+.dudas details p b{color:var(--tinta)}
 
 /* el cierre */
 .cierre{position:relative;overflow:hidden;background:var(--azul);color:var(--blanco);padding-block:100px 96px}
@@ -387,6 +418,7 @@ section.hero{padding-block:0}
   .novedad:nth-child(even) figure{order:0}
   .novedades{gap:64px}
   .donde{grid-template-columns:minmax(0,1fr)}
+  .dudas{grid-template-columns:minmax(0,1fr)}
   .vtop{grid-template-columns:minmax(0,1fr)}
   .hitos{grid-template-columns:repeat(2,minmax(0,1fr))}
   section{padding-block:80px}
@@ -399,6 +431,8 @@ section.hero{padding-block:0}
   .cifras div{padding:14px 12px}
   .cifras dt{font-size:14px}
   .extras,.hitos{grid-template-columns:minmax(0,1fr)}
+  .vlista>li{grid-template-columns:minmax(0,1fr);padding:20px 20px 22px}
+  .vlista>li.ultima .vn{font-size:44px}
   .tabla thead{display:none}
   .tabla table,.tabla tbody,.tabla tr,.tabla th,.tabla td{display:block;width:auto}
   .tabla tbody th{width:auto;padding:18px 18px 6px;color:var(--azul-3)}
@@ -559,9 +593,22 @@ section.hero{padding-block:0}
         <li><h3>Contesta una sola</h3><p>Si la tablet y la compu te oyen a la vez, contesta la que te escuchó mejor. No se pisan.</p></li>
         <li><h3>Te recibe</h3><p>Cuando llegás, te saluda por tu nombre y te cuenta lo que tenés pendiente.</p></li>
         <li><h3>Se adelanta</h3><p>Si tenés algo afuera y va a llover, te avisa una hora antes para que lleves paraguas.</p></li>
-        <li><h3>Se actualiza sola</h3><p>Cuando hay una versión nueva te avisa, baja solo lo que cambió y se instala. Vienen firmadas por BufaLabs.</p></li>
+        <li><h3>Se actualiza sola</h3><p>Cuando hay una versión nueva te avisa, baja solo lo que cambió y se instala. Vienen firmadas por BufaLabs, y si una te anda mal, volvés a la anterior.</p></li>
         <li><h3>Te cuenta lo nuevo</h3><p>Después de cada actualización te muestra una mini presentación con las novedades.</p></li>
       </ul>
+      <div class="hist" id="historial">
+        <h2 class="titulo">La compu, versión por versión.</h2>
+        <p class="intro">Lo que fue cambiando en FRIDAY para Windows y Linux. Te llega sola: no tenés que bajar nada.</p>
+        <ol class="vlista" id="vlista" reversed>
+          <li class="ultima" data-v="101.04"><div class="vn">101.04<small>La última</small></div><div class="min0"><h3>Un instalador de verdad</h3><ul>
+            <li><b>FRIDAY-Setup.</b> Se instala con un solo archivo, como cualquier programa, y aparece en «Aplicaciones instaladas» para desinstalarla cuando quieras.</li>
+            <li><b>Volver a la versión anterior.</b> Si una actualización te anda mal, volvés a la que tenías con un clic.</li></ul></div></li>
+          <li data-v="101.03"><div class="vn">101.03</div><div class="min0"><h3>También en Linux</h3><p>FRIDAY anda en Ubuntu, Mint, Debian, Fedora y parecidas, con las mismas actualizaciones que en Windows.</p></div></li>
+          <li data-v="101.02"><div class="vn">101.02</div><div class="min0"><h3>Pantalla de carga</h3><p>Al abrirla, el núcleo se arma y los sistemas se prenden uno por uno: núcleo BUFIA, voz, memoria y aparatos.</p></div></li>
+          <li data-v="101.01"><div class="vn">101.01</div><div class="min0"><h3>Su propio instalador</h3><p>Cuando hay una versión nueva, aparece antes de abrir FRIDAY, en una ventana propia, con lo que trae y el progreso.</p></div></li>
+          <li data-v="101"><div class="vn">101</div><div class="min0"><h3>Se actualiza sola</h3><p>Baja solo lo que cambió, revisa la firma de BufaLabs y te muestra lo nuevo en una mini presentación.</p></div></li>
+        </ol>
+      </div>
     </div>
   </section>
   <a class="sig" href="#cerebros" data-ir="cerebros"><span class="wrap"><small>Seguí con</small><b>Por dentro</b><em>Cómo piensa FRIDAY y por qué es distinta.</em></span></a>
@@ -713,21 +760,34 @@ section.hero{padding-block:0}
       <h2 class="titulo oculto">Instalala</h2>
       <p class="intro">Empezá por la compu, con Windows o con Linux: después la tablet y el celu se unen a ella con un código.</p>
       <div class="donde">
-        <article><h3>La compu, con Windows</h3><p class="para">Windows 10 u 11</p>
+        <article data-sis="windows"><span class="tuyat">Para esta compu</span><h3>La compu, con Windows</h3><p class="para">Windows 10 u 11</p>
           <ol><li><b>Descargá FRIDAY-Setup</b> y abrilo. Si Windows dice que «protegió su PC», tocá <b>Más información</b> y <b>Ejecutar de todas formas</b>.</li><li>Tocá <b>Instalar</b>. No pide administrador: crea los íconos y queda en <b>Aplicaciones instaladas</b>, como cualquier programa.</li><li>Seguí el tutorial. Te pide una <b>llave gratis de Groq</b>, que es el cerebro.</li><li>Listo: de ahí en adelante <b>se actualiza sola</b>.</li></ol>
           <a class="btn" href="descargas/FRIDAY-Setup.exe" download>Descargar para Windows</a>
+          <p class="peso" data-peso="descargas/FRIDAY-Setup.exe"></p>
           <p class="otra">¿Sin instalar nada? Bajá la <a href="descargas/FRIDAY.zip" download>versión portátil (.zip)</a>, descomprimila y abrí FRIDAY.exe.</p></article>
-        <article><h3>La compu, con Linux</h3><p class="para">Ubuntu, Mint, Debian, Fedora y parecidas (64 bits)</p>
+        <article data-sis="linux"><span class="tuyat">Para esta compu</span><h3>La compu, con Linux</h3><p class="para">Ubuntu, Mint, Debian, Fedora y parecidas (64 bits)</p>
           <ol><li><b>Descargá FRIDAY</b> y descomprimí el archivo.</li><li>En una terminal, en esa carpeta: <b>sh instalar.sh</b>. No pide contraseña.</li><li>Queda en el <b>menú de aplicaciones</b> y arranca sola. Se abre en Chrome, Edge o Chromium.</li><li>Listo: de ahí en adelante <b>se actualiza sola</b>.</li></ol>
-          <a class="btn" href="descargas/FRIDAY-linux.tar.gz" download>Descargar para Linux</a></article>
-        <article><h3>La tablet</h3><p class="para">Android, con Chrome</p>
+          <a class="btn" href="descargas/FRIDAY-linux.tar.gz" download>Descargar para Linux</a>
+          <p class="peso" data-peso="descargas/FRIDAY-linux.tar.gz"></p></article>
+        <article data-sis="tablet"><span class="tuyat">Para esta tablet</span><h3>La tablet</h3><p class="para">Android, con Chrome</p>
           <ol><li>Abrí <b>FRIDAY Casa</b> en Chrome.</li><li>Menú ⋮, <b>Agregar a la pantalla principal</b>, y abrila desde ese ícono.</li><li>Escaneá el código que muestra con tu celu: la configurás desde ahí.</li></ol>
           <a class="btn" href="https://pedropiratita134.github.io/FRIDAY/panel.html">Abrir FRIDAY Casa</a></article>
-        <article><h3>El celu</h3><p class="para">Android o iPhone</p>
+        <article data-sis="celu"><span class="tuyat">Para este celu</span><h3>El celu</h3><p class="para">Android o iPhone</p>
           <ol><li>Abrí <b>FRIDAY Móvil</b> en el navegador.</li><li>Agregala a la pantalla principal.</li><li>Unila a la compu con el código que te muestra FRIDAY en la compu.</li></ol>
           <a class="btn" href="https://pedropiratita134.github.io/FRIDAY/">Abrir FRIDAY Móvil</a></article>
       </div>
       <p class="nota">¿Algo no anda? Decile a FRIDAY «hacé un chequeo»: se prueba sola y arma un informe con lo que funciona y lo que no.</p>
+      <div class="dudas" id="dudas">
+        <h2>Preguntas de siempre</h2>
+        <div class="min0">
+          <details><summary>¿Es gratis de verdad?</summary><p>Sí. FRIDAY es gratis y los cerebros que usa también: Groq y Gemini te dan una llave gratis, y Ollama corre en tu propia compu.</p></details>
+          <details><summary>¿Por qué Windows dice que «protegió su PC»?</summary><p>Porque FRIDAY todavía no tiene la firma digital de Microsoft, que es paga. Tocá <b>Más información</b> y <b>Ejecutar de todas formas</b>: pasa una sola vez. Las actualizaciones sí vienen firmadas por BufaLabs, y FRIDAY rechaza cualquiera que no lo esté.</p></details>
+          <details><summary>¿Adónde van mis cosas?</summary><p>Tu memoria, tus ajustes y tus listas quedan en tus aparatos. Lo que le pedís viaja al cerebro que elegiste para que te conteste; con Ollama no sale de tu compu. Tus llaves pasan de un aparato tuyo a otro cifradas, y nadie más las ve.</p></details>
+          <details><summary>¿Cómo la desinstalo?</summary><p>En Windows: <b>Configuración, Aplicaciones, Aplicaciones instaladas</b>, buscás FRIDAY y tocás <b>Desinstalar</b>. Te pregunta si querés borrar también tus datos. En Linux: <b>sh instalar.sh --desinstalar</b> en la carpeta que descargaste.</p></details>
+          <details><summary>Una actualización me anda mal, ¿qué hago?</summary><p>Decile «buscá actualizaciones» y tocá <b>Volver a la</b> versión anterior. Tus datos no se tocan, y la versión que dejaste no se te vuelve a ofrecer sola por un mes.</p></details>
+          <details><summary>¿Anda en Mac?</summary><p>Todavía no hay FRIDAY para la Mac. En la compu anda con Windows y con Linux; en la tablet y en el celu, desde el navegador.</p></details>
+        </div>
+      </div>
     </div>
   </section>
   <a class="sig" href="#inicio" data-ir="inicio"><span class="wrap"><small>Seguí con</small><b>El inicio</b><em>Volvé a ver a FRIDAY.</em></span></a>
@@ -871,9 +931,32 @@ fetch('actualizaciones/friday.json',{cache:'no-store'}).then(r=>r.ok?r.json():nu
   const d=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(m.datos), c=>c.charCodeAt(0))));
   const v=parseInt(d.version,10), full=d.completa||d.version; if(!(v>0)) return;
   document.querySelectorAll('[data-ver]').forEach(e=>e.textContent=full);
+  pintarUltima(full, d.titulo, d.novedades);
   if(v!==VER){ VER=v; document.querySelectorAll('[data-vergrande]').forEach(e=>e.textContent=String(v)); pintarPuntos(); }
 }).catch(()=>{});
 
+
+// ---- "La compu, versión por versión": la última sale del aviso de actualización publicado
+function pintarUltima(full, titulo, novs){
+  const ol=$('vlista'); if(!ol || !Array.isArray(novs) || !novs.length) return;
+  const esc=t=>String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  let li=[...ol.children].find(x=>x.dataset.v===full);
+  if(!li){ li=document.createElement('li'); li.dataset.v=full; ol.prepend(li); }
+  [...ol.children].forEach(x=>{ x.classList.remove('ultima'); const s=x.querySelector('.vn small'); if(s) s.remove(); });
+  li.classList.add('ultima');
+  const t=String(titulo||'').replace(/\s*\([\d.]+\)\s*$/,'');
+  li.innerHTML=`<div class="vn">${esc(full)}<small>La última</small></div><div class="min0"><h3>${esc(t||'Versión '+full)}</h3><ul>${novs.map(n=>`<li><b>${esc(n.titulo)}.</b> ${esc(n.texto)}</li>`).join('')}</ul></div>`;
+}
+// ---- Instalala: la tarjeta de tu aparato, resaltada
+(function(){
+  const ua=navigator.userAgent||'', touch=navigator.maxTouchPoints>1;
+  const sis=/Windows/.test(ua)?'windows':/Android/.test(ua)?(/Mobile/.test(ua)?'celu':'tablet'):/iPhone|iPod/.test(ua)?'celu':(/iPad/.test(ua)||(/Macintosh/.test(ua)&&touch))?'tablet':/Linux|X11|CrOS/.test(ua)?'linux':'';
+  const a=sis && document.querySelector(`.donde [data-sis="${sis}"]`); if(a) a.classList.add('tuya');
+})();
+// ---- Instalala: cuánto pesa cada descarga
+document.querySelectorAll('[data-peso]').forEach(e=>{
+  fetch(e.dataset.peso,{method:'HEAD',cache:'no-store'}).then(r=>{ const b=+r.headers.get('content-length'); if(r.ok && b>0){ const m=b/1048576; e.textContent=`Versión ${document.querySelector('[data-ver]').textContent} · ${(m<10?m.toFixed(1):Math.round(m)).toString().replace('.',',')} MB`; } }).catch(()=>{});
+});
 
 // ---- cada sección es una página: #hace, #nuevo, #cerebros, #nosotros, #instalar (y #inicio)
 const VISTAS=[...document.querySelectorAll('.vista')];
