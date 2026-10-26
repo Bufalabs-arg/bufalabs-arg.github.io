@@ -280,7 +280,7 @@ section{padding-block:110px;scroll-margin-top:10px}
 
 /* instalarla */
 .instalar{background:var(--papel-2)}
-.donde{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin-top:56px}
+.donde{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin-top:56px}
 .donde article{background:var(--blanco);border-radius:28px;padding:30px 28px 32px;border:1px solid var(--linea);min-width:0}
 .donde h3{margin:0;font:800 28px/1 var(--disp);font-variation-settings:"wdth" 96}
 .donde .para{margin:8px 0 18px;color:var(--tinta-3);font-size:16px}
@@ -383,8 +383,8 @@ section{padding-block:110px;scroll-margin-top:10px}
   </div>
 </header>
 <div class="cinta" aria-hidden="true"><div class="fila">
-  <span>Te escucha</span><span>Pone caras</span><span>Protocolos</span><span>Modo guardia</span><span>Noticiero</span><span>Videollamadas</span><span>Intercom</span><span>Maneja la compu</span><span>Cocina manos libres</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Hecha en Argentina</span>
-  <span>Te escucha</span><span>Pone caras</span><span>Protocolos</span><span>Modo guardia</span><span>Noticiero</span><span>Videollamadas</span><span>Intercom</span><span>Maneja la compu</span><span>Cocina manos libres</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Hecha en Argentina</span>
+  <span>Te escucha</span><span>Pone caras</span><span>Protocolos</span><span>Modo guardia</span><span>Noticiero</span><span>Videollamadas</span><span>Intercom</span><span>Maneja la compu</span><span>Cocina manos libres</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Windows y Linux</span><span>Hecha en Argentina</span>
+  <span>Te escucha</span><span>Pone caras</span><span>Protocolos</span><span>Modo guardia</span><span>Noticiero</span><span>Videollamadas</span><span>Intercom</span><span>Maneja la compu</span><span>Cocina manos libres</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Windows y Linux</span><span>Hecha en Argentina</span>
 </div></div>
 
 <main>
@@ -426,7 +426,7 @@ section{padding-block:110px;scroll-margin-top:10px}
         <div class="lugar compu">
           <figure class="pantalla"><img decoding="async" src="img/compu-estudio.webp" width="1280" height="800" loading="lazy" alt="FRIDAY en la compu, en modo estudio, con el reloj de la tanda."></figure>
           <h3>La compu</h3>
-          <p>Ve tu pantalla cuando se lo pedís, busca en internet de verdad, te ayuda a estudiar y maneja tus programas.</p>
+          <p>Con Windows o con Linux. Ve tu pantalla cuando se lo pedís, busca en internet de verdad, te ayuda a estudiar y maneja tus programas.</p>
         </div>
         <div class="lugar celu">
           <figure class="pantalla"><img decoding="async" src="img/celu.webp" width="560" height="1169" loading="lazy" alt="FRIDAY en el celu."></figure>
@@ -604,11 +604,14 @@ section{padding-block:110px;scroll-margin-top:10px}
   <section class="instalar" id="instalar">
     <div class="wrap">
       <h2 class="titulo">Instalala.</h2>
-      <p class="intro">Empezá por la compu: después la tablet y el celu se unen a ella con un código.</p>
+      <p class="intro">Empezá por la compu, con Windows o con Linux: después la tablet y el celu se unen a ella con un código.</p>
       <div class="donde">
-        <article><h3>La compu</h3><p class="para">Windows 10 u 11</p>
+        <article><h3>La compu, con Windows</h3><p class="para">Windows 10 u 11</p>
           <ol><li><b>Descargá FRIDAY</b> y descomprimí el archivo.</li><li>Abrí <b>FRIDAY.exe</b>: queda andando sola, también en segundo plano.</li><li>Seguí el tutorial. Te pide una <b>llave gratis de Groq</b>, que es el cerebro.</li><li>Listo: de ahí en adelante <b>se actualiza sola</b>.</li></ol>
-          <a class="btn" href="descargas/FRIDAY.zip" download>Descargar FRIDAY</a></article>
+          <a class="btn" href="descargas/FRIDAY.zip" download>Descargar para Windows</a></article>
+        <article><h3>La compu, con Linux</h3><p class="para">Ubuntu, Mint, Debian, Fedora y parecidas (64 bits)</p>
+          <ol><li><b>Descargá FRIDAY</b> y descomprimí el archivo.</li><li>En una terminal, en esa carpeta: <b>sh instalar.sh</b>. No pide contraseña.</li><li>Queda en el <b>menú de aplicaciones</b> y arranca sola. Se abre en Chrome, Edge o Chromium.</li><li>Listo: de ahí en adelante <b>se actualiza sola</b>.</li></ol>
+          <a class="btn" href="descargas/FRIDAY-linux.tar.gz" download>Descargar para Linux</a></article>
         <article><h3>La tablet</h3><p class="para">Android, con Chrome</p>
           <ol><li>Abrí <b>FRIDAY Casa</b> en Chrome.</li><li>Menú ⋮, <b>Agregar a la pantalla principal</b>, y abrila desde ese ícono.</li><li>Escaneá el código que muestra con tu celu: la configurás desde ahí.</li></ol>
           <a class="btn" href="https://pedropiratita134.github.io/FRIDAY/panel.html">Abrir FRIDAY Casa</a></article>
