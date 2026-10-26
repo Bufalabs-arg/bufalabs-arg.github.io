@@ -371,11 +371,11 @@ section{padding-block:110px;scroll-margin-top:10px}
     <div class="hgrid">
       <div class="min0">
         <h1><span>FRIDAY</span><span>vive en</span><span>tu casa.</span></h1>
-        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad: en la compu, en la tablet del living y en el celu. Gratis, ya va por la versión <span data-ver>101</span> y se actualiza sola.</p>
+        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad: en la compu, en la tablet del living y en el celu. Gratis, ya va por la versión <span data-ver>101.01</span> y se actualiza sola.</p>
         <div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a><a class="btn no" href="#hace">Ver qué hace</a></div>
       </div>
       <div class="ella">
-        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>101</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
+        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>101.01</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
         <button id="cara" class="cara" type="button" aria-label="La cara de FRIDAY. Tocala para cambiarle la expresión."></button>
         <div class="globo" id="globo" aria-live="polite"><q id="gQ">Friday, prendé la luz del living</q><p id="gR">Listo. ¿Bajo un poco el brillo para la cena?</p></div>
       </div>
@@ -395,7 +395,7 @@ section{padding-block:110px;scroll-margin-top:10px}
         <p class="intro"><b>BufaLabs</b> es un laboratorio independiente de Argentina. Nuestra primera creación es <b>FRIDAY</b>: una inteligencia artificial que vive en tu casa, habla como nosotros y hace cosas de verdad.</p>
         <p class="intro">La armamos versión por versión. Cada cosa nueva se prueba en casa, se rompe, se arregla y recién ahí se queda.</p>
         <dl class="cifras">
-          <div><dt>versiones</dt><dd data-ver>101</dd></div>
+          <div><dt>versiones</dt><dd data-vergrande>101</dd></div>
           <div><dt>aparatos, una sola FRIDAY</dt><dd>3</dd></div>
           <div><dt>pesos por mes</dt><dd>$0</dd></div>
         </dl>
@@ -583,7 +583,7 @@ section{padding-block:110px;scroll-margin-top:10px}
   <section class="versiones" id="versiones">
     <div class="wrap">
       <div class="vtop">
-        <p class="contador"><b id="cuenta" data-ver>101</b><span>versiones</span></p>
+        <p class="contador"><b id="cuenta" data-vergrande>101</b><span>versiones</span></p>
         <div class="min0">
           <h2 class="titulo">Más de cien versiones y contando.</h2>
           <p class="intro">Cada versión es algo que se rompió, se arregló y quedó mejor. FRIDAY no se termina nunca: crece todas las semanas.</p>
@@ -630,7 +630,7 @@ section{padding-block:110px;scroll-margin-top:10px}
   </div></div>
   <div class="pie"><div class="wrap pgrid">
     <a class="logo" href="#" aria-label="BufaLabs, volver arriba"><img decoding="async" src="img/bufalabs-logo.svg" width="1623" height="512" loading="lazy" alt="BufaLabs: tecnología, inteligencia artificial"></a>
-    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>101</span>, Casa 4.1 y Móvil 2.3. © 2026 BufaLabs</p></div>
+    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>101.01</span>, Casa 4.1 y Móvil 2.3. © 2026 BufaLabs</p></div>
   </div></div>
 </footer>
 
@@ -762,8 +762,9 @@ if(!quieto && 'IntersectionObserver' in window){
 fetch('actualizaciones/friday.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(m=>{
   if(!m || !m.datos) return;
   const d=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(m.datos), c=>c.charCodeAt(0))));
-  const v=parseInt(d.version,10); if(!(v>0) || v===VER) return;
-  VER=v; document.querySelectorAll('[data-ver]').forEach(e=>e.textContent=String(v)); pintarPuntos();
+  const v=parseInt(d.version,10), full=d.completa||d.version; if(!(v>0)) return;
+  document.querySelectorAll('[data-ver]').forEach(e=>e.textContent=full);
+  if(v!==VER){ VER=v; document.querySelectorAll('[data-vergrande]').forEach(e=>e.textContent=String(v)); pintarPuntos(); }
 }).catch(()=>{});
 
 // ---- tres cerebros: BUFIA, el núcleo, en el medio

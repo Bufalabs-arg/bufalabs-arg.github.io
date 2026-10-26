@@ -25,7 +25,8 @@ def huella(p):
 
 def main(fri, sitio, clave):
     html = open(os.path.join(fri, 'friday.html'), encoding='utf-8').read()
-    ver = re.search(r"const FRIDAY_VER\s*=\s*'(\d+)'", html).group(1)
+    ver = re.search(r"const FRIDAY_VER\s*=\s*'(\d+(?:\.\d+)?)'", html).group(1)   # "101.02"
+    grande = ver.split('.')[0]                                                    # "101" (lo que entienden las FRIDAY viejas)
     nov = json.loads(re.search(r'const NOVEDADES=(\{.*?\});\n', html).group(1))
     assert nov['version'] == ver, 'NOVEDADES no es de esta versión'
     exe = re.search(r'appVersion\s*=\s*"([\d.]+)"', open(os.path.join(fri, 'codigo-exe', 'main.go')).read()).group(1)
@@ -46,7 +47,8 @@ def main(fri, sitio, clave):
         ant = {a['nombre']: a['sha256'] for a in viejo['archivos']}
         if ant.get('FRIDAY.exe') and ant['FRIDAY.exe'] != h_exe and viejo['exe'] == exe:
             sys.exit(f'FRIDAY.exe cambió pero sigue diciendo {exe}: subí appVersion')
-        if int(viejo['version']) > int(ver):
+        tup = lambda v: tuple(int(x) for x in str(v).split('.'))
+        if tup(viejo.get('completa') or viejo['version']) > tup(ver):
             sys.exit('esa versión es más vieja que la publicada')
 
     archivos, nuevos = [], 0
@@ -63,7 +65,7 @@ def main(fri, sitio, clave):
             nuevos += 1
         archivos.append({'nombre': n, 'url': rel, 'sha256': h, 'bytes': os.path.getsize(p)})
 
-    datos = {'producto': 'FRIDAY PC', 'version': ver, 'exe': exe, 'fecha': __import__('datetime').date.today().isoformat(),
+    datos = {'producto': 'FRIDAY PC', 'version': grande, 'completa': ver, 'exe': exe, 'fecha': __import__('datetime').date.today().isoformat(),
              'titulo': nov.get('titulo', ''), 'novedades': nov.get('items', []), 'archivos': archivos}
     k = Ed25519PrivateKey.from_private_bytes(base64.b64decode(open(clave).read().strip()))
     b = json.dumps(datos, ensure_ascii=False, separators=(',', ':')).encode('utf-8')
