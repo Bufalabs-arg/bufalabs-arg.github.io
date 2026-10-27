@@ -236,6 +236,8 @@ section.hero{padding-block:0}
 .extras p{margin:0;color:var(--tinta-2);font-size:17px;line-height:1.45}
 /* la compu, versión por versión */
 .hist{margin-top:110px}
+#v-actualizaciones .hist{margin-top:0}
+#v-actualizaciones .filtros{margin-top:0}
 .hist .intro{margin-top:16px}
 .vlista{list-style:none;margin:44px 0 0;padding:0;display:grid;gap:10px}
 .vlista>li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 28px;padding:24px 28px;border-radius:24px;background:var(--blanco);border:1px solid var(--linea)}
@@ -262,7 +264,7 @@ section.hero{padding-block:0}
 .filtros{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
 .filtros button{padding:9px 16px;border-radius:999px;border:1px solid var(--linea);background:var(--blanco);font:700 16px var(--text);color:var(--tinta-2);cursor:pointer}
 .filtros button.on{background:var(--tinta);border-color:var(--tinta);color:var(--blanco)}
-.ultimo{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:8px 16px 8px 8px;border-radius:999px;background:rgba(255,255,255,.14);color:var(--blanco);text-decoration:none;font-size:16px;max-width:100%}
+.ultimo{display:inline-flex;align-items:center;gap:10px;margin:0 0 22px;padding:8px 16px 8px 8px;border-radius:999px;background:rgba(255,255,255,.14);color:var(--blanco);text-decoration:none;font-size:16px;max-width:100%}
 .ultimo b{flex:none;padding:3px 10px;border-radius:999px;background:var(--sol);color:var(--sol-tinta);font-size:13px}
 .ultimo span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .ultimo:hover{background:rgba(255,255,255,.22)}
@@ -495,6 +497,7 @@ section.hero{padding-block:0}
       <li><a href="#inicio" data-ir="inicio">Inicio</a></li>
       <li><a href="#hace" data-ir="hace">Qué hace</a></li>
       <li><a href="#nuevo" data-ir="nuevo">Lo nuevo</a></li>
+      <li><a href="#actualizaciones" data-ir="actualizaciones">Actualizaciones</a></li>
       <li><a href="#cerebros" data-ir="cerebros">Por dentro</a></li>
       <li><a href="#nosotros" data-ir="nosotros">Nosotros</a></li>
     </ul></nav>
@@ -508,10 +511,10 @@ section.hero{padding-block:0}
   <div class="wrap">
     <div class="hgrid">
       <div class="min0">
+        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>Contesta siempre · Celu 3.1</span></a>
         <h1><span>FRIDAY</span><span>vive en</span><span>tu casa.</span></h1>
         <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, ya va por la versión <span data-ver>101.04</span> y se actualiza sola.</p>
         <div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a><a class="btn no" href="#hace">Ver qué hace</a></div>
-        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>El celu, renovado · Celu 3.0</span></a>
       </div>
       <div class="ella">
         <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>101.04</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
@@ -622,12 +625,21 @@ section.hero{padding-block:0}
         <li><h3>Pantalla de carga</h3><p>Al abrirla, el núcleo se arma y los sistemas se prenden uno por uno.</p></li>
         <li><h3>Te cuenta lo nuevo</h3><p>Después de cada actualización te muestra una mini presentación con las novedades.</p></li>
       </ul>
+    </div>
+  </section>
+  <a class="sig" href="#actualizaciones" data-ir="actualizaciones"><span class="wrap"><small>Seguí con</small><b>Actualizaciones</b><em>Todo lo que fue cambiando, con fecha.</em></span></a>
+</div>
+
+<div class="vista" data-vista="actualizaciones" id="v-actualizaciones" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Actualizaciones</h1><p class="cab-p">Todo lo que fue cambiando en FRIDAY, en la compu, en el celu y en la tablet. Te llegan solas: no tenés que bajar nada.</p></div></div>
+  <section class="nuevo">
+    <div class="wrap">
       <div class="hist" id="actualizaciones">
-        <h2 class="titulo">Actualizaciones.</h2>
-        <p class="intro">Todo lo que fue cambiando en FRIDAY, en la compu, en el celu y en la tablet. Las actualizaciones te llegan solas: no tenés que bajar nada.</p>
+        <h2 class="titulo oculto">Todas las actualizaciones</h2>
         <div class="filtros" aria-label="Mostrar"><button class="on" data-f="" aria-pressed="true">Todas</button><button data-f="compu" aria-pressed="false">Compu</button><button data-f="celu" aria-pressed="false">Celu</button><button data-f="casa" aria-pressed="false">Tablet</button></div>
         <ol class="vlista" id="vlista">
-          <li class="ultima" data-app="celu"><div class="vn"><span class="ver">Móvil 3.0</span><span class="app celu">Celu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>El celu, renovado</h3><p>FRIDAY en el celu cambió entera: más fácil de usar y más linda.</p><ul><li><b>Pestañas abajo.</b> Inicio, Agenda, Compras, Música y Más, como cualquier app.</li><li><b>Tu día.</b> Al abrirla te saluda con el clima y te muestra lo próximo que tenés, tu agenda y lo que falta comprar.</li><li><b>Recordatorios a mano.</b> Además de dictárselos, ahora los anotás eligiendo el día, la hora y si se repiten.</li><li><b>Ajustes ordenados.</b> Todo agrupado y fácil de encontrar, con los colores a un toque.</li></ul></div></li>
+          <li class="ultima" data-app="celu"><div class="vn"><span class="ver">Móvil 3.1</span><span class="app celu">Celu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>Contesta siempre</h3><p>Arreglamos que a veces FRIDAY en el celu no contestaba o se quedaba pensando.</p><ul><li><b>Siempre responde.</b> Si su cerebro tarda o se traba, prueba de otra forma y, si no puede, te avisa en vez de quedarse pensando.</li><li><b>Más espacio.</b> La charla tiene más lugar en la pantalla y se mueve más liviana, sobre todo en el iPhone.</li></ul></div></li>
+          <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.0</span><span class="app celu">Celu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>El celu, renovado</h3><p>FRIDAY en el celu cambió entera: más fácil de usar y más linda.</p><ul><li><b>Pestañas abajo.</b> Inicio, Agenda, Compras, Música y Más, como cualquier app.</li><li><b>Tu día.</b> Al abrirla te saluda con el clima y te muestra lo próximo que tenés, tu agenda y lo que falta comprar.</li><li><b>Recordatorios a mano.</b> Además de dictárselos, ahora los anotás eligiendo el día, la hora y si se repiten.</li><li><b>Ajustes ordenados.</b> Todo agrupado y fácil de encontrar, con los colores a un toque.</li></ul></div></li>
           <li data-app="compu"><div class="vn"><span class="ver">101.04</span><span class="app compu">Compu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>Un instalador de verdad</h3><p>Instalar FRIDAY en Windows ahora es como instalar cualquier programa.</p><ul><li><b>FRIDAY-Setup.</b> Un solo archivo: lo abrís, tocás Instalar y listo. No pide permiso de administrador.</li><li><b>Como cualquier programa.</b> Aparece en «Aplicaciones instaladas» de Windows y desde ahí la desinstalás.</li><li><b>Volver atrás.</b> Si una actualización te anda mal, volvés a la versión que tenías con un clic.</li></ul></div></li>
           <li data-app="casa"><div class="vn"><span class="ver">Casa 4.1</span><span class="app casa">Tablet</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>La tablet pasa a beta</h3><p>Para entenderte bien desde lejos, la tablet necesita un micrófono mejor que el que trae. Mientras lo resolvemos, FRIDAY Casa queda en pruebas.</p></div></li>
           <li data-app="compu"><div class="vn"><span class="ver">101.03</span><span class="app compu">Compu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>También en Linux</h3><p>FRIDAY ya anda en Ubuntu, Mint, Debian, Fedora y parecidas, con las mismas actualizaciones que en Windows.</p></div></li>
@@ -825,7 +837,7 @@ section.hero{padding-block:0}
 <footer>
   <div class="pie"><div class="wrap pgrid">
     <a class="logo" href="#inicio" data-ir="inicio" aria-label="BufaLabs, inicio"><img decoding="async" src="img/bufalabs-logo.svg" width="1623" height="512" loading="lazy" alt="BufaLabs: tecnología, inteligencia artificial"></a>
-    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>101.04</span>, Móvil 3.0 y Casa 4.1 (beta). © 2026 BufaLabs</p></div>
+    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>101.04</span>, Móvil 3.1 y Casa 4.1 (beta). © 2026 BufaLabs</p></div>
   </div></div>
 </footer>
 
@@ -982,7 +994,7 @@ document.querySelectorAll('[data-peso]').forEach(e=>{
 
 // ---- cada sección es una página: #hace, #nuevo, #cerebros, #nosotros, #instalar (y #inicio)
 const VISTAS=[...document.querySelectorAll('.vista')];
-const PAGINAS={inicio:'BufaLabs · FRIDAY', hace:'Qué hace · FRIDAY', nuevo:'Lo nuevo · FRIDAY', cerebros:'Por dentro · FRIDAY', nosotros:'Nosotros · BufaLabs', instalar:'Instalala · FRIDAY'};
+const PAGINAS={inicio:'BufaLabs · FRIDAY', hace:'Qué hace · FRIDAY', nuevo:'Lo nuevo · FRIDAY', actualizaciones:'Actualizaciones · FRIDAY', cerebros:'Por dentro · FRIDAY', nosotros:'Nosotros · BufaLabs', instalar:'Instalala · FRIDAY'};
 let vistaActual=null;
 function vistaDe(id){
   if(!id || PAGINAS[id]) return PAGINAS[id] ? id : 'inicio';

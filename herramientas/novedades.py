@@ -31,9 +31,7 @@ def render(s, archivo='/home/claude/bufalabs-site/novedades.json'):
         lis.append(f'          <li{clase} data-app="{n["app"]}"><div class="vn">{meta}</div><div class="min0">{cuerpo}</div></li>')
     bloque = (
         '      <div class="hist" id="actualizaciones">\n'
-        '        <h2 class="titulo">Actualizaciones.</h2>\n'
-        '        <p class="intro">Todo lo que fue cambiando en FRIDAY, en la compu, en el celu y en la tablet. '
-        'Las actualizaciones te llegan solas: no tenés que bajar nada.</p>\n'
+        '        <h2 class="titulo oculto">Todas las actualizaciones</h2>\n'
         '        <div class="filtros" aria-label="Mostrar"><button class="on" data-f="" aria-pressed="true">Todas</button>'
         '<button data-f="compu" aria-pressed="false">Compu</button><button data-f="celu" aria-pressed="false">Celu</button>'
         '<button data-f="casa" aria-pressed="false">Tablet</button></div>\n'
