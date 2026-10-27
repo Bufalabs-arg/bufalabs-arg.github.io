@@ -1,0 +1,32 @@
+[
+  {"fecha": "2026-10-26", "app": "celu", "version": "Móvil 3.0", "titulo": "El celu, renovado",
+   "resumen": "FRIDAY en el celu cambió entera: más fácil de usar y más linda.",
+   "items": [
+     ["Pestañas abajo", "Inicio, Agenda, Compras, Música y Más, como cualquier app."],
+     ["Tu día", "Al abrirla te saluda con el clima y te muestra lo próximo que tenés, tu agenda y lo que falta comprar."],
+     ["Recordatorios a mano", "Además de dictárselos, ahora los anotás eligiendo el día, la hora y si se repiten."],
+     ["Ajustes ordenados", "Todo agrupado y fácil de encontrar, con los colores a un toque."]
+   ]},
+  {"fecha": "2026-10-26", "app": "compu", "version": "101.04", "titulo": "Un instalador de verdad",
+   "resumen": "Instalar FRIDAY en Windows ahora es como instalar cualquier programa.",
+   "items": [
+     ["FRIDAY-Setup", "Un solo archivo: lo abrís, tocás Instalar y listo. No pide permiso de administrador."],
+     ["Como cualquier programa", "Aparece en «Aplicaciones instaladas» de Windows y desde ahí la desinstalás."],
+     ["Volver atrás", "Si una actualización te anda mal, volvés a la versión que tenías con un clic."]
+   ]},
+  {"fecha": "2026-10-26", "app": "casa", "version": "Casa 4.1", "titulo": "La tablet pasa a beta",
+   "resumen": "Para entenderte bien desde lejos, la tablet necesita un micrófono mejor que el que trae. Mientras lo resolvemos, FRIDAY Casa queda en pruebas.",
+   "items": []},
+  {"fecha": "2026-10-26", "app": "compu", "version": "101.03", "titulo": "También en Linux",
+   "resumen": "FRIDAY ya anda en Ubuntu, Mint, Debian, Fedora y parecidas, con las mismas actualizaciones que en Windows.",
+   "items": []},
+  {"fecha": "2026-10-26", "app": "compu", "version": "101.02", "titulo": "Pantalla de carga",
+   "resumen": "Al abrirla, el núcleo de FRIDAY se arma y sus sistemas se prenden uno por uno.",
+   "items": []},
+  {"fecha": "2026-10-26", "app": "compu", "version": "101.01", "titulo": "Las actualizaciones, en su propia ventana",
+   "resumen": "Cuando sale una versión nueva, antes de abrir FRIDAY te muestra qué trae y cómo se instala, paso a paso.",
+   "items": []},
+  {"fecha": "2026-10-25", "app": "compu", "version": "101", "titulo": "Se actualiza sola",
+   "resumen": "FRIDAY baja solo lo que cambió, revisa que venga firmado por BufaLabs y al terminar te cuenta las novedades.",
+   "items": []}
+]

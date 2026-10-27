@@ -251,6 +251,21 @@ section.hero{padding-block:0}
 .vlista>li.ultima .vn small{color:var(--claro-2)}
 .vlista>li.ultima p,.vlista>li.ultima ul li{color:var(--claro)}
 .vlista>li.ultima ul b{color:var(--blanco)}
+.vlista .vn time{display:block;margin-top:10px;font:600 15px var(--text);letter-spacing:0;color:var(--tinta-3)}
+.vlista>li.ultima .vn time{color:var(--claro-2)}
+.app{display:inline-block;margin-top:8px;padding:3px 10px;border-radius:999px;font:700 13px/1.4 var(--text);letter-spacing:0}
+.app.compu{background:var(--papel-2);color:var(--azul-3)}
+.app.celu{background:#DDF7EC;color:#0F6B47}
+.app.casa{background:#FFF1CC;color:#7A5200}
+.vlista>li.ultima .app{background:rgba(255,255,255,.18);color:var(--blanco)}
+.vlista .ver{display:block}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.filtros button{padding:9px 16px;border-radius:999px;border:1px solid var(--linea);background:var(--blanco);font:700 16px var(--text);color:var(--tinta-2);cursor:pointer}
+.filtros button.on{background:var(--tinta);border-color:var(--tinta);color:var(--blanco)}
+.ultimo{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:8px 16px 8px 8px;border-radius:999px;background:rgba(255,255,255,.14);color:var(--blanco);text-decoration:none;font-size:16px;max-width:100%}
+.ultimo b{flex:none;padding:3px 10px;border-radius:999px;background:var(--sol);color:var(--sol-tinta);font-size:13px}
+.ultimo span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ultimo:hover{background:rgba(255,255,255,.22)}
 
 /* tres cerebros */
 .cerebros{background:var(--papel-2)}
@@ -496,6 +511,7 @@ section.hero{padding-block:0}
         <h1><span>FRIDAY</span><span>vive en</span><span>tu casa.</span></h1>
         <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, ya va por la versión <span data-ver>101.04</span> y se actualiza sola.</p>
         <div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a><a class="btn no" href="#hace">Ver qué hace</a></div>
+        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>El celu, renovado · Celu 3.0</span></a>
       </div>
       <div class="ella">
         <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>101.04</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
@@ -606,17 +622,18 @@ section.hero{padding-block:0}
         <li><h3>Pantalla de carga</h3><p>Al abrirla, el núcleo se arma y los sistemas se prenden uno por uno.</p></li>
         <li><h3>Te cuenta lo nuevo</h3><p>Después de cada actualización te muestra una mini presentación con las novedades.</p></li>
       </ul>
-      <div class="hist" id="historial">
-        <h2 class="titulo">La compu, versión por versión.</h2>
-        <p class="intro">Lo que fue cambiando en FRIDAY para Windows y Linux. Te llega sola: no tenés que bajar nada.</p>
-        <ol class="vlista" id="vlista" reversed>
-          <li class="ultima" data-v="101.04"><div class="vn">101.04<small>La última</small></div><div class="min0"><h3>Un instalador de verdad</h3><ul>
-            <li><b>FRIDAY-Setup.</b> Se instala con un solo archivo, como cualquier programa, y aparece en «Aplicaciones instaladas» para desinstalarla cuando quieras.</li>
-            <li><b>Volver a la versión anterior.</b> Si una actualización te anda mal, volvés a la que tenías con un clic.</li></ul></div></li>
-          <li data-v="101.03"><div class="vn">101.03</div><div class="min0"><h3>También en Linux</h3><p>FRIDAY anda en Ubuntu, Mint, Debian, Fedora y parecidas, con las mismas actualizaciones que en Windows.</p></div></li>
-          <li data-v="101.02"><div class="vn">101.02</div><div class="min0"><h3>Pantalla de carga</h3><p>Al abrirla, el núcleo se arma y los sistemas se prenden uno por uno: núcleo BUFIA, voz, memoria y aparatos.</p></div></li>
-          <li data-v="101.01"><div class="vn">101.01</div><div class="min0"><h3>Su propio instalador</h3><p>Cuando hay una versión nueva, aparece antes de abrir FRIDAY, en una ventana propia, con lo que trae y el progreso.</p></div></li>
-          <li data-v="101"><div class="vn">101</div><div class="min0"><h3>Se actualiza sola</h3><p>Baja solo lo que cambió, revisa la firma de BufaLabs y te muestra lo nuevo en una mini presentación.</p></div></li>
+      <div class="hist" id="actualizaciones">
+        <h2 class="titulo">Actualizaciones.</h2>
+        <p class="intro">Todo lo que fue cambiando en FRIDAY, en la compu, en el celu y en la tablet. Las actualizaciones te llegan solas: no tenés que bajar nada.</p>
+        <div class="filtros" aria-label="Mostrar"><button class="on" data-f="" aria-pressed="true">Todas</button><button data-f="compu" aria-pressed="false">Compu</button><button data-f="celu" aria-pressed="false">Celu</button><button data-f="casa" aria-pressed="false">Tablet</button></div>
+        <ol class="vlista" id="vlista">
+          <li class="ultima" data-app="celu"><div class="vn"><span class="ver">Móvil 3.0</span><span class="app celu">Celu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>El celu, renovado</h3><p>FRIDAY en el celu cambió entera: más fácil de usar y más linda.</p><ul><li><b>Pestañas abajo.</b> Inicio, Agenda, Compras, Música y Más, como cualquier app.</li><li><b>Tu día.</b> Al abrirla te saluda con el clima y te muestra lo próximo que tenés, tu agenda y lo que falta comprar.</li><li><b>Recordatorios a mano.</b> Además de dictárselos, ahora los anotás eligiendo el día, la hora y si se repiten.</li><li><b>Ajustes ordenados.</b> Todo agrupado y fácil de encontrar, con los colores a un toque.</li></ul></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101.04</span><span class="app compu">Compu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>Un instalador de verdad</h3><p>Instalar FRIDAY en Windows ahora es como instalar cualquier programa.</p><ul><li><b>FRIDAY-Setup.</b> Un solo archivo: lo abrís, tocás Instalar y listo. No pide permiso de administrador.</li><li><b>Como cualquier programa.</b> Aparece en «Aplicaciones instaladas» de Windows y desde ahí la desinstalás.</li><li><b>Volver atrás.</b> Si una actualización te anda mal, volvés a la versión que tenías con un clic.</li></ul></div></li>
+          <li data-app="casa"><div class="vn"><span class="ver">Casa 4.1</span><span class="app casa">Tablet</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>La tablet pasa a beta</h3><p>Para entenderte bien desde lejos, la tablet necesita un micrófono mejor que el que trae. Mientras lo resolvemos, FRIDAY Casa queda en pruebas.</p></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101.03</span><span class="app compu">Compu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>También en Linux</h3><p>FRIDAY ya anda en Ubuntu, Mint, Debian, Fedora y parecidas, con las mismas actualizaciones que en Windows.</p></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101.02</span><span class="app compu">Compu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>Pantalla de carga</h3><p>Al abrirla, el núcleo de FRIDAY se arma y sus sistemas se prenden uno por uno.</p></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101.01</span><span class="app compu">Compu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>Las actualizaciones, en su propia ventana</h3><p>Cuando sale una versión nueva, antes de abrir FRIDAY te muestra qué trae y cómo se instala, paso a paso.</p></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101</span><span class="app compu">Compu</span><time datetime="2026-10-25">25 de octubre</time></div><div class="min0"><h3>Se actualiza sola</h3><p>FRIDAY baja solo lo que cambió, revisa que venga firmado por BufaLabs y al terminar te cuenta las novedades.</p></div></li>
         </ol>
       </div>
     </div>
@@ -942,22 +959,16 @@ fetch('actualizaciones/friday.json',{cache:'no-store'}).then(r=>r.ok?r.json():nu
   const d=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(m.datos), c=>c.charCodeAt(0))));
   const v=parseInt(d.version,10), full=d.completa||d.version; if(!(v>0)) return;
   document.querySelectorAll('[data-ver]').forEach(e=>e.textContent=full);
-  pintarUltima(full, d.titulo, d.novedades);
   if(v!==VER){ VER=v; document.querySelectorAll('[data-vergrande]').forEach(e=>e.textContent=String(v)); pintarPuntos(); }
 }).catch(()=>{});
 
 
-// ---- "La compu, versión por versión": la última sale del aviso de actualización publicado
-function pintarUltima(full, titulo, novs){
-  const ol=$('vlista'); if(!ol || !Array.isArray(novs) || !novs.length) return;
-  const esc=t=>String(t==null?'':t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  let li=[...ol.children].find(x=>x.dataset.v===full);
-  if(!li){ li=document.createElement('li'); li.dataset.v=full; ol.prepend(li); }
-  [...ol.children].forEach(x=>{ x.classList.remove('ultima'); const s=x.querySelector('.vn small'); if(s) s.remove(); });
-  li.classList.add('ultima');
-  const t=String(titulo||'').replace(/\s*\([\d.]+\)\s*$/,'');
-  li.innerHTML=`<div class="vn">${esc(full)}<small>La última</small></div><div class="min0"><h3>${esc(t||'Versión '+full)}</h3><ul>${novs.map(n=>`<li><b>${esc(n.titulo)}.</b> ${esc(n.texto)}</li>`).join('')}</ul></div>`;
-}
+// ---- Actualizaciones: filtrar por compu, celu o tablet
+document.querySelectorAll('.filtros [data-f]').forEach(b=>b.addEventListener('click', ()=>{
+  const f=b.dataset.f;
+  document.querySelectorAll('.filtros [data-f]').forEach(x=>{ x.classList.toggle('on', x===b); x.setAttribute('aria-pressed', x===b); });
+  document.querySelectorAll('#vlista>li').forEach(li=>{ li.hidden=!!f && li.dataset.app!==f; });
+}));
 // ---- Instalala: la tarjeta de tu aparato, resaltada
 (function(){
   const ua=navigator.userAgent||'', touch=navigator.maxTouchPoints>1;
