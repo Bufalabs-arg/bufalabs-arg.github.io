@@ -1,5 +1,35 @@
 [
  {
+  "fecha": "2026-10-27",
+  "app": "celu",
+  "version": "Móvil 3.3",
+  "titulo": "Pantalla de carga y claves nuevas",
+  "resumen": "El celu arranca como la compu y acepta las claves nuevas de Gemini.",
+  "items": [
+   [
+    "Pantalla de carga",
+    "Al abrirla, el núcleo de FRIDAY se arma y sus sistemas se prenden uno por uno."
+   ],
+   [
+    "Claves «AQ.»",
+    "Las claves nuevas de Gemini andan, sin tener que empezar con «AIza»."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-27",
+  "app": "compu",
+  "version": "101.06",
+  "titulo": "Las claves nuevas de Gemini",
+  "resumen": "Google cambió el formato de las claves de Gemini: ahora empiezan con «AQ.». FRIDAY acepta las nuevas y las viejas.",
+  "items": [
+   [
+    "Sin trabas",
+    "Ya no te pide que la clave empiece de una forma ni te frena al guardar los Ajustes."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-10-26",
   "app": "celu",
   "version": "Móvil 3.2",
