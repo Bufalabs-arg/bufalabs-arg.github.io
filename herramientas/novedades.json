@@ -2,6 +2,40 @@
  {
   "fecha": "2026-10-26",
   "app": "celu",
+  "version": "Móvil 3.2",
+  "titulo": "Dos cerebros también en el celu",
+  "resumen": "El celu pide las dos claves gratis y, si Groq no puede contestar, contesta Gemini.",
+  "items": [
+   [
+    "Nunca muda",
+    "Si Groq se queda sin cupo, tarda o tiene la clave mal, FRIDAY te contesta igual con Gemini."
+   ],
+   [
+    "Una sola vez",
+    "Si te faltaba la clave de Gemini, te la pide al abrir, con los pasos. Si tenés el celu unido a la compu, la toma de ahí y ni te enterás."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-26",
+  "app": "compu",
+  "version": "101.05",
+  "titulo": "Dos cerebros, siempre",
+  "resumen": "FRIDAY en la compu ahora pide las dos claves gratis, la de Groq y la de Gemini, así nunca te quedás sin respuestas.",
+  "items": [
+   [
+    "Si uno se cansa, sigue el otro",
+    "Cuando una de las dos se queda sin cupo del día o falla, FRIDAY sigue pensando con la otra."
+   ],
+   [
+    "Un paso nuevo",
+    "El tutorial te explica cómo sacar la clave de Gemini en un minuto. Si ya usabas FRIDAY, te la pide una sola vez."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-26",
+  "app": "celu",
   "version": "Móvil 3.1",
   "titulo": "Contesta siempre",
   "resumen": "Arreglamos que a veces FRIDAY en el celu no contestaba o se quedaba pensando.",
