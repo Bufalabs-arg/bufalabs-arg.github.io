@@ -6,7 +6,7 @@
 <title>BufaLabs · FRIDAY</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="color-scheme" content="light">
-<meta name="description" content="FRIDAY es una inteligencia artificial gratis que vive en tu compu, en la tablet de la casa y en tu celu. Hecha en Argentina por BufaLabs.">
+<meta name="description" content="FRIDAY es una inteligencia artificial gratis que vive en tu compu y en tu celu. Hecha en Argentina por BufaLabs.">
 <meta name="theme-color" content="#2F6BE3">
 <meta property="og:title" content="FRIDAY, de BufaLabs">
 <meta property="og:description" content="Una inteligencia artificial que te habla, te escucha y hace cosas de verdad. Gratis.">
@@ -182,13 +182,28 @@ section.hero{padding-block:0}
 .lugar{min-width:0}
 .lugar figure,.novedad figure,.fotos figure{margin:0}
 .pantalla{border-radius:22px;overflow:hidden;background:var(--tinta);box-shadow:0 40px 70px -40px rgba(14,27,61,.55), 0 0 0 10px var(--tinta)}
-.lugar.tablet{grid-row:1/3}
-.lugar.tablet .pantalla{border-radius:26px;box-shadow:0 40px 70px -40px rgba(14,27,61,.55), 0 0 0 14px var(--tinta)}
+.lugar.grande{grid-row:1/3}
+.lugar.grande .pantalla{border-radius:26px;box-shadow:0 40px 70px -40px rgba(14,27,61,.55), 0 0 0 14px var(--tinta)}
 .lugar.celu{display:grid;grid-template-columns:150px minmax(0,1fr);gap:22px;align-items:start}
 .lugar.celu .pantalla,.novedad.celu .pantalla{border-radius:26px;box-shadow:0 30px 50px -30px rgba(14,27,61,.6), 0 0 0 7px var(--tinta)}
 .lugar h3{margin:30px 0 6px;font:800 30px/1 var(--disp);font-variation-settings:"wdth" 96}
 .lugar.celu h3{margin-top:4px}
 .lugar p{margin:0;color:var(--tinta-2);max-width:42ch}
+.lugar.compu h3{margin-top:34px}
+.lugar.beta{display:block;align-self:start;text-decoration:none;padding:22px 24px 24px;border-radius:24px;border:2px dashed var(--claro-2);transition:border-color .2s,background .2s}
+.lugar.beta:hover{border-color:var(--azul-2);background:var(--blanco)}
+.lugar.beta h3{margin:10px 0 6px;font-size:24px}
+.lugar.beta p{font-size:17px}
+.etq{display:inline-block;padding:3px 11px;border-radius:999px;background:var(--sol);color:var(--sol-tinta);font:700 13px/1.4 var(--text);letter-spacing:.02em;vertical-align:middle}
+.donde h3 .etq{margin-left:8px;position:relative;top:-3px}
+.donde article.beta{background:transparent;border:2px dashed var(--claro-2)}
+.donde article.beta.tuya{border-style:solid;border-color:var(--azul)}
+.donde .req{margin:0 0 8px;color:var(--tinta-2);font-size:16px}
+.donde ul.req{padding-left:20px;margin-bottom:18px;display:grid;gap:6px}
+.donde ul.req li{padding:0;color:var(--tinta-2)}
+.donde ul.req li::before{content:none}
+.donde ul.req b{color:var(--tinta)}
+.donde .btn.sec{background:transparent;color:var(--azul-3);border:2px solid var(--azul-2)}
 
 /* le hablás y hace: frases */
 .hace{background:var(--tinta);color:var(--blanco)}
@@ -410,7 +425,7 @@ section.hero{padding-block:0}
   .cgrid{grid-template-areas:"texto" "red" "demo"}
   .red{margin-top:34px}
   .lugares{grid-template-columns:minmax(0,1fr)}
-  .lugar.tablet{grid-row:auto}
+  .lugar.grande{grid-row:auto}
   .frases li{grid-template-columns:minmax(0,1fr);gap:8px}
   .charla{grid-template-columns:minmax(0,1fr)}.testigo{display:none}
   .fotos{grid-template-columns:minmax(0,1fr)}
@@ -479,30 +494,30 @@ section.hero{padding-block:0}
     <div class="hgrid">
       <div class="min0">
         <h1><span>FRIDAY</span><span>vive en</span><span>tu casa.</span></h1>
-        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad: en la compu, en la tablet del living y en el celu. Gratis, ya va por la versión <span data-ver>101.04</span> y se actualiza sola.</p>
+        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, ya va por la versión <span data-ver>101.04</span> y se actualiza sola.</p>
         <div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a><a class="btn no" href="#hace">Ver qué hace</a></div>
       </div>
       <div class="ella">
         <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>101.04</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
         <button id="cara" class="cara" type="button" aria-label="La cara de FRIDAY. Tocala para cambiarle la expresión."></button>
-        <div class="globo" id="globo" aria-live="polite"><q id="gQ">Friday, prendé la luz del living</q><p id="gR">Listo. ¿Bajo un poco el brillo para la cena?</p></div>
+        <div class="globo" id="globo" aria-live="polite"><q id="gQ">Friday, mirá mi pantalla</q><p id="gR">Veo que el Word se trabó. ¿Lo cierro y lo abro de nuevo?</p></div>
       </div>
     </div>
   </div>
 </section>
 <div class="cinta" aria-hidden="true"><div class="fila">
-  <span>Te escucha</span><span>Pone caras</span><span>Protocolos</span><span>Modo guardia</span><span>Noticiero</span><span>Videollamadas</span><span>Intercom</span><span>Maneja la compu</span><span>Cocina manos libres</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Windows y Linux</span><span>Hecha en Argentina</span>
-  <span>Te escucha</span><span>Pone caras</span><span>Protocolos</span><span>Modo guardia</span><span>Noticiero</span><span>Videollamadas</span><span>Intercom</span><span>Maneja la compu</span><span>Cocina manos libres</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Windows y Linux</span><span>Hecha en Argentina</span>
+  <span>Te escucha</span><span>Pone caras</span><span>Maneja la compu</span><span>Ve tu pantalla</span><span>Modo estudio</span><span>Sigue precios</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Windows y Linux</span><span>Se actualiza sola</span><span>Hecha en Argentina</span>
+  <span>Te escucha</span><span>Pone caras</span><span>Maneja la compu</span><span>Ve tu pantalla</span><span>Modo estudio</span><span>Sigue precios</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Windows y Linux</span><span>Se actualiza sola</span><span>Hecha en Argentina</span>
 </div></div>
   <section class="atajos" aria-label="Secciones">
     <div class="wrap">
       <h2 class="titulo">Elegí por dónde arrancar.</h2>
       <div class="atgrid">
-        <a class="at at-hace" href="#hace" data-ir="hace"><span class="at-tx"><b>Qué hace</b><em>La tablet del living, la compu y el celu: todo lo que le podés pedir.</em></span><img src="img/tablet-inicio.webp" width="1280" height="800" loading="lazy" alt=""></a>
-        <a class="at at-nuevo" href="#nuevo" data-ir="nuevo"><span class="at-tx"><b>Lo nuevo</b><em>Protocolos, modo guardia, noticiero y más.</em></span><img src="img/tablet-protocolo.webp" width="1280" height="800" loading="lazy" alt=""></a>
+        <a class="at at-hace" href="#hace" data-ir="hace"><span class="at-tx"><b>Qué hace</b><em>La compu y el celu: todo lo que le podés pedir.</em></span><img src="img/compu-estudio.webp" width="1280" height="800" loading="lazy" alt=""></a>
+        <a class="at at-nuevo" href="#nuevo" data-ir="nuevo"><span class="at-tx"><b>Lo nuevo</b><em>El instalador nuevo, la vuelta atrás y Linux.</em></span><img src="img/compu-setup.webp" width="1840" height="1280" loading="lazy" alt=""></a>
         <a class="at at-dentro" href="#cerebros" data-ir="cerebros"><span class="at-tx"><b>Por dentro</b><em>BUFIA y sus tres cerebros. Probalo.</em></span><img class="at-ico" src="img/bufalabs-icono.svg" width="120" height="120" loading="lazy" alt=""></a>
         <a class="at at-nos" href="#nosotros" data-ir="nosotros"><span class="at-tx"><b>Nosotros</b><em>Un laboratorio chico y más de cien versiones.</em></span><span class="at-num" data-vergrande>101</span></a>
-        <a class="at at-inst" href="#instalar" data-ir="instalar"><span class="at-tx"><b>Instalala gratis</b><em>Windows, Linux, la tablet y el celu.</em></span><span class="at-flecha" aria-hidden="true"></span></a>
+        <a class="at at-inst" href="#instalar" data-ir="instalar"><span class="at-tx"><b>Instalala gratis</b><em>Windows, Linux y el celu.</em></span><span class="at-flecha" aria-hidden="true"></span></a>
       </div>
     </div>
   </section>
@@ -515,26 +530,22 @@ section.hero{padding-block:0}
 </div>
 
 <div class="vista" data-vista="hace" id="v-hace" hidden>
-  <div class="cab"><div class="wrap"><h1 class="cab-t">Qué hace</h1><p class="cab-p">Todo lo que FRIDAY hace en tu casa: en la tablet del living, en la compu y en el celu.</p></div></div>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Qué hace</h1><p class="cab-p">Todo lo que FRIDAY hace por vos, en la compu y en el celu.</p></div></div>
   <section class="lugares-sec" id="lugares">
     <div class="wrap">
-      <h2 class="titulo">Una sola FRIDAY, en tres lugares.</h2>
-      <p class="intro">Lo que le contás en un lado lo sabe en los otros: la lista de compras, los recordatorios, las tareas, lo que estudiaste. Todo viaja cifrado entre tus aparatos.</p>
+      <h2 class="titulo">Una sola FRIDAY, en la compu y en el celu.</h2>
+      <p class="intro">Lo que le contás en un lado lo sabe en el otro: la lista de compras, los recordatorios, las tareas, lo que estudiaste. Todo viaja cifrado entre tus aparatos.</p>
       <div class="lugares">
-        <div class="lugar tablet">
-          <figure class="pantalla"><img decoding="async" src="img/tablet-inicio.webp" width="1280" height="800" alt="La pantalla de inicio de FRIDAY Casa en la tablet: la hora, lo de hoy, el clima, una noticia y las apps de la casa."></figure>
-          <h3>La tablet del living</h3>
-          <p>Un sistema propio para toda la familia: luces, música, cocina, tareas con puntos, agenda, noticias, intercom y videollamadas. FRIDAY reconoce a cada uno y lo saluda por su nombre.</p>
-        </div>
-        <div class="lugar compu">
+        <div class="lugar compu grande">
           <figure class="pantalla"><img decoding="async" src="img/compu-estudio.webp" width="1280" height="800" loading="lazy" alt="FRIDAY en la compu, en modo estudio, con el reloj de la tanda."></figure>
           <h3>La compu</h3>
           <p>Con Windows o con Linux. Ve tu pantalla cuando se lo pedís, busca en internet de verdad, te ayuda a estudiar y maneja tus programas.</p>
         </div>
         <div class="lugar celu">
           <figure class="pantalla"><img decoding="async" src="img/celu.webp" width="560" height="1169" loading="lazy" alt="FRIDAY en el celu."></figure>
-          <div class="min0"><h3>El celu</h3><p>FRIDAY en el bolsillo: le hablás, te recuerda las cosas, tiene la misma lista que la casa y te avisa si pasa algo.</p></div>
+          <div class="min0"><h3>El celu</h3><p>FRIDAY en el bolsillo: le hablás, te recuerda las cosas, tiene la misma lista que la compu y te avisa si pasa algo.</p></div>
         </div>
+        <a class="lugar beta" href="#instalar" data-ir="instalar"><span class="etq">Beta</span><h3>La tablet de la casa</h3><p>FRIDAY Casa está en pruebas: para entenderte bien desde lejos necesita un micrófono mejor que el de la tablet. Mirá los requisitos.</p></a>
       </div>
     </div>
   </section>
@@ -543,23 +554,17 @@ section.hero{padding-block:0}
       <h2 class="titulo">Le hablás. Y hace.</h2>
       <p class="intro">Nada de menús: le decís lo que necesitás, como se lo dirías a alguien de tu casa.</p>
       <div class="charla"><ul class="frases">
-        <li data-emo="excited" tabindex="0"><q>¿Cómo hago milanesas al horno?</q><p>Te dicta la receta paso a paso sin que toques la pantalla, cambia las cantidades si son más y te pone los timers.</p></li>
-        <li data-emo="wink" tabindex="0"><q>Avisale a todos que la comida está lista.</q><p>Intercom: lo dice en voz alta en la tablet y en la compu, y te pueden contestar desde ahí.</p></li>
+        <li data-emo="excited" tabindex="0"><q>Mirá mi pantalla. ¿Por qué no anda esto?</q><p>Ve lo que tenés abierto y te explica qué pasa. Sin el cartel de «compartir pantalla» y solo cuando se lo pedís.</p></li>
+        <li data-emo="wink" tabindex="0"><q>Abrí Spotify y poné música.</q><p>Abre tus programas, pasa de tema y baja la música cuando te habla.</p></li>
         <li data-emo="proud" tabindex="0"><q>Ya lavé los platos.</q><p>Suma puntos al que la hizo y pasa el turno. El domingo anuncia quién ganó la semana.</p></li>
         <li data-emo="thinking" tabindex="0"><q>Modo estudio de historia.</q><p>Tandas con pausas, te avisa si te vas a TikTok y en la pausa te toma una ficha de lo que estudiaste.</p></li>
         <li data-emo="happy" tabindex="0"><q>Seguí el precio de las zapatillas y avisame si bajan de 80 mil.</q><p>Revisa Mercado Libre cada unas horas y te avisa cuando bajan. No inventa precios: solo te dice lo que encontró.</p></li>
-        <li data-emo="surprised" tabindex="0"><q>¿Qué ves? ¿Cómo me queda?</q><p>Mira con la cámara y te contesta. Reconoce a cada uno de la familia por la cara y por la voz.</p></li>
-        <li data-emo="love" tabindex="0"><q>Llamá a la compu.</q><p>Videollamada entre los aparatos de la casa, directa y cifrada. La achicás a una ventanita y seguís con lo tuyo.</p></li>
+        <li data-emo="surprised" tabindex="0"><q>¿Qué ves? ¿Cómo me queda?</q><p>Mira con la cámara de la compu, solo cuando se lo pedís, y te contesta.</p></li>
         <li data-emo="cool" tabindex="0"><q>¿Cómo está la compu?</q><p>Te dice cuánto procesador y memoria usa y qué es lo que más consume. Si se lo pedís, la bloquea o la apaga.</p></li>
       </ul><aside class="testigo" aria-hidden="true"><div id="cara2" class="cara"></div></aside></div>
-      <div class="fotos">
-        <figure><img decoding="async" src="img/tablet-cocina.webp" width="1280" height="800" loading="lazy" alt="La app Cocina: la receta de milanesas paso a paso, con un timer de 15 minutos."><figcaption>La cocina, manos libres.</figcaption></figure>
-        <figure><img decoding="async" src="img/tablet-tareas.webp" width="1280" height="800" loading="lazy" alt="La app Tareas: lo que toca hoy y los puntos de la semana."><figcaption>Las tareas, con puntos.</figcaption></figure>
-        <figure><img decoding="async" src="img/tablet-compu.webp" width="1280" height="800" loading="lazy" alt="La app Compu en la tablet: procesador, memoria, disco y batería de la compu, y botones para bloquearla, silenciarla o apagarla."><figcaption>La compu, desde el sillón.</figcaption></figure>
-      </div>
     </div>
   </section>
-  <a class="sig" href="#nuevo" data-ir="nuevo"><span class="wrap"><small>Seguí con</small><b>Lo nuevo</b><em>Protocolos, modo guardia y el noticiero.</em></span></a>
+  <a class="sig" href="#nuevo" data-ir="nuevo"><span class="wrap"><small>Seguí con</small><b>Lo nuevo</b><em>El instalador nuevo, la vuelta atrás y Linux.</em></span></a>
 </div>
 
 <div class="vista" data-vista="nuevo" id="v-nuevo" hidden>
@@ -567,33 +572,32 @@ section.hero{padding-block:0}
   <section class="nuevo" id="nuevo">
     <div class="wrap">
       <h2 class="titulo oculto">Lo nuevo de FRIDAY</h2>
-      <p class="intro">Ahora FRIDAY hace varias cosas con una sola frase, cuida la casa cuando no hay nadie y te cuenta las noticias como en la tele.</p>
+      <p class="intro">Ahora FRIDAY se instala como cualquier programa, se actualiza sola contándote qué cambió y, si algo te anda mal, vuelve atrás.</p>
       <div class="novedades">
         <div class="novedad">
-          <figure class="pantalla"><img decoding="async" src="img/tablet-protocolo.webp" width="1280" height="800" loading="lazy" alt="El protocolo Película en marcha en la tablet: pausar la música, luces al 15%, prender la tele y no dar avisos en voz alta por 150 minutos."></figure>
-          <div class="min0"><h3>Protocolos</h3>
-            <p>Una frase y FRIDAY hace todo junto, paso por paso, y te lo muestra en la pantalla. Vienen seis armados: buenas noches, película, me voy, llegué, buen día y fiesta. Los tuyos se los pedís con tus palabras.</p>
-            <p class="dice"><q>Friday, protocolo película</q></p></div>
-        </div>
-        <div class="novedad celu">
-          <figure class="pantalla"><img decoding="async" src="img/celu-guardia.webp" width="780" height="1600" loading="lazy" alt="Aviso en el celu: la tablet vio movimiento con la guardia activa, con la foto del living y un botón para desactivar la guardia."></figure>
-          <div class="min0"><h3>Modo guardia</h3>
-            <p>Cuando se van, la tablet mira el living. Si ve movimiento y no reconoce la cara, te manda la foto al celu, cifrada, y desde ahí la desactivás. Si es alguien de la familia, lo saluda y se apaga sola.</p>
-            <p class="dice"><q>Me voy. Activá la guardia</q></p></div>
+          <figure class="pantalla"><img decoding="async" src="img/compu-setup.webp" width="1840" height="1280" loading="lazy" alt="El instalador de FRIDAY al terminar: «¡Listo! Ya tenés FRIDAY 101.04», con el botón Abrir FRIDAY."></figure>
+          <div class="min0"><h3>Se instala como cualquier programa</h3>
+            <p>Un solo archivo, FRIDAY-Setup. No pide administrador, crea sus íconos y aparece en «Aplicaciones instaladas», desde donde la desinstalás cuando quieras.</p></div>
         </div>
         <div class="novedad">
-          <figure class="pantalla"><img decoding="async" src="img/tablet-noticiero.webp" width="1280" height="800" loading="lazy" alt="El noticiero de FRIDAY en la tablet: la noticia en grande con su foto, la lista de titulares al costado y la cinta de último momento abajo."></figure>
-          <div class="min0"><h3>El noticiero</h3>
-            <p>Junta los titulares de los diarios, con fotos, y te los lee uno por uno como en la tele. Le pedís la que te interesa y te la cuenta entera.</p>
-            <p class="dice"><q>¿Qué pasa en el mundo? Contame la segunda</q></p></div>
+          <figure class="pantalla"><img decoding="async" src="img/compu-actualizacion.webp" width="1840" height="1280" loading="lazy" alt="Aviso de FRIDAY: hay una versión nueva, la 101.04, con la lista de lo que trae y los botones Ahora no e Instalar."></figure>
+          <div class="min0"><h3>Se actualiza sola</h3>
+            <p>Cuando sale una versión nueva, te muestra qué trae antes de abrir. Baja solo lo que cambió, revisa la firma de BufaLabs y al terminar te cuenta las novedades una por una.</p>
+            <p class="dice"><q>Friday, buscá actualizaciones</q></p></div>
+        </div>
+        <div class="novedad">
+          <figure class="pantalla"><img decoding="async" src="img/compu-volver.webp" width="1840" height="1280" loading="lazy" alt="FRIDAY al día en la 101.04, con el link «¿La 101.04 te anda mal? Volver a la 101.03»."></figure>
+          <div class="min0"><h3>Vuelve atrás</h3>
+            <p>Si una actualización te anda mal, volvés a la versión que tenías con un clic. Tus datos no se tocan, y la que dejaste no se te ofrece sola por un mes.</p>
+            <p class="dice"><q>¿Qué hay de nuevo?</q></p></div>
         </div>
       </div>
       <ul class="extras">
         <li><h3>«Hola, Friday», como te salga</h3><p>Te escucha aunque digas su nombre al final o en el medio de la frase.</p></li>
-        <li><h3>Contesta una sola</h3><p>Si la tablet y la compu te oyen a la vez, contesta la que te escuchó mejor. No se pisan.</p></li>
-        <li><h3>Te recibe</h3><p>Cuando llegás, te saluda por tu nombre y te cuenta lo que tenés pendiente.</p></li>
+        <li><h3>También en Linux</h3><p>Ubuntu, Mint, Debian, Fedora y parecidas, con las mismas actualizaciones que en Windows.</p></li>
+        <li><h3>Te pone al día</h3><p>Cuando la abrís, te cuenta lo que tenés pendiente y los mensajes que te dejaron.</p></li>
         <li><h3>Se adelanta</h3><p>Si tenés algo afuera y va a llover, te avisa una hora antes para que lleves paraguas.</p></li>
-        <li><h3>Se actualiza sola</h3><p>Cuando hay una versión nueva te avisa, baja solo lo que cambió y se instala. Vienen firmadas por BufaLabs, y si una te anda mal, volvés a la anterior.</p></li>
+        <li><h3>Pantalla de carga</h3><p>Al abrirla, el núcleo se arma y los sistemas se prenden uno por uno.</p></li>
         <li><h3>Te cuenta lo nuevo</h3><p>Después de cada actualización te muestra una mini presentación con las novedades.</p></li>
       </ul>
       <div class="hist" id="historial">
@@ -687,11 +691,11 @@ section.hero{padding-block:0}
         <table>
           <thead><tr><th scope="col"><span class="skip">Qué</span></th><th scope="col">Una asistente común</th><th scope="col" class="f">FRIDAY</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Dónde vive</th><td class="c">En una pestaña del navegador</td><td class="f">En tu compu, en la tablet de la casa y en tu celu</td></tr>
+            <tr><th scope="row">Dónde vive</th><td class="c">En una pestaña del navegador</td><td class="f">En tu compu, con Windows o Linux, y en tu celu</td></tr>
             <tr><th scope="row">Cuánto sale</th><td class="c">Una suscripción todos los meses</td><td class="f">Nada. Usa servicios gratis de punta a punta</td></tr>
             <tr><th scope="row">Cómo habla</th><td class="c">Un español de manual</td><td class="f">Como nosotros, che</td></tr>
-            <tr><th scope="row">Qué hace</th><td class="c">Te contesta y listo</td><td class="f">Te contesta y lo hace: prende la luz, pone la tele, apaga la compu</td></tr>
-            <tr><th scope="row">Tu familia</th><td class="c">No sabe quién le habla</td><td class="f">Reconoce a cada uno por la cara y la voz</td></tr>
+            <tr><th scope="row">Qué hace</th><td class="c">Te contesta y listo</td><td class="f">Te contesta y lo hace: abre tus programas, pone la música, apaga la compu</td></tr>
+            <tr><th scope="row">Tu compu</th><td class="c">No la puede tocar</td><td class="f">Ve tu pantalla y maneja tus programas, cuando se lo pedís</td></tr>
             <tr><th scope="row">Cerebros</th><td class="c">Uno solo. Si se cae, esperás</td><td class="f">Tres, y BUFIA elige el mejor para cada cosa</td></tr>
             <tr><th scope="row">Si algo falla</th><td class="c">Un cartel de error</td><td class="f">Cambia de cerebro y sigue. Y si no, te dice qué pasa</td></tr>
             <tr><th scope="row">Quién la hace</th><td class="c">Una empresa gigante</td><td class="f">Un laboratorio chico que la mejora versión por versión</td></tr>
@@ -726,7 +730,7 @@ section.hero{padding-block:0}
         <li style="--c:var(--azul-2)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v4.5h-4.5"/></svg></span>
           <div><h3>Que nunca te deje colgado</h3><p>Si un cerebro se cae, salta otro. Y si algo falla, se hace un chequeo y te dice qué pasa.</p></div></li>
         <li style="--c:var(--azul);--ci:var(--blanco)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2.5"/><path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg></span>
-          <div><h3>Que lo tuyo sea tuyo</h3><p>Lo que comparten tus aparatos viaja cifrado. Las caras y las voces de la familia no salen de la tablet.</p></div></li>
+          <div><h3>Que lo tuyo sea tuyo</h3><p>Lo que comparten tus aparatos viaja cifrado, y la cámara y la pantalla solo se miran cuando se lo pedís.</p></div></li>
       </ul>
     </div>
   </section>
@@ -744,21 +748,21 @@ section.hero{padding-block:0}
         <li><b>v01</b><h3>Arranca</h3><p>Una idea, una compu y muchas ganas de que funcione.</p></li>
         <li><b>v62</b><h3>Llega al celu</h3><p>FRIDAY en el bolsillo, unida a la compu con un código.</p></li>
         <li><b>v70</b><h3>Presentación oficial</h3><p>La isla flotante y la presentación animada, con su cara y sus expresiones.</p></li>
-        <li><b>v84</b><h3>La tablet de la casa</h3><p>Nace FRIDAY Casa: un sistema propio para toda la familia.</p></li>
-        <li><b>v100</b><h3>Protocolos y guardia</h3><p>Protocolos, modo guardia, noticiero y la compu manejada desde el sillón.</p></li>
-        <li><b>v101</b><h3>Hoy</h3><p>Se actualiza sola, te muestra lo nuevo y ahora también anda en Linux.</p></li>
+        <li><b>v84</b><h3>La tablet de la casa</h3><p>Nace FRIDAY Casa, un sistema para toda la familia. Hoy sigue en beta.</p></li>
+        <li><b>v100</b><h3>Cien versiones</h3><p>Cada una probada en casa antes de quedarse.</p></li>
+        <li><b>v101</b><h3>Hoy</h3><p>Se instala como cualquier programa, se actualiza sola y anda en Windows y en Linux.</p></li>
       </ol>
     </div>
   </section>
-  <a class="sig" href="#instalar" data-ir="instalar"><span class="wrap"><small>Seguí con</small><b>Instalala</b><em>Gratis, en Windows, Linux, la tablet y el celu.</em></span></a>
+  <a class="sig" href="#instalar" data-ir="instalar"><span class="wrap"><small>Seguí con</small><b>Instalala</b><em>Gratis, en Windows, Linux y el celu.</em></span></a>
 </div>
 
 <div class="vista" data-vista="instalar" id="v-instalar" hidden>
-  <div class="cab"><div class="wrap"><h1 class="cab-t">Instalala</h1><p class="cab-p">Gratis, en la compu con Windows o con Linux, en la tablet de la casa y en el celu.</p></div></div>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Instalala</h1><p class="cab-p">Gratis, en la compu con Windows o con Linux, y en el celu.</p></div></div>
   <section class="instalar" id="instalar">
     <div class="wrap">
       <h2 class="titulo oculto">Instalala</h2>
-      <p class="intro">Empezá por la compu, con Windows o con Linux: después la tablet y el celu se unen a ella con un código.</p>
+      <p class="intro">Empezá por la compu, con Windows o con Linux: después el celu se une a ella con un código.</p>
       <div class="donde">
         <article data-sis="windows"><span class="tuyat">Para esta compu</span><h3>La compu, con Windows</h3><p class="para">Windows 10 u 11</p>
           <ol><li><b>Descargá FRIDAY-Setup</b> y abrilo. Si Windows dice que «protegió su PC», tocá <b>Más información</b> y <b>Ejecutar de todas formas</b>.</li><li>Tocá <b>Instalar</b>. No pide administrador: crea los íconos y queda en <b>Aplicaciones instaladas</b>, como cualquier programa.</li><li>Seguí el tutorial. Te pide una <b>llave gratis de Groq</b>, que es el cerebro.</li><li>Listo: de ahí en adelante <b>se actualiza sola</b>.</li></ol>
@@ -769,12 +773,13 @@ section.hero{padding-block:0}
           <ol><li><b>Descargá FRIDAY</b> y descomprimí el archivo.</li><li>En una terminal, en esa carpeta: <b>sh instalar.sh</b>. No pide contraseña.</li><li>Queda en el <b>menú de aplicaciones</b> y arranca sola. Se abre en Chrome, Edge o Chromium.</li><li>Listo: de ahí en adelante <b>se actualiza sola</b>.</li></ol>
           <a class="btn" href="descargas/FRIDAY-linux.tar.gz" download>Descargar para Linux</a>
           <p class="peso" data-peso="descargas/FRIDAY-linux.tar.gz"></p></article>
-        <article data-sis="tablet"><span class="tuyat">Para esta tablet</span><h3>La tablet</h3><p class="para">Android, con Chrome</p>
-          <ol><li>Abrí <b>FRIDAY Casa</b> en Chrome.</li><li>Menú ⋮, <b>Agregar a la pantalla principal</b>, y abrila desde ese ícono.</li><li>Escaneá el código que muestra con tu celu: la configurás desde ahí.</li></ol>
-          <a class="btn" href="https://pedropiratita134.github.io/FRIDAY/panel.html">Abrir FRIDAY Casa</a></article>
         <article data-sis="celu"><span class="tuyat">Para este celu</span><h3>El celu</h3><p class="para">Android o iPhone</p>
           <ol><li>Abrí <b>FRIDAY Móvil</b> en el navegador.</li><li>Agregala a la pantalla principal.</li><li>Unila a la compu con el código que te muestra FRIDAY en la compu.</li></ol>
           <a class="btn" href="https://pedropiratita134.github.io/FRIDAY/">Abrir FRIDAY Móvil</a></article>
+        <article data-sis="tablet" class="beta"><span class="tuyat">Para esta tablet</span><h3>La tablet <span class="etq">Beta</span></h3><p class="para">Android, con Chrome. Está en pruebas.</p>
+          <p class="req">Para que te entienda bien, necesita:</p>
+          <ul class="req"><li>Android 10 o más nuevo, con Chrome al día.</li><li>4 GB de memoria o más.</li><li>Un <b>micrófono USB de campo lejano</b> (de los que escuchan a varios metros). El de la tablet solo entiende si le hablás de cerca.</li><li>Estar enchufada y en el mismo wifi que la compu.</li></ul>
+          <a class="btn sec" href="https://pedropiratita134.github.io/FRIDAY/panel.html">Probar FRIDAY Casa</a></article>
       </div>
       <p class="nota">¿Algo no anda? Decile a FRIDAY «hacé un chequeo»: se prueba sola y arma un informe con lo que funciona y lo que no.</p>
       <div class="dudas" id="dudas">
@@ -785,7 +790,7 @@ section.hero{padding-block:0}
           <details><summary>¿Adónde van mis cosas?</summary><p>Tu memoria, tus ajustes y tus listas quedan en tus aparatos. Lo que le pedís viaja al cerebro que elegiste para que te conteste; con Ollama no sale de tu compu. Tus llaves pasan de un aparato tuyo a otro cifradas, y nadie más las ve.</p></details>
           <details><summary>¿Cómo la desinstalo?</summary><p>En Windows: <b>Configuración, Aplicaciones, Aplicaciones instaladas</b>, buscás FRIDAY y tocás <b>Desinstalar</b>. Te pregunta si querés borrar también tus datos. En Linux: <b>sh instalar.sh --desinstalar</b> en la carpeta que descargaste.</p></details>
           <details><summary>Una actualización me anda mal, ¿qué hago?</summary><p>Decile «buscá actualizaciones» y tocá <b>Volver a la</b> versión anterior. Tus datos no se tocan, y la versión que dejaste no se te vuelve a ofrecer sola por un mes.</p></details>
-          <details><summary>¿Anda en Mac?</summary><p>Todavía no hay FRIDAY para la Mac. En la compu anda con Windows y con Linux; en la tablet y en el celu, desde el navegador.</p></details>
+          <details><summary>¿Anda en Mac?</summary><p>Todavía no hay FRIDAY para la Mac. En la compu anda con Windows y con Linux; en el celu, desde el navegador.</p></details>
         </div>
       </div>
     </div>
@@ -797,7 +802,7 @@ section.hero{padding-block:0}
 <footer>
   <div class="pie"><div class="wrap pgrid">
     <a class="logo" href="#inicio" data-ir="inicio" aria-label="BufaLabs, inicio"><img decoding="async" src="img/bufalabs-logo.svg" width="1623" height="512" loading="lazy" alt="BufaLabs: tecnología, inteligencia artificial"></a>
-    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>101.04</span>, Casa 4.1 y Móvil 2.3. © 2026 BufaLabs</p></div>
+    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>101.04</span>, Móvil 2.3 y Casa 4.1 (beta). © 2026 BufaLabs</p></div>
   </div></div>
 </footer>
 
@@ -884,14 +889,14 @@ addEventListener('pointermove', e=>{ mx=e.clientX; my=e.clientY; if(mira) return
 
 // ---- el globo: lo que le piden y lo que contesta
 const CHARLA=[
-  ['Friday, prendé la luz del living','Listo. ¿Bajo un poco el brillo para la cena?','happy'],
-  ['Protocolo película','Bajé las luces y prendí la tele. Que la disfruten.','love'],
-  ['¿Qué pasa en el mundo?','Tengo seis titulares. Arranco con el primero.','excited'],
-  ['Me voy. Activá la guardia','Que te vaya bien. Apagué todo y quedo de guardia.','proud'],
+  ['Friday, mirá mi pantalla','Veo que el Word se trabó. ¿Lo cierro y lo abro de nuevo?','thinking'],
+  ['Abrí Spotify y poné música','Listo, arrancó tu lista. ¿Le subo un poco?','happy'],
   ['Friday, buscá actualizaciones','Hay una versión nueva. ¿La instalo? Tarda un minuto.','excited'],
   ['¿Cómo está la compu?','Tranqui: el procesador va al 34% y lo que más consume es Chrome.','cool'],
   ['Tomame las fichas de historia','¿En qué año fue la Revolución de Mayo?','thinking'],
-  ['¿Quién va ganando?','Sofi, con 35 puntos. ¡Tomi, ponete las pilas!','laugh']
+  ['Avisame si las zapatillas bajan de 80 mil','Dale. Las sigo en Mercado Libre y te aviso.','proud'],
+  ['¿Va a llover mañana?','Sí, a la tarde. Si salís, llevá paraguas.','worried'],
+  ['Ya lavé los platos','¡Bien ahí! Sumaste 10 puntos y vas primero.','laugh']
 ];
 const NOMBRE={idle:'tranquila',happy:'contenta',laugh:'muerta de risa',love:'enamorada',excited:'emocionada',surprised:'sorprendida',sad:'triste',worried:'preocupada',thinking:'pensando',wink:'cómplice',cool:'canchera',confused:'confundida',proud:'orgullosa',angry:'enojada',sleepy:'con sueño',listening:'escuchando'};
 const TOQUE=[['surprised','¡Ay! Me agarraste desprevenida.'],['laugh','¡Jajaja, me hacés cosquillas!'],['wink','Esto queda entre nosotros.'],['love','Ay, gracias. Yo también te quiero.'],['cool','Tranqui, tengo todo bajo control.'],['thinking','Mmm… dejame pensar.'],['confused','¿Eh? ¿Me hablaste?'],['sleepy','Cinco minutitos más…'],['proud','Hoy hice todo bien, ¿viste?'],['excited','¡Contame, contame!'],['angry','¡Ey, que me despeinás!']];
