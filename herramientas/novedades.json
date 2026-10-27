@@ -2,6 +2,60 @@
  {
   "fecha": "2026-10-27",
   "app": "celu",
+  "version": "Móvil 3.4",
+  "titulo": "Más inteligente, también en el celu",
+  "resumen": "FRIDAY en el celu piensa mejor, busca los datos en vez de adivinarlos y ahora entiende fotos y PDF.",
+  "items": [
+   [
+    "Fotos y PDF",
+    "Con el clip le mandás una foto o un PDF (un ticket, una receta, un apunte) y te dice qué es o te responde sobre eso."
+   ],
+   [
+    "Datos de verdad",
+    "Hace las cuentas exactas y te dice el dólar al momento, los feriados o lo que dice Wikipedia."
+   ],
+   [
+    "Te conoce mejor",
+    "Recuerda lo que le contaste y trae justo lo que tiene que ver con lo que preguntás."
+   ],
+   [
+    "Se revisa",
+    "En las preguntas difíciles chequea su respuesta y, si se equivocó, te avisa y se corrige."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-27",
+  "app": "compu",
+  "version": "101.07",
+  "titulo": "FRIDAY más inteligente",
+  "resumen": "La actualización más grande de su cerebro: piensa mejor, usa herramientas y casi nunca se queda sin respuesta.",
+  "items": [
+   [
+    "Un cerebro más grande",
+    "Usa un modelo nuevo y más capaz, y elige cuánto pensar: rápido para charlar, a fondo para lo difícil. Si le decís «pensalo bien», se toma su tiempo."
+   ],
+   [
+    "Busca el dato",
+    "Calculadora exacta, dólar al momento, Wikipedia, feriados y hasta leer una página que le pases."
+   ],
+   [
+    "Te conoce mejor",
+    "Recuerda lo que le contaste, se acuerda de lo que venían hablando y, si la corregís, no se lo olvida."
+   ],
+   [
+    "Se revisa",
+    "En lo difícil chequea lo que dijo y, si se equivocó, te dice «Ojo, me corrijo»."
+   ],
+   [
+    "Más respaldo",
+    "Si querés, en Ajustes sumás cerebros de respaldo gratis para que nunca se quede muda. Y con Ollama la bajás para usarla sin internet con un botón."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-27",
+  "app": "celu",
   "version": "Móvil 3.3",
   "titulo": "Pantalla de carga y claves nuevas",
   "resumen": "El celu arranca como la compu y acepta las claves nuevas de Gemini.",

@@ -273,6 +273,15 @@ section.hero{padding-block:0}
 .cerebros{background:var(--papel-2)}
 .cgrid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);grid-template-areas:"texto red" "demo red";gap:0 clamp(30px,5vw,64px);align-items:start}
 .ctexto{grid-area:texto}.cdemo{grid-area:demo}.red{grid-area:red}
+.herr{margin-top:clamp(48px,7vw,84px)}
+.herr-t{margin:0;font:800 clamp(24px,2.6vw,32px)/1.15 var(--disp);letter-spacing:-.01em}
+.herr-p{margin:10px 0 0;max-width:52ch;color:var(--tinta-2)}
+.herr-l{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;margin:26px 0 0;border-radius:24px;overflow:hidden;background:var(--linea);border:1px solid var(--linea)}
+.herr-l div{padding:18px 20px;background:var(--blanco)}
+.herr-l dt{font-weight:800}
+@media (max-width:980px){.herr-l{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.herr-l{grid-template-columns:minmax(0,1fr)}}
+.herr-l dd{margin:4px 0 0;font-size:16.5px;line-height:1.45;color:var(--tinta-2)}
 .pruebas{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .prueba{min-height:48px;padding:0 20px;border-radius:999px;border:2px solid var(--c);background:var(--blanco);color:var(--tinta);font:700 16px var(--text);cursor:pointer;transition:background .2s, transform .15s}
 .prueba::before{content:"";display:inline-block;width:10px;height:10px;margin-right:9px;border-radius:50%;background:var(--c);vertical-align:1px}
@@ -511,13 +520,13 @@ section.hero{padding-block:0}
   <div class="wrap">
     <div class="hgrid">
       <div class="min0">
-        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>Pantalla de carga y claves nuevas · Celu 3.3</span></a>
+        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>Más inteligente, también en el celu · Celu 3.4</span></a>
         <h1><span>FRIDAY</span><span>vive en</span><span>tu casa.</span></h1>
-        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, ya va por la versión <span data-ver>101.06</span> y se actualiza sola.</p>
+        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, ya va por la versión <span data-ver>101.07</span> y se actualiza sola.</p>
         <div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a><a class="btn no" href="#hace">Ver qué hace</a></div>
       </div>
       <div class="ella">
-        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>101.06</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
+        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>101.07</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
         <button id="cara" class="cara" type="button" aria-label="La cara de FRIDAY. Tocala para cambiarle la expresión."></button>
         <div class="globo" id="globo" aria-live="polite"><q id="gQ">Friday, mirá mi pantalla</q><p id="gR">Veo que el Word se trabó. ¿Lo cierro y lo abro de nuevo?</p></div>
       </div>
@@ -638,7 +647,9 @@ section.hero{padding-block:0}
         <h2 class="titulo oculto">Todas las actualizaciones</h2>
         <div class="filtros" aria-label="Mostrar"><button class="on" data-f="" aria-pressed="true">Todas</button><button data-f="compu" aria-pressed="false">Compu</button><button data-f="celu" aria-pressed="false">Celu</button><button data-f="casa" aria-pressed="false">Tablet</button></div>
         <ol class="vlista" id="vlista">
-          <li class="ultima" data-app="celu"><div class="vn"><span class="ver">Móvil 3.3</span><span class="app celu">Celu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>Pantalla de carga y claves nuevas</h3><p>El celu arranca como la compu y acepta las claves nuevas de Gemini.</p><ul><li><b>Pantalla de carga.</b> Al abrirla, el núcleo de FRIDAY se arma y sus sistemas se prenden uno por uno.</li><li><b>Claves «AQ.».</b> Las claves nuevas de Gemini andan, sin tener que empezar con «AIza».</li></ul></div></li>
+          <li class="ultima" data-app="celu"><div class="vn"><span class="ver">Móvil 3.4</span><span class="app celu">Celu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>Más inteligente, también en el celu</h3><p>FRIDAY en el celu piensa mejor, busca los datos en vez de adivinarlos y ahora entiende fotos y PDF.</p><ul><li><b>Fotos y PDF.</b> Con el clip le mandás una foto o un PDF (un ticket, una receta, un apunte) y te dice qué es o te responde sobre eso.</li><li><b>Datos de verdad.</b> Hace las cuentas exactas y te dice el dólar al momento, los feriados o lo que dice Wikipedia.</li><li><b>Te conoce mejor.</b> Recuerda lo que le contaste y trae justo lo que tiene que ver con lo que preguntás.</li><li><b>Se revisa.</b> En las preguntas difíciles chequea su respuesta y, si se equivocó, te avisa y se corrige.</li></ul></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101.07</span><span class="app compu">Compu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>FRIDAY más inteligente</h3><p>La actualización más grande de su cerebro: piensa mejor, usa herramientas y casi nunca se queda sin respuesta.</p><ul><li><b>Un cerebro más grande.</b> Usa un modelo nuevo y más capaz, y elige cuánto pensar: rápido para charlar, a fondo para lo difícil. Si le decís «pensalo bien», se toma su tiempo.</li><li><b>Busca el dato.</b> Calculadora exacta, dólar al momento, Wikipedia, feriados y hasta leer una página que le pases.</li><li><b>Te conoce mejor.</b> Recuerda lo que le contaste, se acuerda de lo que venían hablando y, si la corregís, no se lo olvida.</li><li><b>Se revisa.</b> En lo difícil chequea lo que dijo y, si se equivocó, te dice «Ojo, me corrijo».</li><li><b>Más respaldo.</b> Si querés, en Ajustes sumás cerebros de respaldo gratis para que nunca se quede muda. Y con Ollama la bajás para usarla sin internet con un botón.</li></ul></div></li>
+          <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.3</span><span class="app celu">Celu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>Pantalla de carga y claves nuevas</h3><p>El celu arranca como la compu y acepta las claves nuevas de Gemini.</p><ul><li><b>Pantalla de carga.</b> Al abrirla, el núcleo de FRIDAY se arma y sus sistemas se prenden uno por uno.</li><li><b>Claves «AQ.».</b> Las claves nuevas de Gemini andan, sin tener que empezar con «AIza».</li></ul></div></li>
           <li data-app="compu"><div class="vn"><span class="ver">101.06</span><span class="app compu">Compu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>Las claves nuevas de Gemini</h3><p>Google cambió el formato de las claves de Gemini: ahora empiezan con «AQ.». FRIDAY acepta las nuevas y las viejas.</p><ul><li><b>Sin trabas.</b> Ya no te pide que la clave empiece de una forma ni te frena al guardar los Ajustes.</li></ul></div></li>
           <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.2</span><span class="app celu">Celu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>Dos cerebros también en el celu</h3><p>El celu pide las dos claves gratis y, si Groq no puede contestar, contesta Gemini.</p><ul><li><b>Nunca muda.</b> Si Groq se queda sin cupo, tarda o tiene la clave mal, FRIDAY te contesta igual con Gemini.</li><li><b>Una sola vez.</b> Si te faltaba la clave de Gemini, te la pide al abrir, con los pasos. Si tenés el celu unido a la compu, la toma de ahí y ni te enterás.</li></ul></div></li>
           <li data-app="compu"><div class="vn"><span class="ver">101.05</span><span class="app compu">Compu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>Dos cerebros, siempre</h3><p>FRIDAY en la compu ahora pide las dos claves gratis, la de Groq y la de Gemini, así nunca te quedás sin respuestas.</p><ul><li><b>Si uno se cansa, sigue el otro.</b> Cuando una de las dos se queda sin cupo del día o falla, FRIDAY sigue pensando con la otra.</li><li><b>Un paso nuevo.</b> El tutorial te explica cómo sacar la clave de Gemini en un minuto. Si ya usabas FRIDAY, te la pide una sola vez.</li></ul></div></li>
@@ -663,7 +674,7 @@ section.hero{padding-block:0}
     <div class="wrap cgrid">
       <div class="min0 ctexto">
         <h2 class="titulo">Piensa con tres cerebros.</h2>
-        <p class="intro">En el medio está BUFIA, el núcleo de BufaLabs: decide a quién preguntarle cada cosa. Groq charla rapidísimo, Gemini busca en Google y Ollama corre en tu propia compu por si fallan los otros dos.</p>
+        <p class="intro">En el medio está BUFIA, el núcleo de BufaLabs: decide a quién preguntarle cada cosa y cuánto pensar. Groq charla rapidísimo y piensa a fondo cuando hace falta, Gemini busca en Google y Ollama corre en tu propia compu por si fallan los otros dos.</p>
       </div>
       <div class="red" id="red">
         <p class="redest" id="redEst"><i aria-hidden="true"></i><span>Todo en línea</span></p>
@@ -716,10 +727,25 @@ section.hero{padding-block:0}
           <button class="prueba" type="button" data-run="groq" style="--c:var(--sol)">Charlar un rato</button>
           <button class="prueba" type="button" data-run="gemini" style="--c:var(--azul-2)">Buscar en internet</button>
           <button class="prueba" type="button" data-run="ollama" style="--c:var(--menta)">Sin internet</button>
+          <button class="prueba" type="button" data-run="pensar" style="--c:var(--sol)">«Pensalo bien»</button>
           <button class="prueba" type="button" data-run="falla" style="--c:var(--rojo)">Simular una falla</button>
         </div>
         <div class="chat" id="chat" aria-live="polite"><p class="m fri">¡Hola! Tocá un botón y mirá cómo resuelvo tu pedido.</p></div>
       </div>
+    </div>
+    <div class="wrap herr">
+      <h3 class="herr-t">Y además, usa herramientas.</h3>
+      <p class="herr-p">Para no inventar, FRIDAY busca el dato en vez de adivinarlo.</p>
+      <dl class="herr-l">
+        <div><dt>Calculadora</dt><dd>Las cuentas las hace exactas, no a ojo.</dd></div>
+        <div><dt>Dólar</dt><dd>El oficial y el blue, al momento.</dd></div>
+        <div><dt>Wikipedia</dt><dd>Para fechas, personas y lugares.</dd></div>
+        <div><dt>Leer una página</dt><dd>Le pasás un link y te cuenta qué dice.</dd></div>
+        <div><dt>Feriados</dt><dd>Los de Argentina, para planear la semana.</dd></div>
+        <div><dt>Fotos y PDF</dt><dd>En el celu le mandás uno y te dice qué es.</dd></div>
+        <div><dt>Se revisa</dt><dd>En lo difícil, chequea lo que dijo y, si se equivocó, se corrige.</dd></div>
+        <div><dt>Te conoce</dt><dd>Recuerda lo que le contaste y lo trae cuando tiene que ver.</dd></div>
+      </dl>
     </div>
   </section>
   <section class="diferente" id="diferente">
@@ -825,6 +851,7 @@ section.hero{padding-block:0}
         <h2>Preguntas de siempre</h2>
         <div class="min0">
           <details><summary>¿Es gratis de verdad?</summary><p>Sí. FRIDAY es gratis y los cerebros que usa también: Groq y Gemini te dan cada uno una llave gratis (hacen falta las dos, así nunca te quedás sin respuestas), y Ollama corre en tu propia compu.</p></details>
+          <details><summary>¿Y si se me acaban Groq y Gemini en el mismo día?</summary><p>Es raro, pero en Ajustes podés sumar cerebros de respaldo, también gratis: Mistral, OpenRouter, NVIDIA, Z.ai y Cloudflare. No hacen falta; si los ponés, FRIDAY los usa cuando los dos principales no pueden.</p></details>
           <details><summary>¿Por qué Windows dice que «protegió su PC»?</summary><p>Porque FRIDAY todavía no tiene la firma digital de Microsoft, que es paga. Tocá <b>Más información</b> y <b>Ejecutar de todas formas</b>: pasa una sola vez. Las actualizaciones sí vienen firmadas por BufaLabs, y FRIDAY rechaza cualquiera que no lo esté.</p></details>
           <details><summary>¿Adónde van mis cosas?</summary><p>Tu memoria, tus ajustes y tus listas quedan en tus aparatos. Lo que le pedís viaja al cerebro que elegiste para que te conteste; con Ollama no sale de tu compu. Tus llaves pasan de un aparato tuyo a otro cifradas, y nadie más las ve.</p></details>
           <details><summary>¿Cómo la desinstalo?</summary><p>En Windows: <b>Configuración, Aplicaciones, Aplicaciones instaladas</b>, buscás FRIDAY y tocás <b>Desinstalar</b>. Te pregunta si querés borrar también tus datos. En Linux: <b>sh instalar.sh --desinstalar</b> en la carpeta que descargaste.</p></details>
@@ -841,7 +868,7 @@ section.hero{padding-block:0}
 <footer>
   <div class="pie"><div class="wrap pgrid">
     <a class="logo" href="#inicio" data-ir="inicio" aria-label="BufaLabs, inicio"><img decoding="async" src="img/bufalabs-logo.svg" width="1623" height="512" loading="lazy" alt="BufaLabs: tecnología, inteligencia artificial"></a>
-    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>101.06</span>, Móvil 3.3 y Casa 4.1 (beta). © 2026 BufaLabs</p></div>
+    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>101.07</span>, Móvil 3.4 y Casa 4.1 (beta). © 2026 BufaLabs</p></div>
   </div></div>
 </footer>
 
@@ -1052,6 +1079,12 @@ const CORRIDAS={
     msg('Se cortó internet: BUFIA usa Ollama, que corre en tu compu','sis'); await sleep(900);
     estado('piensa'); await ruta('ollama',700); await contesta('Las plantas usan la luz del sol para fabricar su comida. Te lo explico paso a paso.');
     await sleep(900); cortar(['groq','gemini'], false); estado('ok','Todo en línea');
+  },
+  pensar: async()=>{
+    msg('Pensalo bien: ¿me conviene alquilar o comprar?','vos'); estado('piensa','BUFIA piensa a fondo');
+    msg('BUFIA usa el modelo grande de Groq, pensando a fondo','sis'); await ruta('groq',1100);
+    msg('Antes de contestar, se revisa con Gemini','sis'); await ruta('gemini',560);
+    estado('ok','Todo en línea'); msg('Revisado','sis bien'); await contesta('Depende de cuánto tiempo te quedes. Te armo las dos cuentas con tus números.');
   },
   falla: async()=>{
     msg('¿Qué se estrena este finde en el cine?','vos'); estado('piensa','BUFIA está pensando'); msg('BUFIA busca en Google con Gemini','sis');
