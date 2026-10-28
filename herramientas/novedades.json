@@ -2,6 +2,27 @@
  {
   "fecha": "2026-10-28",
   "app": "celu",
+  "version": "Móvil 3.6",
+  "titulo": "Actualizaciones como en la compu",
+  "resumen": "Cuando sale una versión nueva del celu, FRIDAY te avisa, te muestra qué trae y se actualiza con un toque.",
+  "items": [
+   [
+    "Te avisa",
+    "Te muestra la versión nueva y lo que trae antes de instalarla."
+   ],
+   [
+    "Con un toque",
+    "Se baja, se revisa y se instala en segundos, sin borrar nada tuyo."
+   ],
+   [
+    "Te cuenta lo nuevo",
+    "Al abrirla, te presenta las novedades una por una. También le podés decir «qué hay de nuevo»."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-28",
+  "app": "celu",
   "version": "Móvil 3.5",
   "titulo": "Más para hablarle",
   "resumen": "El celu aprende de lo que le decís y también investiga a fondo.",
