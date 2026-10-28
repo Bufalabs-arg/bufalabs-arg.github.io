@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bufalabs-arg.github.io/sitemap.xml
