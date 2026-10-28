@@ -1,5 +1,51 @@
 [
  {
+  "fecha": "2026-10-28",
+  "app": "celu",
+  "version": "Móvil 3.5",
+  "titulo": "Más para hablarle",
+  "resumen": "El celu aprende de lo que le decís y también investiga a fondo.",
+  "items": [
+   [
+    "Investiga",
+    "Decile «investigá…» y busca en varios lados, te cuenta cómo va y te deja un informe."
+   ],
+   [
+    "Aprende de vos",
+    "Si se equivoca, decile «eso está mal»: te pregunta qué falló y no lo repite. Si te gustó, «¡bien ahí!»."
+   ],
+   [
+    "¿Cómo estás de cupo?",
+    "Te dice cuánto le queda hoy de sus cerebros gratis y quién te contestó."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-28",
+  "app": "compu",
+  "version": "102",
+  "titulo": "Todo hablando",
+  "resumen": "Una versión grande pensada para hablarle y tocar menos: investiga contándote cómo va, lee tus archivos sin que los busques y aprende de lo que le decís.",
+  "items": [
+   [
+    "Investiga y te cuenta",
+    "Decile «investigá…»: lee varias páginas, te va contando en voz cómo viene, busca de nuevo si le falta algo y te deja el informe completo. «Mostrame el informe» y lo ves."
+   ],
+   [
+    "Tus archivos, sin buscarlos",
+    "Preguntale «¿qué dice el último PDF que bajé?» y lo encuentra sola. O soltale un archivo encima y decile qué hacer con él."
+   ],
+   [
+    "Aprende de lo que le decís",
+    "Si se equivoca, «eso está mal»: te pregunta qué falló y se lo guarda. Si te gustó, «¡bien ahí!», y se acuerda del estilo."
+   ],
+   [
+    "¿Cómo estás de cupo?",
+    "Te dice cuánto le queda hoy de sus cerebros gratis y quién te contestó."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-10-27",
   "app": "celu",
   "version": "Móvil 3.4",

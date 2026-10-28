@@ -274,6 +274,52 @@ section.hero{padding-block:0}
 .cgrid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);grid-template-areas:"texto red" "demo red";gap:0 clamp(30px,5vw,64px);align-items:start}
 .ctexto{grid-area:texto}.cdemo{grid-area:demo}.red{grid-area:red}
 .herr{margin-top:clamp(48px,7vw,84px)}
+/* con nueve secciones, entre 900 y 1240 px el menú pasa a su propia fila (deslizable) para no pisarse con «Instalala» */
+@media (min-width:901px) and (max-width:1240px){
+  .barra-in{flex-wrap:wrap;gap:4px 14px;min-height:0;padding-block:12px 8px}
+  .barra nav{order:3;flex-basis:100%;margin:0;overflow-x:auto;scrollbar-width:none}
+  .barra nav::-webkit-scrollbar{display:none}
+  .barra-cta.btn{margin-left:auto;min-height:42px}
+}
+@media (min-width:1241px){.barra ul a{padding:10px 10px;font-size:16px}}
+
+/* hablale: la cara de FRIDAY en un panel oscuro, el micrófono grande al lado */
+.probala{background:var(--papel-2)}
+.pgrid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center}
+.pcara{position:relative;border-radius:32px;background:radial-gradient(circle at 50% 42%, rgba(94,152,246,.32), transparent 62%), var(--tinta);padding:64px clamp(20px,4vw,40px) 30px;color:var(--blanco);box-shadow:0 40px 70px -40px rgba(14,27,61,.6)}
+#cara4{width:min(300px,62%);aspect-ratio:1;margin:0 auto;position:relative}
+.pest{position:absolute;left:20px;top:18px;display:inline-flex;align-items:center;gap:8px;margin:0;padding:6px 14px 6px 10px;border-radius:999px;background:rgba(255,255,255,.12);font-size:15px;font-weight:700}
+.pest i{width:8px;height:8px;border-radius:50%;background:var(--claro-2)}
+.pcara[data-e=escucha] .pest{background:var(--menta);color:var(--tinta)}.pcara[data-e=escucha] .pest i{background:currentColor;animation:late 1.2s ease-in-out infinite}
+.pcara[data-e=piensa] .pest{background:var(--sol);color:var(--sol-tinta)}.pcara[data-e=piensa] .pest i{background:currentColor}
+.pcara[data-e=habla] .pest{background:var(--azul-2);color:var(--blanco)}.pcara[data-e=habla] .pest i{background:currentColor}
+.pcara[data-e=lista] .pest i{background:var(--menta)}
+.pdice{margin-top:22px;min-height:96px}
+.pdice q{display:block;quotes:"«" "»";color:var(--claro-2);font-size:16px;margin-bottom:6px}
+.pdice p{margin:0;font:600 clamp(20px,2vw,24px)/1.3 var(--disp);font-variation-settings:"opsz" 24}
+.pllave label{display:block;font:800 22px var(--disp);margin-bottom:10px}
+.pfila{display:flex;gap:10px;flex-wrap:wrap}
+.pfila input{flex:1 1 200px;min-width:0;min-height:58px;padding:0 20px;border-radius:999px;border:2px solid var(--linea);background:var(--blanco);color:var(--tinta);font:400 18px var(--text)}
+.pfila input:focus-visible{outline:none;border-color:var(--azul)}
+.btn.azul{background:var(--azul);color:var(--blanco);border:0;cursor:pointer}
+.chico{margin:12px 0 0;color:var(--tinta-2);font-size:16px;max-width:52ch}
+.chico a{color:var(--azul-3);text-underline-offset:3px}
+.chico.mal{color:var(--rojo)}
+.pmic{display:flex;align-items:center;gap:20px;width:100%;margin:0 0 18px;padding:18px 26px 18px 18px;border:0;border-radius:999px;background:var(--azul);color:var(--blanco);font:800 24px var(--disp);cursor:pointer;text-align:left;transition:background .2s, transform .15s}
+.pmic:active{transform:scale(.98)}
+.pmic-i{flex:none;position:relative;width:72px;height:72px;border-radius:50%;background:var(--blanco)}
+.pmic-i::before{content:"";position:absolute;left:28px;top:16px;width:16px;height:26px;border-radius:9px;background:var(--azul)}
+.pmic-i::after{content:"";position:absolute;left:21px;top:30px;width:26px;height:16px;border:3.5px solid var(--azul);border-top:0;border-radius:0 0 16px 16px;box-sizing:border-box}
+.pmic[aria-pressed=true]{background:var(--menta);color:var(--tinta)}
+.pmic[aria-pressed=true] .pmic-i{box-shadow:0 0 0 0 rgba(255,255,255,.7);animation:oye 1.2s ease-out infinite}
+@keyframes oye{to{box-shadow:0 0 0 18px rgba(255,255,255,0)}}
+.pideas{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pideas button{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--linea);background:var(--blanco);color:var(--tinta);font:600 16px var(--text);cursor:pointer}
+.pideas button:hover{border-color:var(--azul-2)}
+.decile-l{grid-template-columns:repeat(2,minmax(0,1fr))}
+.decile-l dt{font:700 19px/1.3 var(--disp)}
+@media (max-width:860px){.pgrid2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.decile-l{grid-template-columns:minmax(0,1fr)}.pmic{font-size:21px}.pmic-i{width:60px;height:60px}.pmic-i::before{left:22px;top:12px}.pmic-i::after{left:15px;top:25px}}
 .herr-t{margin:0;font:800 clamp(24px,2.6vw,32px)/1.15 var(--disp);letter-spacing:-.01em}
 .herr-p{margin:10px 0 0;max-width:52ch;color:var(--tinta-2)}
 .herr-l{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;margin:26px 0 0;border-radius:24px;overflow:hidden;background:var(--linea);border:1px solid var(--linea)}
@@ -509,6 +555,8 @@ section.hero{padding-block:0}
       <li><a href="#actualizaciones" data-ir="actualizaciones">Actualizaciones</a></li>
       <li><a href="#cerebros" data-ir="cerebros">Por dentro</a></li>
       <li><a href="#nosotros" data-ir="nosotros">Nosotros</a></li>
+      <li><a href="#probala" data-ir="probala">Hablale</a></li>
+      <li><a href="#ayuda" data-ir="ayuda">Ayuda</a></li>
     </ul></nav>
     <a class="btn si barra-cta" href="#instalar" data-ir="instalar">Instalala</a>
   </div>
@@ -520,13 +568,13 @@ section.hero{padding-block:0}
   <div class="wrap">
     <div class="hgrid">
       <div class="min0">
-        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>Más inteligente, también en el celu · Celu 3.4</span></a>
+        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>Más para hablarle · Celu 3.5</span></a>
         <h1><span>FRIDAY</span><span>vive en</span><span>tu casa.</span></h1>
-        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, ya va por la versión <span data-ver>101.07</span> y se actualiza sola.</p>
-        <div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a><a class="btn no" href="#hace">Ver qué hace</a></div>
+        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, ya va por la versión <span data-ver>102</span> y se actualiza sola.</p>
+        <div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a><a class="btn no" href="#probala">Hablale ahora</a></div>
       </div>
       <div class="ella">
-        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>101.07</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
+        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>102</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
         <button id="cara" class="cara" type="button" aria-label="La cara de FRIDAY. Tocala para cambiarle la expresión."></button>
         <div class="globo" id="globo" aria-live="polite"><q id="gQ">Friday, mirá mi pantalla</q><p id="gR">Veo que el Word se trabó. ¿Lo cierro y lo abro de nuevo?</p></div>
       </div>
@@ -544,7 +592,7 @@ section.hero{padding-block:0}
         <a class="at at-hace" href="#hace" data-ir="hace"><span class="at-tx"><b>Qué hace</b><em>La compu y el celu: todo lo que le podés pedir.</em></span><img src="img/compu-estudio.webp" width="1280" height="800" loading="lazy" alt=""></a>
         <a class="at at-nuevo" href="#nuevo" data-ir="nuevo"><span class="at-tx"><b>Lo nuevo</b><em>El celu renovado, el instalador nuevo y Linux.</em></span><img src="img/compu-setup.webp" width="1840" height="1280" loading="lazy" alt=""></a>
         <a class="at at-dentro" href="#cerebros" data-ir="cerebros"><span class="at-tx"><b>Por dentro</b><em>BUFIA y sus tres cerebros. Probalo.</em></span><img class="at-ico" src="img/bufalabs-icono.svg" width="120" height="120" loading="lazy" alt=""></a>
-        <a class="at at-nos" href="#nosotros" data-ir="nosotros"><span class="at-tx"><b>Nosotros</b><em>Un laboratorio chico y más de cien versiones.</em></span><span class="at-num" data-vergrande>101</span></a>
+        <a class="at at-nos" href="#nosotros" data-ir="nosotros"><span class="at-tx"><b>Nosotros</b><em>Un laboratorio chico y más de cien versiones.</em></span><span class="at-num" data-vergrande>102</span></a>
         <a class="at at-inst" href="#instalar" data-ir="instalar"><span class="at-tx"><b>Instalala gratis</b><em>Windows, Linux y el celu.</em></span><span class="at-flecha" aria-hidden="true"></span></a>
       </div>
     </div>
@@ -587,6 +635,8 @@ section.hero{padding-block:0}
         <li data-emo="proud" tabindex="0"><q>Ya lavé los platos.</q><p>Suma puntos al que la hizo y pasa el turno. El domingo anuncia quién ganó la semana.</p></li>
         <li data-emo="thinking" tabindex="0"><q>Modo estudio de historia.</q><p>Tandas con pausas, te avisa si te vas a TikTok y en la pausa te toma una ficha de lo que estudiaste.</p></li>
         <li data-emo="happy" tabindex="0"><q>Seguí el precio de las zapatillas y avisame si bajan de 80 mil.</q><p>Revisa Mercado Libre cada unas horas y te avisa cuando bajan. No inventa precios: solo te dice lo que encontró.</p></li>
+        <li data-emo="thinking" tabindex="0"><q>Investigá qué notebook me conviene.</q><p>Busca en varias páginas, te va contando en voz cómo viene y te deja el informe completo. Si le falta un dato, vuelve a buscar.</p></li>
+        <li data-emo="excited" tabindex="0"><q>¿Qué dice el último PDF que bajé?</q><p>Lo encuentra sola en Descargas y te lo resume. También le podés soltar un archivo encima y decirle qué hacer.</p></li>
         <li data-emo="surprised" tabindex="0"><q>¿Qué ves? ¿Cómo me queda?</q><p>Mira con la cámara de la compu, solo cuando se lo pedís, y te contesta.</p></li>
         <li data-emo="cool" tabindex="0"><q>¿Cómo está la compu?</q><p>Te dice cuánto procesador y memoria usa y qué es lo que más consume. Si se lo pedís, la bloquea o la apaga.</p></li>
       </ul><aside class="testigo" aria-hidden="true"><div id="cara2" class="cara"></div></aside></div>
@@ -647,7 +697,9 @@ section.hero{padding-block:0}
         <h2 class="titulo oculto">Todas las actualizaciones</h2>
         <div class="filtros" aria-label="Mostrar"><button class="on" data-f="" aria-pressed="true">Todas</button><button data-f="compu" aria-pressed="false">Compu</button><button data-f="celu" aria-pressed="false">Celu</button><button data-f="casa" aria-pressed="false">Tablet</button></div>
         <ol class="vlista" id="vlista">
-          <li class="ultima" data-app="celu"><div class="vn"><span class="ver">Móvil 3.4</span><span class="app celu">Celu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>Más inteligente, también en el celu</h3><p>FRIDAY en el celu piensa mejor, busca los datos en vez de adivinarlos y ahora entiende fotos y PDF.</p><ul><li><b>Fotos y PDF.</b> Con el clip le mandás una foto o un PDF (un ticket, una receta, un apunte) y te dice qué es o te responde sobre eso.</li><li><b>Datos de verdad.</b> Hace las cuentas exactas y te dice el dólar al momento, los feriados o lo que dice Wikipedia.</li><li><b>Te conoce mejor.</b> Recuerda lo que le contaste y trae justo lo que tiene que ver con lo que preguntás.</li><li><b>Se revisa.</b> En las preguntas difíciles chequea su respuesta y, si se equivocó, te avisa y se corrige.</li></ul></div></li>
+          <li class="ultima" data-app="celu"><div class="vn"><span class="ver">Móvil 3.5</span><span class="app celu">Celu</span><time datetime="2026-10-28">28 de octubre</time></div><div class="min0"><h3>Más para hablarle</h3><p>El celu aprende de lo que le decís y también investiga a fondo.</p><ul><li><b>Investiga.</b> Decile «investigá…» y busca en varios lados, te cuenta cómo va y te deja un informe.</li><li><b>Aprende de vos.</b> Si se equivoca, decile «eso está mal»: te pregunta qué falló y no lo repite. Si te gustó, «¡bien ahí!».</li><li><b>¿Cómo estás de cupo?.</b> Te dice cuánto le queda hoy de sus cerebros gratis y quién te contestó.</li></ul></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">102</span><span class="app compu">Compu</span><time datetime="2026-10-28">28 de octubre</time></div><div class="min0"><h3>Todo hablando</h3><p>Una versión grande pensada para hablarle y tocar menos: investiga contándote cómo va, lee tus archivos sin que los busques y aprende de lo que le decís.</p><ul><li><b>Investiga y te cuenta.</b> Decile «investigá…»: lee varias páginas, te va contando en voz cómo viene, busca de nuevo si le falta algo y te deja el informe completo. «Mostrame el informe» y lo ves.</li><li><b>Tus archivos, sin buscarlos.</b> Preguntale «¿qué dice el último PDF que bajé?» y lo encuentra sola. O soltale un archivo encima y decile qué hacer con él.</li><li><b>Aprende de lo que le decís.</b> Si se equivoca, «eso está mal»: te pregunta qué falló y se lo guarda. Si te gustó, «¡bien ahí!», y se acuerda del estilo.</li><li><b>¿Cómo estás de cupo?.</b> Te dice cuánto le queda hoy de sus cerebros gratis y quién te contestó.</li></ul></div></li>
+          <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.4</span><span class="app celu">Celu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>Más inteligente, también en el celu</h3><p>FRIDAY en el celu piensa mejor, busca los datos en vez de adivinarlos y ahora entiende fotos y PDF.</p><ul><li><b>Fotos y PDF.</b> Con el clip le mandás una foto o un PDF (un ticket, una receta, un apunte) y te dice qué es o te responde sobre eso.</li><li><b>Datos de verdad.</b> Hace las cuentas exactas y te dice el dólar al momento, los feriados o lo que dice Wikipedia.</li><li><b>Te conoce mejor.</b> Recuerda lo que le contaste y trae justo lo que tiene que ver con lo que preguntás.</li><li><b>Se revisa.</b> En las preguntas difíciles chequea su respuesta y, si se equivocó, te avisa y se corrige.</li></ul></div></li>
           <li data-app="compu"><div class="vn"><span class="ver">101.07</span><span class="app compu">Compu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>FRIDAY más inteligente</h3><p>La actualización más grande de su cerebro: piensa mejor, usa herramientas y casi nunca se queda sin respuesta.</p><ul><li><b>Un cerebro más grande.</b> Usa un modelo nuevo y más capaz, y elige cuánto pensar: rápido para charlar, a fondo para lo difícil. Si le decís «pensalo bien», se toma su tiempo.</li><li><b>Busca el dato.</b> Calculadora exacta, dólar al momento, Wikipedia, feriados y hasta leer una página que le pases.</li><li><b>Te conoce mejor.</b> Recuerda lo que le contaste, se acuerda de lo que venían hablando y, si la corregís, no se lo olvida.</li><li><b>Se revisa.</b> En lo difícil chequea lo que dijo y, si se equivocó, te dice «Ojo, me corrijo».</li><li><b>Más respaldo.</b> Si querés, en Ajustes sumás cerebros de respaldo gratis para que nunca se quede muda. Y con Ollama la bajás para usarla sin internet con un botón.</li></ul></div></li>
           <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.3</span><span class="app celu">Celu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>Pantalla de carga y claves nuevas</h3><p>El celu arranca como la compu y acepta las claves nuevas de Gemini.</p><ul><li><b>Pantalla de carga.</b> Al abrirla, el núcleo de FRIDAY se arma y sus sistemas se prenden uno por uno.</li><li><b>Claves «AQ.».</b> Las claves nuevas de Gemini andan, sin tener que empezar con «AIza».</li></ul></div></li>
           <li data-app="compu"><div class="vn"><span class="ver">101.06</span><span class="app compu">Compu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>Las claves nuevas de Gemini</h3><p>Google cambió el formato de las claves de Gemini: ahora empiezan con «AQ.». FRIDAY acepta las nuevas y las viejas.</p><ul><li><b>Sin trabas.</b> Ya no te pide que la clave empiece de una forma ni te frena al guardar los Ajustes.</li></ul></div></li>
@@ -782,7 +834,7 @@ section.hero{padding-block:0}
         <p class="intro"><b>BufaLabs</b> es un laboratorio independiente de Argentina. Nuestra primera creación es <b>FRIDAY</b>: una inteligencia artificial que vive en tu casa, habla como nosotros y hace cosas de verdad.</p>
         <p class="intro">La armamos versión por versión. Cada cosa nueva se prueba en casa, se rompe, se arregla y recién ahí se queda.</p>
         <dl class="cifras">
-          <div><dt>versiones</dt><dd data-vergrande>101</dd></div>
+          <div><dt>versiones</dt><dd data-vergrande>102</dd></div>
           <div><dt>aparatos, una sola FRIDAY</dt><dd>3</dd></div>
           <div><dt>pesos por mes</dt><dd>$0</dd></div>
         </dl>
@@ -802,7 +854,7 @@ section.hero{padding-block:0}
   <section class="versiones" id="versiones">
     <div class="wrap">
       <div class="vtop">
-        <p class="contador"><b id="cuenta" data-vergrande>101</b><span>versiones</span></p>
+        <p class="contador"><b id="cuenta" data-vergrande>102</b><span>versiones</span></p>
         <div class="min0">
           <h2 class="titulo">Más de cien versiones y contando.</h2>
           <p class="intro">Cada versión es algo que se rompió, se arregló y quedó mejor. FRIDAY no se termina nunca: crece todas las semanas.</p>
@@ -817,6 +869,84 @@ section.hero{padding-block:0}
         <li><b>v100</b><h3>Cien versiones</h3><p>Cada una probada en casa antes de quedarse.</p></li>
         <li><b>v101</b><h3>Hoy</h3><p>Se instala como cualquier programa, se actualiza sola y anda en Windows y en Linux.</p></li>
       </ol>
+    </div>
+  </section>
+  <a class="sig" href="#probala" data-ir="probala"><span class="wrap"><small>Seguí con</small><b>Hablale</b><em>Probala acá mismo, sin instalar nada.</em></span></a>
+</div>
+
+<div class="vista" data-vista="probala" id="v-probala" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Hablale</h1><p class="cab-p">Probala acá mismo, sin instalar nada: tocá el micrófono y decile algo.</p></div></div>
+  <section class="probala" id="probala">
+    <div class="wrap pgrid2">
+      <div class="pcara">
+        <p class="pest" id="pEst"><i aria-hidden="true"></i><span>Esperando tu llave</span></p>
+        <div id="cara4" class="cara" aria-hidden="true"></div>
+        <div class="pdice" aria-live="polite"><q id="pYo" hidden></q><p id="pElla">¡Hola! Soy FRIDAY. Para charlar conmigo acá necesito tu llave gratis de Groq.</p></div>
+      </div>
+      <div class="pmando min0">
+        <form id="pLlaveF" class="pllave" autocomplete="off">
+          <label for="pLlave">Tu llave de Groq</label>
+          <div class="pfila"><input id="pLlave" type="password" placeholder="gsk_…" spellcheck="false" autocapitalize="off"><button class="btn azul" type="submit">Empezar</button></div>
+          <p class="chico" id="pLlaveMsg">Va directo de tu navegador a Groq: no la guardamos ni pasa por BufaLabs, y se borra al cerrar la pestaña. ¿No tenés? <a href="#llaves">Sacala en un minuto</a>.</p>
+        </form>
+        <div id="pHablar" hidden>
+          <button id="pMic" class="pmic" type="button" aria-pressed="false"><span class="pmic-i" aria-hidden="true"></span><b id="pMicTx">Tocá y hablale</b></button>
+          <p class="chico" id="pSinMic" hidden>Tu navegador no deja hablarle: escribile acá abajo. Para hablarle, abrí la página en Chrome, Edge o Safari.</p>
+          <form id="pTxtF" class="pfila"><input id="pTxt" placeholder="…o escribile" autocomplete="off" aria-label="Escribile a FRIDAY"><button class="btn azul" type="submit">Mandar</button></form>
+          <div class="pideas" role="group" aria-label="Ideas para decirle"><button type="button">¿Qué sabés hacer?</button><button type="button">Contame un chiste</button><button type="button">¿Cómo me ayudás a estudiar?</button></div>
+          <p class="chico">Acá solo charla. Instalada, además maneja tu compu, busca en internet, lee tus archivos y se acuerda de vos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <a class="sig" href="#ayuda" data-ir="ayuda"><span class="wrap"><small>Seguí con</small><b>Ayuda</b><em>Las llaves gratis y qué decirle.</em></span></a>
+</div>
+
+<div class="vista" data-vista="ayuda" id="v-ayuda" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Ayuda</h1><p class="cab-p">Las llaves gratis, qué decirle y qué hacer si algo no anda.</p></div></div>
+  <section class="instalar" id="llaves">
+    <div class="wrap">
+      <h2 class="titulo">Las dos llaves gratis.</h2>
+      <p class="intro">FRIDAY piensa con Groq y con Gemini. Cada uno te da una llave gratis, que es como una contraseña para que FRIDAY les pregunte de tu parte. Se sacan en un minuto, con tu cuenta de Google.</p>
+      <div class="donde">
+        <article><h3>La de Groq</h3><p class="para">Para charlar rapidísimo y escucharte</p>
+          <ol><li>Entrá a <b>console.groq.com/keys</b> e iniciá sesión con Google.</li><li>Tocá el botón para <b>crear una llave nueva</b> (Create API Key) y ponele de nombre FRIDAY.</li><li><b>Copiala</b>: empieza con <b>gsk_</b> y se ve una sola vez.</li><li>Pegala en FRIDAY: en la compu te la pide el tutorial; en el celu, en <b>Más → Cerebro</b>.</li></ol>
+          <a class="btn" href="https://console.groq.com/keys" target="_blank" rel="noopener">Abrir Groq</a></article>
+        <article><h3>La de Gemini</h3><p class="para">Para buscar en Google, leer PDF y fotos, y recordar</p>
+          <ol><li>Entrá a <b>aistudio.google.com/apikey</b> con tu cuenta de Google.</li><li>Tocá <b>crear una llave</b> (Create API key). Si te pide un proyecto, elegí el que te ofrece.</li><li><b>Copiala</b>: puede empezar con <b>AQ.</b> o con <b>AIza</b>; las dos sirven.</li><li>Pegala en FRIDAY, igual que la de Groq.</li></ol>
+          <a class="btn" href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Abrir Google AI Studio</a></article>
+      </div>
+      <p class="nota">Las de respaldo son opcionales y se sacan igual: Mistral en <b>console.mistral.ai</b> y OpenRouter en <b>openrouter.ai/keys</b>. Si las cargás en Ajustes, FRIDAY las usa cuando las otras dos no pueden.</p>
+    </div>
+  </section>
+  <section class="cerebros" id="decile">
+    <div class="wrap">
+      <h2 class="titulo">Qué decirle.</h2>
+      <p class="intro">FRIDAY está hecha para hablarle. Estas frases sirven tal cual, en la compu y en el celu.</p>
+      <dl class="herr-l decile-l">
+        <div><dt>«Investigá qué notebook me conviene»</dt><dd>Lee varias páginas, te va contando cómo viene y te deja un informe.</dd></div>
+        <div><dt>«¿Qué dice el último PDF que bajé?»</dt><dd>Lo encuentra solo y te lo cuenta. En la compu también le podés soltar un archivo encima.</dd></div>
+        <div><dt>«Pensalo bien: …»</dt><dd>Se toma su tiempo con lo difícil.</dd></div>
+        <div><dt>«Eso está mal»</dt><dd>Te pregunta qué falló y no lo repite. Si te gustó, «¡bien ahí!».</dd></div>
+        <div><dt>«¿Cómo estás de cupo?»</dt><dd>Te dice cuánto le queda hoy de los cerebros gratis.</dd></div>
+        <div><dt>«Mostrame el informe»</dt><dd>Abre el último que te armó. «Leémelo» y te lo lee.</dd></div>
+        <div><dt>«Hacé un chequeo»</dt><dd>Se prueba sola y te dice qué anda y qué no.</dd></div>
+        <div><dt>«Buscá actualizaciones»</dt><dd>Se fija si hay una versión nueva y, si querés, vuelve a la anterior.</dd></div>
+      </dl>
+    </div>
+  </section>
+  <section class="instalar" id="problemas">
+    <div class="wrap">
+      <div class="dudas" style="margin-top:0">
+        <h2>Si algo no anda</h2>
+        <div class="min0">
+          <details><summary>No me contesta o se queda pensando</summary><p>Fijate que haya internet y preguntale «¿cómo estás de cupo?». Si Groq se quedó sin cupo del día, sigue con Gemini; si se acabaron los dos, sumá una llave de respaldo en Ajustes. Y si querés saber qué pasa, «hacé un chequeo».</p></details>
+          <details><summary>Me dice que la llave no anda</summary><p>Copiala entera, sin espacios. Las de Gemini pueden empezar con <b>AQ.</b> o con <b>AIza</b>: las dos sirven. Si sigue igual, creá una nueva y pegala en <b>Ajustes</b> en la compu, o en <b>Más → Cerebro</b> en el celu.</p></details>
+          <details><summary>No me escucha</summary><p>Cuando el navegador te pida permiso para el micrófono, tocá <b>Permitir</b>. Decí «Friday» antes de hablarle. En el celu, activá <b>manos libres</b> en <b>Más</b> y te escucha sin tocar nada.</p></details>
+          <details><summary>Se equivocó en algo</summary><p>Decile «eso está mal» y contale qué. Se lo guarda y no lo repite. Si un tema es difícil, pedile «pensalo bien» y se toma su tiempo.</p></details>
+          <details><summary>El celu no se une a la compu</summary><p>La compu tiene que estar prendida y con FRIDAY abierta. En la compu, FRIDAY te muestra un código; en el celu lo escaneás o lo escribís, y listo.</p></details>
+        </div>
+      </div>
     </div>
   </section>
   <a class="sig" href="#instalar" data-ir="instalar"><span class="wrap"><small>Seguí con</small><b>Instalala</b><em>Gratis, en Windows, Linux y el celu.</em></span></a>
@@ -846,7 +976,7 @@ section.hero{padding-block:0}
           <ul class="req"><li>Android 10 o más nuevo, con Chrome al día.</li><li>4 GB de memoria o más.</li><li>Un <b>micrófono USB de campo lejano</b> (de los que escuchan a varios metros). El de la tablet solo entiende si le hablás de cerca.</li><li>Estar enchufada y en el mismo wifi que la compu.</li></ul>
           <a class="btn sec" href="https://pedropiratita134.github.io/FRIDAY/panel.html">Probar FRIDAY Casa</a></article>
       </div>
-      <p class="nota">¿Algo no anda? Decile a FRIDAY «hacé un chequeo»: se prueba sola y arma un informe con lo que funciona y lo que no.</p>
+      <p class="nota">¿Te trabaste con las llaves? En <a href="#llaves">Ayuda</a> están paso a paso. ¿Algo no anda? Decile a FRIDAY «hacé un chequeo»: se prueba sola y arma un informe con lo que funciona y lo que no.</p>
       <div class="dudas" id="dudas">
         <h2>Preguntas de siempre</h2>
         <div class="min0">
@@ -868,7 +998,7 @@ section.hero{padding-block:0}
 <footer>
   <div class="pie"><div class="wrap pgrid">
     <a class="logo" href="#inicio" data-ir="inicio" aria-label="BufaLabs, inicio"><img decoding="async" src="img/bufalabs-logo.svg" width="1623" height="512" loading="lazy" alt="BufaLabs: tecnología, inteligencia artificial"></a>
-    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>101.07</span>, Móvil 3.4 y Casa 4.1 (beta). © 2026 BufaLabs</p></div>
+    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>102</span>, Móvil 3.5 y Casa 4.2 (beta). © 2026 BufaLabs</p></div>
   </div></div>
 </footer>
 
@@ -903,13 +1033,16 @@ const EXPR={
   listening:{eyes:[eyeOpen(72,36),eyeOpen(128,36)], brows:['M58 62q14 -8 28 0','M114 62q14 -8 28 0'], mouth:'M86 138q14 10 28 0', cheek:.3, tilt:-4}
 };
 
+let faceN=0;
+// cada cara tiene sus propios degradados: si comparten el id y la primera queda en una vista oculta, las otras se quedan sin cabeza
 function faceBuild(target){
+  const k=++faceN;
   target.innerHTML=`<svg viewBox="0 0 200 200" role="img" aria-label="FRIDAY">
-  <defs><linearGradient id="fsk" x1="0" y1="0" x2=".3" y2="1"><stop class="skin-a" offset="0" stop-color="#5E98F6"/><stop class="skin-b" offset="1" stop-color="#2D63D8"/></linearGradient>
-  <radialGradient id="fsh" cx=".3" cy=".18" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".42"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
-  <filter id="fds" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#000" flood-opacity=".45"/></filter></defs>
+  <defs><linearGradient id="fsk${k}" x1="0" y1="0" x2=".3" y2="1"><stop class="skin-a" offset="0" stop-color="#5E98F6"/><stop class="skin-b" offset="1" stop-color="#2D63D8"/></linearGradient>
+  <radialGradient id="fsh${k}" cx=".3" cy=".18" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".42"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="fds${k}" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#000" flood-opacity=".45"/></filter></defs>
   <g class="breathe"><g class="head">
-    <path d="${SQUIRCLE}" fill="url(#fsk)"/><path d="${SQUIRCLE}" fill="url(#fsh)"/>
+    <path d="${SQUIRCLE}" fill="url(#fsk${k})"/><path d="${SQUIRCLE}" fill="url(#fsh${k})"/>
     <g class="cheeks"><ellipse class="cheek" cx="56" cy="122" rx="13" ry="8" fill="#FFB3A1" opacity="0"/><ellipse class="cheek" cx="144" cy="122" rx="13" ry="8" fill="#FFB3A1" opacity="0"/></g>
     <g class="eyes"><path class="eye eL" fill="#fff"/><path class="eye eR" fill="#fff"/></g>
     <path class="brow bL" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".9"/><path class="brow bR" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".9"/>
@@ -1025,7 +1158,7 @@ document.querySelectorAll('[data-peso]').forEach(e=>{
 
 // ---- cada sección es una página: #hace, #nuevo, #cerebros, #nosotros, #instalar (y #inicio)
 const VISTAS=[...document.querySelectorAll('.vista')];
-const PAGINAS={inicio:'BufaLabs · FRIDAY', hace:'Qué hace · FRIDAY', nuevo:'Lo nuevo · FRIDAY', actualizaciones:'Actualizaciones · FRIDAY', cerebros:'Por dentro · FRIDAY', nosotros:'Nosotros · BufaLabs', instalar:'Instalala · FRIDAY'};
+const PAGINAS={inicio:'BufaLabs · FRIDAY', hace:'Qué hace · FRIDAY', nuevo:'Lo nuevo · FRIDAY', actualizaciones:'Actualizaciones · FRIDAY', cerebros:'Por dentro · FRIDAY', nosotros:'Nosotros · BufaLabs', probala:'Hablale · FRIDAY', ayuda:'Ayuda · FRIDAY', instalar:'Instalala · FRIDAY'};
 let vistaActual=null;
 function vistaDe(id){
   if(!id || PAGINAS[id]) return PAGINAS[id] ? id : 'inicio';
@@ -1045,6 +1178,77 @@ function ir(hash){
   else window.scrollTo({top:0, behavior:'auto'});
 }
 addEventListener('hashchange', ()=>ir(location.hash));
+
+// ---- HABLALE: la demo por voz (Groq directo desde tu navegador; la llave queda solo en esta pestaña)
+(function(){
+  const pc=document.querySelector('.pcara'), est=$('pEst').querySelector('span'), yo=$('pYo'), ella=$('pElla'), cara=$('cara4');
+  faceBuild(cara);
+  let llave='', charla=[], oyendo=false, rec=null, hablaRAF=0, gen=0;
+  const ESTADO={lista:'Lista para charlar', escucha:'Te escucho…', piensa:'Pensando…', habla:'Hablando'};
+  const EXP={lista:'happy', escucha:'listening', piensa:'thinking', habla:'happy'};
+  function estado(e){ pc.dataset.e=e; est.textContent=ESTADO[e]||'Esperando tu llave'; FACE.talk=0; faceApplyTo(cara, EXPR[EXP[e]]||EXPR.happy); }
+  faceApplyTo(cara, EXPR.happy);
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  function voz(){ const v=speechSynthesis.getVoices(); return v.find(x=>/es[-_]AR/i.test(x.lang)) || v.find(x=>/es[-_](419|MX|US)/i.test(x.lang)) || v.find(x=>/^es/i.test(x.lang)) || null; }
+  function decir(t){
+    return new Promise(res=>{
+      if(!('speechSynthesis' in window)){ res(); return; }
+      try{ speechSynthesis.cancel(); }catch(e){}
+      const u=new SpeechSynthesisUtterance(t), v=voz(); if(v) u.voice=v; u.lang=v?v.lang:'es-AR'; u.rate=1.05;
+      let fin=false; const listo=()=>{ if(fin) return; fin=true; cancelAnimationFrame(hablaRAF); FACE.talk=0; estado('lista'); res(); };
+      u.onstart=()=>{ estado('habla'); const t0=performance.now(); (function anima(){ FACE.talk=quieto?.3:.35+.35*Math.abs(Math.sin((performance.now()-t0)/95)); faceApplyTo(cara, EXPR.happy); hablaRAF=requestAnimationFrame(anima); })(); };
+      u.onend=listo; u.onerror=listo; setTimeout(()=>{ if(!speechSynthesis.speaking) listo(); }, 1500 + t.length*90);
+      speechSynthesis.speak(u);
+    });
+  }
+  const PROMPT=()=>`Sos FRIDAY, la inteligencia artificial de BufaLabs, un laboratorio chico de Argentina. Estás en una demo en la página: alguien te prueba antes de instalarte. Hablás en español rioplatense, cálida, con humor, en 1 a 3 oraciones cortas, sin markdown, sin emojis ni listas (todo se lee en voz alta). Acá en la página solo podés charlar. Si te piden algo de la compu, del celu, música, recordatorios, archivos o buscar en internet, contá con entusiasmo que instalada lo hacés de verdad (es gratis, en Windows, Linux y el celu), sin inventar que lo hiciste. No inventes datos de hoy (precios, resultados, noticias). Hoy es ${new Date().toLocaleDateString('es-AR',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}.`;
+  async function preguntar(texto){
+    texto=String(texto||'').trim(); if(!texto || !llave) return;
+    const mio=++gen; try{ speechSynthesis.cancel(); }catch(e){}
+    yo.hidden=false; yo.textContent=texto; ella.textContent=''; estado('piensa'); faceApplyTo(cara, EXPR.thinking);
+    charla.push({role:'user', content:texto}); charla=charla.slice(-10);
+    let r, out='';
+    try{
+      r=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST', headers:{'Content-Type':'application/json','Authorization':'Bearer '+llave},
+        body:JSON.stringify({model:'openai/gpt-oss-20b', reasoning_effort:'low', temperature:.8, max_completion_tokens:700, messages:[{role:'system', content:PROMPT()}, ...charla]})});
+    }catch(e){ r=null; }
+    if(mio!==gen) return;
+    if(!r || !r.ok){
+      const st=r?r.status:0; charla.pop();
+      out = st===401 ? 'Esa llave no me anda. Fijate que esté completa: empieza con gsk_.' : st===429 ? 'Uy, se llenó el cupo de este minuto. Probá de nuevo en un ratito.' : 'No me pude conectar. Fijate que haya internet y probá de nuevo.';
+      if(st===401){ $('pHablar').hidden=true; $('pLlaveF').hidden=false; $('pLlaveMsg').classList.add('mal'); $('pLlaveMsg').textContent=out; llave=''; }
+      ella.textContent=out; estado('lista'); faceApplyTo(cara, EXPR.worried); if(st!==401) decir(out); return;
+    }
+    try{ const d=await r.json(); out=String(d.choices&&d.choices[0]&&d.choices[0].message&&d.choices[0].message.content||'').replace(/[*_#`]/g,'').trim(); }catch(e){}
+    if(mio!==gen) return;
+    if(!out) out='Me quedé en blanco. ¿Me lo decís de nuevo?';
+    charla.push({role:'assistant', content:out}); ella.textContent=out;
+    await decir(out);
+  }
+  $('pLlaveF').addEventListener('submit', e=>{
+    e.preventDefault(); const k=$('pLlave').value.replace(/\s/g,'');
+    if(k.length<20){ $('pLlaveMsg').classList.add('mal'); $('pLlaveMsg').textContent='Esa llave parece incompleta: copiala entera, empieza con gsk_.'; return; }
+    llave=k; $('pLlave').value=''; $('pLlaveF').hidden=true; $('pHablar').hidden=false; estado('lista');
+    if(!SR){ $('pMic').hidden=true; $('pSinMic').hidden=false; }
+    const hola='¡Listo! Tocá el micrófono y hablame, o escribime abajo.'; ella.textContent=hola; decir(hola);
+  });
+  function parar(){ oyendo=false; $('pMic').setAttribute('aria-pressed','false'); $('pMicTx').textContent='Tocá y hablale'; try{ rec && rec.stop(); }catch(e){} }
+  $('pMic').addEventListener('click', ()=>{
+    if(!SR) return;
+    if(oyendo){ parar(); return; }
+    gen++; try{ speechSynthesis.cancel(); }catch(e){}
+    rec=new SR(); rec.lang='es-AR'; rec.interimResults=true; rec.maxAlternatives=1;
+    let final='';
+    rec.onresult=e=>{ let parcial=''; for(let i=e.resultIndex;i<e.results.length;i++){ const t=e.results[i][0].transcript; if(e.results[i].isFinal) final+=t; else parcial+=t; } yo.hidden=false; yo.textContent=(final+parcial).trim(); };
+    rec.onerror=e=>{ parar(); if(e.error==='not-allowed'||e.error==='service-not-allowed'){ ella.textContent='No me diste permiso para el micrófono. Tocá el candadito de la barra de direcciones y permitilo, o escribime abajo.'; estado('lista'); } };
+    rec.onend=()=>{ const t=final.trim(); parar(); if(t) preguntar(t); else if(pc.dataset.e==='escucha') estado('lista'); };
+    try{ rec.start(); oyendo=true; $('pMic').setAttribute('aria-pressed','true'); $('pMicTx').textContent='Te escucho… tocá para terminar'; estado('escucha'); }catch(e){ parar(); }
+  });
+  $('pTxtF').addEventListener('submit', e=>{ e.preventDefault(); const t=$('pTxt').value; $('pTxt').value=''; preguntar(t); });
+  document.querySelectorAll('.pideas button').forEach(b=>b.addEventListener('click', ()=>preguntar(b.textContent)));
+  try{ speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged=()=>{}; }catch(e){}
+  addEventListener('pagehide', ()=>{ llave=''; charla=[]; });
+})();
 document.addEventListener('click', e=>{ const a=e.target.closest('a[href^="#"]'); if(a && a.getAttribute('href')===location.hash){ e.preventDefault(); ir(location.hash); } });
 ir(location.hash);
 const barra=document.querySelector('.barra');
