@@ -1,5 +1,51 @@
 [
  {
+  "fecha": "2026-10-29",
+  "app": "compu",
+  "version": "102.01",
+  "titulo": "Te conoce mejor",
+  "resumen": "FRIDAY ahora se acuerda de lo que quedó pendiente, aprende tus costumbres y te ayuda a estudiar tomándote examen.",
+  "items": [
+   [
+    "Te acordás de lo de ayer",
+    "Si ayer quedó algo pendiente, como llamar a alguien o terminar un trabajo, FRIDAY te lo recuerda una vez al otro día."
+   ],
+   [
+    "Lo de siempre",
+    "Aprende lo que le pedís seguido a cierta hora y te lo ofrece. Le decís «dale» y lo hace."
+   ],
+   [
+    "Dos cerebros piensan mejor",
+    "Cuando le pedís «pensalo bien», consulta otra opinión y, si suma algo, te lo agrega."
+   ],
+   [
+    "Modo profe",
+    "Decile «tomame examen de historia»: te hace cinco preguntas, te corrige y te dice qué repasar."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-29",
+  "app": "celu",
+  "version": "Móvil 3.7",
+  "titulo": "Te conoce mejor",
+  "resumen": "Lo mismo que en la compu: recuerda lo pendiente, aprende tus costumbres y te toma examen.",
+  "items": [
+   [
+    "Te acordás de lo de ayer",
+    "Si ayer quedó algo pendiente, como llamar a alguien o terminar un trabajo, FRIDAY te lo recuerda una vez al otro día."
+   ],
+   [
+    "Lo de siempre",
+    "Aprende lo que le pedís seguido a cierta hora y te lo ofrece. Le decís «dale» y lo hace."
+   ],
+   [
+    "Modo profe",
+    "Decile «tomame examen de historia»: te hace cinco preguntas, te corrige y te dice qué repasar."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-10-28",
   "app": "celu",
   "version": "Móvil 3.6",
