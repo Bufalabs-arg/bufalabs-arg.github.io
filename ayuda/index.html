@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ayuda de FRIDAY · BufaLabs</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Cómo sacar las llaves gratis de Groq y Gemini, qué decirle a FRIDAY y qué hacer si algo no anda.">
+<meta name="theme-color" content="#2F6BE3">
+<meta property="og:title" content="Ayuda de FRIDAY · BufaLabs">
+<meta property="og:description" content="Cómo sacar las llaves gratis de Groq y Gemini, qué decirle a FRIDAY y qué hacer si algo no anda.">
+<meta property="og:image" content="https://bufalabs-arg.github.io/img/og-friday.png">
+<meta property="og:image:alt" content="FRIDAY vive en tu casa: la cara de FRIDAY y un globo de charla, de BufaLabs.">
+<meta property="og:site_name" content="BufaLabs">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:image" content="https://bufalabs-arg.github.io/img/og-friday.png">
+<link rel="canonical" href="https://bufalabs-arg.github.io/ayuda/">
+<link rel="alternate" hreflang="es-AR" href="https://bufalabs-arg.github.io/">
+<link rel="alternate" hreflang="en" href="https://bufalabs-arg.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://bufalabs-arg.github.io/">
+<meta name="google-site-verification" content="BmoSnXkW53Xt9tNBYE_nl_BCPsMj27MFNu641bMHhyM">
+<meta property="og:url" content="https://bufalabs-arg.github.io/ayuda/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" type="image/svg+xml" href="img/bufalabs-icono.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="img/bufalabs-icono-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://bufalabs-arg.github.io/#bufalabs","name":"BufaLabs","alternateName":["Bufalabs","Bufa Labs"],"url":"https://bufalabs-arg.github.io/",
+  "logo":"https://bufalabs-arg.github.io/img/bufalabs-logo-512.png","image":"https://bufalabs-arg.github.io/img/og-friday.png",
+  "description":"Laboratorio de tecnología e inteligencia artificial de Argentina. Hace a FRIDAY, una inteligencia artificial gratis para la compu y el celu.",
+  "areaServed":"AR","address":{"@type":"PostalAddress","addressRegion":"Córdoba","addressCountry":"AR"},"sameAs":[]},
+ {"@type":"WebSite","@id":"https://bufalabs-arg.github.io/#sitio","url":"https://bufalabs-arg.github.io/","name":"BufaLabs","inLanguage":"es-AR","publisher":{"@id":"https://bufalabs-arg.github.io/#bufalabs"}},
+ {"@type":"VideoObject","name":"FRIDAY en 30 segundos","description":"FRIDAY, la inteligencia artificial gratis de BufaLabs: investiga por vos, lee tus archivos y te ayuda a estudiar.",
+  "thumbnailUrl":"https://bufalabs-arg.github.io/video/friday-30s.jpg","uploadDate":"2026-10-29","duration":"PT30S","contentUrl":"https://bufalabs-arg.github.io/video/friday-30s.mp4","inLanguage":"es-AR","publisher":{"@id":"https://bufalabs-arg.github.io/#bufalabs"}},
+ {"@type":"SoftwareApplication","name":"FRIDAY","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 10, Windows 11, Linux, Android, iOS",
+  "description":"Una inteligencia artificial gratis que te escucha, te habla y hace cosas de verdad en la compu y en el celu.",
+  "softwareVersion":"102","inLanguage":"es-AR","url":"https://bufalabs-arg.github.io/","downloadUrl":"https://bufalabs-arg.github.io/descargas/FRIDAY-Setup.exe",
+  "image":"https://bufalabs-arg.github.io/img/og-friday.png","offers":{"@type":"Offer","price":"0","priceCurrency":"ARS"},"publisher":{"@id":"https://bufalabs-arg.github.io/#bufalabs"}}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<style>
+/* BufaLabs, la casa de FRIDAY.
+   Layout: el azul de FRIDAY a pantalla completa arriba, con ella mirándote; abajo, bandas enteras de
+   papel blanco frío y tinta azul noche. Lo que hace FRIDAY se cuenta como se lo pedís: con frases. */
+:root{
+  --azul:#2F6BE3; --azul-2:#5E98F6; --azul-3:#1E4FC0; --azul-4:#173E9E;
+  --tinta:#0E1B3D; --tinta-2:#4A5A7F; --tinta-3:#8A97B4; --tinta-4:#1B2B57;
+  --papel:#F5F8FF; --papel-2:#E7EEFF; --linea:#D3DDF5; --blanco:#FFFFFF;
+  --claro:#E4EDFF; --claro-2:#AFC0E6; --claro-3:#C9D6F2;
+  --sol:#FFC93C; --sol-tinta:#2A1C00; --menta:#3DDC97; --rojo:#F0525A;
+  --disp:"Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --text:"Atkinson Hyperlegible", system-ui, "Segoe UI", Roboto, sans-serif;
+  --ancho:1180px; --gut:clamp(16px,3.4vw,28px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--papel)}
+body{margin:0;background:var(--papel);color:var(--tinta);font:400 19px/1.55 var(--text);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3{text-wrap:balance}
+:focus-visible{outline:3px solid var(--sol);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--ancho);margin:0 auto;padding-left:max(var(--gut), env(safe-area-inset-left, 0px));padding-right:max(var(--gut), env(safe-area-inset-right, 0px))}
+.min0{min-width:0}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;z-index:10;background:var(--blanco);padding:8px 14px}
+
+/* ---------- arriba: el azul de FRIDAY ---------- */
+.hero{position:relative;overflow:hidden;color:var(--blanco);background:
+  radial-gradient(70% 90% at 78% 40%, #4D86F0 0%, transparent 60%),
+  radial-gradient(60% 70% at 0% 100%, #2457C9 0%, transparent 70%), var(--azul)}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.16) 1.2px, transparent 1.5px);background-size:30px 30px;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 80%);mask-image:linear-gradient(180deg,#000 0%,transparent 80%)}
+
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;border-radius:14px}
+.marca .ico{width:46px;height:46px;flex:none;border-radius:13px;box-shadow:0 8px 16px -6px rgba(8,26,80,.5)}
+.marca .pal{width:auto;height:25px;flex:none}
+/* la barra de arriba: siempre a mano, en todas las secciones */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:31;background:var(--azul)}
+.barra{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--azul);color:var(--blanco);transition:box-shadow .3s}
+.barra.sombra{box-shadow:0 10px 30px -14px rgba(8,26,80,.65)}
+.barra-in{display:flex;align-items:center;gap:22px;min-height:78px}
+.barra nav{margin-left:auto;min-width:0}
+.barra ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.barra ul a{display:block;position:relative;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:16.5px;color:var(--claro);white-space:nowrap;transition:background .2s,color .2s}
+.barra ul a:hover{background:rgba(255,255,255,.12);color:var(--blanco)}
+.barra ul a[aria-current="page"]{background:var(--blanco);color:var(--azul-3)}
+.barra-cta.btn{min-height:46px;padding:0 22px;font-size:16.5px}
+.barra-cta[aria-current="page"]{box-shadow:0 0 0 3px rgba(255,255,255,.7)}
+
+/* cada sección es una página */
+.vista[hidden]{display:none}
+.vista.entra{animation:vistaEntra .5s cubic-bezier(.2,.8,.3,1)}
+@keyframes vistaEntra{from{opacity:0;transform:translateY(18px)}}
+.cab{position:relative;overflow:hidden;color:var(--blanco);background:radial-gradient(70% 120% at 85% 0%, #4D86F0 0%, transparent 60%),var(--azul);padding-block:56px 64px}
+.cab::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.14) 1.2px, transparent 1.5px);background-size:30px 30px;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+.cab .wrap{position:relative;z-index:1}
+.cab-t{margin:0;font:800 clamp(52px,8vw,110px)/.9 var(--disp);font-variation-settings:"opsz" 96,"wdth" 92;letter-spacing:-.022em}
+.cab-p{margin:18px 0 0;max-width:46ch;font-size:clamp(19px,1.7vw,22px);color:var(--claro)}
+.cab+section{padding-top:76px}
+.oculto{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.oculto+.intro{margin-top:0}
+.sig{display:block;text-decoration:none;background:var(--azul-3);color:var(--blanco);padding-block:44px;transition:background .25s}
+.sig:hover{background:var(--azul-4)}
+.sig .wrap{display:grid;gap:4px}
+.sig small{font-size:16px;color:var(--claro-2)}
+.sig b{font:800 clamp(36px,5vw,60px)/1 var(--disp);font-variation-settings:"wdth" 94;letter-spacing:-.015em;color:var(--sol)}
+.sig em{font-style:normal;font-size:18px;color:var(--claro-3)}
+
+/* inicio: las puertas a cada sección */
+.atajos{background:var(--papel)}
+.atgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;margin-top:44px}
+.at{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:18px;min-height:250px;padding:26px 26px 0;border-radius:28px;text-decoration:none;color:var(--tinta);background:var(--blanco);border:1px solid var(--linea);transition:transform .25s cubic-bezier(.3,1.3,.5,1),box-shadow .25s}
+.at:hover{transform:translateY(-4px);box-shadow:0 26px 50px -30px rgba(14,27,61,.55)}
+.at-tx b{display:block;font:800 clamp(28px,2.6vw,36px)/1 var(--disp);font-variation-settings:"wdth" 94;letter-spacing:-.01em}
+.at-tx em{display:block;margin-top:8px;font-style:normal;font-size:17px;line-height:1.4;color:var(--tinta-2);max-width:30ch}
+.at img{align-self:stretch;margin-inline:-6px;border-radius:14px 14px 0 0;box-shadow:0 0 0 6px var(--tinta)}
+.at-hace,.at-nuevo{grid-column:span 3}
+.at-dentro,.at-nos,.at-inst{grid-column:span 2;padding-bottom:26px}
+.at-hace{background:var(--papel-2)}
+.at-nuevo{background:var(--tinta);color:var(--blanco);border-color:var(--tinta)}.at-nuevo .at-tx em{color:var(--claro-2)}
+.at-dentro{background:var(--azul);color:var(--blanco);border-color:var(--azul)}.at-dentro .at-tx em{color:var(--claro)}
+.at-ico{width:96px;height:96px;margin:0!important;align-self:flex-end!important;box-shadow:none!important;border-radius:26px!important}
+.at-num{align-self:flex-end;font:800 92px/.8 var(--disp);font-variation-settings:"wdth" 90;letter-spacing:-.03em;color:var(--azul-3)}
+.at-inst{background:var(--sol);border-color:var(--sol);color:var(--sol-tinta)}.at-inst .at-tx em{color:#5a4300}
+.at-flecha{align-self:flex-end;width:62px;height:62px;border-radius:50%;background:var(--sol-tinta);position:relative}
+.at-flecha::before{content:"";position:absolute;left:50%;top:50%;width:16px;height:16px;border-right:4px solid var(--sol);border-bottom:4px solid var(--sol);transform:translate(-65%,-50%) rotate(-45deg)}
+.hgrid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:30px;padding-block:30px 120px}
+.hero h1{margin:0;font:800 clamp(62px,9.4vw,138px)/.86 var(--disp);font-variation-settings:"opsz" 96,"wdth" 92;letter-spacing:-.022em;text-wrap:initial}
+.hero h1 span{display:block}
+.hero .bajada{max-width:32ch;margin:30px 0 0;font-size:clamp(19px,1.7vw,23px);line-height:1.45;color:var(--claro)}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;min-height:58px;padding:0 28px;border-radius:999px;font:700 18px var(--text);text-decoration:none;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn.si{background:var(--sol);color:var(--sol-tinta)}
+.btn.no{border:2px solid rgba(255,255,255,.55);color:var(--blanco)}
+.btn.no:hover{border-color:var(--blanco)}
+/* ella */
+.ella{position:relative;justify-self:center;width:min(420px,80vw)}
+.ellabar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px;margin-bottom:14px}
+.estado{display:inline-flex;align-items:center;gap:8px;margin:0;padding:6px 14px 6px 10px;border-radius:999px;background:rgba(14,27,61,.28);font-size:15px;font-weight:700;color:var(--claro)}
+.estado i{width:9px;height:9px;border-radius:50%;background:var(--menta);box-shadow:0 0 0 4px rgba(61,220,151,.25);animation:late 2s ease-in-out infinite}
+@keyframes late{50%{box-shadow:0 0 0 7px rgba(61,220,151,0)}}
+#cara{display:block;width:100%;aspect-ratio:1;max-width:100%;padding:0;border:0;background:none;cursor:pointer;position:relative;-webkit-tap-highlight-color:transparent;border-radius:28%}
+#cara:active .head{transform:scale(1.05,.94)}
+.cara svg{position:relative;width:100%;height:100%;overflow:visible;display:block}
+.cara::before{content:"";position:absolute;left:8%;right:8%;bottom:-6%;height:30%;border-radius:50%;background:radial-gradient(closest-side, rgba(8,26,80,.5), rgba(8,26,80,0));pointer-events:none}
+.testigo .cara::before{background:radial-gradient(closest-side, rgba(0,0,0,.55), rgba(0,0,0,0))}
+.cara .head{transform-origin:100px 110px;transition:transform .5s cubic-bezier(.3,1.4,.5,1)}
+.cara .breathe{animation:respira 5s ease-in-out infinite;transform-origin:100px 190px}
+@keyframes respira{50%{transform:scale(1.02,.985)}}
+.cara .eyes{transition:transform .25s cubic-bezier(.3,1.3,.5,1)}
+.cara .eye{transition:d .18s ease, transform .12s;transform-box:fill-box;transform-origin:center}
+.cara .eye.blink{transform:scaleY(.08)}
+.cara .brow,.cara .mouth{transition:d .22s ease}
+.cara .cheek,.cara .extra{transition:opacity .35s}
+.globo{position:absolute;left:-18%;bottom:-10%;width:min(390px,86vw);padding:18px 22px 20px;border-radius:26px 26px 26px 6px;background:var(--blanco);color:var(--tinta);box-shadow:0 30px 60px -25px rgba(8,26,80,.6);
+  transition:opacity .35s, transform .35s}
+.globo.cambia{opacity:0;transform:translateY(8px)}
+.globo q{display:block;quotes:"«" "»";color:var(--tinta-2);font-size:16px;margin-bottom:6px}
+.globo q.toque{quotes:none;font-style:italic}
+.globo p{margin:0;min-height:1.3em;font:600 21px/1.3 var(--disp);font-variation-settings:"opsz" 24}
+.globo p.tipea::after{content:"";display:inline-block;width:.45em;height:1em;margin-left:.12em;vertical-align:-.12em;background:var(--azul);border-radius:2px;animation:cursor .8s steps(2) infinite}
+@keyframes cursor{50%{opacity:0}}
+.toca{margin:0;font-size:15px;font-weight:700;color:var(--claro-2)}
+.toca b{color:var(--sol)}
+
+/* la cinta */
+.cinta{overflow:hidden;background:var(--azul-4);padding-block:16px}
+.cinta .fila{display:flex;gap:12px;width:max-content;animation:corre 46s linear infinite}
+.cinta span{display:inline-flex;align-items:center;padding:8px 18px;border-radius:999px;font:700 17px/1 var(--disp);font-variation-settings:"wdth" 97;white-space:nowrap;background:var(--azul-3);color:var(--blanco)}
+.cinta span:nth-child(4n+1){background:var(--sol);color:var(--sol-tinta)}
+.cinta span:nth-child(4n+3){background:var(--menta);color:var(--tinta)}
+@keyframes corre{to{transform:translateX(calc(-50% - 6px))}}
+
+/* ---------- secciones ---------- */
+section{padding-block:110px;scroll-margin-top:90px}
+section.hero{padding-block:0}
+.titulo{margin:0;font:800 clamp(40px,5.4vw,72px)/.95 var(--disp);font-variation-settings:"opsz" 80,"wdth" 94;letter-spacing:-.018em;max-width:16ch}
+.intro{max-width:46ch;margin:22px 0 0;color:var(--tinta-2);font-size:20px}
+
+/* quiénes somos */
+.nosgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(36px,6vw,90px);align-items:start}
+.nos .titulo{font-size:clamp(38px,4.6vw,62px);max-width:18ch}
+.nos .intro + .intro{margin-top:14px}
+.nos .intro b{color:var(--tinta)}
+.cifras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:40px 0 0}
+.cifras div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:8px;padding:18px 18px 20px;border-radius:22px;background:var(--papel-2)}
+.cifras dd{margin:0;font:800 clamp(44px,5vw,64px)/.9 var(--disp);font-variation-settings:"wdth" 92;letter-spacing:-.015em;color:var(--azul-3);font-variant-numeric:tabular-nums}
+.cifras dt{font-size:16px;line-height:1.3;color:var(--tinta-2)}
+.princ{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.princ li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;align-items:start;padding:20px 22px;border-radius:24px;background:var(--blanco);border:1px solid var(--linea)}
+.princ .ico{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:var(--c);color:var(--ci,var(--tinta))}
+.princ .ico svg{width:28px;height:28px}
+.princ h3{margin:2px 0 4px;font:800 24px/1.1 var(--disp);font-variation-settings:"wdth" 96}
+.princ p{margin:0;color:var(--tinta-2);font-size:17px;line-height:1.45}
+
+/* tres lugares */
+.lugares-sec{background:var(--papel-2)}
+.lugares{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);grid-template-rows:auto auto;gap:34px;margin-top:60px}
+.lugar{min-width:0}
+.lugar figure,.novedad figure,.fotos figure{margin:0}
+.pantalla{border-radius:22px;overflow:hidden;background:var(--tinta);box-shadow:0 40px 70px -40px rgba(14,27,61,.55), 0 0 0 10px var(--tinta)}
+.lugar.grande{grid-row:1/3}
+.lugar.grande .pantalla{border-radius:26px;box-shadow:0 40px 70px -40px rgba(14,27,61,.55), 0 0 0 14px var(--tinta)}
+.lugar.celu{display:grid;grid-template-columns:150px minmax(0,1fr);gap:22px;align-items:start}
+.lugar.celu .pantalla,.novedad.celu .pantalla{border-radius:26px;box-shadow:0 30px 50px -30px rgba(14,27,61,.6), 0 0 0 7px var(--tinta)}
+.lugar h3{margin:30px 0 6px;font:800 30px/1 var(--disp);font-variation-settings:"wdth" 96}
+.lugar.celu h3{margin-top:4px}
+.lugar p{margin:0;color:var(--tinta-2);max-width:42ch}
+.lugar.compu h3{margin-top:34px}
+.lugar.beta{display:block;align-self:start;text-decoration:none;padding:22px 24px 24px;border-radius:24px;border:2px dashed var(--claro-2);transition:border-color .2s,background .2s}
+.lugar.beta:hover{border-color:var(--azul-2);background:var(--blanco)}
+.lugar.beta h3{margin:10px 0 6px;font-size:24px}
+.lugar.beta p{font-size:17px}
+.etq{display:inline-block;padding:3px 11px;border-radius:999px;background:var(--sol);color:var(--sol-tinta);font:700 13px/1.4 var(--text);letter-spacing:.02em;vertical-align:middle}
+.donde h3 .etq{margin-left:8px;position:relative;top:-3px}
+.donde article.beta{background:transparent;border:2px dashed var(--claro-2)}
+.donde article.beta.tuya{border-style:solid;border-color:var(--azul)}
+.donde .req{margin:0 0 8px;color:var(--tinta-2);font-size:16px}
+.donde ul.req{padding-left:20px;margin-bottom:18px;display:grid;gap:6px}
+.donde ul.req li{padding:0;color:var(--tinta-2)}
+.donde ul.req li::before{content:none}
+.donde ul.req b{color:var(--tinta)}
+.donde .btn.sec{background:transparent;color:var(--azul-3);border:2px solid var(--azul-2)}
+
+/* le hablás y hace: frases */
+.hace{background:var(--tinta);color:var(--blanco)}
+.hace .intro{color:var(--claro-2)}
+.charla{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:50px;margin-top:56px}
+.testigo{position:relative}.testigo div{position:sticky;top:30vh;width:200px;aspect-ratio:1}
+.frases{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.14)}
+.frases li{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:baseline;padding-block:28px;border-bottom:1px solid rgba(255,255,255,.14)}
+.frases q{quotes:"«" "»";font:700 clamp(24px,2.6vw,34px)/1.18 var(--disp);font-variation-settings:"opsz" 40,"wdth" 98;letter-spacing:-.01em;transition:color .2s}
+.frases li:hover q,.frases li:focus-visible q{color:var(--sol)}
+.frases p{margin:0;color:var(--claro-3);font-size:18px}
+.fotos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:56px}
+.fotos img{border-radius:16px;box-shadow:0 0 0 6px var(--tinta-4)}
+.fotos figcaption{margin-top:14px;color:var(--claro-2);font-size:16px}
+
+/* lo nuevo */
+.novedades{display:grid;gap:80px;margin-top:64px}
+.novedad{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(30px,5vw,64px);align-items:center}
+.novedad:nth-child(even){grid-template-columns:minmax(0,1fr) minmax(0,1.45fr)}
+.novedad:nth-child(even) figure{order:2}
+.novedad.celu{grid-template-columns:minmax(0,1fr) minmax(0,1.45fr)}
+.novedad.celu figure{order:0;justify-self:center;width:min(270px,70vw)}
+.novedad h3{margin:0;font:800 clamp(34px,3.6vw,48px)/.95 var(--disp);font-variation-settings:"wdth" 94;letter-spacing:-.012em}
+.novedad p{margin:16px 0 0;color:var(--tinta-2);max-width:44ch}
+.novedad .dice{display:inline-block;margin-top:22px;padding:12px 18px;border-radius:20px 20px 20px 6px;background:var(--azul);color:var(--blanco);font:700 19px/1.25 var(--disp);font-variation-settings:"wdth" 98}
+.dice q{quotes:"«" "»"}
+.extras{list-style:none;margin:90px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.extras li{padding:24px 22px 26px;border-radius:24px;background:var(--papel-2)}
+.extras h3{margin:0 0 8px;font:800 23px/1.1 var(--disp);font-variation-settings:"wdth" 96}
+.extras p{margin:0;color:var(--tinta-2);font-size:17px;line-height:1.45}
+/* la compu, versión por versión */
+.hist{margin-top:110px}
+#v-actualizaciones .hist{margin-top:0}
+#v-actualizaciones .filtros{margin-top:0}
+.hist .intro{margin-top:16px}
+.vlista{list-style:none;margin:44px 0 0;padding:0;display:grid;gap:10px}
+.vlista>li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 28px;padding:24px 28px;border-radius:24px;background:var(--blanco);border:1px solid var(--linea)}
+.vlista .vn{font:800 40px/1 var(--disp);font-variation-settings:"wdth" 88;letter-spacing:-.02em;color:var(--azul-3)}
+.vlista .vn small{display:block;margin-top:8px;font:400 15px var(--text);letter-spacing:0;color:var(--tinta-3)}
+.vlista h3{margin:2px 0 0;font:800 24px/1.1 var(--disp);font-variation-settings:"wdth" 96}
+.vlista p{margin:8px 0 0;color:var(--tinta-2);font-size:17px;max-width:62ch}
+.vlista ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.vlista ul li{color:var(--tinta-2);font-size:17px;line-height:1.45;max-width:62ch}
+.vlista ul b{color:var(--tinta)}
+.vlista>li.ultima{background:var(--azul);border-color:var(--azul);color:var(--blanco);padding-block:30px}
+.vlista>li.ultima .vn{color:var(--sol);font-size:52px}
+.vlista>li.ultima .vn small{color:var(--claro-2)}
+.vlista>li.ultima p,.vlista>li.ultima ul li{color:var(--claro)}
+.vlista>li.ultima ul b{color:var(--blanco)}
+.vlista .vn time{display:block;margin-top:10px;font:600 15px var(--text);letter-spacing:0;color:var(--tinta-3)}
+.vlista>li.ultima .vn time{color:var(--claro-2)}
+.app{display:inline-block;margin-top:8px;padding:3px 10px;border-radius:999px;font:700 13px/1.4 var(--text);letter-spacing:0}
+.app.compu{background:var(--papel-2);color:var(--azul-3)}
+.app.celu{background:#DDF7EC;color:#0F6B47}
+.app.casa{background:#FFF1CC;color:#7A5200}
+.vlista>li.ultima .app{background:rgba(255,255,255,.18);color:var(--blanco)}
+.vlista .ver{display:block}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.filtros button{padding:9px 16px;border-radius:999px;border:1px solid var(--linea);background:var(--blanco);font:700 16px var(--text);color:var(--tinta-2);cursor:pointer}
+.filtros button.on{background:var(--tinta);border-color:var(--tinta);color:var(--blanco)}
+.ultimo{display:inline-flex;align-items:center;gap:10px;margin:0 0 22px;padding:8px 16px 8px 8px;border-radius:999px;background:rgba(255,255,255,.14);color:var(--blanco);text-decoration:none;font-size:16px;max-width:100%}
+.ultimo b{flex:none;padding:3px 10px;border-radius:999px;background:var(--sol);color:var(--sol-tinta);font-size:13px}
+.ultimo span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ultimo:hover{background:rgba(255,255,255,.22)}
+
+/* tres cerebros */
+.cerebros{background:var(--papel-2)}
+.cgrid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);grid-template-areas:"texto red" "demo red";gap:0 clamp(30px,5vw,64px);align-items:start}
+.ctexto{grid-area:texto}.cdemo{grid-area:demo}.red{grid-area:red}
+.herr{margin-top:clamp(48px,7vw,84px)}
+.video-sec{background:var(--papel);padding-block:clamp(48px,7vw,84px) 0}
+.video-caja{margin-top:28px;border-radius:28px;overflow:hidden;background:var(--tinta);box-shadow:0 40px 70px -40px rgba(14,27,61,.6)}
+.video-caja video{display:block;width:100%;height:auto;aspect-ratio:16/9}
+/* con nueve secciones, entre 900 y 1240 px el menú pasa a su propia fila (deslizable) para no pisarse con «Instalala» */
+@media (min-width:901px) and (max-width:1240px){
+  .barra-in{flex-wrap:wrap;gap:4px 14px;min-height:0;padding-block:12px 8px}
+  .barra nav{order:3;flex-basis:100%;margin:0;overflow-x:auto;scrollbar-width:none}
+  .barra nav::-webkit-scrollbar{display:none}
+  .barra-cta.btn{margin-left:auto;min-height:42px}
+}
+@media (min-width:1241px){.barra ul a{padding:10px 10px;font-size:16px}}
+
+/* hablale: la cara de FRIDAY en un panel oscuro, el micrófono grande al lado */
+.probala{background:var(--papel-2)}
+.pgrid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center}
+.pcara{position:relative;border-radius:32px;background:radial-gradient(circle at 50% 42%, rgba(94,152,246,.32), transparent 62%), var(--tinta);padding:64px clamp(20px,4vw,40px) 30px;color:var(--blanco);box-shadow:0 40px 70px -40px rgba(14,27,61,.6)}
+#cara4{width:min(300px,62%);aspect-ratio:1;margin:0 auto;position:relative}
+.pest{position:absolute;left:20px;top:18px;display:inline-flex;align-items:center;gap:8px;margin:0;padding:6px 14px 6px 10px;border-radius:999px;background:rgba(255,255,255,.12);font-size:15px;font-weight:700}
+.pest i{width:8px;height:8px;border-radius:50%;background:var(--claro-2)}
+.pcara[data-e=escucha] .pest{background:var(--menta);color:var(--tinta)}.pcara[data-e=escucha] .pest i{background:currentColor;animation:late 1.2s ease-in-out infinite}
+.pcara[data-e=piensa] .pest{background:var(--sol);color:var(--sol-tinta)}.pcara[data-e=piensa] .pest i{background:currentColor}
+.pcara[data-e=habla] .pest{background:var(--azul-2);color:var(--blanco)}.pcara[data-e=habla] .pest i{background:currentColor}
+.pcara[data-e=lista] .pest i{background:var(--menta)}
+.pdice{margin-top:22px;min-height:96px}
+.pdice q{display:block;quotes:"«" "»";color:var(--claro-2);font-size:16px;margin-bottom:6px}
+.pdice p{margin:0;font:600 clamp(20px,2vw,24px)/1.3 var(--disp);font-variation-settings:"opsz" 24}
+.pllave label{display:block;font:800 22px var(--disp);margin-bottom:10px}
+.pfila{display:flex;gap:10px;flex-wrap:wrap}
+.pfila input{flex:1 1 200px;min-width:0;min-height:58px;padding:0 20px;border-radius:999px;border:2px solid var(--linea);background:var(--blanco);color:var(--tinta);font:400 18px var(--text)}
+.pfila input:focus-visible{outline:none;border-color:var(--azul)}
+.btn.azul{background:var(--azul);color:var(--blanco);border:0;cursor:pointer}
+.chico{margin:12px 0 0;color:var(--tinta-2);font-size:16px;max-width:52ch}
+.chico a{color:var(--azul-3);text-underline-offset:3px}
+.chico.mal{color:var(--rojo)}
+.pmic{display:flex;align-items:center;gap:20px;width:100%;margin:0 0 18px;padding:18px 26px 18px 18px;border:0;border-radius:999px;background:var(--azul);color:var(--blanco);font:800 24px var(--disp);cursor:pointer;text-align:left;transition:background .2s, transform .15s}
+.pmic:active{transform:scale(.98)}
+.pmic-i{flex:none;position:relative;width:72px;height:72px;border-radius:50%;background:var(--blanco)}
+.pmic-i::before{content:"";position:absolute;left:28px;top:16px;width:16px;height:26px;border-radius:9px;background:var(--azul)}
+.pmic-i::after{content:"";position:absolute;left:21px;top:30px;width:26px;height:16px;border:3.5px solid var(--azul);border-top:0;border-radius:0 0 16px 16px;box-sizing:border-box}
+.pmic[aria-pressed=true]{background:var(--menta);color:var(--tinta)}
+.pmic[aria-pressed=true] .pmic-i{box-shadow:0 0 0 0 rgba(255,255,255,.7);animation:oye 1.2s ease-out infinite}
+@keyframes oye{to{box-shadow:0 0 0 18px rgba(255,255,255,0)}}
+.pideas{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pideas button{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--linea);background:var(--blanco);color:var(--tinta);font:600 16px var(--text);cursor:pointer}
+.pideas button:hover{border-color:var(--azul-2)}
+.decile-l{grid-template-columns:repeat(2,minmax(0,1fr))}
+.decile-l dt{font:700 19px/1.3 var(--disp)}
+@media (max-width:860px){.pgrid2{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.decile-l{grid-template-columns:minmax(0,1fr)}.pmic{font-size:21px}.pmic-i{width:60px;height:60px}.pmic-i::before{left:22px;top:12px}.pmic-i::after{left:15px;top:25px}}
+.herr-t{margin:0;font:800 clamp(24px,2.6vw,32px)/1.15 var(--disp);letter-spacing:-.01em}
+.herr-p{margin:10px 0 0;max-width:52ch;color:var(--tinta-2)}
+.herr-l{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;margin:26px 0 0;border-radius:24px;overflow:hidden;background:var(--linea);border:1px solid var(--linea)}
+.herr-l div{padding:18px 20px;background:var(--blanco)}
+.herr-l dt{font-weight:800}
+@media (max-width:980px){.herr-l{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.herr-l{grid-template-columns:minmax(0,1fr)}}
+.herr-l dd{margin:4px 0 0;font-size:16.5px;line-height:1.45;color:var(--tinta-2)}
+.pruebas{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.prueba{min-height:48px;padding:0 20px;border-radius:999px;border:2px solid var(--c);background:var(--blanco);color:var(--tinta);font:700 16px var(--text);cursor:pointer;transition:background .2s, transform .15s}
+.prueba::before{content:"";display:inline-block;width:10px;height:10px;margin-right:9px;border-radius:50%;background:var(--c);vertical-align:1px}
+.prueba:hover{background:var(--papel)}
+.prueba:active{transform:scale(.97)}
+.prueba:disabled{opacity:.45;cursor:default}
+.chat{margin-top:20px;min-height:250px;padding:16px;border-radius:24px;background:var(--blanco);border:1px solid var(--linea);display:flex;flex-direction:column;gap:8px;justify-content:flex-end;overflow:hidden}
+.chat .m{max-width:86%;margin:0;padding:9px 14px;font-size:16px;line-height:1.4;animation:entra .35s cubic-bezier(.3,1.3,.5,1) both}
+@keyframes entra{from{opacity:0;transform:translateY(8px) scale(.94)}}
+.chat .vos{align-self:flex-end;background:var(--azul);color:var(--blanco);border-radius:18px 18px 4px 18px}
+.chat .fri{align-self:flex-start;background:var(--papel-2);color:var(--tinta);border-radius:18px 18px 18px 4px}
+.chat .tres i{display:inline-block;width:7px;height:7px;margin:0 2px;border-radius:50%;background:var(--tinta-3);animation:salta 1s ease-in-out infinite}
+.chat .tres i:nth-child(2){animation-delay:.15s}.chat .tres i:nth-child(3){animation-delay:.3s}
+@keyframes salta{30%{transform:translateY(-5px)}}
+.chat .sis{align-self:center;max-width:100%;padding:4px 12px;font-size:14px;color:var(--tinta-2);background:var(--papel);border-radius:999px;text-align:center}
+.chat .sis.mal{color:var(--blanco);background:var(--rojo)}
+.chat .sis.bien{color:var(--tinta);background:var(--menta)}
+.red{position:relative;border-radius:32px;background:radial-gradient(circle at 50% 50%, rgba(94,152,246,.28), transparent 62%), var(--tinta);padding:18px;box-shadow:0 40px 70px -40px rgba(14,27,61,.6)}
+.red svg{display:block;width:100%;height:auto}
+.redest{position:absolute;left:20px;top:18px;display:inline-flex;align-items:center;gap:8px;margin:0;padding:6px 14px 6px 10px;border-radius:999px;background:var(--menta);color:var(--tinta);font-size:15px;font-weight:700}
+.redest i{width:8px;height:8px;border-radius:50%;background:currentColor}
+.red.alerta .redest{background:var(--rojo);color:var(--blanco)}
+.red.piensa .redest{background:var(--sol);color:var(--sol-tinta)}
+.red .ln{stroke-width:5;stroke-linecap:round;opacity:.55;transition:opacity .3s}
+.red .ln.cae{stroke:var(--rojo)!important;stroke-dasharray:6 12;opacity:.9}
+.red .nodo > circle{transition:transform .3s cubic-bezier(.3,1.4,.5,1);transform-box:fill-box;transform-origin:center}
+.red .nodo.activo > circle{transform:scale(1.14)}
+.red .nodo.cae > circle{fill:var(--rojo)!important}
+.red .ic{fill:none;stroke:var(--tinta);stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round}
+.red text{font-family:var(--disp);text-anchor:middle}
+.red .n{font-size:24px;font-weight:800;fill:var(--blanco)}
+.red .r{font-size:16px;fill:var(--claro-2);font-family:var(--text)}
+.red .nombre{font-size:28px;letter-spacing:.06em}
+.red .flujo{stroke:var(--blanco);stroke-width:4;stroke-linecap:round;stroke-dasharray:.5 22;opacity:.4;animation:fluye 1.6s linear infinite}
+.red .flujo.va{opacity:1;stroke-width:6;animation-duration:.45s}
+.red .flujo.cae{opacity:0}
+@keyframes fluye{to{stroke-dashoffset:-45}}
+.red .nodo{animation:flota 5s ease-in-out infinite}
+.red #n-gemini{animation-delay:-1.7s}.red #n-ollama{animation-delay:-3.3s}
+@keyframes flota{50%{transform:translateY(-6px)}}
+.red .gira{transform-box:fill-box;transform-origin:center}
+.red .nodo.activo .gira{animation:gira 1.1s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+.red .nodo.activo .rayo,.red .nodo.activo .pantallita{animation:titila .32s steps(2) infinite}
+@keyframes titila{50%{opacity:.25}}
+.red .halo{transform-box:fill-box;transform-origin:center;animation:late2 3.2s ease-in-out infinite}
+@keyframes late2{50%{transform:scale(1.12);opacity:.75}}
+.red .pulso{fill:none;stroke:var(--azul-2);stroke-width:3;transform-box:fill-box;transform-origin:center;animation:pulso 2.6s ease-out infinite}
+.red.piensa .pulso{animation-duration:1s}
+@keyframes pulso{from{transform:scale(1);opacity:.8}to{transform:scale(1.55);opacity:0}}
+.red .vidrio{fill:var(--tinta)}
+.red .liq{fill:url(#bf-liq)}
+.red.alerta .liq{fill:url(#bf-mal)}
+.red .cara-mal{opacity:0}
+.red.alerta .cara-mal{opacity:1}.red.alerta .cara-bien{opacity:0}
+.red .mira{transition:transform .35s cubic-bezier(.3,1.3,.5,1)}
+.red .ojos{transform-box:fill-box;transform-origin:center;animation:pestanea 5s infinite}
+@keyframes pestanea{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.red .burbujas circle{fill:#ffd27a;opacity:0;animation:burbuja 2.6s ease-in infinite}
+.red .burbujas circle:nth-child(2){animation-delay:-.9s}.red .burbujas circle:nth-child(3){animation-delay:-1.8s}
+.red.piensa .burbujas circle{animation-duration:1s}
+@keyframes burbuja{0%{transform:translateY(0);opacity:0}15%{opacity:1}80%{opacity:.9}100%{transform:translateY(-118px);opacity:0}}
+#pk{fill:var(--blanco);opacity:0}
+#pk2{fill:var(--claro);opacity:0}
+
+/* por qué es diferente */
+.tabla{margin-top:50px;border-radius:28px;background:var(--blanco);border:1px solid var(--linea);overflow:hidden}
+.tabla table{width:100%;border-collapse:collapse}
+.tabla th,.tabla td{padding:18px 22px;text-align:left;vertical-align:top}
+.tabla thead th{padding-block:16px;font:700 16px var(--text);color:var(--tinta-3);border-bottom:1px solid var(--linea)}
+.tabla thead th.f{color:var(--azul-3);font:800 20px var(--disp);font-variation-settings:"wdth" 96}
+.tabla tbody tr + tr > *{border-top:1px solid var(--linea)}
+.tabla tbody th{width:20%;font:800 19px/1.2 var(--disp);font-variation-settings:"wdth" 97;color:var(--tinta)}
+.tabla td{color:var(--tinta-3);font-size:17px;line-height:1.4}
+.tabla td.f,.tabla th.f{background:rgba(47,107,227,.07)}
+.tabla td.f{color:var(--tinta);font-weight:700}
+.tabla td.f::before,.tabla td.c::before{content:"";display:inline-block;width:20px;height:20px;margin:0 10px -4px 0;border-radius:50%;flex:none}
+.tabla td.f::before{background:var(--menta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' stroke='%230E1B3D' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.tabla td.c::before{background:var(--papel-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10h8' stroke='%238A97B4' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E")}
+.cita{margin:56px 0 0;font:800 clamp(28px,3.6vw,46px)/1.12 var(--disp);font-variation-settings:"wdth" 96;letter-spacing:-.012em;max-width:24ch}
+.cita span{color:var(--azul)}
+
+/* cien versiones */
+.versiones{background:var(--tinta);color:var(--blanco)}
+.versiones .intro{color:var(--claro-2)}
+.vtop{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.contador{margin:0;display:flex;flex-direction:column}
+.contador b{font:800 clamp(130px,21vw,260px)/.82 var(--disp);font-variation-settings:"wdth" 90;letter-spacing:-.03em;color:var(--sol);font-variant-numeric:tabular-nums}
+.contador span{margin-top:10px;font-size:18px;color:var(--claro-2)}
+.puntos{display:grid;grid-template-columns:repeat(50,minmax(0,1fr));gap:7px;margin-top:56px}
+.puntos i{aspect-ratio:1;border-radius:50%;background:var(--azul-2);opacity:.45}
+.puntos i.hito{background:var(--sol);opacity:1;box-shadow:0 0 0 2px var(--tinta),0 0 0 4px var(--sol)}
+.puntos.ola i{animation:ola .9s ease-out both;animation-delay:var(--dl)}
+@keyframes ola{40%{transform:scale(1.5);opacity:1}}
+.hitos{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.hitos li{padding:18px 18px 20px;border-radius:22px;background:var(--tinta-4)}
+.hitos b{display:inline-block;padding:3px 11px;border-radius:999px;background:var(--azul-2);color:var(--tinta);font:800 15px var(--disp)}
+.hitos li:last-child{background:var(--azul)}
+.hitos li:last-child b{background:var(--sol)}
+.hitos h3{margin:12px 0 6px;font:800 21px/1.1 var(--disp);font-variation-settings:"wdth" 97}
+.hitos p{margin:0;font-size:16px;line-height:1.45;color:var(--claro-3)}
+
+/* instalarla */
+.instalar{background:var(--papel-2)}
+.donde{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;margin-top:56px}
+.donde article{background:var(--blanco);border-radius:28px;padding:30px 28px 32px;border:1px solid var(--linea);min-width:0}
+.donde h3{margin:0;font:800 28px/1 var(--disp);font-variation-settings:"wdth" 96}
+.donde .para{margin:8px 0 18px;color:var(--tinta-3);font-size:16px}
+.donde ol{margin:0;padding:0;list-style:none;counter-reset:p}
+.donde li{counter-increment:p;position:relative;padding:0 0 16px 48px;color:var(--tinta-2)}
+.donde li::before{content:counter(p);position:absolute;left:0;top:-2px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--papel-2);color:var(--azul-3);font:800 17px var(--disp)}
+.donde li b{color:var(--tinta)}
+.donde .btn{margin-top:8px;min-height:52px;font-size:17px;background:var(--azul);color:var(--blanco)}
+.donde .otra{margin:14px 0 0;color:var(--tinta-3);font-size:15px}
+.donde .otra a{color:var(--azul-3);text-underline-offset:3px}
+.nota{margin:30px 0 0;color:var(--tinta-2);font-size:17px;max-width:70ch}
+.donde .peso{margin:10px 0 0;color:var(--tinta-3);font-size:15px;min-height:1.4em}
+.donde article.tuya{border:2px solid var(--azul);box-shadow:0 22px 40px -26px rgba(30,79,192,.55);position:relative}
+.donde .tuyat{display:none}
+.donde article.tuya .tuyat{display:inline-block;margin:0 0 12px;padding:5px 12px;border-radius:999px;background:var(--sol);color:var(--sol-tinta);font:700 14px var(--text)}
+.dudas{margin-top:80px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:clamp(24px,5vw,64px);align-items:start}
+.dudas h2{margin:0;font:800 clamp(34px,4vw,52px)/.95 var(--disp);font-variation-settings:"wdth" 94;letter-spacing:-.015em}
+.dudas details{border-top:1px solid var(--claro-2)}
+.dudas details:last-child{border-bottom:1px solid var(--claro-2)}
+.dudas summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 2px;font:700 20px/1.25 var(--disp);font-variation-settings:"wdth" 96}
+.dudas summary::-webkit-details-marker{display:none}
+.dudas summary::after{content:"";flex:none;width:12px;height:12px;border-right:2.5px solid var(--azul-3);border-bottom:2.5px solid var(--azul-3);transform:rotate(45deg) translate(-3px,-3px);transition:transform .2s}
+.dudas details[open] summary::after{transform:rotate(225deg) translate(-2px,-2px)}
+.dudas details p{margin:0 0 22px;color:var(--tinta-2);font-size:18px;max-width:58ch}
+.dudas details p b{color:var(--tinta)}
+
+/* el cierre */
+.cierre{position:relative;overflow:hidden;background:var(--azul);color:var(--blanco);padding-block:100px 96px}
+.cierre::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.14) 1.2px, transparent 1.5px);background-size:30px 30px;
+  -webkit-mask-image:linear-gradient(0deg,#000 0%,transparent 70%);mask-image:linear-gradient(0deg,#000 0%,transparent 70%)}
+.chau{position:relative;z-index:1;display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(24px,5vw,60px);align-items:center}
+#cara3{position:relative;width:240px;max-width:100%;aspect-ratio:1}
+.chau h2{margin:0;font:800 clamp(56px,8vw,112px)/.9 var(--disp);font-variation-settings:"opsz" 96,"wdth" 92;letter-spacing:-.022em}
+.chau p{margin:16px 0 0;font-size:21px;color:var(--claro)}
+.chau .ctas{margin-top:26px}
+.pie{background:var(--tinta);padding-block:56px 50px}
+.pgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 60px;align-items:center}
+.pie .logo{display:block;max-width:440px;border-radius:14px}
+.pie .logo img{width:100%;height:auto}
+.pie p{margin:0;font-size:17px;max-width:44ch;color:var(--claro-3)}
+.pie .vers{margin-top:12px;font-size:15px;color:var(--tinta-3)}
+
+@media (max-width:1080px){
+  .extras{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .puntos{grid-template-columns:repeat(25,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .barra-in{flex-wrap:wrap;gap:4px 14px;min-height:0;padding-block:12px 8px}
+  .barra nav{order:3;flex-basis:100%;margin:0 calc(-1 * max(var(--gut), env(safe-area-inset-left, 0px))) 0;overflow-x:auto;scrollbar-width:none;padding-inline:max(var(--gut), env(safe-area-inset-left, 0px))}
+  .barra nav::-webkit-scrollbar{display:none}
+  .barra ul a{padding:8px 13px;font-size:15.5px}
+  .barra-cta.btn{margin-left:auto;min-height:42px;padding:0 18px;font-size:15.5px}
+  .atgrid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .at-hace,.at-nuevo{grid-column:span 2}
+  .at-dentro,.at-nos{grid-column:span 1}
+  .at-inst{grid-column:span 2}
+  .cab{padding-block:40px 46px}
+  .hgrid{grid-template-columns:minmax(0,1fr);padding-block:10px 130px}
+  .ella{width:min(330px,76vw);margin-top:44px}
+  .globo{left:auto;right:-6%;bottom:-18%}
+  .nosgrid,.cgrid{grid-template-columns:minmax(0,1fr)}
+  .cgrid{grid-template-areas:"texto" "red" "demo"}
+  .red{margin-top:34px}
+  .lugares{grid-template-columns:minmax(0,1fr)}
+  .lugar.grande{grid-row:auto}
+  .frases li{grid-template-columns:minmax(0,1fr);gap:8px}
+  .charla{grid-template-columns:minmax(0,1fr)}.testigo{display:none}
+  .fotos{grid-template-columns:minmax(0,1fr)}
+  .novedad,.novedad:nth-child(even),.novedad.celu{grid-template-columns:minmax(0,1fr)}
+  .novedad:nth-child(even) figure{order:0}
+  .novedades{gap:64px}
+  .donde{grid-template-columns:minmax(0,1fr)}
+  .dudas{grid-template-columns:minmax(0,1fr)}
+  .vtop{grid-template-columns:minmax(0,1fr)}
+  .hitos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  section{padding-block:80px}
+}
+@media (max-width:640px){
+  .atgrid{grid-template-columns:minmax(0,1fr)}
+  .at-hace,.at-nuevo,.at-dentro,.at-nos,.at-inst{grid-column:auto}
+  .at{min-height:0}
+  .cifras{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:8px}
+  .cifras div{padding:14px 12px}
+  .cifras dt{font-size:14px}
+  .extras,.hitos{grid-template-columns:minmax(0,1fr)}
+  .vlista>li{grid-template-columns:minmax(0,1fr);padding:20px 20px 22px}
+  .vlista>li.ultima .vn{font-size:44px}
+  .tabla thead{display:none}
+  .tabla table,.tabla tbody,.tabla tr,.tabla th,.tabla td{display:block;width:auto}
+  .tabla tbody th{width:auto;padding:18px 18px 6px;color:var(--azul-3)}
+  .red .n{font-size:30px}.red .r{font-size:20px}.red .nombre{font-size:32px}
+  .redest{position:static;margin-bottom:6px}
+  .tabla td{padding:6px 18px}
+  .tabla td.f{background:none;padding-bottom:18px}
+  .tabla td.c{color:var(--tinta-3)}
+  .tabla tbody tr + tr > *{border-top:0}
+  .tabla tbody tr + tr{border-top:1px solid var(--linea)}
+  .chau{grid-template-columns:minmax(0,1fr)}
+  #cara3{width:170px}
+  .pgrid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:480px){
+  .lugar.celu{grid-template-columns:110px minmax(0,1fr)}
+  .globo{right:-2%}
+  .puntos{grid-template-columns:repeat(10,minmax(0,1fr));gap:6px}
+}
+.pausa,.pausa *,.pausa *::before,.pausa *::after{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){ *{animation:none!important;transition:none!important} html{scroll-behavior:auto} .cinta .fila{flex-wrap:wrap;width:auto;justify-content:center} .cinta .fila span:nth-child(n+12){display:none} }
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="barra" id="arriba">
+  <div class="wrap barra-in">
+    <a class="marca" href="#inicio" aria-label="BufaLabs, inicio"><img class="ico" src="img/bufalabs-icono.svg" width="46" height="46" alt=""><img class="pal" src="img/bufalabs-palabra.svg" width="136" height="25" alt="BufaLabs"></a>
+    <nav aria-label="Secciones"><ul id="menu">
+      <li><a href="#inicio" data-ir="inicio">Inicio</a></li>
+      <li><a href="#hace" data-ir="hace">Qué hace</a></li>
+      <li><a href="#nuevo" data-ir="nuevo">Lo nuevo</a></li>
+      <li><a href="#actualizaciones" data-ir="actualizaciones">Actualizaciones</a></li>
+      <li><a href="#cerebros" data-ir="cerebros">Por dentro</a></li>
+      <li><a href="#nosotros" data-ir="nosotros">Nosotros</a></li>
+      <li><a href="#probala" data-ir="probala">Hablale</a></li>
+      <li><a href="#ayuda" data-ir="ayuda">Ayuda</a></li>
+    </ul></nav>
+    <a class="btn si barra-cta" href="#instalar" data-ir="instalar">Instalala</a>
+  </div>
+</header>
+
+<main id="contenido">
+<div class="vista" data-vista="inicio" id="v-inicio" hidden>
+<section class="hero" aria-label="FRIDAY">
+  <div class="wrap">
+    <div class="hgrid">
+      <div class="min0">
+        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>Actualizaciones como en la compu · Celu 3.6</span></a>
+        <h1><span>FRIDAY</span><span>vive en</span><span>tu casa.</span></h1>
+        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, hecha en Argentina por BufaLabs. Ya va por la versión <span data-ver>102</span> y se actualiza sola.</p>
+        <div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a><a class="btn no" href="#probala">Hablale ahora</a></div>
+      </div>
+      <div class="ella">
+        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>102</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
+        <button id="cara" class="cara" type="button" aria-label="La cara de FRIDAY. Tocala para cambiarle la expresión."></button>
+        <div class="globo" id="globo" aria-live="polite"><q id="gQ">Friday, mirá mi pantalla</q><p id="gR">Veo que el Word se trabó. ¿Lo cierro y lo abro de nuevo?</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="cinta" aria-hidden="true"><div class="fila">
+  <span>Te escucha</span><span>Pone caras</span><span>Maneja la compu</span><span>Ve tu pantalla</span><span>Modo estudio</span><span>Sigue precios</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Windows y Linux</span><span>Se actualiza sola</span><span>Hecha en Argentina</span>
+  <span>Te escucha</span><span>Pone caras</span><span>Maneja la compu</span><span>Ve tu pantalla</span><span>Modo estudio</span><span>Sigue precios</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Windows y Linux</span><span>Se actualiza sola</span><span>Hecha en Argentina</span>
+</div></div>
+  <section class="video-sec" aria-labelledby="videoT">
+    <div class="wrap">
+      <h2 class="titulo" id="videoT">Mirala en 30 segundos.</h2>
+      <div class="video-caja"><video controls preload="none" playsinline poster="video/friday-30s.jpg" width="1920" height="1080" aria-label="FRIDAY en 30 segundos: investiga, lee tus archivos y te ayuda a estudiar."><source src="video/friday-30s.mp4" type="video/mp4"></video></div>
+    </div>
+  </section>
+  <section class="atajos" aria-label="Secciones">
+    <div class="wrap">
+      <h2 class="titulo">Elegí por dónde arrancar.</h2>
+      <div class="atgrid">
+        <a class="at at-hace" href="#hace" data-ir="hace"><span class="at-tx"><b>Qué hace</b><em>La compu y el celu: todo lo que le podés pedir.</em></span><img src="img/compu-estudio.webp" width="1280" height="800" loading="lazy" alt=""></a>
+        <a class="at at-nuevo" href="#nuevo" data-ir="nuevo"><span class="at-tx"><b>Lo nuevo</b><em>El celu renovado, el instalador nuevo y Linux.</em></span><img src="img/compu-setup.webp" width="1840" height="1280" loading="lazy" alt=""></a>
+        <a class="at at-dentro" href="#cerebros" data-ir="cerebros"><span class="at-tx"><b>Por dentro</b><em>BUFIA y sus tres cerebros. Probalo.</em></span><img class="at-ico" src="img/bufalabs-icono.svg" width="120" height="120" loading="lazy" alt=""></a>
+        <a class="at at-nos" href="#nosotros" data-ir="nosotros"><span class="at-tx"><b>Nosotros</b><em>Un laboratorio chico y más de cien versiones.</em></span><span class="at-num" data-vergrande>102</span></a>
+        <a class="at at-inst" href="#instalar" data-ir="instalar"><span class="at-tx"><b>Instalala gratis</b><em>Windows, Linux y el celu.</em></span><span class="at-flecha" aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
+  <div class="cierre" id="chau"><div class="wrap">
+    <div class="chau">
+      <div id="cara3" class="cara" aria-hidden="true"></div>
+      <div class="min0"><h2>Decí «Friday».</h2><p>Y charlamos un rato.</p><div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a></div></div>
+    </div>
+  </div></div>
+</div>
+
+<div class="vista" data-vista="hace" id="v-hace" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Qué hace</h1><p class="cab-p">Todo lo que FRIDAY hace por vos, en la compu y en el celu.</p></div></div>
+  <section class="lugares-sec" id="lugares">
+    <div class="wrap">
+      <h2 class="titulo">Una sola FRIDAY, en la compu y en el celu.</h2>
+      <p class="intro">Lo que le contás en un lado lo sabe en el otro: la lista de compras, los recordatorios, las tareas, lo que estudiaste. Todo viaja cifrado entre tus aparatos.</p>
+      <div class="lugares">
+        <div class="lugar compu grande">
+          <figure class="pantalla"><img decoding="async" src="img/compu-estudio.webp" width="1280" height="800" loading="lazy" alt="FRIDAY en la compu, en modo estudio, con el reloj de la tanda."></figure>
+          <h3>La compu</h3>
+          <p>Con Windows o con Linux. Ve tu pantalla cuando se lo pedís, busca en internet de verdad, te ayuda a estudiar y maneja tus programas.</p>
+        </div>
+        <div class="lugar celu">
+          <figure class="pantalla"><img decoding="async" src="img/celu-30.webp" width="780" height="1688" loading="lazy" alt="FRIDAY Móvil 3.0: el saludo, el clima y «Tu día» con los recordatorios y las compras, y las pestañas Inicio, Agenda, Compras, Música y Más."></figure>
+          <div class="min0"><h3>El celu</h3><p>FRIDAY en el bolsillo: le hablás, te recuerda las cosas, tiene la misma lista que la compu y te avisa si pasa algo.</p></div>
+        </div>
+        <a class="lugar beta" href="#instalar" data-ir="instalar"><span class="etq">Beta</span><h3>La tablet de la casa</h3><p>FRIDAY Casa está en pruebas: para entenderte bien desde lejos necesita un micrófono mejor que el de la tablet. Mirá los requisitos.</p></a>
+      </div>
+    </div>
+  </section>
+  <section class="hace" id="hace">
+    <div class="wrap">
+      <h2 class="titulo">Le hablás. Y hace.</h2>
+      <p class="intro">Nada de menús: le decís lo que necesitás, como se lo dirías a alguien de tu casa.</p>
+      <div class="charla"><ul class="frases">
+        <li data-emo="excited" tabindex="0"><q>Mirá mi pantalla. ¿Por qué no anda esto?</q><p>Ve lo que tenés abierto y te explica qué pasa. Sin el cartel de «compartir pantalla» y solo cuando se lo pedís.</p></li>
+        <li data-emo="wink" tabindex="0"><q>Abrí Spotify y poné música.</q><p>Abre tus programas, pasa de tema y baja la música cuando te habla.</p></li>
+        <li data-emo="proud" tabindex="0"><q>Ya lavé los platos.</q><p>Suma puntos al que la hizo y pasa el turno. El domingo anuncia quién ganó la semana.</p></li>
+        <li data-emo="thinking" tabindex="0"><q>Modo estudio de historia.</q><p>Tandas con pausas, te avisa si te vas a TikTok y en la pausa te toma una ficha de lo que estudiaste.</p></li>
+        <li data-emo="happy" tabindex="0"><q>Seguí el precio de las zapatillas y avisame si bajan de 80 mil.</q><p>Revisa Mercado Libre cada unas horas y te avisa cuando bajan. No inventa precios: solo te dice lo que encontró.</p></li>
+        <li data-emo="thinking" tabindex="0"><q>Investigá qué notebook me conviene.</q><p>Busca en varias páginas, te va contando en voz cómo viene y te deja el informe completo. Si le falta un dato, vuelve a buscar.</p></li>
+        <li data-emo="excited" tabindex="0"><q>¿Qué dice el último PDF que bajé?</q><p>Lo encuentra sola en Descargas y te lo resume. También le podés soltar un archivo encima y decirle qué hacer.</p></li>
+        <li data-emo="surprised" tabindex="0"><q>¿Qué ves? ¿Cómo me queda?</q><p>Mira con la cámara de la compu, solo cuando se lo pedís, y te contesta.</p></li>
+        <li data-emo="cool" tabindex="0"><q>¿Cómo está la compu?</q><p>Te dice cuánto procesador y memoria usa y qué es lo que más consume. Si se lo pedís, la bloquea o la apaga.</p></li>
+      </ul><aside class="testigo" aria-hidden="true"><div id="cara2" class="cara"></div></aside></div>
+    </div>
+  </section>
+  <a class="sig" href="#nuevo" data-ir="nuevo"><span class="wrap"><small>Seguí con</small><b>Lo nuevo</b><em>El celu renovado, el instalador nuevo y Linux.</em></span></a>
+</div>
+
+<div class="vista" data-vista="nuevo" id="v-nuevo" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Lo nuevo</h1><p class="cab-p">Lo último que aprendió FRIDAY. Se actualiza sola, así que ya lo tenés.</p></div></div>
+  <section class="nuevo" id="nuevo">
+    <div class="wrap">
+      <h2 class="titulo oculto">Lo nuevo de FRIDAY</h2>
+      <p class="intro">El celu cambió entero, y en la compu FRIDAY se instala como cualquier programa, se actualiza sola contándote qué cambió y, si algo te anda mal, vuelve atrás.</p>
+      <div class="novedades">
+        <div class="novedad celu">
+          <figure class="pantalla"><img decoding="async" src="img/celu-30.webp" width="780" height="1688" loading="lazy" alt="FRIDAY Móvil 3.0: el saludo, el clima y «Tu día» con los recordatorios y las compras, y las pestañas de abajo."></figure>
+          <div class="min0"><h3>El celu, renovado</h3>
+            <p>FRIDAY Móvil 3.0 arranca con tu día: lo próximo que tenés, tu agenda y lo que falta comprar. Abajo, cinco pestañas: Inicio, Agenda, Compras, Música y Más. Los recordatorios ahora también se anotan a mano, con día, hora y si se repiten.</p>
+            <p class="dice"><q>Recordame mañana a las 9 pagar la luz</q></p></div>
+        </div>
+        <div class="novedad">
+          <figure class="pantalla"><img decoding="async" src="img/compu-setup.webp" width="1840" height="1280" loading="lazy" alt="El instalador de FRIDAY al terminar: «¡Listo! Ya tenés FRIDAY 101.04», con el botón Abrir FRIDAY."></figure>
+          <div class="min0"><h3>Se instala como cualquier programa</h3>
+            <p>Un solo archivo, FRIDAY-Setup. No pide administrador, crea sus íconos y aparece en «Aplicaciones instaladas», desde donde la desinstalás cuando quieras.</p></div>
+        </div>
+        <div class="novedad">
+          <figure class="pantalla"><img decoding="async" src="img/compu-actualizacion.webp" width="1840" height="1280" loading="lazy" alt="Aviso de FRIDAY: hay una versión nueva, la 101.04, con la lista de lo que trae y los botones Ahora no e Instalar."></figure>
+          <div class="min0"><h3>Se actualiza sola</h3>
+            <p>Cuando sale una versión nueva, te muestra qué trae antes de abrir. Baja solo lo que cambió, revisa la firma de BufaLabs y al terminar te cuenta las novedades una por una.</p>
+            <p class="dice"><q>Friday, buscá actualizaciones</q></p></div>
+        </div>
+        <div class="novedad">
+          <figure class="pantalla"><img decoding="async" src="img/compu-volver.webp" width="1840" height="1280" loading="lazy" alt="FRIDAY al día en la 101.04, con el link «¿La 101.04 te anda mal? Volver a la 101.03»."></figure>
+          <div class="min0"><h3>Vuelve atrás</h3>
+            <p>Si una actualización te anda mal, volvés a la versión que tenías con un clic. Tus datos no se tocan, y la que dejaste no se te ofrece sola por un mes.</p>
+            <p class="dice"><q>¿Qué hay de nuevo?</q></p></div>
+        </div>
+      </div>
+      <ul class="extras">
+        <li><h3>«Hola, Friday», como te salga</h3><p>Te escucha aunque digas su nombre al final o en el medio de la frase.</p></li>
+        <li><h3>También en Linux</h3><p>Ubuntu, Mint, Debian, Fedora y parecidas, con las mismas actualizaciones que en Windows.</p></li>
+        <li><h3>Te pone al día</h3><p>Cuando la abrís, te cuenta lo que tenés pendiente y los mensajes que te dejaron.</p></li>
+        <li><h3>Se adelanta</h3><p>Si tenés algo afuera y va a llover, te avisa una hora antes para que lleves paraguas.</p></li>
+        <li><h3>Pantalla de carga</h3><p>Al abrirla, el núcleo se arma y los sistemas se prenden uno por uno.</p></li>
+        <li><h3>Te cuenta lo nuevo</h3><p>Después de cada actualización te muestra una mini presentación con las novedades.</p></li>
+      </ul>
+    </div>
+  </section>
+  <a class="sig" href="#actualizaciones" data-ir="actualizaciones"><span class="wrap"><small>Seguí con</small><b>Actualizaciones</b><em>Todo lo que fue cambiando, con fecha.</em></span></a>
+</div>
+
+<div class="vista" data-vista="actualizaciones" id="v-actualizaciones" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Actualizaciones</h1><p class="cab-p">Todo lo que fue cambiando en FRIDAY, en la compu, en el celu y en la tablet. Te llegan solas: no tenés que bajar nada.</p></div></div>
+  <section class="nuevo">
+    <div class="wrap">
+      <div class="hist" id="actualizaciones">
+        <h2 class="titulo oculto">Todas las actualizaciones</h2>
+        <div class="filtros" aria-label="Mostrar"><button class="on" data-f="" aria-pressed="true">Todas</button><button data-f="compu" aria-pressed="false">Compu</button><button data-f="celu" aria-pressed="false">Celu</button><button data-f="casa" aria-pressed="false">Tablet</button></div>
+        <ol class="vlista" id="vlista">
+          <li class="ultima" data-app="celu"><div class="vn"><span class="ver">Móvil 3.6</span><span class="app celu">Celu</span><time datetime="2026-10-28">28 de octubre</time></div><div class="min0"><h3>Actualizaciones como en la compu</h3><p>Cuando sale una versión nueva del celu, FRIDAY te avisa, te muestra qué trae y se actualiza con un toque.</p><ul><li><b>Te avisa.</b> Te muestra la versión nueva y lo que trae antes de instalarla.</li><li><b>Con un toque.</b> Se baja, se revisa y se instala en segundos, sin borrar nada tuyo.</li><li><b>Te cuenta lo nuevo.</b> Al abrirla, te presenta las novedades una por una. También le podés decir «qué hay de nuevo».</li></ul></div></li>
+          <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.5</span><span class="app celu">Celu</span><time datetime="2026-10-28">28 de octubre</time></div><div class="min0"><h3>Más para hablarle</h3><p>El celu aprende de lo que le decís y también investiga a fondo.</p><ul><li><b>Investiga.</b> Decile «investigá…» y busca en varios lados, te cuenta cómo va y te deja un informe.</li><li><b>Aprende de vos.</b> Si se equivoca, decile «eso está mal»: te pregunta qué falló y no lo repite. Si te gustó, «¡bien ahí!».</li><li><b>¿Cómo estás de cupo?.</b> Te dice cuánto le queda hoy de sus cerebros gratis y quién te contestó.</li></ul></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">102</span><span class="app compu">Compu</span><time datetime="2026-10-28">28 de octubre</time></div><div class="min0"><h3>Todo hablando</h3><p>Una versión grande pensada para hablarle y tocar menos: investiga contándote cómo va, lee tus archivos sin que los busques y aprende de lo que le decís.</p><ul><li><b>Investiga y te cuenta.</b> Decile «investigá…»: lee varias páginas, te va contando en voz cómo viene, busca de nuevo si le falta algo y te deja el informe completo. «Mostrame el informe» y lo ves.</li><li><b>Tus archivos, sin buscarlos.</b> Preguntale «¿qué dice el último PDF que bajé?» y lo encuentra sola. O soltale un archivo encima y decile qué hacer con él.</li><li><b>Aprende de lo que le decís.</b> Si se equivoca, «eso está mal»: te pregunta qué falló y se lo guarda. Si te gustó, «¡bien ahí!», y se acuerda del estilo.</li><li><b>¿Cómo estás de cupo?.</b> Te dice cuánto le queda hoy de sus cerebros gratis y quién te contestó.</li></ul></div></li>
+          <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.4</span><span class="app celu">Celu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>Más inteligente, también en el celu</h3><p>FRIDAY en el celu piensa mejor, busca los datos en vez de adivinarlos y ahora entiende fotos y PDF.</p><ul><li><b>Fotos y PDF.</b> Con el clip le mandás una foto o un PDF (un ticket, una receta, un apunte) y te dice qué es o te responde sobre eso.</li><li><b>Datos de verdad.</b> Hace las cuentas exactas y te dice el dólar al momento, los feriados o lo que dice Wikipedia.</li><li><b>Te conoce mejor.</b> Recuerda lo que le contaste y trae justo lo que tiene que ver con lo que preguntás.</li><li><b>Se revisa.</b> En las preguntas difíciles chequea su respuesta y, si se equivocó, te avisa y se corrige.</li></ul></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101.07</span><span class="app compu">Compu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>FRIDAY más inteligente</h3><p>La actualización más grande de su cerebro: piensa mejor, usa herramientas y casi nunca se queda sin respuesta.</p><ul><li><b>Un cerebro más grande.</b> Usa un modelo nuevo y más capaz, y elige cuánto pensar: rápido para charlar, a fondo para lo difícil. Si le decís «pensalo bien», se toma su tiempo.</li><li><b>Busca el dato.</b> Calculadora exacta, dólar al momento, Wikipedia, feriados y hasta leer una página que le pases.</li><li><b>Te conoce mejor.</b> Recuerda lo que le contaste, se acuerda de lo que venían hablando y, si la corregís, no se lo olvida.</li><li><b>Se revisa.</b> En lo difícil chequea lo que dijo y, si se equivocó, te dice «Ojo, me corrijo».</li><li><b>Más respaldo.</b> Si querés, en Ajustes sumás cerebros de respaldo gratis para que nunca se quede muda. Y con Ollama la bajás para usarla sin internet con un botón.</li></ul></div></li>
+          <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.3</span><span class="app celu">Celu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>Pantalla de carga y claves nuevas</h3><p>El celu arranca como la compu y acepta las claves nuevas de Gemini.</p><ul><li><b>Pantalla de carga.</b> Al abrirla, el núcleo de FRIDAY se arma y sus sistemas se prenden uno por uno.</li><li><b>Claves «AQ.».</b> Las claves nuevas de Gemini andan, sin tener que empezar con «AIza».</li></ul></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101.06</span><span class="app compu">Compu</span><time datetime="2026-10-27">27 de octubre</time></div><div class="min0"><h3>Las claves nuevas de Gemini</h3><p>Google cambió el formato de las claves de Gemini: ahora empiezan con «AQ.». FRIDAY acepta las nuevas y las viejas.</p><ul><li><b>Sin trabas.</b> Ya no te pide que la clave empiece de una forma ni te frena al guardar los Ajustes.</li></ul></div></li>
+          <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.2</span><span class="app celu">Celu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>Dos cerebros también en el celu</h3><p>El celu pide las dos claves gratis y, si Groq no puede contestar, contesta Gemini.</p><ul><li><b>Nunca muda.</b> Si Groq se queda sin cupo, tarda o tiene la clave mal, FRIDAY te contesta igual con Gemini.</li><li><b>Una sola vez.</b> Si te faltaba la clave de Gemini, te la pide al abrir, con los pasos. Si tenés el celu unido a la compu, la toma de ahí y ni te enterás.</li></ul></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101.05</span><span class="app compu">Compu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>Dos cerebros, siempre</h3><p>FRIDAY en la compu ahora pide las dos claves gratis, la de Groq y la de Gemini, así nunca te quedás sin respuestas.</p><ul><li><b>Si uno se cansa, sigue el otro.</b> Cuando una de las dos se queda sin cupo del día o falla, FRIDAY sigue pensando con la otra.</li><li><b>Un paso nuevo.</b> El tutorial te explica cómo sacar la clave de Gemini en un minuto. Si ya usabas FRIDAY, te la pide una sola vez.</li></ul></div></li>
+          <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.1</span><span class="app celu">Celu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>Contesta siempre</h3><p>Arreglamos que a veces FRIDAY en el celu no contestaba o se quedaba pensando.</p><ul><li><b>Siempre responde.</b> Si su cerebro tarda o se traba, prueba de otra forma y, si no puede, te avisa en vez de quedarse pensando.</li><li><b>Más espacio.</b> La charla tiene más lugar en la pantalla y se mueve más liviana, sobre todo en el iPhone.</li></ul></div></li>
+          <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.0</span><span class="app celu">Celu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>El celu, renovado</h3><p>FRIDAY en el celu cambió entera: más fácil de usar y más linda.</p><ul><li><b>Pestañas abajo.</b> Inicio, Agenda, Compras, Música y Más, como cualquier app.</li><li><b>Tu día.</b> Al abrirla te saluda con el clima y te muestra lo próximo que tenés, tu agenda y lo que falta comprar.</li><li><b>Recordatorios a mano.</b> Además de dictárselos, ahora los anotás eligiendo el día, la hora y si se repiten.</li><li><b>Ajustes ordenados.</b> Todo agrupado y fácil de encontrar, con los colores a un toque.</li></ul></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101.04</span><span class="app compu">Compu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>Un instalador de verdad</h3><p>Instalar FRIDAY en Windows ahora es como instalar cualquier programa.</p><ul><li><b>FRIDAY-Setup.</b> Un solo archivo: lo abrís, tocás Instalar y listo. No pide permiso de administrador.</li><li><b>Como cualquier programa.</b> Aparece en «Aplicaciones instaladas» de Windows y desde ahí la desinstalás.</li><li><b>Volver atrás.</b> Si una actualización te anda mal, volvés a la versión que tenías con un clic.</li></ul></div></li>
+          <li data-app="casa"><div class="vn"><span class="ver">Casa 4.1</span><span class="app casa">Tablet</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>La tablet pasa a beta</h3><p>Para entenderte bien desde lejos, la tablet necesita un micrófono mejor que el que trae. Mientras lo resolvemos, FRIDAY Casa queda en pruebas.</p></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101.03</span><span class="app compu">Compu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>También en Linux</h3><p>FRIDAY ya anda en Ubuntu, Mint, Debian, Fedora y parecidas, con las mismas actualizaciones que en Windows.</p></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101.02</span><span class="app compu">Compu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>Pantalla de carga</h3><p>Al abrirla, el núcleo de FRIDAY se arma y sus sistemas se prenden uno por uno.</p></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101.01</span><span class="app compu">Compu</span><time datetime="2026-10-26">26 de octubre</time></div><div class="min0"><h3>Las actualizaciones, en su propia ventana</h3><p>Cuando sale una versión nueva, antes de abrir FRIDAY te muestra qué trae y cómo se instala, paso a paso.</p></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">101</span><span class="app compu">Compu</span><time datetime="2026-10-25">25 de octubre</time></div><div class="min0"><h3>Se actualiza sola</h3><p>FRIDAY baja solo lo que cambió, revisa que venga firmado por BufaLabs y al terminar te cuenta las novedades.</p></div></li>
+        </ol>
+      </div>
+      <p class="nota">Cada actualización también tiene su propia nota para compartir: <a href="/novedades/">ver las novedades</a>.</p>
+    </div>
+  </section>
+  <a class="sig" href="#cerebros" data-ir="cerebros"><span class="wrap"><small>Seguí con</small><b>Por dentro</b><em>Cómo piensa FRIDAY y por qué es distinta.</em></span></a>
+</div>
+
+<div class="vista" data-vista="cerebros" id="v-cerebros" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Por dentro</h1><p class="cab-p">Cómo piensa FRIDAY, cómo sigue andando si algo falla y en qué se diferencia.</p></div></div>
+  <section class="cerebros" id="cerebros">
+    <div class="wrap cgrid">
+      <div class="min0 ctexto">
+        <h2 class="titulo">Piensa con tres cerebros.</h2>
+        <p class="intro">En el medio está BUFIA, el núcleo de BufaLabs: decide a quién preguntarle cada cosa y cuánto pensar. Groq charla rapidísimo y piensa a fondo cuando hace falta, Gemini busca en Google y Ollama corre en tu propia compu por si fallan los otros dos.</p>
+      </div>
+      <div class="red" id="red">
+        <p class="redest" id="redEst"><i aria-hidden="true"></i><span>Todo en línea</span></p>
+        <svg viewBox="0 0 640 450" role="img" aria-label="BUFIA, el núcleo, en el centro, conectado con Groq, Gemini y Ollama.">
+          <defs>
+            <radialGradient id="bf-halo" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#4cc9ff" stop-opacity=".42"/><stop offset="1" stop-color="#4cc9ff" stop-opacity="0"/></radialGradient>
+            <linearGradient id="bf-liq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fe0ff"/><stop offset="1" stop-color="#2f86e6"/></linearGradient>
+            <linearGradient id="bf-mal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb3a8"/><stop offset="1" stop-color="#e5484d"/></linearGradient>
+            <linearGradient id="bf-luz" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          </defs>
+          <line class="ln" id="ln-groq" x1="320" y1="230" x2="112" y2="110" style="stroke:var(--sol)"/>
+          <line class="ln" id="ln-gemini" x1="320" y1="230" x2="528" y2="110" style="stroke:var(--azul-2)"/>
+          <line class="ln" id="ln-ollama" x1="320" y1="230" x2="320" y2="362" style="stroke:var(--menta)"/>
+          <line class="flujo" id="fl-groq" x1="320" y1="230" x2="112" y2="110"/>
+          <line class="flujo" id="fl-gemini" x1="320" y1="230" x2="528" y2="110"/>
+          <line class="flujo" id="fl-ollama" x1="320" y1="230" x2="320" y2="362"/>
+          <g class="nodo" id="n-groq"><circle cx="112" cy="110" r="44" style="fill:var(--sol)"/>
+            <path class="ic rayo" d="M117 90l-17 23h14l-5 17 17-23h-14z"/>
+            <text class="n" x="112" y="186">Groq</text><text class="r" x="112" y="208">charla rápida</text></g>
+          <g class="nodo" id="n-gemini"><circle cx="528" cy="110" r="44" style="fill:var(--azul-2)"/>
+            <g class="gira"><circle class="ic" cx="528" cy="110" r="17"/><path class="ic" d="M511 110h34M528 93c-8 9-8 25 0 34M528 93c8 9 8 25 0 34"/></g>
+            <text class="n" x="528" y="186">Gemini</text><text class="r" x="528" y="208">busca en Google</text></g>
+          <g class="nodo" id="n-ollama"><circle cx="320" cy="362" r="44" style="fill:var(--menta)"/>
+            <rect class="ic pantallita" x="302" y="348" width="36" height="24" rx="3"/><path class="ic" d="M312 380h16"/>
+            <text class="n" x="384" y="358" style="text-anchor:start">Ollama</text><text class="r" x="384" y="380" style="text-anchor:start">en tu compu</text></g>
+          <circle class="halo" cx="320" cy="236" r="112" fill="url(#bf-halo)"/>
+          <circle class="pulso" cx="320" cy="236" r="78"/>
+          <circle id="pk2" cx="320" cy="230" r="6"/>
+          <circle id="pk" cx="320" cy="230" r="11"/>
+          <g class="bufia" id="bufia" transform="translate(320 240) scale(.44) translate(-256 -262)">
+            <path class="vidrio" d="M226 104 L226 206 L132 370 Q114 408 156 416 L356 416 Q398 408 380 370 L286 206 L286 104 Z"/>
+            
+            <path class="liq" d="M199 236 Q228 226 256 236 T313 236 L376 372 Q388 402 356 404 L156 404 Q124 402 136 372 Z"><animate attributeName="d" dur="2.8s" repeatCount="indefinite" values="M199 236 Q228 226 256 236 T313 236 L376 372 Q388 402 356 404 L156 404 Q124 402 136 372 Z;M199 236 Q228 248 256 236 T313 236 L376 372 Q388 402 356 404 L156 404 Q124 402 136 372 Z;M199 236 Q228 226 256 236 T313 236 L376 372 Q388 402 356 404 L156 404 Q124 402 136 372 Z" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/></path>
+            <path d="M199 236 Q228 226 256 236 T313 236 L376 372 Q388 402 356 404 L156 404 Q124 402 136 372 Z" fill="url(#bf-luz)"><animate attributeName="d" dur="2.8s" repeatCount="indefinite" values="M199 236 Q228 226 256 236 T313 236 L376 372 Q388 402 356 404 L156 404 Q124 402 136 372 Z;M199 236 Q228 248 256 236 T313 236 L376 372 Q388 402 356 404 L156 404 Q124 402 136 372 Z;M199 236 Q228 226 256 236 T313 236 L376 372 Q388 402 356 404 L156 404 Q124 402 136 372 Z" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"/></path>
+            <g class="mira"><g class="ojos">
+              <ellipse cx="224" cy="300" rx="19" ry="23" fill="#fff" opacity=".22"/><ellipse cx="224" cy="300" rx="13" ry="17" fill="#fff"/>
+              <ellipse cx="288" cy="300" rx="19" ry="23" fill="#fff" opacity=".22"/><ellipse cx="288" cy="300" rx="13" ry="17" fill="#fff"/>
+            </g></g>
+            <path class="cara-bien" d="M206 268 L238 264 M274 264 L306 268 M234 340 Q256 358 278 340" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <path class="cara-mal" d="M206 270 L238 258 M274 258 L306 270 M236 352 Q256 336 276 352" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <path d="M212 102 L300 102 M226 102 L226 206 L132 370 Q114 408 156 416 L356 416 Q398 408 380 370 L286 206 L286 102" fill="none" stroke="#c9f4ff" stroke-width="18" stroke-linejoin="round" stroke-linecap="round"/>
+            <path d="M244 128 L244 190" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".35"/>
+            <g class="burbujas"><circle cx="262" cy="214" r="9"/><circle cx="248" cy="214" r="6"/><circle cx="268" cy="214" r="4.5"/></g>
+          </g>
+          <text class="n nombre" x="320" y="104">BUFIA</text><text class="r" x="320" y="129" style="fill:var(--claro)">el núcleo</text>
+        </svg>
+      </div>
+      <div class="min0 cdemo">
+        <div class="pruebas" role="group" aria-label="Probá un pedido">
+          <button class="prueba" type="button" data-run="groq" style="--c:var(--sol)">Charlar un rato</button>
+          <button class="prueba" type="button" data-run="gemini" style="--c:var(--azul-2)">Buscar en internet</button>
+          <button class="prueba" type="button" data-run="ollama" style="--c:var(--menta)">Sin internet</button>
+          <button class="prueba" type="button" data-run="pensar" style="--c:var(--sol)">«Pensalo bien»</button>
+          <button class="prueba" type="button" data-run="falla" style="--c:var(--rojo)">Simular una falla</button>
+        </div>
+        <div class="chat" id="chat" aria-live="polite"><p class="m fri">¡Hola! Tocá un botón y mirá cómo resuelvo tu pedido.</p></div>
+      </div>
+    </div>
+    <div class="wrap herr">
+      <h3 class="herr-t">Y además, usa herramientas.</h3>
+      <p class="herr-p">Para no inventar, FRIDAY busca el dato en vez de adivinarlo.</p>
+      <dl class="herr-l">
+        <div><dt>Calculadora</dt><dd>Las cuentas las hace exactas, no a ojo.</dd></div>
+        <div><dt>Dólar</dt><dd>El oficial y el blue, al momento.</dd></div>
+        <div><dt>Wikipedia</dt><dd>Para fechas, personas y lugares.</dd></div>
+        <div><dt>Leer una página</dt><dd>Le pasás un link y te cuenta qué dice.</dd></div>
+        <div><dt>Feriados</dt><dd>Los de Argentina, para planear la semana.</dd></div>
+        <div><dt>Fotos y PDF</dt><dd>En el celu le mandás uno y te dice qué es.</dd></div>
+        <div><dt>Se revisa</dt><dd>En lo difícil, chequea lo que dijo y, si se equivocó, se corrige.</dd></div>
+        <div><dt>Te conoce</dt><dd>Recuerda lo que le contaste y lo trae cuando tiene que ver.</dd></div>
+      </dl>
+    </div>
+  </section>
+  <section class="diferente" id="diferente">
+    <div class="wrap">
+      <h2 class="titulo">Por qué FRIDAY es distinta.</h2>
+      <p class="intro">Hay muchas asistentes que te contestan. FRIDAY te contesta, te mira, te entiende y además hace las cosas.</p>
+      <div class="tabla">
+        <table>
+          <thead><tr><th scope="col"><span class="skip">Qué</span></th><th scope="col">Una asistente común</th><th scope="col" class="f">FRIDAY</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Dónde vive</th><td class="c">En una pestaña del navegador</td><td class="f">En tu compu, con Windows o Linux, y en tu celu</td></tr>
+            <tr><th scope="row">Cuánto sale</th><td class="c">Una suscripción todos los meses</td><td class="f">Nada. Usa servicios gratis de punta a punta</td></tr>
+            <tr><th scope="row">Cómo habla</th><td class="c">Un español de manual</td><td class="f">Como nosotros, che</td></tr>
+            <tr><th scope="row">Qué hace</th><td class="c">Te contesta y listo</td><td class="f">Te contesta y lo hace: abre tus programas, pone la música, apaga la compu</td></tr>
+            <tr><th scope="row">Tu compu</th><td class="c">No la puede tocar</td><td class="f">Ve tu pantalla y maneja tus programas, cuando se lo pedís</td></tr>
+            <tr><th scope="row">Cerebros</th><td class="c">Uno solo. Si se cae, esperás</td><td class="f">Tres, y BUFIA elige el mejor para cada cosa</td></tr>
+            <tr><th scope="row">Si algo falla</th><td class="c">Un cartel de error</td><td class="f">Cambia de cerebro y sigue. Y si no, te dice qué pasa</td></tr>
+            <tr><th scope="row">Quién la hace</th><td class="c">Una empresa gigante</td><td class="f">Un laboratorio chico que la mejora versión por versión</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="cita">FRIDAY vive en tu casa y te da una mano, <span>como alguien más de la familia.</span></p>
+    </div>
+  </section>
+  <a class="sig" href="#nosotros" data-ir="nosotros"><span class="wrap"><small>Seguí con</small><b>Nosotros</b><em>Quiénes la hacemos y cómo llegó hasta acá.</em></span></a>
+</div>
+
+<div class="vista" data-vista="nosotros" id="v-nosotros" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Nosotros</h1><p class="cab-p">BufaLabs es un laboratorio chico de Argentina. Hacemos a FRIDAY, versión por versión.</p></div></div>
+  <section class="nos" id="nosotros">
+    <div class="wrap nosgrid">
+      <div class="min0">
+        <h2 class="titulo">Un laboratorio chico que hace IA para usar todos los días.</h2>
+        <p class="intro"><b>BufaLabs</b> es un laboratorio independiente de Argentina. Nuestra primera creación es <b>FRIDAY</b>: una inteligencia artificial que vive en tu casa, habla como nosotros y hace cosas de verdad.</p>
+        <p class="intro">La armamos versión por versión. Cada cosa nueva se prueba en casa, se rompe, se arregla y recién ahí se queda.</p>
+        <dl class="cifras">
+          <div><dt>versiones</dt><dd data-vergrande>102</dd></div>
+          <div><dt>aparatos, una sola FRIDAY</dt><dd>3</dd></div>
+          <div><dt>pesos por mes</dt><dd>$0</dd></div>
+        </dl>
+      </div>
+      <ul class="princ">
+        <li style="--c:var(--sol)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01"/></svg></span>
+          <div><h3>Que hable como vos</h3><p>Nada de español de manual. FRIDAY entiende cómo hablamos acá, che.</p></div></li>
+        <li style="--c:var(--menta)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l12 8-5.5 1.2L15 18l-2.6 1.2-2.6-5.7L6 17z"/></svg></span>
+          <div><h3>Que haga cosas de verdad</h3><p>Prende las luces, pone la música, abre programas, maneja la tele y apaga la compu.</p></div></li>
+        <li style="--c:var(--azul-2)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v4.5h-4.5"/></svg></span>
+          <div><h3>Que nunca te deje colgado</h3><p>Si un cerebro se cae, salta otro. Y si algo falla, se hace un chequeo y te dice qué pasa.</p></div></li>
+        <li style="--c:var(--azul);--ci:var(--blanco)"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2.5"/><path d="M8.5 11V8a3.5 3.5 0 0 1 7 0v3"/></svg></span>
+          <div><h3>Que lo tuyo sea tuyo</h3><p>Lo que comparten tus aparatos viaja cifrado, y la cámara y la pantalla solo se miran cuando se lo pedís.</p></div></li>
+      </ul>
+    </div>
+  </section>
+  <section class="versiones" id="versiones">
+    <div class="wrap">
+      <div class="vtop">
+        <p class="contador"><b id="cuenta" data-vergrande>102</b><span>versiones</span></p>
+        <div class="min0">
+          <h2 class="titulo">Más de cien versiones y contando.</h2>
+          <p class="intro">Cada versión es algo que se rompió, se arregló y quedó mejor. FRIDAY no se termina nunca: crece todas las semanas.</p>
+        </div>
+      </div>
+      <div class="puntos" id="puntos" aria-hidden="true"></div>
+      <ol class="hitos">
+        <li><b>v01</b><h3>Arranca</h3><p>Una idea, una compu y muchas ganas de que funcione.</p></li>
+        <li><b>v62</b><h3>Llega al celu</h3><p>FRIDAY en el bolsillo, unida a la compu con un código.</p></li>
+        <li><b>v70</b><h3>Presentación oficial</h3><p>La isla flotante y la presentación animada, con su cara y sus expresiones.</p></li>
+        <li><b>v84</b><h3>La tablet de la casa</h3><p>Nace FRIDAY Casa, un sistema para toda la familia. Hoy sigue en beta.</p></li>
+        <li><b>v100</b><h3>Cien versiones</h3><p>Cada una probada en casa antes de quedarse.</p></li>
+        <li><b>v101</b><h3>Hoy</h3><p>Se instala como cualquier programa, se actualiza sola y anda en Windows y en Linux.</p></li>
+      </ol>
+    </div>
+  </section>
+  <a class="sig" href="#probala" data-ir="probala"><span class="wrap"><small>Seguí con</small><b>Hablale</b><em>Probala acá mismo, sin instalar nada.</em></span></a>
+</div>
+
+<div class="vista" data-vista="probala" id="v-probala" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Hablale</h1><p class="cab-p">Probala acá mismo, sin instalar nada: tocá el micrófono y decile algo.</p></div></div>
+  <section class="probala" id="probala">
+    <div class="wrap pgrid2">
+      <div class="pcara">
+        <p class="pest" id="pEst"><i aria-hidden="true"></i><span>Esperando tu llave</span></p>
+        <div id="cara4" class="cara" aria-hidden="true"></div>
+        <div class="pdice" aria-live="polite"><q id="pYo" hidden></q><p id="pElla">¡Hola! Soy FRIDAY. Para charlar conmigo acá necesito tu llave gratis de Groq.</p></div>
+      </div>
+      <div class="pmando min0">
+        <form id="pLlaveF" class="pllave" autocomplete="off">
+          <label for="pLlave">Tu llave de Groq</label>
+          <div class="pfila"><input id="pLlave" type="password" placeholder="gsk_…" spellcheck="false" autocapitalize="off"><button class="btn azul" type="submit">Empezar</button></div>
+          <p class="chico" id="pLlaveMsg">Va directo de tu navegador a Groq: no la guardamos ni pasa por BufaLabs, y se borra al cerrar la pestaña. ¿No tenés? <a href="#llaves">Sacala en un minuto</a>.</p>
+        </form>
+        <div id="pHablar" hidden>
+          <button id="pMic" class="pmic" type="button" aria-pressed="false"><span class="pmic-i" aria-hidden="true"></span><b id="pMicTx">Tocá y hablale</b></button>
+          <p class="chico" id="pSinMic" hidden>Tu navegador no deja hablarle: escribile acá abajo. Para hablarle, abrí la página en Chrome, Edge o Safari.</p>
+          <form id="pTxtF" class="pfila"><input id="pTxt" placeholder="…o escribile" autocomplete="off" aria-label="Escribile a FRIDAY"><button class="btn azul" type="submit">Mandar</button></form>
+          <div class="pideas" role="group" aria-label="Ideas para decirle"><button type="button">¿Qué sabés hacer?</button><button type="button">Contame un chiste</button><button type="button">¿Cómo me ayudás a estudiar?</button></div>
+          <p class="chico">Acá solo charla. Instalada, además maneja tu compu, busca en internet, lee tus archivos y se acuerda de vos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <a class="sig" href="#ayuda" data-ir="ayuda"><span class="wrap"><small>Seguí con</small><b>Ayuda</b><em>Las llaves gratis y qué decirle.</em></span></a>
+</div>
+
+<div class="vista" data-vista="ayuda" id="v-ayuda">
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Ayuda</h1><p class="cab-p">Las llaves gratis, qué decirle y qué hacer si algo no anda.</p></div></div>
+  <section class="instalar" id="llaves">
+    <div class="wrap">
+      <h2 class="titulo">Las dos llaves gratis.</h2>
+      <p class="intro">FRIDAY piensa con Groq y con Gemini. Cada uno te da una llave gratis, que es como una contraseña para que FRIDAY les pregunte de tu parte. Se sacan en un minuto, con tu cuenta de Google.</p>
+      <div class="donde">
+        <article><h3>La de Groq</h3><p class="para">Para charlar rapidísimo y escucharte</p>
+          <ol><li>Entrá a <b>console.groq.com/keys</b> e iniciá sesión con Google.</li><li>Tocá el botón para <b>crear una llave nueva</b> (Create API Key) y ponele de nombre FRIDAY.</li><li><b>Copiala</b>: empieza con <b>gsk_</b> y se ve una sola vez.</li><li>Pegala en FRIDAY: en la compu te la pide el tutorial; en el celu, en <b>Más → Cerebro</b>.</li></ol>
+          <a class="btn" href="https://console.groq.com/keys" target="_blank" rel="noopener">Abrir Groq</a></article>
+        <article><h3>La de Gemini</h3><p class="para">Para buscar en Google, leer PDF y fotos, y recordar</p>
+          <ol><li>Entrá a <b>aistudio.google.com/apikey</b> con tu cuenta de Google.</li><li>Tocá <b>crear una llave</b> (Create API key). Si te pide un proyecto, elegí el que te ofrece.</li><li><b>Copiala</b>: puede empezar con <b>AQ.</b> o con <b>AIza</b>; las dos sirven.</li><li>Pegala en FRIDAY, igual que la de Groq.</li></ol>
+          <a class="btn" href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Abrir Google AI Studio</a></article>
+      </div>
+      <p class="nota">Las de respaldo son opcionales y se sacan igual: Mistral en <b>console.mistral.ai</b> y OpenRouter en <b>openrouter.ai/keys</b>. Si las cargás en Ajustes, FRIDAY las usa cuando las otras dos no pueden.</p>
+    </div>
+  </section>
+  <section class="cerebros" id="decile">
+    <div class="wrap">
+      <h2 class="titulo">Qué decirle.</h2>
+      <p class="intro">FRIDAY está hecha para hablarle. Estas frases sirven tal cual, en la compu y en el celu.</p>
+      <dl class="herr-l decile-l">
+        <div><dt>«Investigá qué notebook me conviene»</dt><dd>Lee varias páginas, te va contando cómo viene y te deja un informe.</dd></div>
+        <div><dt>«¿Qué dice el último PDF que bajé?»</dt><dd>Lo encuentra solo y te lo cuenta. En la compu también le podés soltar un archivo encima.</dd></div>
+        <div><dt>«Pensalo bien: …»</dt><dd>Se toma su tiempo con lo difícil.</dd></div>
+        <div><dt>«Eso está mal»</dt><dd>Te pregunta qué falló y no lo repite. Si te gustó, «¡bien ahí!».</dd></div>
+        <div><dt>«¿Cómo estás de cupo?»</dt><dd>Te dice cuánto le queda hoy de los cerebros gratis.</dd></div>
+        <div><dt>«Mostrame el informe»</dt><dd>Abre el último que te armó. «Leémelo» y te lo lee.</dd></div>
+        <div><dt>«Hacé un chequeo»</dt><dd>Se prueba sola y te dice qué anda y qué no.</dd></div>
+        <div><dt>«Buscá actualizaciones»</dt><dd>Se fija si hay una versión nueva y, si querés, vuelve a la anterior.</dd></div>
+      </dl>
+    </div>
+  </section>
+  <section class="instalar" id="problemas">
+    <div class="wrap">
+      <div class="dudas" style="margin-top:0">
+        <h2>Si algo no anda</h2>
+        <div class="min0">
+          <details><summary>No me contesta o se queda pensando</summary><p>Fijate que haya internet y preguntale «¿cómo estás de cupo?». Si Groq se quedó sin cupo del día, sigue con Gemini; si se acabaron los dos, sumá una llave de respaldo en Ajustes. Y si querés saber qué pasa, «hacé un chequeo».</p></details>
+          <details><summary>Me dice que la llave no anda</summary><p>Copiala entera, sin espacios. Las de Gemini pueden empezar con <b>AQ.</b> o con <b>AIza</b>: las dos sirven. Si sigue igual, creá una nueva y pegala en <b>Ajustes</b> en la compu, o en <b>Más → Cerebro</b> en el celu.</p></details>
+          <details><summary>No me escucha</summary><p>Cuando el navegador te pida permiso para el micrófono, tocá <b>Permitir</b>. Decí «Friday» antes de hablarle. En el celu, activá <b>manos libres</b> en <b>Más</b> y te escucha sin tocar nada.</p></details>
+          <details><summary>Se equivocó en algo</summary><p>Decile «eso está mal» y contale qué. Se lo guarda y no lo repite. Si un tema es difícil, pedile «pensalo bien» y se toma su tiempo.</p></details>
+          <details><summary>El celu no se une a la compu</summary><p>La compu tiene que estar prendida y con FRIDAY abierta. En la compu, FRIDAY te muestra un código; en el celu lo escaneás o lo escribís, y listo.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <a class="sig" href="#instalar" data-ir="instalar"><span class="wrap"><small>Seguí con</small><b>Instalala</b><em>Gratis, en Windows, Linux y el celu.</em></span></a>
+</div>
+
+<div class="vista" data-vista="instalar" id="v-instalar" hidden>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Instalala</h1><p class="cab-p">Gratis, en la compu con Windows o con Linux, y en el celu.</p></div></div>
+  <section class="instalar" id="instalar">
+    <div class="wrap">
+      <h2 class="titulo oculto">Instalala</h2>
+      <p class="intro">Empezá por la compu, con Windows o con Linux: después el celu se une a ella con un código.</p>
+      <div class="donde">
+        <article data-sis="windows"><span class="tuyat">Para esta compu</span><h3>La compu, con Windows</h3><p class="para">Windows 10 u 11</p>
+          <ol><li><b>Descargá FRIDAY-Setup</b> y abrilo. Si Windows dice que «protegió su PC», tocá <b>Más información</b> y <b>Ejecutar de todas formas</b>.</li><li>Tocá <b>Instalar</b>. No pide administrador: crea los íconos y queda en <b>Aplicaciones instaladas</b>, como cualquier programa.</li><li>Seguí el tutorial. Te pide dos <b>llaves gratis</b>, la de Groq y la de Gemini: son sus dos cerebros, y si uno se cansa sigue el otro.</li><li>Listo: de ahí en adelante <b>se actualiza sola</b>.</li></ol>
+          <a class="btn" href="descargas/FRIDAY-Setup.exe" download>Descargar para Windows</a>
+          <p class="peso" data-peso="descargas/FRIDAY-Setup.exe"></p>
+          <p class="otra">¿Sin instalar nada? Bajá la <a href="descargas/FRIDAY.zip" download>versión portátil (.zip)</a>, descomprimila y abrí FRIDAY.exe.</p></article>
+        <article data-sis="linux"><span class="tuyat">Para esta compu</span><h3>La compu, con Linux</h3><p class="para">Ubuntu, Mint, Debian, Fedora y parecidas (64 bits)</p>
+          <ol><li><b>Descargá FRIDAY</b> y descomprimí el archivo.</li><li>En una terminal, en esa carpeta: <b>sh instalar.sh</b>. No pide contraseña.</li><li>Queda en el <b>menú de aplicaciones</b> y arranca sola. Se abre en Chrome, Edge o Chromium.</li><li>Listo: de ahí en adelante <b>se actualiza sola</b>.</li></ol>
+          <a class="btn" href="descargas/FRIDAY-linux.tar.gz" download>Descargar para Linux</a>
+          <p class="peso" data-peso="descargas/FRIDAY-linux.tar.gz"></p></article>
+        <article data-sis="celu"><span class="tuyat">Para este celu</span><h3>El celu</h3><p class="para">Android o iPhone</p>
+          <ol><li>Abrí <b>FRIDAY Móvil</b> en el navegador.</li><li>Agregala a la pantalla principal.</li><li>Unila a la compu con el código que te muestra FRIDAY en la compu.</li></ol>
+          <a class="btn" href="https://pedropiratita134.github.io/FRIDAY/">Abrir FRIDAY Móvil</a></article>
+        <article data-sis="tablet" class="beta"><span class="tuyat">Para esta tablet</span><h3>La tablet <span class="etq">Beta</span></h3><p class="para">Android, con Chrome. Está en pruebas.</p>
+          <p class="req">Para que te entienda bien, necesita:</p>
+          <ul class="req"><li>Android 10 o más nuevo, con Chrome al día.</li><li>4 GB de memoria o más.</li><li>Un <b>micrófono USB de campo lejano</b> (de los que escuchan a varios metros). El de la tablet solo entiende si le hablás de cerca.</li><li>Estar enchufada y en el mismo wifi que la compu.</li></ul>
+          <a class="btn sec" href="https://pedropiratita134.github.io/FRIDAY/panel.html">Probar FRIDAY Casa</a></article>
+      </div>
+      <p class="nota">¿Te trabaste con las llaves? En <a href="#llaves">Ayuda</a> están paso a paso. ¿Algo no anda? Decile a FRIDAY «hacé un chequeo»: se prueba sola y arma un informe con lo que funciona y lo que no.</p>
+      <div class="dudas" id="dudas">
+        <h2>Preguntas de siempre</h2>
+        <div class="min0">
+          <details><summary>¿Es gratis de verdad?</summary><p>Sí. FRIDAY es gratis y los cerebros que usa también: Groq y Gemini te dan cada uno una llave gratis (hacen falta las dos, así nunca te quedás sin respuestas), y Ollama corre en tu propia compu.</p></details>
+          <details><summary>¿Y si se me acaban Groq y Gemini en el mismo día?</summary><p>Es raro, pero en Ajustes podés sumar cerebros de respaldo, también gratis: Mistral, OpenRouter, NVIDIA, Z.ai y Cloudflare. No hacen falta; si los ponés, FRIDAY los usa cuando los dos principales no pueden.</p></details>
+          <details><summary>¿Por qué Windows dice que «protegió su PC»?</summary><p>Porque FRIDAY todavía no tiene la firma digital de Microsoft, que es paga. Tocá <b>Más información</b> y <b>Ejecutar de todas formas</b>: pasa una sola vez. Las actualizaciones sí vienen firmadas por BufaLabs, y FRIDAY rechaza cualquiera que no lo esté.</p></details>
+          <details><summary>¿Adónde van mis cosas?</summary><p>Tu memoria, tus ajustes y tus listas quedan en tus aparatos. Lo que le pedís viaja al cerebro que elegiste para que te conteste; con Ollama no sale de tu compu. Tus llaves pasan de un aparato tuyo a otro cifradas, y nadie más las ve.</p></details>
+          <details><summary>¿Cómo la desinstalo?</summary><p>En Windows: <b>Configuración, Aplicaciones, Aplicaciones instaladas</b>, buscás FRIDAY y tocás <b>Desinstalar</b>. Te pregunta si querés borrar también tus datos. En Linux: <b>sh instalar.sh --desinstalar</b> en la carpeta que descargaste.</p></details>
+          <details><summary>Una actualización me anda mal, ¿qué hago?</summary><p>Decile «buscá actualizaciones» y tocá <b>Volver a la</b> versión anterior. Tus datos no se tocan, y la versión que dejaste no se te vuelve a ofrecer sola por un mes.</p></details>
+          <details><summary>¿Anda en Mac?</summary><p>Todavía no hay FRIDAY para la Mac. En la compu anda con Windows y con Linux; en el celu, desde el navegador.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <a class="sig" href="#inicio" data-ir="inicio"><span class="wrap"><small>Seguí con</small><b>El inicio</b><em>Volvé a ver a FRIDAY.</em></span></a>
+</div>
+</main>
+
+<footer>
+  <div class="pie"><div class="wrap pgrid">
+    <a class="logo" href="#inicio" data-ir="inicio" aria-label="BufaLabs, inicio"><img decoding="async" src="img/bufalabs-logo.svg" width="1623" height="512" loading="lazy" alt="BufaLabs: tecnología, inteligencia artificial"></a>
+    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>102</span>, Móvil 3.6 y Casa 4.2 (beta). © 2026 BufaLabs</p><p class="vers"><a href="/novedades/" style="color:inherit">Novedades</a> · <a href="/en/" hreflang="en" lang="en" style="color:inherit">English</a></p></div>
+  </div></div>
+</footer>
+
+<script>window.VISTA_INICIAL="#ayuda";</script>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const quieto=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const FACE={ talk:0, lookX:0, lookY:0 };
+const FACE_D_CSS=!!(window.CSS && CSS.supports && CSS.supports('d','path("M0 0")'));
+const SQUIRCLE='M100 10C171 10 190 29 190 100C190 171 171 190 100 190C29 190 10 171 10 100C10 29 29 10 100 10Z';
+const eyeOpen=(cx,h=34,w=24)=>`M${cx-w/2} ${100-h/2+w/2}a${w/2} ${w/2} 0 0 1 ${w} 0v${h-w}a${w/2} ${w/2} 0 0 1 ${-w} 0z`;
+const eyeHappy=cx=>`M${cx-13} 98q13 -18 26 0q-13 -9 -26 0z`;
+const eyeClosed=cx=>`M${cx-12} 99q12 6 24 0q-12 3 -24 0z`;
+const eyeHalf=cx=>`M${cx-12} 96h24v6a12 6 0 0 1 -24 0z`;
+const EXPR={
+  idle:     {eyes:[eyeOpen(72),eyeOpen(128)], brows:['M58 66q14 -5 28 0','M114 66q14 -5 28 0'], mouth:'M84 138q16 12 32 0', cheek:0},
+  happy:    {eyes:[eyeHappy(72),eyeHappy(128)], brows:['M58 63q14 -7 28 0','M114 63q14 -7 28 0'], mouth:'M80 134q20 22 40 0', cheek:.9},
+  laugh:    {eyes:[eyeClosed(72),eyeClosed(128)], brows:['M58 62q14 -8 28 0','M114 62q14 -8 28 0'], mouth:'M78 130q22 34 44 0z', fill:1, cheek:1, tilt:-4},
+  love:     {eyes:[eyeHappy(72),eyeHappy(128)], brows:['M58 64q14 -6 28 0','M114 64q14 -6 28 0'], mouth:'M84 136q16 14 32 0', cheek:1, extra:'hearts'},
+  excited:  {eyes:[eyeOpen(72,38,26),eyeOpen(128,38,26)], brows:['M56 58q15 -9 30 -2','M114 56q15 -7 30 2'], mouth:'M80 130q20 30 40 0z', fill:1, cheek:.6, extra:'sparkles'},
+  surprised:{eyes:[eyeOpen(72,40,26),eyeOpen(128,40,26)], brows:['M58 56q14 -9 28 -2','M114 54q14 -7 28 2'], mouth:'M90 140a10 12 0 1 0 20 0a10 12 0 1 0 -20 0z', fill:1, cheek:0},
+  sad:      {eyes:[eyeOpen(72,28),eyeOpen(128,28)], brows:['M58 70q14 -10 28 -4','M114 66q14 -6 28 4'], mouth:'M84 146q16 -12 32 0', cheek:0, tilt:3, extra:'tear'},
+  worried:  {eyes:[eyeOpen(72,30),eyeOpen(128,30)], brows:['M58 68q14 -8 28 -6','M114 62q14 -2 28 6'], mouth:'M86 144q14 -8 28 0', cheek:0, extra:'sweat'},
+  thinking: {eyes:[eyeHalf(72),eyeOpen(128,32)], brows:['M58 68h28','M114 60q14 -8 28 0'], mouth:'M88 142q12 -3 26 2', cheek:0, look:[.6,-.6], extra:'dots'},
+  wink:     {eyes:[eyeOpen(72),eyeClosed(128)], brows:['M58 64q14 -6 28 0','M114 68q14 -2 28 2'], mouth:'M82 136q18 16 36 0', cheek:.7, tilt:-3},
+  cool:     {eyes:[eyeHalf(72),eyeHalf(128)], brows:['M58 66h28','M114 66h28'], mouth:'M84 138q18 10 34 -4', cheek:.2, extra:'shades'},
+  confused: {eyes:[eyeOpen(72,30),eyeOpen(128,36)], brows:['M58 70q14 -4 28 2','M114 58q14 -6 28 -2'], mouth:'M86 142q8 -6 14 0t14 0', cheek:0, tilt:6, extra:'question'},
+  proud:    {eyes:[eyeHalf(72),eyeHalf(128)], brows:['M58 62q14 -6 28 0','M114 62q14 -6 28 0'], mouth:'M82 134q18 16 36 0', cheek:.5, tilt:-2},
+  angry:    {eyes:[eyeOpen(72,26),eyeOpen(128,26)], brows:['M58 60l28 10','M142 60l-28 10'], mouth:'M86 146q14 -10 28 0', cheek:0},
+  sleepy:   {eyes:[eyeHalf(72),eyeHalf(128)], brows:['M58 70h28','M114 70h28'], mouth:'M88 142q12 4 24 0', cheek:0, extra:'zz'},
+  listening:{eyes:[eyeOpen(72,36),eyeOpen(128,36)], brows:['M58 62q14 -8 28 0','M114 62q14 -8 28 0'], mouth:'M86 138q14 10 28 0', cheek:.3, tilt:-4}
+};
+
+let faceN=0;
+// cada cara tiene sus propios degradados: si comparten el id y la primera queda en una vista oculta, las otras se quedan sin cabeza
+function faceBuild(target){
+  const k=++faceN;
+  target.innerHTML=`<svg viewBox="0 0 200 200" role="img" aria-label="FRIDAY">
+  <defs><linearGradient id="fsk${k}" x1="0" y1="0" x2=".3" y2="1"><stop class="skin-a" offset="0" stop-color="#5E98F6"/><stop class="skin-b" offset="1" stop-color="#2D63D8"/></linearGradient>
+  <radialGradient id="fsh${k}" cx=".3" cy=".18" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".42"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+  <filter id="fds${k}" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="9" flood-color="#000" flood-opacity=".45"/></filter></defs>
+  <g class="breathe"><g class="head">
+    <path d="${SQUIRCLE}" fill="url(#fsk${k})"/><path d="${SQUIRCLE}" fill="url(#fsh${k})"/>
+    <g class="cheeks"><ellipse class="cheek" cx="56" cy="122" rx="13" ry="8" fill="#FFB3A1" opacity="0"/><ellipse class="cheek" cx="144" cy="122" rx="13" ry="8" fill="#FFB3A1" opacity="0"/></g>
+    <g class="eyes"><path class="eye eL" fill="#fff"/><path class="eye eR" fill="#fff"/></g>
+    <path class="brow bL" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".9"/><path class="brow bR" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".9"/>
+    <path class="mouth" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <g class="extra x-hearts" opacity="0" fill="#FF7A90"><path d="M44 42c-6-8-18-2-12 8l12 10 12-10c6-10-6-16-12-8z" transform="scale(.7) translate(10,10)"/><path d="M160 40c-5-7-15-2-10 7l10 9 10-9c5-9-5-14-10-7z" transform="scale(.8) translate(30,0)"/></g>
+    <g class="extra x-sparkles" opacity="0" fill="#FFD36B"><path d="M30 40l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/><path d="M168 30l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g>
+    <g class="extra x-tear" opacity="0"><path d="M60 112q-6 10 0 14q6 -4 0 -14z" fill="#BFE0FF"/></g>
+    <g class="extra x-sweat" opacity="0"><path d="M156 52q-7 11 0 16q7 -5 0 -16z" fill="#BFE0FF"/></g>
+    <g class="extra x-dots" opacity="0" fill="#fff"><circle cx="150" cy="36" r="5"/><circle cx="166" cy="26" r="6"/><circle cx="184" cy="12" r="7"/></g>
+    <g class="extra x-shades" opacity="0"><rect x="48" y="84" width="46" height="24" rx="9" fill="#1d1b22"/><rect x="106" y="84" width="46" height="24" rx="9" fill="#1d1b22"/><path d="M94 92h12" stroke="#1d1b22" stroke-width="5"/><path d="M56 90l10 -3" stroke="#fff" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/></g>
+    <g class="extra x-question" opacity="0"><text x="164" y="44" font-size="38" font-weight="700" fill="#fff" font-family="sans-serif">?</text></g>
+    <g class="extra x-zz" opacity="0" fill="#fff" font-family="sans-serif" font-weight="700"><text x="150" y="44" font-size="22">z</text><text x="166" y="26" font-size="28">z</text></g>
+  </g></g></svg>`;
+}
+
+function faceApplyTo(root, e){
+  if(!root.querySelector('.eyes')) return;
+  const q=s=>root.querySelectorAll(s);
+  // Safari (iPhone) no entiende la propiedad CSS «d»: ahí se pone el atributo directo
+  const d=(el,v)=>{ if(!el) return; if(FACE_D_CSS) el.style.d=`path("${v}")`; else el.setAttribute('d', v); };
+  d(q('.eL')[0], e.eyes[0]); d(q('.eR')[0], e.eyes[1]); d(q('.bL')[0], e.brows[0]); d(q('.bR')[0], e.brows[1]);
+  const m=q('.mouth')[0]; let mouth=e.mouth;
+  if(FACE.talk>0.05 && !e.fill){ const o=Math.round(4+FACE.talk*16); mouth=`M84 134q16 ${o+6} 32 0q-16 ${Math.round(o*.45)} -32 0z`; }
+  d(m, mouth); m.setAttribute('fill', (e.fill || FACE.talk>0.05) ? '#1F3F8F' : 'none');
+  q('.cheek').forEach(c=>c.setAttribute('opacity', e.cheek||0));
+  q('.extra').forEach(x=>x.setAttribute('opacity', x.classList.contains('x-'+(e.extra||'-')) ? 1 : 0));
+  const look=e.look||[FACE.lookX, FACE.lookY];
+  q('.eyes')[0].style.transform=`translate(${(look[0]*9).toFixed(1)}px,${(look[1]*7).toFixed(1)}px)`;
+  q('.head')[0].style.transform=`rotate(${e.tilt||0}deg)`;
+}
+
+// ---- FRIDAY te mira, parpadea y cambia de cara
+const caras=[$('cara'), $('cara2'), $('cara3')];
+caras.forEach(faceBuild);
+let cur='happy', base='happy';
+const pinta=(root, n)=>{ const r=root.getBoundingClientRect(); FACE.lookX=Math.max(-1,Math.min(1,(mx-(r.left+r.width/2))/500)); FACE.lookY=Math.max(-1,Math.min(1,(my-(r.top+r.height/2))/400)); faceApplyTo(root, EXPR[n]||EXPR.idle); };
+let mx=innerWidth/2, my=innerHeight/2;
+const show=n=>{ cur=n; pinta(caras[0], n); pinta(caras[1], n); };
+show('happy'); pinta(caras[2], 'wink');
+let mira=0;
+addEventListener('pointermove', e=>{ mx=e.clientX; my=e.clientY; if(mira) return; mira=requestAnimationFrame(()=>{ mira=0; pinta(caras[0], cur); pinta(caras[1], cur); pinta(caras[2], 'wink'); }); }, {passive:true});
+(function parpadeo(){ setTimeout(()=>{ if(!['laugh','happy','love','proud'].includes(cur)){ const ojos=document.querySelectorAll('.cara .eye'); ojos.forEach(x=>x.classList.add('blink')); setTimeout(()=>ojos.forEach(x=>x.classList.remove('blink')), 130); } parpadeo(); }, 2400+Math.random()*3200); })();
+
+// ---- el globo: lo que le piden y lo que contesta
+const CHARLA=[
+  ['Friday, mirá mi pantalla','Veo que el Word se trabó. ¿Lo cierro y lo abro de nuevo?','thinking'],
+  ['Abrí Spotify y poné música','Listo, arrancó tu lista. ¿Le subo un poco?','happy'],
+  ['Friday, buscá actualizaciones','Hay una versión nueva. ¿La instalo? Tarda un minuto.','excited'],
+  ['¿Cómo está la compu?','Tranqui: el procesador va al 34% y lo que más consume es Chrome.','cool'],
+  ['Tomame las fichas de historia','¿En qué año fue la Revolución de Mayo?','thinking'],
+  ['Avisame si las zapatillas bajan de 80 mil','Dale. Las sigo en Mercado Libre y te aviso.','proud'],
+  ['¿Va a llover mañana?','Sí, a la tarde. Si salís, llevá paraguas.','worried'],
+  ['Ya lavé los platos','¡Bien ahí! Sumaste 10 puntos y vas primero.','laugh']
+];
+const NOMBRE={idle:'tranquila',happy:'contenta',laugh:'muerta de risa',love:'enamorada',excited:'emocionada',surprised:'sorprendida',sad:'triste',worried:'preocupada',thinking:'pensando',wink:'cómplice',cool:'canchera',confused:'confundida',proud:'orgullosa',angry:'enojada',sleepy:'con sueño',listening:'escuchando'};
+const TOQUE=[['surprised','¡Ay! Me agarraste desprevenida.'],['laugh','¡Jajaja, me hacés cosquillas!'],['wink','Esto queda entre nosotros.'],['love','Ay, gracias. Yo también te quiero.'],['cool','Tranqui, tengo todo bajo control.'],['thinking','Mmm… dejame pensar.'],['confused','¿Eh? ¿Me hablaste?'],['sleepy','Cinco minutitos más…'],['proud','Hoy hice todo bien, ¿viste?'],['excited','¡Contame, contame!'],['angry','¡Ey, que me despeinás!']];
+let k=0, t=0, pausa=0, tipeo=0;
+function decir(q, r, e, toque){
+  const g=$('globo'), gq=$('gQ'), gr=$('gR');
+  g.classList.add('cambia');
+  setTimeout(()=>{ gq.textContent=q; gq.classList.toggle('toque', !!toque); base=e; show(e); $('expN').textContent=NOMBRE[e]||e; g.classList.remove('cambia');
+    clearInterval(tipeo);
+    if(quieto){ gr.textContent=r; return; }
+    let i=0; gr.textContent=''; gr.classList.add('tipea');
+    tipeo=setInterval(()=>{ i+=1; gr.textContent=r.slice(0,i); if(i>=r.length){ clearInterval(tipeo); gr.classList.remove('tipea'); } }, 24);
+  }, 300);
+}
+function charla(){ if(Date.now()<pausa || !heroVisible) return; k=(k+1)%CHARLA.length; const [q,r,e]=CHARLA[k]; decir(q,r,e); }
+if(!quieto) setInterval(()=>{ if(!document.hidden) charla(); }, 5600);
+$('cara').addEventListener('click', ()=>{ const [e,r]=TOQUE[t]; t=(t+1)%TOQUE.length; pausa=Date.now()+7000; decir('Le tocaste la cara', r, e, true); });
+// pasale el mouse (o el foco) a una frase y FRIDAY pone la cara
+document.querySelectorAll('.frases li').forEach(li=>{ const on=()=>show(li.dataset.emo), off=()=>show(base); li.addEventListener('pointerenter', on); li.addEventListener('focus', on); li.addEventListener('pointerleave', off); li.addEventListener('blur', off); });
+
+// ---- cien versiones: los puntitos y el contador
+const HITOS=[1,62,70,84,100,101];
+const puntos=$('puntos');
+let VER=101;
+const pintarPuntos=()=>{ puntos.innerHTML=Array.from({length:VER},(_,i)=>`<i class="${HITOS.includes(i+1)?'hito':''}" style="--dl:${i*14}ms"></i>`).join(''); };
+pintarPuntos();
+if(!quieto && 'IntersectionObserver' in window){
+  let hecho=false; const cuenta=$('cuenta');
+  new IntersectionObserver(es=>{ if(hecho || !es[0].isIntersecting) return; hecho=true; puntos.classList.add('ola');
+    const t0=performance.now(); (function paso(t){ const x=Math.min(1,(t-t0)/1500), v=Math.max(1,Math.round(VER*(1-Math.pow(1-x,3)))); cuenta.textContent=v; if(x<1) requestAnimationFrame(paso); else cuenta.textContent=String(VER); })(t0);
+  }, {threshold:.35}).observe(puntos);
+}
+
+// ---- la versión publicada (la misma que revisa FRIDAY para actualizarse)
+fetch('actualizaciones/friday.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(m=>{
+  if(!m || !m.datos) return;
+  const d=JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(m.datos), c=>c.charCodeAt(0))));
+  const v=parseInt(d.version,10), full=d.completa||d.version; if(!(v>0)) return;
+  document.querySelectorAll('[data-ver]').forEach(e=>e.textContent=full);
+  if(v!==VER){ VER=v; document.querySelectorAll('[data-vergrande]').forEach(e=>e.textContent=String(v)); pintarPuntos(); }
+}).catch(()=>{});
+
+
+// ---- Actualizaciones: filtrar por compu, celu o tablet
+document.querySelectorAll('.filtros [data-f]').forEach(b=>b.addEventListener('click', ()=>{
+  const f=b.dataset.f;
+  document.querySelectorAll('.filtros [data-f]').forEach(x=>{ x.classList.toggle('on', x===b); x.setAttribute('aria-pressed', x===b); });
+  document.querySelectorAll('#vlista>li').forEach(li=>{ li.hidden=!!f && li.dataset.app!==f; });
+}));
+// ---- Instalala: la tarjeta de tu aparato, resaltada
+(function(){
+  const ua=navigator.userAgent||'', touch=navigator.maxTouchPoints>1;
+  const sis=/Windows/.test(ua)?'windows':/Android/.test(ua)?(/Mobile/.test(ua)?'celu':'tablet'):/iPhone|iPod/.test(ua)?'celu':(/iPad/.test(ua)||(/Macintosh/.test(ua)&&touch))?'tablet':/Linux|X11|CrOS/.test(ua)?'linux':'';
+  const a=sis && document.querySelector(`.donde [data-sis="${sis}"]`); if(a) a.classList.add('tuya');
+})();
+// ---- Instalala: cuánto pesa cada descarga
+document.querySelectorAll('[data-peso]').forEach(e=>{
+  fetch(e.dataset.peso,{method:'HEAD',cache:'no-store'}).then(r=>{ const b=+r.headers.get('content-length'); if(r.ok && b>0){ const m=b/1048576; e.textContent=`Versión ${document.querySelector('[data-ver]').textContent} · ${(m<10?m.toFixed(1):Math.round(m)).toString().replace('.',',')} MB`; } }).catch(()=>{});
+});
+
+// ---- cada sección es una página: #hace, #nuevo, #cerebros, #nosotros, #instalar (y #inicio)
+const VISTAS=[...document.querySelectorAll('.vista')];
+const PAGINAS={inicio:'BufaLabs: FRIDAY, la inteligencia artificial gratis', hace:'Qué hace FRIDAY · BufaLabs', nuevo:'Lo nuevo de FRIDAY · BufaLabs', actualizaciones:'Actualizaciones de FRIDAY · BufaLabs', cerebros:'Por dentro: cómo piensa FRIDAY · BufaLabs', nosotros:'Nosotros · BufaLabs', probala:'Hablale a FRIDAY sin instalar · BufaLabs', ayuda:'Ayuda de FRIDAY · BufaLabs', instalar:'Descargar FRIDAY gratis · BufaLabs'};
+let vistaActual=null;
+function vistaDe(id){
+  if(!id || PAGINAS[id]) return PAGINAS[id] ? id : 'inicio';
+  const el=document.getElementById(id), v=el && el.closest('.vista');
+  return v ? v.dataset.vista : 'inicio';
+}
+function ir(hash){
+  const id=decodeURIComponent((hash||'').replace(/^#/,'')), v=vistaDe(id);
+  if(v!==vistaActual){
+    VISTAS.forEach(x=>{ const on=x.dataset.vista===v; x.hidden=!on; if(on && vistaActual!==null && !quieto){ x.classList.remove('entra'); void x.offsetWidth; x.classList.add('entra'); } });
+    vistaActual=v; document.title=PAGINAS[v];
+    document.querySelectorAll('[data-ir]').forEach(a=>{ if(a.closest('.barra')){ if(a.dataset.ir===v) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); } });
+    const act=document.querySelector('.barra ul a[aria-current]'); if(act) act.scrollIntoView({block:'nearest', inline:'center'});
+  }
+  const el=!PAGINAS[id] && id ? document.getElementById(id) : null;
+  if(el) requestAnimationFrame(()=>el.scrollIntoView({behavior:quieto?'auto':'smooth'}));
+  else window.scrollTo({top:0, behavior:'auto'});
+}
+addEventListener('hashchange', ()=>ir(location.hash));
+
+// ---- HABLALE: la demo por voz (Groq directo desde tu navegador; la llave queda solo en esta pestaña)
+(function(){
+  const pc=document.querySelector('.pcara'), est=$('pEst').querySelector('span'), yo=$('pYo'), ella=$('pElla'), cara=$('cara4');
+  faceBuild(cara);
+  let llave='', charla=[], oyendo=false, rec=null, hablaRAF=0, gen=0;
+  const ESTADO={lista:'Lista para charlar', escucha:'Te escucho…', piensa:'Pensando…', habla:'Hablando'};
+  const EXP={lista:'happy', escucha:'listening', piensa:'thinking', habla:'happy'};
+  function estado(e){ pc.dataset.e=e; est.textContent=ESTADO[e]||'Esperando tu llave'; FACE.talk=0; faceApplyTo(cara, EXPR[EXP[e]]||EXPR.happy); }
+  faceApplyTo(cara, EXPR.happy);
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  function voz(){ const v=speechSynthesis.getVoices(); return v.find(x=>/es[-_]AR/i.test(x.lang)) || v.find(x=>/es[-_](419|MX|US)/i.test(x.lang)) || v.find(x=>/^es/i.test(x.lang)) || null; }
+  function decir(t){
+    return new Promise(res=>{
+      if(!('speechSynthesis' in window)){ res(); return; }
+      try{ speechSynthesis.cancel(); }catch(e){}
+      const u=new SpeechSynthesisUtterance(t), v=voz(); if(v) u.voice=v; u.lang=v?v.lang:'es-AR'; u.rate=1.05;
+      let fin=false; const listo=()=>{ if(fin) return; fin=true; cancelAnimationFrame(hablaRAF); FACE.talk=0; estado('lista'); res(); };
+      u.onstart=()=>{ estado('habla'); const t0=performance.now(); (function anima(){ FACE.talk=quieto?.3:.35+.35*Math.abs(Math.sin((performance.now()-t0)/95)); faceApplyTo(cara, EXPR.happy); hablaRAF=requestAnimationFrame(anima); })(); };
+      u.onend=listo; u.onerror=listo; setTimeout(()=>{ if(!speechSynthesis.speaking) listo(); }, 1500 + t.length*90);
+      speechSynthesis.speak(u);
+    });
+  }
+  const PROMPT=()=>`Sos FRIDAY, la inteligencia artificial de BufaLabs, un laboratorio chico de Argentina. Estás en una demo en la página: alguien te prueba antes de instalarte. Hablás en español rioplatense, cálida, con humor, en 1 a 3 oraciones cortas, sin markdown, sin emojis ni listas (todo se lee en voz alta). Acá en la página solo podés charlar. Si te piden algo de la compu, del celu, música, recordatorios, archivos o buscar en internet, contá con entusiasmo que instalada lo hacés de verdad (es gratis, en Windows, Linux y el celu), sin inventar que lo hiciste. No inventes datos de hoy (precios, resultados, noticias). Hoy es ${new Date().toLocaleDateString('es-AR',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}.`;
+  async function preguntar(texto){
+    texto=String(texto||'').trim(); if(!texto || !llave) return;
+    const mio=++gen; try{ speechSynthesis.cancel(); }catch(e){}
+    yo.hidden=false; yo.textContent=texto; ella.textContent=''; estado('piensa'); faceApplyTo(cara, EXPR.thinking);
+    charla.push({role:'user', content:texto}); charla=charla.slice(-10);
+    let r, out='';
+    try{
+      r=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST', headers:{'Content-Type':'application/json','Authorization':'Bearer '+llave},
+        body:JSON.stringify({model:'openai/gpt-oss-20b', reasoning_effort:'low', temperature:.8, max_completion_tokens:700, messages:[{role:'system', content:PROMPT()}, ...charla]})});
+    }catch(e){ r=null; }
+    if(mio!==gen) return;
+    if(!r || !r.ok){
+      const st=r?r.status:0; charla.pop();
+      out = st===401 ? 'Esa llave no me anda. Fijate que esté completa: empieza con gsk_.' : st===429 ? 'Uy, se llenó el cupo de este minuto. Probá de nuevo en un ratito.' : 'No me pude conectar. Fijate que haya internet y probá de nuevo.';
+      if(st===401){ $('pHablar').hidden=true; $('pLlaveF').hidden=false; $('pLlaveMsg').classList.add('mal'); $('pLlaveMsg').textContent=out; llave=''; }
+      ella.textContent=out; estado('lista'); faceApplyTo(cara, EXPR.worried); if(st!==401) decir(out); return;
+    }
+    try{ const d=await r.json(); out=String(d.choices&&d.choices[0]&&d.choices[0].message&&d.choices[0].message.content||'').replace(/[*_#`]/g,'').trim(); }catch(e){}
+    if(mio!==gen) return;
+    if(!out) out='Me quedé en blanco. ¿Me lo decís de nuevo?';
+    charla.push({role:'assistant', content:out}); ella.textContent=out;
+    await decir(out);
+  }
+  $('pLlaveF').addEventListener('submit', e=>{
+    e.preventDefault(); const k=$('pLlave').value.replace(/\s/g,'');
+    if(k.length<20){ $('pLlaveMsg').classList.add('mal'); $('pLlaveMsg').textContent='Esa llave parece incompleta: copiala entera, empieza con gsk_.'; return; }
+    llave=k; $('pLlave').value=''; $('pLlaveF').hidden=true; $('pHablar').hidden=false; estado('lista');
+    if(!SR){ $('pMic').hidden=true; $('pSinMic').hidden=false; }
+    const hola='¡Listo! Tocá el micrófono y hablame, o escribime abajo.'; ella.textContent=hola; decir(hola);
+  });
+  function parar(){ oyendo=false; $('pMic').setAttribute('aria-pressed','false'); $('pMicTx').textContent='Tocá y hablale'; try{ rec && rec.stop(); }catch(e){} }
+  $('pMic').addEventListener('click', ()=>{
+    if(!SR) return;
+    if(oyendo){ parar(); return; }
+    gen++; try{ speechSynthesis.cancel(); }catch(e){}
+    rec=new SR(); rec.lang='es-AR'; rec.interimResults=true; rec.maxAlternatives=1;
+    let final='';
+    rec.onresult=e=>{ let parcial=''; for(let i=e.resultIndex;i<e.results.length;i++){ const t=e.results[i][0].transcript; if(e.results[i].isFinal) final+=t; else parcial+=t; } yo.hidden=false; yo.textContent=(final+parcial).trim(); };
+    rec.onerror=e=>{ parar(); if(e.error==='not-allowed'||e.error==='service-not-allowed'){ ella.textContent='No me diste permiso para el micrófono. Tocá el candadito de la barra de direcciones y permitilo, o escribime abajo.'; estado('lista'); } };
+    rec.onend=()=>{ const t=final.trim(); parar(); if(t) preguntar(t); else if(pc.dataset.e==='escucha') estado('lista'); };
+    try{ rec.start(); oyendo=true; $('pMic').setAttribute('aria-pressed','true'); $('pMicTx').textContent='Te escucho… tocá para terminar'; estado('escucha'); }catch(e){ parar(); }
+  });
+  $('pTxtF').addEventListener('submit', e=>{ e.preventDefault(); const t=$('pTxt').value; $('pTxt').value=''; preguntar(t); });
+  document.querySelectorAll('.pideas button').forEach(b=>b.addEventListener('click', ()=>preguntar(b.textContent)));
+  try{ speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged=()=>{}; }catch(e){}
+  addEventListener('pagehide', ()=>{ llave=''; charla=[]; });
+})();
+document.addEventListener('click', e=>{ const a=e.target.closest('a[href^="#"]'); if(a && a.getAttribute('href')===location.hash){ e.preventDefault(); ir(location.hash); } });
+ir(location.hash || window.VISTA_INICIAL || "");
+const barra=document.querySelector('.barra');
+addEventListener('scroll', ()=>barra.classList.toggle('sombra', scrollY>8), {passive:true});
+
+// ---- tres cerebros: BUFIA, el núcleo, en el medio
+const P={nucleo:[320,230], groq:[112,110], gemini:[528,110], ollama:[320,362]};
+const pk=$('pk'), pk2=$('pk2'), chat=$('chat'), red=$('red'), est=$('redEst').querySelector('span'), miraB=document.querySelector('#bufia .mira');
+const pruebas=[...document.querySelectorAll('.prueba')];
+let ocupado=false;
+if(quieto){ try{ red.querySelector('svg').pauseAnimations(); }catch(e){} }
+function viaja(el, a, b, ms, hasta=1){
+  if(quieto) ms=1;
+  return new Promise(res=>{ const t0=performance.now(); el.style.opacity=1;
+    (function paso(t){ const x=Math.min(1,(t-t0)/ms), e=(x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2)*hasta;
+      el.setAttribute('cx', a[0]+(b[0]-a[0])*e); el.setAttribute('cy', a[1]+(b[1]-a[1])*e);
+      x<1 ? requestAnimationFrame(paso) : res(); })(t0); });
+}
+// BUFIA mira para el lado del cerebro con el que está hablando
+function mirar(id){ if(!id){ miraB.style.transform=''; return; } const dx=P[id][0]-P.nucleo[0], dy=P[id][1]-P.nucleo[1], d=Math.hypot(dx,dy)||1; miraB.style.transform=`translate(${(dx/d*13).toFixed(1)}px,${(dy/d*10).toFixed(1)}px)`; }
+function msg(txt, cls){ const d=document.createElement('p'); d.className='m '+cls; d.textContent=txt; chat.appendChild(d); while(chat.children.length>6) chat.firstChild.remove(); return d; }
+async function contesta(txt){ const d=msg('', 'fri tres'); d.innerHTML='<i></i><i></i><i></i>'; await sleep(quieto?0:750); d.classList.remove('tres'); d.textContent=txt; }
+const nodo=id=>$('n-'+id), linea=id=>$('ln-'+id), flujo=id=>$('fl-'+id);
+function estado(tipo, txt){ if(txt) est.textContent=txt; red.classList.toggle('alerta', tipo==='mal'); red.classList.toggle('piensa', tipo==='piensa'); }
+function cortar(ids, si){ ids.forEach(id=>{ linea(id).classList.toggle('cae', si); flujo(id).classList.toggle('cae', si); }); }
+async function ruta(id, ms){ nodo(id).classList.add('activo'); flujo(id).classList.add('va'); mirar(id); await viaja(pk, P.nucleo, P[id], ms); await sleep(320); await viaja(pk, P[id], P.nucleo, ms); nodo(id).classList.remove('activo'); flujo(id).classList.remove('va'); pk.style.opacity=0; mirar(null); }
+const CORRIDAS={
+  groq: async()=>{ msg('¿Cómo andás, Friday?','vos'); estado('piensa','BUFIA está pensando'); msg('BUFIA le pasa la charla a Groq','sis'); await ruta('groq',520); estado('ok','Todo en línea'); await contesta('¡Todo bien, che! ¿Y vos?'); },
+  gemini: async()=>{ msg('¿Qué se estrena este finde en el cine?','vos'); estado('piensa','BUFIA está pensando'); msg('BUFIA busca en Google con Gemini','sis'); await ruta('gemini',620); estado('ok','Todo en línea'); await contesta('Ya lo busqué. Te paso las tres que más me gustaron.'); },
+  ollama: async()=>{
+    msg('Explicame la fotosíntesis','vos'); estado('mal','Sin internet'); cortar(['groq','gemini'], true);
+    msg('Se cortó internet: BUFIA usa Ollama, que corre en tu compu','sis'); await sleep(900);
+    estado('piensa'); await ruta('ollama',700); await contesta('Las plantas usan la luz del sol para fabricar su comida. Te lo explico paso a paso.');
+    await sleep(900); cortar(['groq','gemini'], false); estado('ok','Todo en línea');
+  },
+  pensar: async()=>{
+    msg('Pensalo bien: ¿me conviene alquilar o comprar?','vos'); estado('piensa','BUFIA piensa a fondo');
+    msg('BUFIA usa el modelo grande de Groq, pensando a fondo','sis'); await ruta('groq',1100);
+    msg('Antes de contestar, se revisa con Gemini','sis'); await ruta('gemini',560);
+    estado('ok','Todo en línea'); msg('Revisado','sis bien'); await contesta('Depende de cuánto tiempo te quedes. Te armo las dos cuentas con tus números.');
+  },
+  falla: async()=>{
+    msg('¿Qué se estrena este finde en el cine?','vos'); estado('piensa','BUFIA está pensando'); msg('BUFIA busca en Google con Gemini','sis');
+    nodo('gemini').classList.add('activo'); flujo('gemini').classList.add('va'); mirar('gemini'); await viaja(pk, P.nucleo, P.gemini, 620, .78);
+    nodo('gemini').classList.remove('activo'); flujo('gemini').classList.remove('va'); nodo('gemini').classList.add('cae'); cortar(['gemini'], true); estado('mal','¡Alerta!');
+    msg('¡Gemini no responde!','sis mal'); await sleep(1000); msg('Cambio de cerebro: Groq, con el buscador de FRIDAY','sis');
+    const pto=[P.nucleo[0]+(P.gemini[0]-P.nucleo[0])*.78, P.nucleo[1]+(P.gemini[1]-P.nucleo[1])*.78];
+    await viaja(pk, pto, P.nucleo, 420); estado('piensa','BUFIA está pensando');
+    await ruta('groq',520); estado('ok','Todo en línea'); msg('Todo funcionando otra vez','sis bien'); await contesta('Listo, lo encontré igual. Y no fue mi culpa: culpá a Google.');
+    await sleep(1200); nodo('gemini').classList.remove('cae'); cortar(['gemini'], false);
+  }
+};
+pruebas.forEach(b=>b.addEventListener('click', async()=>{ ocupado=true; pruebas.forEach(x=>x.disabled=true); try{ await CORRIDAS[b.dataset.run](); } finally { pruebas.forEach(x=>x.disabled=false); ocupado=false; } }));
+// cuando nadie le pide nada, BUFIA igual trabaja: manda paquetitos y los sigue con la mirada
+const IDS=['groq','gemini','ollama'];
+async function paseo(){
+  if(ocupado || document.hidden || !redVisible) return;
+  const id=IDS[Math.floor(Math.random()*IDS.length)]; mirar(id);
+  await viaja(pk2, P.nucleo, P[id], 900); if(!ocupado) await viaja(pk2, P[id], P.nucleo, 900);
+  pk2.style.opacity=0; if(!ocupado) mirar(null);
+}
+if(!quieto) setInterval(paseo, 3400);
+// lo que no está en pantalla se queda quieto (así el celu no se traba)
+let heroVisible=true, redVisible=false;
+if('IntersectionObserver' in window){
+  const svgRed=red.querySelector('svg');
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    const el=e.target, ve=e.isIntersecting;
+    el.classList.toggle('pausa', !ve);
+    if(el.classList.contains('hero')) heroVisible=ve;
+    if(el.id==='cerebros'){ redVisible=ve; try{ ve&&!quieto ? svgRed.unpauseAnimations() : svgRed.pauseAnimations(); }catch(_){} }
+  }), {rootMargin:'80px 0px'});
+  document.querySelectorAll('.hero,.cinta,.hace,#cerebros,.versiones,.cierre').forEach(x=>io.observe(x));
+}
+</script>
+</body>
+</html>

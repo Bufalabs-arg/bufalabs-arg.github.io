@@ -17,6 +17,9 @@
 <meta property="og:locale" content="es_AR">
 <meta name="twitter:image" content="https://bufalabs-arg.github.io/img/og-friday.png">
 <link rel="canonical" href="https://bufalabs-arg.github.io/">
+<link rel="alternate" hreflang="es-AR" href="https://bufalabs-arg.github.io/">
+<link rel="alternate" hreflang="en" href="https://bufalabs-arg.github.io/en/">
+<link rel="alternate" hreflang="x-default" href="https://bufalabs-arg.github.io/">
 <meta name="google-site-verification" content="BmoSnXkW53Xt9tNBYE_nl_BCPsMj27MFNu641bMHhyM">
 <meta property="og:url" content="https://bufalabs-arg.github.io/">
 <meta name="twitter:card" content="summary_large_image">
@@ -32,6 +35,8 @@
   "description":"Laboratorio de tecnología e inteligencia artificial de Argentina. Hace a FRIDAY, una inteligencia artificial gratis para la compu y el celu.",
   "areaServed":"AR","address":{"@type":"PostalAddress","addressRegion":"Córdoba","addressCountry":"AR"},"sameAs":[]},
  {"@type":"WebSite","@id":"https://bufalabs-arg.github.io/#sitio","url":"https://bufalabs-arg.github.io/","name":"BufaLabs","inLanguage":"es-AR","publisher":{"@id":"https://bufalabs-arg.github.io/#bufalabs"}},
+ {"@type":"VideoObject","name":"FRIDAY en 30 segundos","description":"FRIDAY, la inteligencia artificial gratis de BufaLabs: investiga por vos, lee tus archivos y te ayuda a estudiar.",
+  "thumbnailUrl":"https://bufalabs-arg.github.io/video/friday-30s.jpg","uploadDate":"2026-10-29","duration":"PT30S","contentUrl":"https://bufalabs-arg.github.io/video/friday-30s.mp4","inLanguage":"es-AR","publisher":{"@id":"https://bufalabs-arg.github.io/#bufalabs"}},
  {"@type":"SoftwareApplication","name":"FRIDAY","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 10, Windows 11, Linux, Android, iOS",
   "description":"Una inteligencia artificial gratis que te escucha, te habla y hace cosas de verdad en la compu y en el celu.",
   "softwareVersion":"102","inLanguage":"es-AR","url":"https://bufalabs-arg.github.io/","downloadUrl":"https://bufalabs-arg.github.io/descargas/FRIDAY-Setup.exe",
@@ -296,6 +301,9 @@ section.hero{padding-block:0}
 .cgrid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);grid-template-areas:"texto red" "demo red";gap:0 clamp(30px,5vw,64px);align-items:start}
 .ctexto{grid-area:texto}.cdemo{grid-area:demo}.red{grid-area:red}
 .herr{margin-top:clamp(48px,7vw,84px)}
+.video-sec{background:var(--papel);padding-block:clamp(48px,7vw,84px) 0}
+.video-caja{margin-top:28px;border-radius:28px;overflow:hidden;background:var(--tinta);box-shadow:0 40px 70px -40px rgba(14,27,61,.6)}
+.video-caja video{display:block;width:100%;height:auto;aspect-ratio:16/9}
 /* con nueve secciones, entre 900 y 1240 px el menú pasa a su propia fila (deslizable) para no pisarse con «Instalala» */
 @media (min-width:901px) and (max-width:1240px){
   .barra-in{flex-wrap:wrap;gap:4px 14px;min-height:0;padding-block:12px 8px}
@@ -607,6 +615,12 @@ section.hero{padding-block:0}
   <span>Te escucha</span><span>Pone caras</span><span>Maneja la compu</span><span>Ve tu pantalla</span><span>Modo estudio</span><span>Sigue precios</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Windows y Linux</span><span>Se actualiza sola</span><span>Hecha en Argentina</span>
   <span>Te escucha</span><span>Pone caras</span><span>Maneja la compu</span><span>Ve tu pantalla</span><span>Modo estudio</span><span>Sigue precios</span><span>Tareas con puntos</span><span>Tres cerebros</span><span>Windows y Linux</span><span>Se actualiza sola</span><span>Hecha en Argentina</span>
 </div></div>
+  <section class="video-sec" aria-labelledby="videoT">
+    <div class="wrap">
+      <h2 class="titulo" id="videoT">Mirala en 30 segundos.</h2>
+      <div class="video-caja"><video controls preload="none" playsinline poster="video/friday-30s.jpg" width="1920" height="1080" aria-label="FRIDAY en 30 segundos: investiga, lee tus archivos y te ayuda a estudiar."><source src="video/friday-30s.mp4" type="video/mp4"></video></div>
+    </div>
+  </section>
   <section class="atajos" aria-label="Secciones">
     <div class="wrap">
       <h2 class="titulo">Elegí por dónde arrancar.</h2>
@@ -738,6 +752,7 @@ section.hero{padding-block:0}
           <li data-app="compu"><div class="vn"><span class="ver">101</span><span class="app compu">Compu</span><time datetime="2026-10-25">25 de octubre</time></div><div class="min0"><h3>Se actualiza sola</h3><p>FRIDAY baja solo lo que cambió, revisa que venga firmado por BufaLabs y al terminar te cuenta las novedades.</p></div></li>
         </ol>
       </div>
+      <p class="nota">Cada actualización también tiene su propia nota para compartir: <a href="/novedades/">ver las novedades</a>.</p>
     </div>
   </section>
   <a class="sig" href="#cerebros" data-ir="cerebros"><span class="wrap"><small>Seguí con</small><b>Por dentro</b><em>Cómo piensa FRIDAY y por qué es distinta.</em></span></a>
@@ -1021,7 +1036,7 @@ section.hero{padding-block:0}
 <footer>
   <div class="pie"><div class="wrap pgrid">
     <a class="logo" href="#inicio" data-ir="inicio" aria-label="BufaLabs, inicio"><img decoding="async" src="img/bufalabs-logo.svg" width="1623" height="512" loading="lazy" alt="BufaLabs: tecnología, inteligencia artificial"></a>
-    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>102</span>, Móvil 3.6 y Casa 4.2 (beta). © 2026 BufaLabs</p></div>
+    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>102</span>, Móvil 3.6 y Casa 4.2 (beta). © 2026 BufaLabs</p><p class="vers"><a href="/novedades/" style="color:inherit">Novedades</a> · <a href="/en/" hreflang="en" lang="en" style="color:inherit">English</a></p></div>
   </div></div>
 </footer>
 
@@ -1181,7 +1196,7 @@ document.querySelectorAll('[data-peso]').forEach(e=>{
 
 // ---- cada sección es una página: #hace, #nuevo, #cerebros, #nosotros, #instalar (y #inicio)
 const VISTAS=[...document.querySelectorAll('.vista')];
-const PAGINAS={inicio:'BufaLabs: FRIDAY, la inteligencia artificial gratis', hace:'Qué hace · FRIDAY', nuevo:'Lo nuevo · FRIDAY', actualizaciones:'Actualizaciones · FRIDAY', cerebros:'Por dentro · FRIDAY', nosotros:'Nosotros · BufaLabs', probala:'Hablale · FRIDAY', ayuda:'Ayuda · FRIDAY', instalar:'Instalala · FRIDAY'};
+const PAGINAS={inicio:'BufaLabs: FRIDAY, la inteligencia artificial gratis', hace:'Qué hace FRIDAY · BufaLabs', nuevo:'Lo nuevo de FRIDAY · BufaLabs', actualizaciones:'Actualizaciones de FRIDAY · BufaLabs', cerebros:'Por dentro: cómo piensa FRIDAY · BufaLabs', nosotros:'Nosotros · BufaLabs', probala:'Hablale a FRIDAY sin instalar · BufaLabs', ayuda:'Ayuda de FRIDAY · BufaLabs', instalar:'Descargar FRIDAY gratis · BufaLabs'};
 let vistaActual=null;
 function vistaDe(id){
   if(!id || PAGINAS[id]) return PAGINAS[id] ? id : 'inicio';
@@ -1273,7 +1288,7 @@ addEventListener('hashchange', ()=>ir(location.hash));
   addEventListener('pagehide', ()=>{ llave=''; charla=[]; });
 })();
 document.addEventListener('click', e=>{ const a=e.target.closest('a[href^="#"]'); if(a && a.getAttribute('href')===location.hash){ e.preventDefault(); ir(location.hash); } });
-ir(location.hash);
+ir(location.hash || window.VISTA_INICIAL || "");
 const barra=document.querySelector('.barra');
 addEventListener('scroll', ()=>barra.classList.toggle('sombra', scrollY>8), {passive:true});
 
