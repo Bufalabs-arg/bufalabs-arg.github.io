@@ -40,7 +40,7 @@
   "thumbnailUrl":"https://bufalabs-arg.github.io/video/friday-30s.jpg","uploadDate":"2026-10-29","duration":"PT30S","contentUrl":"https://bufalabs-arg.github.io/video/friday-30s.mp4","inLanguage":"es-AR","publisher":{"@id":"https://bufalabs-arg.github.io/#bufalabs"}},
  {"@type":"SoftwareApplication","name":"FRIDAY","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 10, Windows 11, Linux, Android, iOS",
   "description":"Una inteligencia artificial gratis que te escucha, te habla y hace cosas de verdad en la compu y en el celu.",
-  "softwareVersion":"102.01","inLanguage":"es-AR","url":"https://bufalabs-arg.github.io/","downloadUrl":"https://bufalabs-arg.github.io/descargas/FRIDAY-Setup.exe",
+  "softwareVersion":"102.02","inLanguage":"es-AR","url":"https://bufalabs-arg.github.io/","downloadUrl":"https://bufalabs-arg.github.io/descargas/FRIDAY-Setup.exe",
   "image":"https://bufalabs-arg.github.io/img/og-friday.png","offers":{"@type":"Offer","price":"0","priceCurrency":"ARS"},"publisher":{"@id":"https://bufalabs-arg.github.io/#bufalabs"}}
 ]}
 </script>
@@ -470,7 +470,7 @@ section.hero{padding-block:0}
 .donde ol{margin:0;padding:0;list-style:none;counter-reset:p}
 .donde li{counter-increment:p;position:relative;padding:0 0 16px 48px;color:var(--tinta-2)}
 .donde li::before{content:counter(p);position:absolute;left:0;top:-2px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--papel-2);color:var(--azul-3);font:800 17px var(--disp)}
-.donde li b{color:var(--tinta)}
+.donde li b{color:var(--tinta);overflow-wrap:anywhere}
 .donde .btn{margin-top:8px;min-height:52px;font-size:17px;background:var(--azul);color:var(--blanco)}
 .donde .otra{margin:14px 0 0;color:var(--tinta-3);font-size:15px}
 .donde .otra a{color:var(--azul-3);text-underline-offset:3px}
@@ -599,13 +599,13 @@ section.hero{padding-block:0}
   <div class="wrap">
     <div class="hgrid">
       <div class="min0">
-        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>Te conoce mejor · Compu 102.01</span></a>
+        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>Más manos libres en la compu · Compu 102.02</span></a>
         <h1><span>FRIDAY</span><span>vive en</span><span>tu casa.</span></h1>
-        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, hecha en Argentina por BufaLabs. Ya va por la versión <span data-ver>102.01</span> y se actualiza sola.</p>
+        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, hecha en Argentina por BufaLabs. Ya va por la versión <span data-ver>102.02</span> y se actualiza sola.</p>
         <div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a><a class="btn no" href="#probala">Hablale ahora</a></div>
       </div>
       <div class="ella">
-        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>102.01</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
+        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>102.02</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
         <button id="cara" class="cara" type="button" aria-label="La cara de FRIDAY. Tocala para cambiarle la expresión."></button>
         <div class="globo" id="globo" aria-live="polite"><q id="gQ">Friday, mirá mi pantalla</q><p id="gR">Veo que el Word se trabó. ¿Lo cierro y lo abro de nuevo?</p></div>
       </div>
@@ -734,7 +734,9 @@ section.hero{padding-block:0}
         <h2 class="titulo oculto">Todas las actualizaciones</h2>
         <div class="filtros" aria-label="Mostrar"><button class="on" data-f="" aria-pressed="true">Todas</button><button data-f="compu" aria-pressed="false">Compu</button><button data-f="celu" aria-pressed="false">Celu</button><button data-f="casa" aria-pressed="false">Tablet</button></div>
         <ol class="vlista" id="vlista">
-          <li class="ultima" data-app="compu"><div class="vn"><span class="ver">102.01</span><span class="app compu">Compu</span><time datetime="2026-10-29">29 de octubre</time></div><div class="min0"><h3>Te conoce mejor</h3><p>FRIDAY ahora se acuerda de lo que quedó pendiente, aprende tus costumbres y te ayuda a estudiar tomándote examen.</p><ul><li><b>Te acordás de lo de ayer.</b> Si ayer quedó algo pendiente, como llamar a alguien o terminar un trabajo, FRIDAY te lo recuerda una vez al otro día.</li><li><b>Lo de siempre.</b> Aprende lo que le pedís seguido a cierta hora y te lo ofrece. Le decís «dale» y lo hace.</li><li><b>Dos cerebros piensan mejor.</b> Cuando le pedís «pensalo bien», consulta otra opinión y, si suma algo, te lo agrega.</li><li><b>Modo profe.</b> Decile «tomame examen de historia»: te hace cinco preguntas, te corrige y te dice qué repasar.</li></ul></div></li>
+          <li class="ultima" data-app="compu"><div class="vn"><span class="ver">102.02</span><span class="app compu">Compu</span><time datetime="2026-10-29">29 de octubre</time></div><div class="min0"><h3>Más manos libres en la compu</h3><p>Dictado, traductor en vivo, ayuda con lo que copiás y una copia de seguridad de todo, pidiéndolo en voz.</p><ul><li><b>Dictado.</b> «Modo dictado»: hacés clic donde quieras escribir y lo que decís se escribe solo.</li><li><b>Traductor en vivo.</b> «Modo traductor al inglés»: lo que decís en español lo dice en inglés, y al revés.</li><li><b>Lo que copiaste.</b> «Resumí lo que copié» o «pasalo a un mail formal», y te lo deja copiado para pegar.</li><li><b>Copia de seguridad.</b> «Guardá todo» guarda su memoria, tus ajustes y tus listas; en otra compu, «recuperá todo».</li></ul></div></li>
+          <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.8</span><span class="app celu">Celu</span><time datetime="2026-10-29">29 de octubre</time></div><div class="min0"><h3>Más manos libres en el celu</h3><p>Llevá tus gastos hablando, usala mientras manejás y preguntale por lo que ves con la cámara.</p><ul><li><b>Gastos por voz.</b> «Gasté 3500 en el súper» y lleva la cuenta del mes. Le preguntás cuánto gastaste o le ponés un límite y te avisa.</li><li><b>Modo auto.</b> «Estoy manejando»: pantalla grande y te escucha sola después de cada respuesta.</li><li><b>Foto y pregunta.</b> «Mirá esto»: sacás la foto y le preguntás lo que quieras de lo que ve.</li><li><b>Desde Siri.</b> Con un atajo del iPhone le hablás con «Oye Siri, Friday», sin abrir la app.</li></ul></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">102.01</span><span class="app compu">Compu</span><time datetime="2026-10-29">29 de octubre</time></div><div class="min0"><h3>Te conoce mejor</h3><p>FRIDAY ahora se acuerda de lo que quedó pendiente, aprende tus costumbres y te ayuda a estudiar tomándote examen.</p><ul><li><b>Te acordás de lo de ayer.</b> Si ayer quedó algo pendiente, como llamar a alguien o terminar un trabajo, FRIDAY te lo recuerda una vez al otro día.</li><li><b>Lo de siempre.</b> Aprende lo que le pedís seguido a cierta hora y te lo ofrece. Le decís «dale» y lo hace.</li><li><b>Dos cerebros piensan mejor.</b> Cuando le pedís «pensalo bien», consulta otra opinión y, si suma algo, te lo agrega.</li><li><b>Modo profe.</b> Decile «tomame examen de historia»: te hace cinco preguntas, te corrige y te dice qué repasar.</li></ul></div></li>
           <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.7</span><span class="app celu">Celu</span><time datetime="2026-10-29">29 de octubre</time></div><div class="min0"><h3>Te conoce mejor</h3><p>Lo mismo que en la compu: recuerda lo pendiente, aprende tus costumbres y te toma examen.</p><ul><li><b>Te acordás de lo de ayer.</b> Si ayer quedó algo pendiente, como llamar a alguien o terminar un trabajo, FRIDAY te lo recuerda una vez al otro día.</li><li><b>Lo de siempre.</b> Aprende lo que le pedís seguido a cierta hora y te lo ofrece. Le decís «dale» y lo hace.</li><li><b>Modo profe.</b> Decile «tomame examen de historia»: te hace cinco preguntas, te corrige y te dice qué repasar.</li></ul></div></li>
           <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.6</span><span class="app celu">Celu</span><time datetime="2026-10-28">28 de octubre</time></div><div class="min0"><h3>Actualizaciones como en la compu</h3><p>Cuando sale una versión nueva del celu, FRIDAY te avisa, te muestra qué trae y se actualiza con un toque.</p><ul><li><b>Te avisa.</b> Te muestra la versión nueva y lo que trae antes de instalarla.</li><li><b>Con un toque.</b> Se baja, se revisa y se instala en segundos, sin borrar nada tuyo.</li><li><b>Te cuenta lo nuevo.</b> Al abrirla, te presenta las novedades una por una. También le podés decir «qué hay de nuevo».</li></ul></div></li>
           <li data-app="celu"><div class="vn"><span class="ver">Móvil 3.5</span><span class="app celu">Celu</span><time datetime="2026-10-28">28 de octubre</time></div><div class="min0"><h3>Más para hablarle</h3><p>El celu aprende de lo que le decís y también investiga a fondo.</p><ul><li><b>Investiga.</b> Decile «investigá…» y busca en varios lados, te cuenta cómo va y te deja un informe.</li><li><b>Aprende de vos.</b> Si se equivoca, decile «eso está mal»: te pregunta qué falló y no lo repite. Si te gustó, «¡bien ahí!».</li><li><b>¿Cómo estás de cupo?.</b> Te dice cuánto le queda hoy de sus cerebros gratis y quién te contestó.</li></ul></div></li>
@@ -973,7 +975,23 @@ section.hero{padding-block:0}
         <div><dt>«Mostrame el informe»</dt><dd>Abre el último que te armó. «Leémelo» y te lo lee.</dd></div>
         <div><dt>«Hacé un chequeo»</dt><dd>Se prueba sola y te dice qué anda y qué no.</dd></div>
         <div><dt>«Buscá actualizaciones»</dt><dd>Se fija si hay una versión nueva y, si querés, vuelve a la anterior.</dd></div>
+        <div><dt>«Modo dictado»</dt><dd>En la compu: lo que decís se escribe donde tengas el cursor.</dd></div>
+        <div><dt>«Modo traductor al inglés»</dt><dd>En la compu: hace de intérprete en los dos sentidos.</dd></div>
+        <div><dt>«Gasté 3500 en el súper»</dt><dd>En el celu: lleva la cuenta del mes. «¿Cuánto gasté?»</dd></div>
+        <div><dt>«Tomame examen de historia»</dt><dd>Cinco preguntas, te corrige y te dice qué repasar.</dd></div>
       </dl>
+    </div>
+  </section>
+  <section class="instalar" id="siri">
+    <div class="wrap">
+      <h2 class="titulo">Hablale sin abrir la app.</h2>
+      <p class="intro">En el celu, FRIDAY también te escucha desde el asistente del teléfono.</p>
+      <div class="donde">
+        <article><h3>«Oye Siri, Friday»</h3><p class="para">iPhone, con la app Atajos</p>
+          <ol><li>Abrí <b>Atajos</b> y tocá <b>+</b>.</li><li>Agregá <b>Dictar texto</b> (en español) y después <b>Codificar URL</b>.</li><li>Agregá <b>URL</b>: <b>pedropiratita134.github.io/FRIDAY/?q=</b> y al final tocá la variable <b>Texto codificado</b>.</li><li>Agregá <b>Abrir URL</b> y ponele de nombre <b>Friday</b>.</li></ol></article>
+        <article><h3>«Ok Google»</h3><p class="para">Android, con FRIDAY en la pantalla de inicio</p>
+          <ol><li>Instalá FRIDAY Móvil en la pantalla de inicio.</li><li>Decí <b>«Ok Google, abrí FRIDAY»</b>.</li><li>Si mantenés apretado el ícono, tenés atajos: <b>Hablarle</b> y <b>Mis gastos</b>.</li></ol></article>
+      </div>
     </div>
   </section>
   <section class="instalar" id="problemas">
@@ -1039,7 +1057,7 @@ section.hero{padding-block:0}
 <footer>
   <div class="pie"><div class="wrap pgrid">
     <a class="logo" href="#inicio" data-ir="inicio" aria-label="BufaLabs, inicio"><img decoding="async" src="img/bufalabs-logo.svg" width="1623" height="512" loading="lazy" alt="BufaLabs: tecnología, inteligencia artificial"></a>
-    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>102.01</span>, Móvil 3.7 y Casa 4.2 (beta). © 2026 BufaLabs</p><p class="vers"><a href="/novedades/" style="color:inherit">Novedades</a> · <a href="/en/" hreflang="en" lang="en" style="color:inherit">English</a></p></div>
+    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="vers">FRIDAY v<span data-ver>102.02</span>, Móvil 3.8 y Casa 4.2 (beta). © 2026 BufaLabs</p><p class="vers"><a href="/novedades/" style="color:inherit">Novedades</a> · <a href="/en/" hreflang="en" lang="en" style="color:inherit">English</a></p></div>
   </div></div>
 </footer>
 

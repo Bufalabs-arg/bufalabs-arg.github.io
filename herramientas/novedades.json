@@ -2,6 +2,56 @@
  {
   "fecha": "2026-10-29",
   "app": "compu",
+  "version": "102.02",
+  "titulo": "Más manos libres en la compu",
+  "resumen": "Dictado, traductor en vivo, ayuda con lo que copiás y una copia de seguridad de todo, pidiéndolo en voz.",
+  "items": [
+   [
+    "Dictado",
+    "«Modo dictado»: hacés clic donde quieras escribir y lo que decís se escribe solo."
+   ],
+   [
+    "Traductor en vivo",
+    "«Modo traductor al inglés»: lo que decís en español lo dice en inglés, y al revés."
+   ],
+   [
+    "Lo que copiaste",
+    "«Resumí lo que copié» o «pasalo a un mail formal», y te lo deja copiado para pegar."
+   ],
+   [
+    "Copia de seguridad",
+    "«Guardá todo» guarda su memoria, tus ajustes y tus listas; en otra compu, «recuperá todo»."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-29",
+  "app": "celu",
+  "version": "Móvil 3.8",
+  "titulo": "Más manos libres en el celu",
+  "resumen": "Llevá tus gastos hablando, usala mientras manejás y preguntale por lo que ves con la cámara.",
+  "items": [
+   [
+    "Gastos por voz",
+    "«Gasté 3500 en el súper» y lleva la cuenta del mes. Le preguntás cuánto gastaste o le ponés un límite y te avisa."
+   ],
+   [
+    "Modo auto",
+    "«Estoy manejando»: pantalla grande y te escucha sola después de cada respuesta."
+   ],
+   [
+    "Foto y pregunta",
+    "«Mirá esto»: sacás la foto y le preguntás lo que quieras de lo que ve."
+   ],
+   [
+    "Desde Siri",
+    "Con un atajo del iPhone le hablás con «Oye Siri, Friday», sin abrir la app."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-29",
+  "app": "compu",
   "version": "102.01",
   "titulo": "Te conoce mejor",
   "resumen": "FRIDAY ahora se acuerda de lo que quedó pendiente, aprende tus costumbres y te ayuda a estudiar tomándote examen.",
