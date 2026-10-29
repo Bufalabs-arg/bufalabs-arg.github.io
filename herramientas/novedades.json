@@ -2,6 +2,40 @@
  {
   "fecha": "2026-10-29",
   "app": "compu",
+  "version": "102.03",
+  "titulo": "Más confiable",
+  "resumen": "FRIDAY te cuenta cómo anduvieron sus cerebros en la semana y te deja avisarnos con un toque si algo falla.",
+  "items": [
+   [
+    "¿Cómo anduviste?",
+    "Preguntale «¿cómo anduviste esta semana?» y te cuenta cómo le fue a cada cerebro: cuánto contestó bien, cuánto tardó y cuál falló."
+   ],
+   [
+    "Algo anduvo mal",
+    "Decile «algo anduvo mal» y arma un informe para BufaLabs, sin tus charlas, tu memoria ni tus llaves. Así lo arreglamos más rápido."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-29",
+  "app": "celu",
+  "version": "Móvil 3.9",
+  "titulo": "Más confiable",
+  "resumen": "El celu te cuenta cómo anduvieron sus cerebros y te deja avisarnos si algo falla.",
+  "items": [
+   [
+    "¿Cómo anduviste?",
+    "Preguntale «¿cómo anduviste esta semana?» y te cuenta cómo le fue a cada cerebro: cuánto contestó bien, cuánto tardó y cuál falló."
+   ],
+   [
+    "Algo anduvo mal",
+    "Decile «algo anduvo mal» y arma un informe para BufaLabs, sin tus charlas, tu memoria ni tus llaves. Así lo arreglamos más rápido."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-29",
+  "app": "compu",
   "version": "102.02",
   "titulo": "Más manos libres en la compu",
   "resumen": "Dictado, traductor en vivo, ayuda con lo que copiás y una copia de seguridad de todo, pidiéndolo en voz.",
