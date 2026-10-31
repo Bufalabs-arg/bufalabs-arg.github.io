@@ -1,5 +1,39 @@
 [
  {
+  "fecha": "2026-10-31",
+  "app": "compu",
+  "version": "103",
+  "titulo": "Sin llaves",
+  "resumen": "FRIDAY ya no necesita ninguna llave: la instalás y le hablás. Piensa y escucha con el servidor gratis de BufaLabs.",
+  "items": [
+   [
+    "Ya no hacen falta llaves",
+    "FRIDAY piensa y escucha con el servidor gratis de BufaLabs. Si ya tenías tu llave de Groq, la sigue usando, y cuando se queda sin cupo se pasa sola al servidor."
+   ],
+   [
+    "Sin internet, con Ollama",
+    "Si instalás Ollama en la compu, FRIDAY lo usa cuando se corta internet. Preguntale «¿con qué pensás?» y te cuenta."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-31",
+  "app": "celu",
+  "version": "Móvil 4.0",
+  "titulo": "Sin llaves",
+  "resumen": "El celu ya no pide llaves: ponés tu nombre y le hablás.",
+  "items": [
+   [
+    "Ya no hacen falta llaves",
+    "La bienvenida tiene dos pasos: tu nombre y listo. FRIDAY piensa con el servidor gratis de BufaLabs."
+   ],
+   [
+    "Nunca te quedás sin cerebro",
+    "Si tenías tu llave de Groq, la sigue usando; cuando se queda sin cupo, se pasa sola al servidor de BufaLabs."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-10-29",
   "app": "compu",
   "version": "102.03",
