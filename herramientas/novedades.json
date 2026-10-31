@@ -2,6 +2,27 @@
  {
   "fecha": "2026-10-31",
   "app": "compu",
+  "version": "103.01",
+  "titulo": "La isla nueva",
+  "resumen": "La isla de arriba de la pantalla se renovó: sale del borde, te muestra lo que está pasando y con el mouse abre un panel.",
+  "items": [
+   [
+    "Sale del borde de arriba",
+    "Es negra, tiene los ojos de FRIDAY y cuando le hablás se estira y dice si te escucha, piensa o habla, con barritas que se mueven con la voz."
+   ],
+   [
+    "Lo que está pasando",
+    "Aunque FRIDAY esté callada, te muestra el timer que corre o el tema que suena."
+   ],
+   [
+    "Un panel con el mouse",
+    "Dejá el mouse encima un ratito: se abre un panel con la fecha, la música, el timer y lo próximo. Tocá la música para pausarla."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-31",
+  "app": "compu",
   "version": "103",
   "titulo": "Sin llaves",
   "resumen": "FRIDAY ya no necesita ninguna llave: la instalás y le hablás. Piensa y escucha con el servidor gratis de BufaLabs.",
