@@ -2,6 +2,27 @@
  {
   "fecha": "2026-10-31",
   "app": "compu",
+  "version": "103.04",
+  "titulo": "La isla brota",
+  "resumen": "La isla ya no está siempre arriba: brota del borde como una gota cuando hace falta y se vuelve a meter, con más animaciones.",
+  "items": [
+   [
+    "Brota como una gota",
+    "Cuando está tranquila, la isla no se ve. Brota del borde de arriba cuando le hablás, cuando empieza un tema o un timer, o cuando llega un aviso, y se vuelve a meter sola. Ya no molesta cuando vas a las pestañas del navegador."
+   ],
+   [
+    "Más animaciones",
+    "Una onda de luz cuando te empieza a escuchar, una luz que da vueltas mientras piensa, un brillo que recorre el borde y ojitos felices cuando termina."
+   ],
+   [
+    "El panel, cuando lo llamás",
+    "Dejá el mouse quieto en el borde de arriba, al medio: se abre el panel con la fecha, la música, el timer y lo próximo, y las fichas entran de a una."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-31",
+  "app": "compu",
   "version": "103.03",
   "titulo": "Música que suena",
   "resumen": "«Poné música» reproduce un tema aunque la búsqueda de la compu falle, y el oído vuelve solo si Whisper se cae.",
