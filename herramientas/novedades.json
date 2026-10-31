@@ -2,6 +2,31 @@
  {
   "fecha": "2026-10-31",
   "app": "compu",
+  "version": "103.02",
+  "titulo": "Oído más firme",
+  "resumen": "La música ya no despierta a FRIDAY, no se escucha a sí misma en las notebooks y «poné NTVG» pone un tema.",
+  "items": [
+   [
+    "La música no la despierta",
+    "Con música o la tele sonando, FRIDAY solo te atiende si empezás con «Friday». Ya no se activa sola con una canción ni contesta lo que canta el tema."
+   ],
+   [
+    "No se escucha a sí misma",
+    "En las notebooks, con el parlante al lado del micrófono, ya no toma su propia voz como un pedido."
+   ],
+   [
+    "Un freno",
+    "Si le llegan pedidos solos uno atrás del otro, entiende que es ruido y por un rato espera que digas «Friday»."
+   ],
+   [
+    "«Poné NTVG» pone un tema",
+    "Cuando le pedís una banda, elige una canción de verdad: no un recital de dos horas, un enganchado ni el canal."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-10-31",
+  "app": "compu",
   "version": "103.01",
   "titulo": "La isla nueva",
   "resumen": "La isla de arriba de la pantalla se renovó: sale del borde, te muestra lo que está pasando y con el mouse abre un panel.",
