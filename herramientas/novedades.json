@@ -1,5 +1,22 @@
 [
  {
+  "fecha": "2026-11-01",
+  "app": "casa",
+  "version": "Casa 5.1",
+  "titulo": "Más liviana (beta)",
+  "resumen": "La tablet ahora es una pantalla para manejar la casa: se le escribe o se le habla desde el celu, y anda mucho más fluida.",
+  "items": [
+   [
+    "Mucho más fluida",
+    "Sacamos lo que más le costaba a una tablet: los vidrios borrosos y las animaciones que corrían escondidas. Quieta, trabaja diez veces menos."
+   ],
+   [
+    "Las luces, al toque",
+    "Tocás una luz y cambia en el momento, sin esperar. Podés tocar varias seguidas, y si una no responde, vuelve como estaba."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-10-31",
   "app": "compu",
   "version": "103.04",
