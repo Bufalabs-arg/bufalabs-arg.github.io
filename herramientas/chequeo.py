@@ -56,7 +56,7 @@ try:
     if c: revisar('Cupo de las llaves', c['pensar_pct_min'] >= 15, f"a la más usada le queda {c['pensar_pct_min']}% hoy", aviso=True)
 except Exception:
     revisar('Servidor vivo', False, f'respondió {st}: {cuerpo[:120]!r}')
-cuerpo_chat = json.dumps({'model': 'llama-3.1-8b-instant', 'messages': [{'role': 'user', 'content': 'Respondé solo con la palabra: listo'}], 'max_tokens': 40}).encode()
+cuerpo_chat = json.dumps({'model': 'openai/gpt-oss-20b', 'reasoning_effort': 'low', 'messages': [{'role': 'user', 'content': 'Respondé solo con la palabra: listo'}], 'max_completion_tokens': 600}).encode()
 st, cuerpo, cab, seg = pedir(SERVIDOR + '/openai/v1/chat/completions', 'POST', cuerpo_chat, {'Content-Type': 'application/json', 'X-Friday': 'web-chequeosemanal'}, 60)
 try: m = json.loads(cuerpo)['choices'][0]['message']; txt = (m.get('content') or m.get('reasoning') or '').strip()
 except Exception: txt = ''
