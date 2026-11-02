@@ -1,0 +1,49 @@
+name: Chequeo diario
+# Todos los días a las 21:17 de Argentina revisa la página, las descargas, FRIDAY Móvil y el servidor.
+# Si algo anda mal (o a una llave le queda poco cupo), abre un aviso en Issues; cuando vuelve a andar, lo cierra solo.
+on:
+  schedule:
+    - cron: '17 0 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  chequeo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Revisar todo
+        id: chequeo
+        continue-on-error: true
+        run: python herramientas/chequeo.py | tee informe.md
+      - name: Avisar si algo anda mal
+        uses: actions/github-script@v7
+        env:
+          MAL: ${{ steps.chequeo.outputs.mal }}
+          OJO: ${{ steps.chequeo.outputs.ojo }}
+        with:
+          script: |
+            const fs = require('fs');
+            const informe = fs.readFileSync('informe.md', 'utf8');
+            const repo = { owner: context.repo.owner, repo: context.repo.repo };
+            const titulo = 'Chequeo: algo para revisar en BufaLabs';
+            const problemas = t => (t.match(/^- (❌|⚠️) [^:\n]+/gmu) || []).sort().join('\n');
+            const { data: abiertos } = await github.rest.issues.listForRepo({ ...repo, state: 'open', per_page: 100 });
+            const ya = abiertos.find(i => i.title === titulo && !i.pull_request);
+            const hay = Number(process.env.MAL || 0) + Number(process.env.OJO || 0) > 0;
+            if (hay && !ya) {
+              await github.rest.issues.create({ ...repo, title: titulo, body: informe + '\n\n_Lo abrió el chequeo automático. Se cierra solo cuando todo vuelve a andar bien._' });
+            } else if (hay && ya) {
+              const { data: cs } = await github.rest.issues.listComments({ ...repo, issue_number: ya.number, per_page: 100 });
+              const ultimo = cs.length ? cs[cs.length - 1].body : ya.body;
+              if (problemas(ultimo) !== problemas(informe)) await github.rest.issues.createComment({ ...repo, issue_number: ya.number, body: informe });
+            } else if (!hay && ya) {
+              await github.rest.issues.createComment({ ...repo, issue_number: ya.number, body: '✅ Todo volvió a andar bien.\n\n' + informe });
+              await github.rest.issues.update({ ...repo, issue_number: ya.number, state: 'closed' });
+            }
+            core.summary.addRaw(informe).write();
