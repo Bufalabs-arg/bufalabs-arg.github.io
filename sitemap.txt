@@ -7,6 +7,9 @@ https://bufalabs-arg.github.io/nosotros/
 https://bufalabs-arg.github.io/probala/
 https://bufalabs-arg.github.io/ayuda/
 https://bufalabs-arg.github.io/instalar/
+https://bufalabs-arg.github.io/novedades/casa-5-2/
+https://bufalabs-arg.github.io/novedades/movil-4-1/
+https://bufalabs-arg.github.io/novedades/compu-103-05/
 https://bufalabs-arg.github.io/novedades/casa-5-1/
 https://bufalabs-arg.github.io/novedades/compu-103-04/
 https://bufalabs-arg.github.io/novedades/compu-103-03/
@@ -39,3 +42,5 @@ https://bufalabs-arg.github.io/novedades/compu-101-01/
 https://bufalabs-arg.github.io/novedades/compu-101/
 https://bufalabs-arg.github.io/novedades/
 https://bufalabs-arg.github.io/en/
+https://bufalabs-arg.github.io/tutoriales/
+https://bufalabs-arg.github.io/diferencias/
