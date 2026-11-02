@@ -1,6 +1,44 @@
 [
  {
   "fecha": "2026-11-02",
+  "app": "celu",
+  "version": "Móvil 4.2",
+  "titulo": "Más app que nunca",
+  "resumen": "Los recordatorios te llegan con el celu bloqueado, se siente más como una app y podés pasarle FRIDAY a un amigo.",
+  "items": [
+   [
+    "Avisos con el celu bloqueado",
+    "Prendelos en Más → Avisos: los recordatorios te llegan aunque FRIDAY esté cerrada, sin instalar otra app. El servidor de BufaLabs solo sabe a qué hora avisarte; lo que dice el recordatorio queda en tu celu. En iPhone funciona con FRIDAY agregada a la pantalla de inicio."
+   ],
+   [
+    "Se siente app",
+    "Ya no se estira, no hace zoom sin querer ni selecciona cosas al tocar. Los botones responden con una vibración cortita, en iPhone abre con su pantalla de presentación, y si la abrís desde el navegador te ofrece instalarla."
+   ],
+   [
+    "Pasale FRIDAY a un amigo",
+    "En Más → La app, o decile «pasale FRIDAY a un amigo» y elegí a quién mandársela."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-02",
+  "app": "compu",
+  "version": "103.06",
+  "titulo": "Pasale FRIDAY a un amigo",
+  "resumen": "Decile «pasale FRIDAY a un amigo» y te copia el link, o te abre WhatsApp con el mensaje listo.",
+  "items": [
+   [
+    "Por voz",
+    "Decile «pasale FRIDAY a un amigo»: te copia el link para que lo pegues donde quieras. Si después le decís «por WhatsApp», te abre WhatsApp con el mensaje listo."
+   ],
+   [
+    "También en Ajustes",
+    "En Ajustes → Pasale FRIDAY a un amigo tenés los dos botones: copiar el link o mandarlo por WhatsApp."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-02",
   "app": "casa",
   "version": "Casa 5.2",
   "titulo": "Escenas de un toque (beta)",
