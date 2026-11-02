@@ -1,4 +1,4 @@
-# Chequeo semanal de BufaLabs (lo corre GitHub todos los domingos; también a mano desde Actions).
+# Chequeo diario de BufaLabs (lo corre GitHub todos los días; también a mano desde Actions).
 # Revisa que la página, las descargas, FRIDAY Móvil y el servidor anden, y que a las llaves les quede cupo.
 # Escribe un informe en Markdown y termina con error si algo anda mal (así GitHub abre un aviso).
 import json, os, sys, time, urllib.request, urllib.error
@@ -56,11 +56,11 @@ try:
     if c: revisar('Cupo de las llaves', c['pensar_pct_min'] >= 15, f"a la más usada le queda {c['pensar_pct_min']}% hoy", aviso=True)
 except Exception:
     revisar('Servidor vivo', False, f'respondió {st}: {cuerpo[:120]!r}')
-cuerpo_chat = json.dumps({'model': 'openai/gpt-oss-20b', 'messages': [{'role': 'user', 'content': 'Respondé solo con la palabra: listo'}], 'max_tokens': 20}).encode()
+cuerpo_chat = json.dumps({'model': 'llama-3.1-8b-instant', 'messages': [{'role': 'user', 'content': 'Respondé solo con la palabra: listo'}], 'max_tokens': 40}).encode()
 st, cuerpo, cab, seg = pedir(SERVIDOR + '/openai/v1/chat/completions', 'POST', cuerpo_chat, {'Content-Type': 'application/json', 'X-Friday': 'web-chequeosemanal'}, 60)
-try: txt = json.loads(cuerpo)['choices'][0]['message']['content']
+try: m = json.loads(cuerpo)['choices'][0]['message']; txt = (m.get('content') or m.get('reasoning') or '').strip()
 except Exception: txt = ''
-revisar('El servidor piensa', st == 200 and bool(txt.strip()), f"con {cab.get('X-Cerebro') or cab.get('x-cerebro') or '?'}, {seg:.1f} s" if st == 200 else f'respondió {st}')
+revisar('El servidor piensa', st == 200 and bool(txt), f"con {cab.get('X-Cerebro') or cab.get('x-cerebro') or '?'}, {seg:.1f} s" if st == 200 else f'respondió {st}')
 st, cuerpo, _, _ = pedir(SERVIDOR + '/estado')
 try:
     e = json.loads(cuerpo).get('err') or []
@@ -69,7 +69,7 @@ except Exception: pass
 
 # ---- el informe
 hoy = time.strftime('%d/%m/%Y', time.gmtime(time.time() - 3 * 3600))
-lin = [f'## Chequeo semanal · {hoy}', '']
+lin = [f'## Chequeo diario · {hoy}', '']
 if mal: lin += ['**Algo anda mal:**', ''] + [f'- ❌ {n}: {d}' for n, d in mal] + ['']
 if ojo: lin += ['**Para mirar:**', ''] + [f'- ⚠️ {n}: {d}' for n, d in ojo] + ['']
 lin += ['**Anda bien:**', ''] + [f'- ✅ {n}' + (f': {d}' if d else '') for n, d in bien]
