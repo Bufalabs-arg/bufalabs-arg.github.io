@@ -121,6 +121,24 @@ body.tiembla .wrap{animation:tiembla .12s infinite}@keyframes tiembla{0%{transfo
 #entrar input{width:100%;height:54px;border-radius:16px;border:1px solid var(--line2);background:var(--panel);color:var(--text);padding:0 18px;font:inherit;font-size:17px;margin-bottom:12px}
 .err{color:#FF8A82;min-height:22px;font-size:14px}
 .oculto{display:none!important}
+.act{font-size:12.5px;color:var(--muted);margin:-14px 0 18px 58px}.act i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--ok);margin-right:6px;vertical-align:middle}
+.barras i{cursor:pointer}.barras i:hover,.barras i.sel{background:var(--warn)}
+#diaInfo{grid-column:1/-1;min-height:20px;font-size:13px;color:var(--muted);margin-top:6px}
+.prueba{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.pulso{width:54px;height:54px;border-radius:50%;border:2px solid var(--line2);display:grid;place-items:center;position:relative;flex:0 0 54px}
+.pulso::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid var(--accent);opacity:0}
+.pulso.va::after{animation:ping 1.1s ease-out infinite}@keyframes ping{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.7)}}
+.pulso b{font:800 15px var(--disp);font-variant-numeric:tabular-nums}
+.res{font-size:14px;color:var(--muted);flex:1;min-width:180px}.res b{color:var(--text)}
+.logros{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.logro{border:1px dashed var(--line2);border-radius:14px;padding:12px;font-size:13px;color:var(--muted);min-height:76px}
+.logro b{display:block;font:800 15px var(--disp);color:var(--muted);margin-bottom:4px}.logro .e{font-size:22px;filter:grayscale(1);opacity:.35}
+.logro.si{border-style:solid;border-color:rgba(var(--accent-rgb),.5);color:var(--text)}.logro.si b{color:var(--text)}.logro.si .e{filter:none;opacity:1}
+.logro.nuevo{animation:nuevo 1s cubic-bezier(.2,.8,.2,1)}@keyframes nuevo{0%{transform:scale(.6);box-shadow:0 0 0 0 rgba(var(--accent-rgb),.8)}60%{transform:scale(1.06)}100%{transform:scale(1);box-shadow:0 0 0 18px rgba(var(--accent-rgb),0)}}
+#logroT{position:fixed;left:50%;top:calc(16px + var(--safe-t));z-index:95;transform:translate(-50%,-140%);background:linear-gradient(135deg,#1c2d47,#0d1522);border:1px solid var(--accent);border-radius:18px;padding:12px 18px;display:flex;gap:12px;align-items:center;transition:transform .5s cubic-bezier(.2,1.3,.4,1);max-width:calc(100% - 32px)}
+#logroT.on{transform:translate(-50%,0)}#logroT .e{font-size:30px}#logroT small{display:block;color:var(--muted);font-size:12px}
+.sel3{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.sel3 button{border:1px solid var(--line);background:none;border-radius:10px;padding:6px 10px;font-size:13px;cursor:pointer}.sel3 button.on{border-color:var(--accent);color:var(--accent)}
+input.txt{width:100%;height:42px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--text);padding:0 12px;font:inherit;font-size:15px;margin-top:10px}
 @media (prefers-reduced-motion:reduce){ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important} }
 </style>
 </head>
@@ -142,6 +160,7 @@ body.tiembla .wrap{animation:tiembla .12s infinite}@keyframes tiembla{0%{transfo
       <div class="estado" id="estado"><i></i><span>Conectando…</span></div>
       <button class="ic" id="refrescar" type="button" aria-label="Actualizar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5"/></svg></button>
     </div>
+    <p class="act" id="act" aria-live="polite"></p>
 
     <div class="grid">
       <section class="card s8" aria-label="Hoy">
@@ -154,6 +173,7 @@ body.tiembla .wrap{animation:tiembla .12s infinite}@keyframes tiembla{0%{transfo
             <div class="mini"><b id="nOido">0</b><span>audios</span></div>
           </div>
           <div class="barras" id="barras" aria-label="Personas por día, últimos 30 días"></div>
+          <div id="diaInfo">Tocá una barra para ver ese día.</div>
         </div>
       </section>
 
@@ -165,6 +185,7 @@ body.tiembla .wrap{animation:tiembla .12s infinite}@keyframes tiembla{0%{transfo
             <div class="tapa" id="tapa" role="button" tabindex="0" aria-label="Levantar la tapa">LEVANTÁ<br>LA TAPA</div>
           </div>
           <div class="horas" id="horas" role="group" aria-label="Por cuánto tiempo"><button type="button" data-h="1">1 h</button><button type="button" data-h="3" class="on">3 h</button><button type="button" data-h="24">24 h</button></div>
+          <input class="txt" id="swTxt" maxlength="200" placeholder="Qué contesta mientras duerme (opcional)" aria-label="Qué contesta mientras duerme">
           <small id="swNota">Levantá la tapa y mantené apretado el botón 2 segundos. FRIDAY se va a dormir la siesta en todos lados y contesta que vuelve en un rato.</small>
         </div>
       </section>
@@ -176,6 +197,7 @@ body.tiembla .wrap{animation:tiembla .12s infinite}@keyframes tiembla{0%{transfo
       <section class="card s6"><h2>Mensaje a todas las FRIDAY</h2>
         <p class="vacio" style="margin-bottom:10px">Le aparece una vez a todo el que use FRIDAY (compu y celu) durante las próximas 24 horas.</p>
         <textarea id="msj" maxlength="200" placeholder="¡Salió la 104! Decile «buscá actualizaciones»."></textarea>
+        <div class="sel3" id="msjH" role="group" aria-label="Cuánto dura"><button type="button" data-h="1">1 hora</button><button type="button" data-h="24" class="on">24 horas</button><button type="button" data-h="72">3 días</button></div>
         <div class="links" style="margin-top:10px"><button class="btn pri" id="msjVa" type="button">Mandar a todas</button><button class="btn" id="msjBorra" type="button">Borrar el mensaje</button></div>
         <p class="vacio" id="msjAhora" style="margin-top:10px"></p>
         <div class="ondas" id="ondas"><i></i><i></i><i></i></div>
@@ -186,6 +208,10 @@ body.tiembla .wrap{animation:tiembla .12s infinite}@keyframes tiembla{0%{transfo
       <section class="card s6"><h2>Lo último publicado</h2><div id="nov"></div></section>
       <section class="card s6"><h2>Informes de errores</h2><div id="infs"></div></section>
 
+      <section class="card s6"><h2>Probar el cerebro</h2>
+        <div class="prueba"><div class="pulso" id="pulso"><b id="pulsoN">—</b></div><div class="res" id="pruebaRes">Le hago una pregunta de verdad al servidor y te digo quién contestó y cuánto tardó.</div><button class="btn" id="probar" type="button">Probar</button></div>
+      </section>
+      <section class="card s6"><h2>Logros secretos <span id="logrosN" style="color:var(--accent)"></span></h2><div class="logros" id="logros"></div></section>
       <section class="card s12"><h2>Atajos</h2>
         <div class="links">
           <a id="lTab" target="_blank" rel="noopener">Tablero</a>
@@ -207,6 +233,7 @@ body.tiembla .wrap{animation:tiembla .12s infinite}@keyframes tiembla{0%{transfo
 
 <div id="zz" role="dialog" aria-modal="true" aria-labelledby="zzT"><div><div class="luna"></div><h2 id="zzT">FRIDAY duerme</h2><p id="zzP">Toda la IA del servidor está de siesta.</p><button class="btn pri" id="despertar" type="button">Despertar a FRIDAY</button></div></div>
 <div id="ad" role="alertdialog" aria-modal="true" aria-labelledby="adT"><div><div class="t" id="adT">AUTODESTRUCCIÓN</div><div class="n" id="adN">10</div><button class="btn cancel" id="adNo" type="button">Cancelar</button></div></div>
+<div id="logroT" role="status" aria-live="polite"><span class="e" id="logroE"></span><div><b id="logroN"></b><small>Logro desbloqueado</small></div></div>
 <div id="flash"></div><div id="barrido"></div><canvas id="confeti"></canvas><div id="tost" role="status" aria-live="polite"></div>
 
 <script>
@@ -246,7 +273,7 @@ async function cargar(){
     fetch(SRV+'/ping',{cache:'no-store'}).then(r=>r.json()).catch(()=>null),
     fetch(`https://api.github.com/repos/${REPO}/issues?state=open&per_page=30`).then(r=>r.ok?r.json():null).catch(()=>null),
     fetch('/herramientas/novedades.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>null) ]);
-  $('refrescar').classList.remove('gira');
+  $('refrescar').classList.remove('gira'); ultCarga=Date.now();
   datos=est && !est.error ? est : null;
   pintarEstado(ping, est);
   if(datos) pintarDatos(datos); else { ['apps','cupo','links','infs'].forEach(id=>$(id).innerHTML=`<p class="vacio">${esc(est&&est.error?est.error.message:'Sin datos.')}</p>`); }
@@ -267,9 +294,9 @@ function pintarDatos(d){
   contar($('nHoy'), h.gente); contar($('nSem'), d.semana); contar($('nChat'), h.chat); contar($('nOido'), h.oido);
   // récord: si hoy es el día con más gente, festejamos (una vez por día)
   const max=Math.max(0, ...(d.dias||[]).filter(x=>x.dia!==d.hoy).map(x=>x.gente));
-  if(h.gente>max && max>0 && LS.get('record','')!==d.hoy){ LS.set('record', d.hoy); setTimeout(()=>{ confeti(160); tost('🏆 ¡Récord! Nunca tantas personas en un día.', 4000); }, 900); }
+  if(h.gente>max && max>0 && LS.get('record','')!==d.hoy){ LS.set('record', d.hoy); setTimeout(()=>{ logro('record'); confeti(160); tost('🏆 ¡Récord! Nunca tantas personas en un día.', 4000); }, 900); }
   const dias=(d.dias||[]).slice(-30), top=Math.max(1, ...dias.map(x=>x.gente));
-  $('barras').innerHTML=dias.length?dias.map((x,i)=>`<i class="${x.dia===d.hoy?'hoyb':''}" style="height:${Math.max(4,x.gente/top*100)}%;animation-delay:${i*18}ms" title="${esc(x.dia)}: ${x.gente} personas"></i>`).join(''):'<p class="vacio">Los días van a aparecer acá.</p>';
+  $('barras').innerHTML=dias.length?dias.map((x,i)=>`<i data-info="${esc(x.dia.slice(8)+'/'+x.dia.slice(5,7))}: ${x.gente} personas · ${fmt(x.chat)} charlas · ${fmt(x.oido)} audios" class="${x.dia===d.hoy?'hoyb':''}" style="height:${Math.max(4,x.gente/top*100)}%;animation-delay:${i*18}ms" title="${esc(x.dia)}: ${x.gente} personas"></i>`).join(''):'<p class="vacio">Los días van a aparecer acá.</p>';
   const tot=(h.pc||0)+(h.celu||0)+(h.casa||0)||1;
   $('apps').innerHTML=[['Compu',h.pc],['Celu',h.celu],['Tablet',h.casa]].map(([n,v])=>`<div class="fila"><span>${n}</span><b>${fmt(v)}</b></div><div class="bar"><i style="background:var(--accent)" data-w="${(v||0)/tot*100}"></i></div>`).join('');
   $('cupo').innerHTML=(d.cupos&&d.cupos.length)?d.cupos.map(c=>`<div class="fila"><span>Llave ${c.llave} · ${c.tipo==='oido'?'escuchar':'pensar'}</span><b>${c.pct}%</b></div><div class="bar"><i style="background:${c.pct<15?'var(--red)':c.pct<40?'var(--warn)':'var(--ok)'}" data-w="${c.pct}"></i></div>`).join(''):'<p class="vacio">Aparece cuando alguien usa FRIDAY.</p>';
@@ -290,7 +317,31 @@ function pintarSalud(ping, d, iss){
 function pintarNov(n){ if(!Array.isArray(n)||!n.length){ $('nov').innerHTML='<p class="vacio">No pude leer las novedades.</p>'; return; }
   const APP={compu:'Compu',celu:'Celu',casa:'Tablet'};
   $('nov').innerHTML=['compu','celu','casa'].map(a=>n.find(x=>x.app===a)).filter(Boolean).map(x=>`<div class="fila"><span>${APP[x.app]} · ${esc(x.fecha)}</span><b>${esc(x.version)}: ${esc(x.titulo)}</b></div>`).join(''); }
-$('refrescar').onclick=cargar;
+$('refrescar').onclick=()=>{ cargar(); logro('refresca'); };
+let ultCarga=0; setInterval(()=>{ if(!ultCarga) return; const s=Math.round((Date.now()-ultCarga)/1000); $('act').innerHTML='<i></i>Actualizado '+(s<5?'recién':'hace '+(s<60?s+' s':Math.round(s/60)+' min'))+' · se actualiza solo cada minuto'; }, 1000);
+$('barras').addEventListener('click', e=>{ const b=e.target.closest('i'); if(!b) return; $('barras').querySelectorAll('i').forEach(x=>x.classList.toggle('sel', x===b)); $('diaInfo').textContent=b.dataset.info||''; if(navigator.vibrate) navigator.vibrate(6); });
+// ---------------------------------------------------------------- probar el cerebro
+$('probar').onclick=async()=>{ const p=$('pulso'), b=$('probar'); b.disabled=true; p.classList.add('va'); $('pulsoN').textContent='…'; $('pruebaRes').textContent='Preguntando…'; const t0=performance.now();
+  try{ const r=await fetch(SRV+'/openai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','X-Friday':'web-mando0000000'},body:JSON.stringify({model:'openai/gpt-oss-20b',reasoning_effort:'low',max_completion_tokens:300,messages:[{role:'user',content:'Decí en una frase corta y con onda que estás funcionando bien.'}]})});
+    const ms=Math.round(performance.now()-t0), cer=r.headers.get('X-Cerebro')||'?'; const j=await r.json().catch(()=>null); const txt=j&&j.choices&&j.choices[0]&&j.choices[0].message&&j.choices[0].message.content||'';
+    $('pulsoN').textContent=(ms/1000).toFixed(1)+'s';
+    $('pruebaRes').innerHTML=r.ok?`<b>${esc({groq:'Groq',cloudflare:'Cloudflare',gemini:'Gemini',siesta:'La siesta'}[cer]||cer)}</b> contestó en ${(ms/1000).toFixed(1)} s: «${esc(txt.slice(0,140))}»`:`El servidor respondió ${r.status}.`;
+    if(r.ok && ms<1500) logro('rayo'); }
+  catch(e){ $('pulsoN').textContent='✕'; $('pruebaRes').textContent='No me pude conectar con el servidor.'; }
+  finally{ p.classList.remove('va'); b.disabled=false; } };
+// ---------------------------------------------------------------- logros secretos
+const LOGROS=[['mark42','🦾','Mark 42','Tocá el logo 7 veces'],['autodestruccion','💥','Era joda','Sobreviví a la autodestrucción'],['cancelar','🛑','Sangre fría','Cancelá la autodestrucción a tiempo'],['fiesta','🎉','Fiestero','Escribí la palabra mágica'],
+  ['terremoto','🌎','Terremoto','Sacudí el celu'],['saludo','🎙️','¿Me escuchás?','Mantené apretado el logo'],['siesta','🌙','Buenas noches','Mandá a FRIDAY a dormir'],['despertar','☀️','Buen día','Despertala'],['mensaje','📡','Al aire','Mandá un mensaje a todas'],
+  ['rayo','⚡','Rayo','Que el cerebro conteste en menos de 1,5 s'],['refresca','🔄','Ansioso','Actualizá a mano'],['noche','🦉','Búho','Entrá al mando de madrugada'],['record','🏆','Récord','Un día con más gente que nunca']];
+let logrosT=null;
+function logrosPintar(nuevo){ const h=LS.get('logros',{}); const n=LOGROS.filter(l=>h[l[0]]).length; $('logrosN').textContent=n+'/'+LOGROS.length;
+  $('logros').innerHTML=LOGROS.map(([k,e,t,d])=>h[k]?`<div class="logro si${k===nuevo?' nuevo':''}"><span class="e">${e}</span><b>${esc(t)}</b>${esc(d)}</div>`:`<div class="logro"><span class="e">${e}</span><b>???</b>${k==='record'||k==='rayo'?esc(d):'Secreto'}</div>`).join(''); }
+function logro(k){ const h=LS.get('logros',{}); if(h[k]) return; h[k]=Date.now(); LS.set('logros',h); const l=LOGROS.find(x=>x[0]===k); if(!l) return;
+  $('logroE').textContent=l[1]; $('logroN').textContent=l[2]; const t=$('logroT'); t.classList.add('on'); clearTimeout(logrosT); logrosT=setTimeout(()=>t.classList.remove('on'), 3200); bip(1046,.08); setTimeout(()=>bip(1568,.12),110);
+  logrosPintar(k); if(LOGROS.every(x=>h[x[0]])) setTimeout(()=>{ confeti(300); tost('👑 ¡Todos los logros! Sos el jefe de la sala de control.', 5000); hablar('Todos los logros desbloqueados. Impresionante, jefe.'); }, 1200); }
+logrosPintar(); if(new Date().getHours()<5) setTimeout(()=>logro('noche'), 1500);
+// ---------------------------------------------------------------- duraciones
+let msjHoras=24; $('msjH').onclick=e=>{ const b=e.target.closest('button'); if(!b) return; msjHoras=+b.dataset.h; $('msjH').querySelectorAll('button').forEach(x=>x.classList.toggle('on', x===b)); };
 setInterval(()=>{ if(!document.hidden && clave) cargar(); }, 60000);
 
 // ---------------------------------------------------------------- la siesta (apagar toda la IA)
@@ -310,10 +361,10 @@ $('boton').addEventListener('pointerdown', e=>{ if(!tapa.classList.contains('abi
 $('boton').addEventListener('keydown', e=>{ if((e.key==='Enter'||e.key===' ') && tapa.classList.contains('abierta') && !e.repeat){ e.preventDefault(); tost('Con el teclado: mantené Enter 2 segundos'); const t0=Date.now(); const up=()=>{ removeEventListener('keyup', up); if(Date.now()-t0>=2000) dormir(); }; addEventListener('keyup', up); } });
 async function dormir(){
   if(navigator.vibrate) navigator.vibrate([40,60,120]);
-  try{ const r=await api('/admin/siesta', {on:true, horas}); siestaHasta=r.siesta.hasta; tapa.classList.remove('abierta'); zzMostrar(true); cargar(); }
+  try{ const r=await api('/admin/siesta', {on:true, horas, texto:$('swTxt').value.trim()}); logro('siesta'); siestaHasta=r.siesta.hasta; tapa.classList.remove('abierta'); zzMostrar(true); cargar(); }
   catch(e){ tost(e.message, 4000); }
 }
-$('despertar').onclick=async()=>{ try{ await api('/admin/siesta', {on:false}); siestaHasta=0; zzMostrar(false); confeti(90); tost('☀️ FRIDAY despierta. Todos los sistemas en línea.', 3500); hablar('Buen día, jefe. Todos los sistemas en línea.'); cargar(); }catch(e){ tost(e.message, 4000); } };
+$('despertar').onclick=async()=>{ try{ await api('/admin/siesta', {on:false}); logro('despertar'); siestaHasta=0; zzMostrar(false); confeti(90); tost('☀️ FRIDAY despierta. Todos los sistemas en línea.', 3500); hablar('Buen día, jefe. Todos los sistemas en línea.'); cargar(); }catch(e){ tost(e.message, 4000); } };
 let zzT=null;
 function zzMostrar(on){ $('zz').classList.toggle('on', on); clearInterval(zzT); document.querySelectorAll('#zz .z').forEach(z=>z.remove());
   if(!on) return;
@@ -324,7 +375,7 @@ function zzMostrar(on){ $('zz').classList.toggle('on', on); clearInterval(zzT); 
 
 // ---------------------------------------------------------------- mensaje a todas
 $('msjVa').onclick=async()=>{ const t=$('msj').value.trim(); if(!t){ $('msj').focus(); return; }
-  try{ await api('/admin/mensaje', {texto:t}); const o=$('ondas'); o.classList.remove('va'); void o.offsetWidth; o.classList.add('va'); tost('📡 Mandado a todas las FRIDAY'); $('msj').value=''; cargar(); }catch(e){ tost(e.message, 4000); } };
+  try{ await api('/admin/mensaje', {texto:t, horas:msjHoras}); logro('mensaje'); const o=$('ondas'); o.classList.remove('va'); void o.offsetWidth; o.classList.add('va'); tost('📡 Mandado a todas las FRIDAY'); $('msj').value=''; cargar(); }catch(e){ tost(e.message, 4000); } };
 $('msjBorra').onclick=async()=>{ try{ await api('/admin/mensaje', {texto:''}); tost('Mensaje borrado'); cargar(); }catch(e){ tost(e.message, 4000); } };
 
 // ---------------------------------------------------------------- voz
@@ -348,30 +399,30 @@ let adT=null;
 $('adBtn').onclick=()=>{ let n=10; $('ad').classList.add('on'); document.body.classList.add('tiembla'); $('adN').textContent=n; hablar('Secuencia de autodestrucción iniciada.');
   clearInterval(adT); adT=setInterval(()=>{ n--; bip(n<=3?1320:880, n<=3?.25:.12); if(navigator.vibrate) navigator.vibrate(n<=3?120:40);
     if(n<=0){ clearInterval(adT); $('ad').classList.remove('on'); document.body.classList.remove('tiembla'); $('flash').classList.remove('on'); void $('flash').offsetWidth; $('flash').classList.add('on');
-      setTimeout(()=>{ confeti(220); tost('😎 Era joda. BufaLabs sigue en pie y FRIDAY también.', 4500); hablar('Era joda, jefe. Todo sigue en pie.'); }, 500); return; }
+      setTimeout(()=>{ logro('autodestruccion'); confeti(220); tost('😎 Era joda. BufaLabs sigue en pie y FRIDAY también.', 4500); hablar('Era joda, jefe. Todo sigue en pie.'); }, 500); return; }
     const e=$('adN'); e.textContent=n; e.classList.remove('pum'); void e.offsetWidth; e.classList.add('pum'); }, 1000); };
-$('adNo').onclick=()=>{ clearInterval(adT); $('ad').classList.remove('on'); document.body.classList.remove('tiembla'); tost('Autodestrucción cancelada. Por esta vez.'); hablar('Cancelada. Por esta vez.'); };
+$('adNo').onclick=()=>{ logro('cancelar'); clearInterval(adT); $('ad').classList.remove('on'); document.body.classList.remove('tiembla'); tost('Autodestrucción cancelada. Por esta vez.'); hablar('Cancelada. Por esta vez.'); };
 
 // ---------------------------------------------------------------- 🥚 Mark 42: tocá el logo 7 veces (o el código Konami)
 let toques=[];
-function mark42(){ const on=!document.documentElement.classList.contains('mark42'); const b=$('barrido'); b.classList.remove('on'); void b.offsetWidth; b.classList.add('on');
+function mark42(){ logro('mark42'); const on=!document.documentElement.classList.contains('mark42'); const b=$('barrido'); b.classList.remove('on'); void b.offsetWidth; b.classList.add('on');
   setTimeout(()=>{ document.documentElement.classList.toggle('mark42', on); document.querySelector('meta[name=theme-color]').content=on?'#120606':'#070B12'; LS.set('mark42', on); }, 520);
   tost(on?'🦾 Protocolo Mark 42 activado':'Protocolo Mark 42 desactivado'); hablar(on?'Protocolo Mark cuarenta y dos activado. Bienvenido, señor Stark.':'Volviendo al modo BufaLabs.'); }
 if(LS.get('mark42',false)){ document.documentElement.classList.add('mark42'); document.querySelector('meta[name=theme-color]').content='#120606'; }
 $('logo').addEventListener('click', ()=>{ const t=Date.now(); toques=toques.filter(x=>t-x<2500); toques.push(t); if(toques.length>=7){ toques=[]; mark42(); } });
 // mantener apretado el logo: FRIDAY saluda
 let logoT=null; $('logo').addEventListener('pointerdown', ()=>{ logoT=setTimeout(()=>{ const h=new Date().getHours(); const f=['Todos los sistemas en verde, jefe.','A sus órdenes. ¿Qué administramos hoy?','BufaLabs funcionando. Nadie rompió nada todavía.','Café cargado al cien por cien. Bueno, el suyo no.'];
-  hablar((h<12?'Buen día. ':h<20?'Buenas tardes. ':'Buenas noches. ')+f[Math.random()*f.length|0]); tost('🎙️ FRIDAY dice hola'); }, 700); });
+  hablar((h<12?'Buen día. ':h<20?'Buenas tardes. ':'Buenas noches. ')+f[Math.random()*f.length|0]); tost('🎙️ FRIDAY dice hola'); logro('saludo'); }, 700); });
 ['pointerup','pointerleave','pointercancel'].forEach(ev=>$('logo').addEventListener(ev, ()=>clearTimeout(logoT)));
 const KONAMI=['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a']; let kz=0, escrito='';
 addEventListener('keydown', e=>{ if(e.target.closest && e.target.closest('textarea,input')) return;
   kz = e.key===KONAMI[kz] ? kz+1 : (e.key===KONAMI[0]?1:0); if(kz===KONAMI.length){ kz=0; mark42(); }
   // 🥚 escribí «fiesta» en cualquier lado
   if(e.key.length===1){ escrito=(escrito+e.key.toLowerCase()).slice(-6); if(escrito==='fiesta'){ escrito=''; fiesta(); } } });
-function fiesta(){ confeti(260); tost('🎉 ¡Modo fiesta en la sala de control!'); hablar('Que empiece la fiesta.'); let k=0; const cs=['#4CC9FF','#FF4D42','#FFC93C','#3DDC97','#B794FF'];
+function fiesta(){ logro('fiesta'); confeti(260); tost('🎉 ¡Modo fiesta en la sala de control!'); hablar('Que empiece la fiesta.'); let k=0; const cs=['#4CC9FF','#FF4D42','#FFC93C','#3DDC97','#B794FF'];
   const t=setInterval(()=>{ document.body.style.background=`radial-gradient(circle at ${20+Math.random()*60}% ${20+Math.random()*60}%, ${cs[k%cs.length]}33, var(--bg) 60%)`; bip(440+((k*3)%8)*80,.08); if(++k>16){ clearInterval(t); document.body.style.background=''; } }, 260); }
 // 🥚 sacudí el celu
-let ultSac=0; addEventListener('devicemotion', e=>{ const a=e.accelerationIncludingGravity; if(!a) return; const f=Math.abs(a.x||0)+Math.abs(a.y||0)+Math.abs(a.z||0); if(f>45 && Date.now()-ultSac>8000){ ultSac=Date.now(); tost('🌎 ¿Terremoto? Tranqui: los servidores están bien.', 3200); if(navigator.vibrate) navigator.vibrate([30,40,30]); } });
+let ultSac=0; addEventListener('devicemotion', e=>{ const a=e.accelerationIncludingGravity; if(!a) return; const f=Math.abs(a.x||0)+Math.abs(a.y||0)+Math.abs(a.z||0); if(f>45 && Date.now()-ultSac>8000){ ultSac=Date.now(); tost('🌎 ¿Terremoto? Tranqui: los servidores están bien.', 3200); logro('terremoto'); if(navigator.vibrate) navigator.vibrate([30,40,30]); } });
 
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
