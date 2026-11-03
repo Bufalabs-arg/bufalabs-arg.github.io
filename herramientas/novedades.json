@@ -1,6 +1,40 @@
 [
  {
   "fecha": "2026-11-03",
+  "app": "celu",
+  "version": "Móvil 4.3",
+  "titulo": "Cara nueva",
+  "resumen": "FRIDAY estrena ícono y pantalla de presentación, y te avisa cuando BufaLabs tiene algo importante para contarte.",
+  "items": [
+   [
+    "Ícono nuevo",
+    "El núcleo azul de FRIDAY, igual en el celu, la tablet y la compu. Si ya la tenías instalada, el ícono se actualiza solo en unos días (o al volver a agregarla)."
+   ],
+   [
+    "Mensajes de BufaLabs",
+    "Cuando hay algo importante, como una versión nueva o un arreglo, te aparece un mensaje una sola vez."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-03",
+  "app": "compu",
+  "version": "104.01",
+  "titulo": "Se adelanta",
+  "resumen": "El primer saludo del día te cuenta también los recordatorios de hoy, y te llegan los mensajes de BufaLabs.",
+  "items": [
+   [
+    "La mañana, más completa",
+    "En el resumen del primer saludo del día, además del clima, la agenda y las noticias, te recuerda lo que tenés anotado para hoy."
+   ],
+   [
+    "Mensajes de BufaLabs",
+    "Cuando hay algo importante, te aparece un mensaje una sola vez."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-03",
   "app": "compu",
   "version": "104",
   "titulo": "Menos es más",

@@ -1,0 +1,16 @@
+{
+  "id": "/mando/",
+  "name": "Mando de BufaLabs",
+  "short_name": "Mando",
+  "description": "El centro de mando de FRIDAY: números en vivo, la siesta y mensajes para todas.",
+  "lang": "es-AR",
+  "start_url": "/mando/",
+  "scope": "/mando/",
+  "display": "standalone",
+  "background_color": "#070B12",
+  "theme_color": "#070B12",
+  "icons": [
+    {"src": "/img/bufalabs-icono-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/img/bufalabs-logo-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ]
+}

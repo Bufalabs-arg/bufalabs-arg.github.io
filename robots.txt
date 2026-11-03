@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /mando/
 
 Sitemap: https://bufalabs-arg.github.io/sitemap.xml
 Sitemap: https://bufalabs-arg.github.io/sitemap.txt
