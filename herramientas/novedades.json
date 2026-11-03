@@ -1,5 +1,30 @@
 [
  {
+  "fecha": "2026-11-03",
+  "app": "compu",
+  "version": "104",
+  "titulo": "Menos es más",
+  "resumen": "Más limpia, maneja tus ventanas, entiende «esto» y nunca te pide llaves.",
+  "items": [
+   [
+    "Más limpia",
+    "Arriba quedan solo cuatro íconos y un solo reloj, Ajustes se ordenó en seis pestañas y en Encargos ya no aparecen secciones vacías."
+   ],
+   [
+    "Maneja tus ventanas",
+    "«Poné Chrome a la izquierda y Spotify a la derecha», «maximizá Word», «mostrame el escritorio» y «volvé las ventanas». También «¿qué tengo abierto?» y «hacé un recorte de pantalla»."
+   ],
+   [
+    "Entiende «esto»",
+    "Cuando decís «resumime esto» o «¿qué es esto?», FRIDAY se fija qué ventana tenés adelante: solo el título, no la pantalla. Se apaga en Ajustes → Compu y rutinas."
+   ],
+   [
+    "Sin llaves, de verdad",
+    "La bienvenida son dos pasos y ya no te pide la clave de Gemini: piensa con el servidor gratis de BufaLabs."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-02",
   "app": "celu",
   "version": "Móvil 4.2",
