@@ -1,6 +1,44 @@
 [
  {
   "fecha": "2026-11-03",
+  "app": "casa",
+  "version": "Casa 5.3",
+  "titulo": "La siesta, también en la tablet",
+  "resumen": "Cuando en BufaLabs le hacemos ajustes a FRIDAY, la tablet se duerme con una animación y avisa cuándo vuelve.",
+  "items": []
+ },
+ {
+  "fecha": "2026-11-03",
+  "app": "celu",
+  "version": "Móvil 4.5",
+  "titulo": "La siesta",
+  "resumen": "Cuando en BufaLabs le hacemos ajustes, FRIDAY se duerme con una animación, te cuenta por qué y a qué hora vuelve.",
+  "items": [
+   [
+    "La siesta de FRIDAY",
+    "Se queda dormida con una animación y el mensaje de BufaLabs, te dice a qué hora vuelve y se despierta sola. Mientras duerme no contesta."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-03",
+  "app": "compu",
+  "version": "104.03",
+  "titulo": "Buenas noches",
+  "resumen": "FRIDAY se duerme una siesta cuando en BufaLabs le hacemos ajustes, y el primer saludo respeta la hora.",
+  "items": [
+   [
+    "La siesta de FRIDAY",
+    "Cuando en BufaLabs hacemos ajustes, FRIDAY se duerme con una animación, te cuenta por qué y a qué hora vuelve. Se despierta sola."
+   ],
+   [
+    "Saluda según la hora",
+    "De noche te dice «buenas noches», no «buen día»."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-03",
   "app": "celu",
   "version": "Móvil 4.4",
   "titulo": "Modo divertido",

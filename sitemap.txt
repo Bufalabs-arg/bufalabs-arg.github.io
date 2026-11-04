@@ -7,6 +7,9 @@ https://bufalabs-arg.github.io/nosotros/
 https://bufalabs-arg.github.io/probala/
 https://bufalabs-arg.github.io/ayuda/
 https://bufalabs-arg.github.io/instalar/
+https://bufalabs-arg.github.io/novedades/casa-5-3/
+https://bufalabs-arg.github.io/novedades/movil-4-5/
+https://bufalabs-arg.github.io/novedades/compu-104-03/
 https://bufalabs-arg.github.io/novedades/movil-4-4/
 https://bufalabs-arg.github.io/novedades/compu-104-02/
 https://bufalabs-arg.github.io/novedades/movil-4-3/

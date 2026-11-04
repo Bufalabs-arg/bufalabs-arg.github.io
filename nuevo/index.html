@@ -40,7 +40,7 @@
   "thumbnailUrl":"https://bufalabs-arg.github.io/video/friday-30s.jpg","uploadDate":"2026-10-29","duration":"PT30S","contentUrl":"https://bufalabs-arg.github.io/video/friday-30s.mp4","inLanguage":"es-AR","publisher":{"@id":"https://bufalabs-arg.github.io/#bufalabs"}},
  {"@type":"SoftwareApplication","name":"FRIDAY","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 10, Windows 11, Linux, Android, iOS",
   "description":"Una inteligencia artificial gratis que te escucha, te habla y hace cosas de verdad en la compu y en el celu.",
-  "softwareVersion":"104.02","inLanguage":"es-AR","url":"https://bufalabs-arg.github.io/","downloadUrl":"https://bufalabs-arg.github.io/descargas/FRIDAY-Setup.exe",
+  "softwareVersion":"104.03","inLanguage":"es-AR","url":"https://bufalabs-arg.github.io/","downloadUrl":"https://bufalabs-arg.github.io/descargas/FRIDAY-Setup.exe",
   "image":"https://bufalabs-arg.github.io/img/og-friday.png","offers":{"@type":"Offer","price":"0","priceCurrency":"ARS"},"publisher":{"@id":"https://bufalabs-arg.github.io/#bufalabs"}}
 ]}
 </script>
@@ -150,6 +150,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .ellabar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px;margin-bottom:14px}
 .estado{display:inline-flex;align-items:center;gap:8px;margin:0;padding:6px 14px 6px 10px;border-radius:999px;background:rgba(14,27,61,.28);font-size:15px;font-weight:700;color:var(--claro)}
 .estado i{width:9px;height:9px;border-radius:50%;background:var(--menta);box-shadow:0 0 0 4px rgba(61,220,151,.25);animation:late 2s ease-in-out infinite}
+.estado.siesta i{background:var(--sol);box-shadow:0 0 0 4px rgba(255,201,60,.25);animation:none}
 @keyframes late{50%{box-shadow:0 0 0 7px rgba(61,220,151,0)}}
 #cara{display:block;width:100%;aspect-ratio:1;max-width:100%;padding:0;border:0;background:none;cursor:pointer;position:relative;-webkit-tap-highlight-color:transparent;border-radius:28%}
 #cara:active .head{transform:scale(1.05,.94)}
@@ -608,14 +609,14 @@ section.hero{padding-block:0}
   <div class="wrap">
     <div class="hgrid">
       <div class="min0">
-        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>Modo divertido · Celu 4.4</span></a>
+        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>La siesta, también en la tablet · Tablet 5.3</span></a>
         <h1><span>FRIDAY</span><span>vive en</span><span>tu casa.</span></h1>
-        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, hecha en Argentina por BufaLabs. Ya va por la versión <span data-ver>104.02</span> y se actualiza sola.</p>
+        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, hecha en Argentina por BufaLabs. Ya va por la versión <span data-ver>104.03</span> y se actualiza sola.</p>
         <div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a><a class="btn no" href="#probala">Hablale ahora</a></div>
         <p class="regalo" id="regalo" hidden>Te la pasó alguien que ya la usa. Es gratis: probala acá mismo o instalala.</p>
       </div>
       <div class="ella">
-        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>104.02</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
+        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>104.03</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
         <button id="cara" class="cara" type="button" aria-label="La cara de FRIDAY. Tocala para cambiarle la expresión."></button>
         <div class="globo" id="globo" aria-live="polite"><q id="gQ">Friday, mirá mi pantalla</q><p id="gR">Veo que el Word se trabó. ¿Lo cierro y lo abro de nuevo?</p></div>
       </div>
@@ -746,7 +747,10 @@ section.hero{padding-block:0}
         <h2 class="titulo oculto">Todas las actualizaciones</h2>
         <div class="filtros" aria-label="Mostrar"><button class="on" data-f="" aria-pressed="true">Todas</button><button data-f="compu" aria-pressed="false">Compu</button><button data-f="celu" aria-pressed="false">Celu</button><button data-f="casa" aria-pressed="false">Tablet</button></div>
         <ol class="vlista" id="vlista">
-          <li class="ultima" data-app="celu"><div class="vn"><span class="ver">Móvil 4.4</span><span class="app celu">Celu</span><time datetime="2026-11-03">3 de noviembre</time></div><div class="min0"><h3>Modo divertido</h3><p>FRIDAY en el celu ahora juega: moneda, dados, sorteos, piedra, papel o tijera, y quince logros secretos para descubrir.</p><ul><li><b>Juegos que sirven.</b> «Tirá una moneda», «tirá dos dados», «elegí un número del 1 al 100», «sorteá entre Juan, Ana y Leo», «piedra, papel o tijera» y «cuenta regresiva de 10». Los resuelve al toque, sin gastar nada.</li><li><b>Sorpresas.</b> Decile «modo fiesta» o «protocolo Mark 42» y mirá lo que pasa. Hay más escondidas.</li><li><b>Logros secretos.</b> Hay quince. Los que ya tenés los ves en Más → Logros secretos.</li></ul></div></li>
+          <li class="ultima" data-app="casa"><div class="vn"><span class="ver">Casa 5.3</span><span class="app casa">Tablet</span><time datetime="2026-11-03">3 de noviembre</time></div><div class="min0"><h3>La siesta, también en la tablet</h3><p>Cuando en BufaLabs le hacemos ajustes a FRIDAY, la tablet se duerme con una animación y avisa cuándo vuelve.</p></div></li>
+          <li data-app="celu"><div class="vn"><span class="ver">Móvil 4.5</span><span class="app celu">Celu</span><time datetime="2026-11-03">3 de noviembre</time></div><div class="min0"><h3>La siesta</h3><p>Cuando en BufaLabs le hacemos ajustes, FRIDAY se duerme con una animación, te cuenta por qué y a qué hora vuelve.</p><ul><li><b>La siesta de FRIDAY.</b> Se queda dormida con una animación y el mensaje de BufaLabs, te dice a qué hora vuelve y se despierta sola. Mientras duerme no contesta.</li></ul></div></li>
+          <li data-app="compu"><div class="vn"><span class="ver">104.03</span><span class="app compu">Compu</span><time datetime="2026-11-03">3 de noviembre</time></div><div class="min0"><h3>Buenas noches</h3><p>FRIDAY se duerme una siesta cuando en BufaLabs le hacemos ajustes, y el primer saludo respeta la hora.</p><ul><li><b>La siesta de FRIDAY.</b> Cuando en BufaLabs hacemos ajustes, FRIDAY se duerme con una animación, te cuenta por qué y a qué hora vuelve. Se despierta sola.</li><li><b>Saluda según la hora.</b> De noche te dice «buenas noches», no «buen día».</li></ul></div></li>
+          <li data-app="celu"><div class="vn"><span class="ver">Móvil 4.4</span><span class="app celu">Celu</span><time datetime="2026-11-03">3 de noviembre</time></div><div class="min0"><h3>Modo divertido</h3><p>FRIDAY en el celu ahora juega: moneda, dados, sorteos, piedra, papel o tijera, y quince logros secretos para descubrir.</p><ul><li><b>Juegos que sirven.</b> «Tirá una moneda», «tirá dos dados», «elegí un número del 1 al 100», «sorteá entre Juan, Ana y Leo», «piedra, papel o tijera» y «cuenta regresiva de 10». Los resuelve al toque, sin gastar nada.</li><li><b>Sorpresas.</b> Decile «modo fiesta» o «protocolo Mark 42» y mirá lo que pasa. Hay más escondidas.</li><li><b>Logros secretos.</b> Hay quince. Los que ya tenés los ves en Más → Logros secretos.</li></ul></div></li>
           <li data-app="compu"><div class="vn"><span class="ver">104.02</span><span class="app compu">Compu</span><time datetime="2026-11-03">3 de noviembre</time></div><div class="min0"><h3>Modo divertido</h3><p>FRIDAY juega con vos: moneda, dados, sorteos con ruleta, cuenta regresiva gigante, modo fiesta con música y logros secretos.</p><ul><li><b>Juegos que sirven.</b> «Tirá una moneda», «tirá dos dados», «elegí un número del 1 al 100», «sorteá entre Juan, Ana y Leo», «juguemos a piedra, papel o tijera» y «cuenta regresiva de 10».</li><li><b>Modo fiesta.</b> Decí «modo fiesta»: confeti, luces y te pone música para la previa.</li><li><b>Logros secretos.</b> Hay quince escondidos. Preguntale «¿qué logros tengo?» y andá descubriéndolos. Pista: probá cosas de película.</li></ul></div></li>
           <li data-app="celu"><div class="vn"><span class="ver">Móvil 4.3</span><span class="app celu">Celu</span><time datetime="2026-11-03">3 de noviembre</time></div><div class="min0"><h3>Cara nueva</h3><p>FRIDAY estrena ícono y pantalla de presentación, y te avisa cuando BufaLabs tiene algo importante para contarte.</p><ul><li><b>Ícono nuevo.</b> El núcleo azul de FRIDAY, igual en el celu, la tablet y la compu. Si ya la tenías instalada, el ícono se actualiza solo en unos días (o al volver a agregarla).</li><li><b>Mensajes de BufaLabs.</b> Cuando hay algo importante, como una versión nueva o un arreglo, te aparece un mensaje una sola vez.</li></ul></div></li>
           <li data-app="compu"><div class="vn"><span class="ver">104.01</span><span class="app compu">Compu</span><time datetime="2026-11-03">3 de noviembre</time></div><div class="min0"><h3>Se adelanta</h3><p>El primer saludo del día te cuenta también los recordatorios de hoy, y te llegan los mensajes de BufaLabs.</p><ul><li><b>La mañana, más completa.</b> En el resumen del primer saludo del día, además del clima, la agenda y las noticias, te recuerda lo que tenés anotado para hoy.</li><li><b>Mensajes de BufaLabs.</b> Cuando hay algo importante, te aparece un mensaje una sola vez.</li></ul></div></li>
@@ -1085,7 +1089,7 @@ section.hero{padding-block:0}
 <footer>
   <div class="pie"><div class="wrap pgrid">
     <a class="logo" href="#inicio" data-ir="inicio" aria-label="BufaLabs, inicio"><img decoding="async" src="img/bufalabs-logo.svg" width="1623" height="512" loading="lazy" alt="BufaLabs: tecnología, inteligencia artificial"></a>
-    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="opina"><a href="https://g.page/r/CTKDgQ2Ny99xEBM/review" target="_blank" rel="noopener">Contanos qué te pareció en Google</a></p><p class="vers">FRIDAY v<span data-ver>104.02</span>, Móvil 4.4 y Casa 5.2 (beta). © 2026 BufaLabs</p><p class="redes"><a href="https://www.youtube.com/@Bufalabs-arg" rel="me noopener" target="_blank">YouTube</a><a href="https://www.instagram.com/bufalabs/" rel="me noopener" target="_blank">Instagram</a><a href="https://x.com/Bufalabs" rel="me noopener" target="_blank">X</a></p><p class="vers"><a href="/novedades/" style="color:inherit">Novedades</a> · <a href="/tutoriales/" style="color:inherit">Tutoriales</a> · <a href="/diferencias/" style="color:inherit">¿En qué se diferencia?</a> · <a href="/jugar/" style="color:inherit">Jugá con FRIDAY</a> · <a href="/en/" hreflang="en" lang="en" style="color:inherit">English</a></p></div>
+    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="opina"><a href="https://g.page/r/CTKDgQ2Ny99xEBM/review" target="_blank" rel="noopener">Contanos qué te pareció en Google</a></p><p class="vers">FRIDAY v<span data-ver>104.03</span>, Móvil 4.5 y Casa 5.3 (beta). © 2026 BufaLabs</p><p class="redes"><a href="https://www.youtube.com/@Bufalabs-arg" rel="me noopener" target="_blank">YouTube</a><a href="https://www.instagram.com/bufalabs/" rel="me noopener" target="_blank">Instagram</a><a href="https://x.com/Bufalabs" rel="me noopener" target="_blank">X</a></p><p class="vers"><a href="/novedades/" style="color:inherit">Novedades</a> · <a href="/tutoriales/" style="color:inherit">Tutoriales</a> · <a href="/diferencias/" style="color:inherit">¿En qué se diferencia?</a> · <a href="/jugar/" style="color:inherit">Jugá con FRIDAY</a> · <a href="/en/" hreflang="en" lang="en" style="color:inherit">English</a></p></div>
   </div></div>
 </footer>
 
@@ -1413,6 +1417,15 @@ if('IntersectionObserver' in window){
   }), {rootMargin:'80px 0px'});
   document.querySelectorAll('.hero,.cinta,.hace,#cerebros,.versiones,.cierre').forEach(x=>io.observe(x));
 }
+</script>
+<script>
+// si FRIDAY está de siesta (la pusieron a dormir desde BufaLabs), el cartel de arriba lo dice
+(function(){ var e=document.querySelector('.ellabar .estado'); if(!e||!window.fetch) return;
+  setTimeout(function(){ fetch('https://bufalabs.pedrobufager.workers.dev/ping',{cache:'no-store'}).then(function(r){ return r.ok?r.json():null; }).then(function(p){
+    if(!p||!p.siesta||!(p.siesta.hasta>Date.now())) return;
+    var h=new Date(p.siesta.hasta).toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit',hour12:false});
+    e.classList.add('siesta'); e.innerHTML='<i aria-hidden="true"></i>De siesta hasta las '+h+': le estamos haciendo ajustes';
+  }).catch(function(){}); }, 1200); })();
 </script>
 </body>
 </html>
