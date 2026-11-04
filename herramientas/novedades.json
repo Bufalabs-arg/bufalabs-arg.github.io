@@ -2,6 +2,48 @@
  {
   "fecha": "2026-11-03",
   "app": "celu",
+  "version": "Móvil 4.4",
+  "titulo": "Modo divertido",
+  "resumen": "FRIDAY en el celu ahora juega: moneda, dados, sorteos, piedra, papel o tijera, y quince logros secretos para descubrir.",
+  "items": [
+   [
+    "Juegos que sirven",
+    "«Tirá una moneda», «tirá dos dados», «elegí un número del 1 al 100», «sorteá entre Juan, Ana y Leo», «piedra, papel o tijera» y «cuenta regresiva de 10». Los resuelve al toque, sin gastar nada."
+   ],
+   [
+    "Sorpresas",
+    "Decile «modo fiesta» o «protocolo Mark 42» y mirá lo que pasa. Hay más escondidas."
+   ],
+   [
+    "Logros secretos",
+    "Hay quince. Los que ya tenés los ves en Más → Logros secretos."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-03",
+  "app": "compu",
+  "version": "104.02",
+  "titulo": "Modo divertido",
+  "resumen": "FRIDAY juega con vos: moneda, dados, sorteos con ruleta, cuenta regresiva gigante, modo fiesta con música y logros secretos.",
+  "items": [
+   [
+    "Juegos que sirven",
+    "«Tirá una moneda», «tirá dos dados», «elegí un número del 1 al 100», «sorteá entre Juan, Ana y Leo», «juguemos a piedra, papel o tijera» y «cuenta regresiva de 10»."
+   ],
+   [
+    "Modo fiesta",
+    "Decí «modo fiesta»: confeti, luces y te pone música para la previa."
+   ],
+   [
+    "Logros secretos",
+    "Hay quince escondidos. Preguntale «¿qué logros tengo?» y andá descubriéndolos. Pista: probá cosas de película."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-03",
+  "app": "celu",
   "version": "Móvil 4.3",
   "titulo": "Cara nueva",
   "resumen": "FRIDAY estrena ícono y pantalla de presentación, y te avisa cuando BufaLabs tiene algo importante para contarte.",

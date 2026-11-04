@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jugá con FRIDAY: moneda, dados y sorteos · BufaLabs</title>
+<meta name="description" content="Tirá una moneda, un dado, elegí un número al azar o hacé un sorteo entre nombres, gratis. Y los juegos y logros secretos de FRIDAY, la inteligencia artificial de BufaLabs.">
+<link rel="canonical" href="https://bufalabs-arg.github.io/jugar/">
+<meta property="og:title" content="Jugá con FRIDAY: moneda, dados y sorteos · BufaLabs">
+<meta property="og:description" content="Tirá una moneda, un dado, elegí un número al azar o hacé un sorteo entre nombres, gratis. Y los juegos y logros secretos de FRIDAY, la inteligencia artificial de BufaLabs.">
+<meta property="og:url" content="https://bufalabs-arg.github.io/jugar/">
+<meta property="og:image" content="https://bufalabs-arg.github.io/img/og-friday.png">
+<meta property="og:site_name" content="BufaLabs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2F6BE3">
+<link rel="icon" type="image/svg+xml" href="/img/bufalabs-icono.svg">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<style>
+.mesa{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:22px;align-items:stretch}
+.tablero{position:relative;min-height:340px;border-radius:32px;background:radial-gradient(120% 90% at 50% 0%,#3d7bf0 0%,var(--azul) 45%,var(--azul-3) 100%);color:#fff;display:grid;place-items:center;text-align:center;overflow:hidden;padding:24px}
+.tablero .cosa{font-size:clamp(96px,16vw,168px);line-height:1;filter:drop-shadow(0 18px 30px rgba(0,0,0,.28))}
+.tablero .res{margin-top:14px;font:800 clamp(30px,5vw,46px)/1.05 var(--disp);font-variation-settings:"opsz" 72,"wdth" 90}
+.tablero .sub{margin-top:6px;color:var(--claro);font-size:16px}
+.tablero.gira .cosa{animation:moneda 1.1s cubic-bezier(.2,.8,.3,1)}
+.tablero.rueda .cosa{animation:dado .9s cubic-bezier(.2,.8,.3,1)}
+.tablero.pum .res{animation:pum .6s cubic-bezier(.2,1.4,.4,1)}
+@keyframes moneda{0%{transform:translateY(60px) rotateX(0)}60%{transform:translateY(-40px) rotateX(1440deg)}100%{transform:none}}
+@keyframes dado{0%{transform:translateX(-120px) rotate(-540deg)}100%{transform:none}}
+@keyframes pum{0%{transform:scale(1.5);opacity:.2}100%{transform:none;opacity:1}}
+.mandos{display:flex;flex-direction:column;gap:12px}
+.mandos .fila{display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:#fff;border:1px solid var(--linea);border-radius:22px;padding:14px}
+.mandos button{font:700 17px var(--text);border:0;border-radius:999px;padding:12px 20px;background:var(--azul);color:#fff;cursor:pointer;min-height:48px}
+.mandos button:hover{background:var(--azul-3)}
+.mandos button:focus-visible,.mandos input:focus-visible{outline:3px solid var(--sol);outline-offset:2px}
+.mandos label{font-weight:700;color:var(--tinta)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.mandos input{font:400 17px var(--text);border:1px solid var(--linea);border-radius:14px;padding:11px 12px;min-height:48px;color:var(--tinta);background:var(--papel)}
+.mandos input[type=number]{width:96px}
+.mandos .nombres{flex:1 1 220px}
+.decirle{margin-top:56px}.decirle>h2,.logros>h2{margin:0;font:800 34px/1.1 var(--disp)}.decirle>p,.logros>p{margin:6px 0 18px;color:var(--tinta-2)}
+.frases{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:0;padding:0;list-style:none}
+.frases li{background:#fff;border:1px solid var(--linea);border-radius:24px;padding:18px 16px 20px;display:flex;flex-direction:column}
+.frases h3{margin:0 0 2px;font:800 22px/1.1 var(--disp)}
+.decile{align-self:flex-end;max-width:96%;margin:12px 0 0;padding:11px 16px;border-radius:20px 20px 6px 20px;background:var(--azul-3);color:#fff;font-weight:700;line-height:1.35}
+.decile span{display:block;font-weight:400;font-size:14px;color:var(--claro)}
+.pasa{margin:10px 0 0;color:var(--tinta-2)}
+.logros{margin-top:56px;background:var(--tinta);color:#fff;border-radius:32px;padding:28px 24px}
+.logros>p{color:var(--claro)}.logros ul{margin:0;padding-left:20px;line-height:1.6}.logros li::marker{color:var(--sol)}
+@media (max-width:760px){.mesa{grid-template-columns:1fr}.tablero{min-height:280px}}
+@media (prefers-reduced-motion:reduce){.tablero .cosa,.tablero .res{animation:none!important}}
+</style>
+<style>:root{--azul:#2F6BE3;--azul-3:#1E4FC0;--tinta:#0E1B3D;--tinta-2:#4A5A7F;--tinta-3:#8A97B4;--papel:#F5F8FF;--papel-2:#E7EEFF;--linea:#D3DDF5;--claro:#E4EDFF;--sol:#FFC93C;--sol-tinta:#2A1C00;
+--disp:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;--text:"Atkinson Hyperlegible",system-ui,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box}html{background:var(--papel)}body{margin:0;background:var(--papel);color:var(--tinta);font:400 19px/1.6 var(--text);-webkit-font-smoothing:antialiased}
+a{color:var(--azul-3);text-underline-offset:3px}
+.barra{background:var(--azul);color:#fff}.barra .in{max-width:1000px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none}.marca img.ico{width:42px;height:42px;border-radius:12px}.marca img.pal{height:23px;width:auto}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--sol);color:var(--sol-tinta);font:700 17px var(--text);text-decoration:none}
+.cab{background:var(--azul);color:#fff;padding:36px 0 52px}.cab .in,main{max-width:1000px;margin:0 auto;padding-inline:20px}
+.cab h1{margin:0;font:800 clamp(40px,7vw,76px)/.95 var(--disp);font-variation-settings:"opsz" 96,"wdth" 92;letter-spacing:-.02em;text-wrap:balance}
+.cab p{margin:16px 0 0;max-width:46ch;color:var(--claro);font-size:20px}.cab .dato{font-size:16px;color:var(--claro);margin:0 0 14px}
+main{padding-block:44px 64px}
+.items{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.items li{background:#fff;border:1px solid var(--linea);border-radius:22px;padding:22px 24px}
+.items h2,.items h3{margin:0 0 6px;font:800 24px/1.2 var(--disp)}.items p{margin:0;color:var(--tinta-2)}
+.lista{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.lista a{display:block;background:#fff;border:1px solid var(--linea);border-radius:20px;padding:18px 22px;text-decoration:none;color:var(--tinta)}
+.lista b{display:block;font:800 22px/1.2 var(--disp)}.lista small{color:var(--tinta-3);font-size:15px}.lista span{display:block;color:var(--tinta-2);margin-top:4px}
+.volver{margin-top:32px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+footer{background:var(--azul-3);color:var(--claro);font-size:15px}footer .in{max-width:1000px;margin:0 auto;padding:22px 20px}
+@media (max-width:560px){.marca img.pal{display:none}}</style>
+</head>
+<body>
+<header class="barra"><div class="in"><a class="marca" href="/" aria-label="BufaLabs, inicio"><img class="ico" src="/img/bufalabs-icono.svg" alt=""><img class="pal" src="/img/bufalabs-palabra.svg" alt="BufaLabs"></a><a class="btn" href="/instalar/">Instalala gratis</a></div></header>
+<section class="cab"><div class="in"><h1>Jugá un rato.</h1><p>Moneda, dado, número al azar y sorteo, acá mismo. Lo mismo que hace FRIDAY cuando se lo pedís.</p></div></section>
+<main><section class="mesa" aria-label="Juegos"><div class="tablero" id="tab" aria-live="polite"><div><div class="cosa" aria-hidden="true">🎲</div><div class="res">Elegí un juego</div><div class="sub">Todo pasa en tu navegador.</div></div></div><div class="mandos"><div class="fila"><button type="button" id="bMon">Tirar una moneda</button><button type="button" id="bDado">Tirar un dado</button></div><div class="fila"><label for="nA">Del</label><input id="nA" type="number" value="1" inputmode="numeric"><label for="nB">al</label><input id="nB" type="number" value="100" inputmode="numeric"><button type="button" id="bNum">Elegir número</button></div><div class="fila"><label for="nom" class="sr">Nombres</label><input id="nom" class="nombres" type="text" placeholder="Juan, Ana, Leo" autocomplete="off"><button type="button" id="bSort">Sortear</button></div></div></section><section class="decirle"><h2>Pedíselo a FRIDAY</h2><p>En la compu y en el celu, por voz o escribiendo. No gasta nada: lo resuelve sin pensar.</p><ul class="frases"><li><h3>Moneda</h3><p class="decile"><span>Decile</span>«Friday, tirá una moneda»</p><p class="pasa">La tira en la pantalla y te dice cara o ceca.</p></li><li><h3>Dados</h3><p class="decile"><span>Decile</span>«Tirá dos dados»</p><p class="pasa">Hasta cinco, y te suma el total.</p></li><li><h3>Número</h3><p class="decile"><span>Decile</span>«Elegí un número del 1 al 100»</p><p class="pasa">Para rifas, turnos o lo que quieras.</p></li><li><h3>Sorteo</h3><p class="decile"><span>Decile</span>«Sorteá entre Juan, Ana y Leo»</p><p class="pasa">Gira una ruleta con los nombres y para en uno.</p></li><li><h3>Piedra, papel o tijera</h3><p class="decile"><span>Decile</span>«Juguemos a piedra, papel o tijera»</p><p class="pasa">Te pregunta qué sacás y juega de verdad.</p></li><li><h3>Cuenta regresiva</h3><p class="decile"><span>Decile</span>«Cuenta regresiva de 10»</p><p class="pasa">Números gigantes en la pantalla, hasta un minuto.</p></li><li><h3>Fiesta</h3><p class="decile"><span>Decile</span>«Modo fiesta»</p><p class="pasa">Confeti, luces y, en la compu, música para la previa.</p></li></ul></section><section class="logros"><h2>Hay 15 logros secretos</h2><p>FRIDAY esconde quince sorpresas. No te las contamos, pero van tres pistas:</p><ul><li>Hablale como si fueras Tony Stark.</li><li>No le tengas miedo al botón rojo: es todo de mentira.</li><li>Preguntale cuál es el sentido de la vida.</li></ul><p style="margin-top:14px">Los que ya tenés: en el celu, en Más → Logros secretos. En la compu, decile «¿qué logros tengo?».</p></section><div class="volver"><a class="btn" href="/instalar/">Instalala gratis</a><a href="/tutoriales/">Tutoriales</a><a href="/ayuda/">Qué más decirle</a><a href="/">Volver al inicio</a></div><script>
+(function(){
+  var t=document.getElementById('tab'), cosa=t.querySelector('.cosa'), res=t.querySelector('.res'), sub=t.querySelector('.sub');
+  function al(a,b){ var u=new Uint32Array(1); crypto.getRandomValues(u); return a+(u[0]%(b-a+1)); }
+  function poner(c,r,s,anim){ t.className='tablero'; void t.offsetWidth; cosa.textContent=c; res.textContent=r; sub.textContent=s||''; t.classList.add(anim||'pum'); }
+  document.getElementById('bMon').onclick=function(){ var c=al(0,1); poner('🪙','',''); t.classList.add('gira'); setTimeout(function(){ res.textContent=c?'Cara':'Ceca'; t.classList.add('pum'); },900); };
+  document.getElementById('bDado').onclick=function(){ var n=al(1,6); poner(['','⚀','⚁','⚂','⚃','⚄','⚅'][n],'Salió un '+n,'','rueda'); };
+  document.getElementById('bNum').onclick=function(){ var a=parseInt(document.getElementById('nA').value,10), b=parseInt(document.getElementById('nB').value,10); if(isNaN(a)||isNaN(b)){ poner('🔢','Poné dos números',''); return; } if(a>b){ var x=a; a=b; b=x; } poner('🔢', String(al(a,b)), 'entre '+a+' y '+b); };
+  document.getElementById('bSort').onclick=function(){
+    var ns=document.getElementById('nom').value.split(/\s*(?:,|\by\b|\n)\s*/i).map(function(x){return x.trim();}).filter(Boolean).slice(0,40);
+    if(ns.length<2){ poner('🎯','Escribí dos nombres o más','separados por coma'); return; }
+    var g=ns[al(0,ns.length-1)], i=0, paso=50, tt=0, quieto=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    t.className='tablero'; cosa.textContent='🎯'; sub.textContent='';
+    if(quieto){ res.textContent=g; sub.textContent='de '+ns.length+' nombres'; return; }
+    (function gira(){ res.textContent=ns[i++%ns.length]; tt+=paso; paso*=1.13; if(tt<2200) setTimeout(gira,paso); else { poner('🎯', g, 'de '+ns.length+' nombres'); } })();
+  };
+})();
+</script></main>
+<footer><div class="in">BufaLabs, un laboratorio independiente de Córdoba, Argentina. © 2026 · <a href="https://www.youtube.com/@Bufalabs-arg" rel="me noopener" target="_blank" style="color:inherit">YouTube</a> · <a href="https://www.instagram.com/bufalabs/" rel="me noopener" target="_blank" style="color:inherit">Instagram</a> · <a href="https://x.com/Bufalabs" rel="me noopener" target="_blank" style="color:inherit">X</a> · <a href="https://g.page/r/CTKDgQ2Ny99xEBM/review" target="_blank" rel="noopener" style="color:inherit">Contanos qué te pareció en Google</a></div></footer>
+</body>
+</html>
