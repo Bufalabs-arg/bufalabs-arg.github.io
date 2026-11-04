@@ -1,5 +1,29 @@
 [
  {
+  "fecha": "2026-11-04",
+  "app": "casa",
+  "version": "Casa 5.4",
+  "titulo": "Los mensajes de BufaLabs",
+  "resumen": "La tablet también te cuenta los avisos importantes de BufaLabs, una sola vez.",
+  "items": []
+ },
+ {
+  "fecha": "2026-11-04",
+  "app": "celu",
+  "version": "Móvil 4.6",
+  "titulo": "Mensajes a medida",
+  "resumen": "Los avisos de BufaLabs te llegan solo si son para el celu.",
+  "items": []
+ },
+ {
+  "fecha": "2026-11-04",
+  "app": "compu",
+  "version": "104.04",
+  "titulo": "Mensajes a medida",
+  "resumen": "Los avisos de BufaLabs te llegan solo si son para la compu.",
+  "items": []
+ },
+ {
   "fecha": "2026-11-03",
   "app": "casa",
   "version": "Casa 5.3",
