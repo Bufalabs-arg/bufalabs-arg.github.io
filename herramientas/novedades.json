@@ -1,5 +1,55 @@
 [
  {
+  "fecha": "2026-11-06",
+  "app": "casa",
+  "version": "Casa 6.0",
+  "titulo": "Entra en cualquier tablet, la guardia de verdad y el control de la tele",
+  "resumen": "FRIDAY Casa se acomoda sola a la pantalla, la guardia te avisa al celu con fotos y la tele tiene su control remoto.",
+  "items": [
+   [
+    "Del tamaño justo",
+    "Se acomoda sola a cualquier tablet, acostada o parada. Si la ves grande, decile «achicá la pantalla»."
+   ],
+   [
+    "La guardia, de nuevo",
+    "Antes de activarse prueba la cámara, vigila sin confundirse con el ruido, saca fotos y te suena el celu aunque tengas FRIDAY cerrada. La pantalla queda oscura con un escudo; para apagarla, mantené apretado."
+   ],
+   [
+    "La app Tele",
+    "Lo que suena en la tele, el control remoto (pausa, adelantar, volumen, siguiente) y «¿qué ponemos?». También por voz: «pausá la tele», «adelantá un minuto», «agregá Queen a la tele»."
+   ],
+   [
+    "Hablame desde el celu",
+    "Abajo a la derecha te muestra cómo, paso a paso. Si el celu todavía no está unido, lo unís ahí mismo."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-06",
+  "app": "celu",
+  "version": "Móvil 5.0",
+  "titulo": "Más humana",
+  "resumen": "FRIDAY tiene cara, todo se ve más cálido, la tablet está a un toque y hay modo manejo.",
+  "items": [
+   [
+    "FRIDAY tiene cara",
+    "La misma carita de la tablet: parpadea, sonríe y mueve la boca cuando habla. Letras redondas y burbujas de charla."
+   ],
+   [
+    "La tablet, a un toque",
+    "En el inicio aparece «La tablet de la casa»: le hablás con un botón, activás la guardia y manejás la tele."
+   ],
+   [
+    "La guardia te avisa siempre",
+    "Si la tablet ve a alguien, te suena el celu aunque tengas FRIDAY cerrada (con «Avisos con el celu bloqueado» prendido)."
+   ],
+   [
+    "Modo manejo",
+    "Tocá «🚗 Manejando»: botones grandes para la música, ir a algún lado con el mapa, mandar un mensaje y el clima. Y te escucha sola."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-04",
   "app": "casa",
   "version": "Casa 5.4",
