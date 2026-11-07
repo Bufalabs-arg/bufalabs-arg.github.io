@@ -1,5 +1,34 @@
 [
  {
+  "fecha": "2026-11-07",
+  "app": "celu",
+  "version": "Móvil 5.1",
+  "titulo": "El changuito",
+  "resumen": "Sacale una foto al precio y FRIDAY te arma el changuito: producto, imagen, promo y el total sumado. Y te revisa el ticket.",
+  "items": [
+   [
+    "Sacale una foto al precio",
+    "En Compras → Changuito, sacale una foto a la etiqueta o al cartel del descuento: FRIDAY lee el producto, el precio y la promo, le pone la imagen y te va sumando."
+   ],
+   [
+    "Las promos, bien hechas",
+    "2x1, 3x2, «2da al 70%», «llevando 2, 25% menos»: lo calcula según cuántos lleves, te dice cuánto ahorrás y si te conviene llevar uno más. Los descuentos con banco los muestra aparte."
+   ],
+   [
+    "Revisá el ticket",
+    "Al final, sacale una foto al ticket y FRIDAY te dice si te cobraron algo de más que en la góndola."
+   ],
+   [
+    "La lista, ordenada",
+    "Por sección del súper (verdulería, lácteos, almacén…), con cantidades, «lo de siempre» y presupuesto. Y avisa si algo subió desde la última vez."
+   ],
+   [
+    "La tablet a la vista",
+    "«🏠 Tablet» ahora está en el inicio y en Más."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-06",
   "app": "casa",
   "version": "Casa 6.0",

@@ -61,3 +61,5 @@ https://bufalabs-arg.github.io/jugar/
 https://bufalabs-arg.github.io/casa/
 https://bufalabs-arg.github.io/novedades/casa-6-0/
 https://bufalabs-arg.github.io/novedades/movil-5-0/
+https://bufalabs-arg.github.io/promos/
+https://bufalabs-arg.github.io/novedades/movil-5-1/
