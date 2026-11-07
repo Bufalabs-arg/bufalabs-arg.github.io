@@ -1,6 +1,73 @@
 [
  {
   "fecha": "2026-11-07",
+  "app": "compu",
+  "version": "104.05",
+  "titulo": "Tu cuenta de BufaLabs",
+  "resumen": "Ya no se entra con Google: entrás con tu mail y una clave, y lo tuyo se guarda cifrado en BufaLabs.",
+  "items": [
+   [
+    "Sin Google",
+    "La primera vez que abrís FRIDAY aparece una bienvenida para crear tu cuenta con tu mail y una clave nueva. Si ya tenés una, entrás."
+   ],
+   [
+    "Ni nosotros lo podemos leer",
+    "Tu mail no se guarda (solo una huella) y la clave no sale de tu compu. Tu memoria, recordatorios y ajustes viajan cifrados."
+   ],
+   [
+    "Todo junto, sin códigos",
+    "Entrá con la misma cuenta en la compu, el celu y la tablet y se conectan solos. Sin escanear nada."
+   ],
+   [
+    "Si te olvidás la clave",
+    "Al crear la cuenta te da un código de rescate. Con él entrás y elegís otra clave, sin perder nada."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-07",
+  "app": "celu",
+  "version": "Móvil 5.2",
+  "titulo": "Tu cuenta, en el celu",
+  "resumen": "Entrás con tu mail y una clave y el celu se une solo con la compu y la tablet. Si cambiás de celu, vuelve todo.",
+  "items": [
+   [
+    "Bienvenida nueva",
+    "La primera vez te recibe con una pantalla animada para crear tu cuenta o entrar. Después está en Más → Tu cuenta."
+   ],
+   [
+    "Celu nuevo, FRIDAY de siempre",
+    "Entrás con tu mail en el celu nuevo y vuelven tu nombre, tus listas, tus recordatorios y tus ajustes."
+   ],
+   [
+    "Se conectan solos",
+    "Con la misma cuenta, celu, compu y tablet comparten memoria y recordatorios. El QR queda como plan B."
+   ],
+   [
+    "Por voz",
+    "Decile «mi cuenta», «crear cuenta» o «me olvidé la clave»."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-07",
+  "app": "casa",
+  "version": "Casa 6.1",
+  "titulo": "La tablet entra con tu cuenta",
+  "resumen": "En Ajustes → Tu cuenta de BufaLabs, la tablet entra con tu mail y se une sola a tu celu y tu compu.",
+  "items": [
+   [
+    "Sin códigos",
+    "Entrás con tu mail y tu clave y la tablet se conecta con tus otros aparatos."
+   ],
+   [
+    "Lo tuyo, cifrado",
+    "Las escenas y los ajustes de la tablet se guardan cifrados en tu cuenta."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-07",
   "app": "celu",
   "version": "Móvil 5.1",
   "titulo": "El changuito",

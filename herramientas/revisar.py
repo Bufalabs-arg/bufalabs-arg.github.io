@@ -53,7 +53,7 @@ for m in ('friday.json', 'friday-linux.json'):
 # 3) nada privado
 PROHIBIDO = [re.compile(rb'-----BEGIN [A-Z ]*PRIVATE KEY-----'), re.compile(rb'gsk_[A-Za-z0-9]{40,}'), re.compile(rb'AIza[0-9A-Za-z_\-]{35}'),
              re.compile(rb'"clave_?privada"\s*:')]
-PUBLICOS = {b'bufalabs.ar@gmail.com'}   # el contacto público de BufaLabs
+PUBLICOS = {b'nombre@gmail.com', b'bufalabs.ar@gmail.com'}   # el contacto público de BufaLabs
 MAIL = re.compile(rb'[A-Za-z0-9._%+-]+@(?:gmail|hotmail|outlook|yahoo)\.com')
 for p in archivos():
     b = os.path.basename(p).lower()
