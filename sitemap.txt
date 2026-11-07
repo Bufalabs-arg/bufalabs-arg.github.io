@@ -67,3 +67,7 @@ https://bufalabs-arg.github.io/cuenta/
 https://bufalabs-arg.github.io/novedades/compu-104-05/
 https://bufalabs-arg.github.io/novedades/movil-5-2/
 https://bufalabs-arg.github.io/novedades/casa-6-1/
+https://bufalabs-arg.github.io/tele/
+https://bufalabs-arg.github.io/novedades/tele-1-0/
+https://bufalabs-arg.github.io/novedades/movil-5-3/
+https://bufalabs-arg.github.io/novedades/casa-6-2/

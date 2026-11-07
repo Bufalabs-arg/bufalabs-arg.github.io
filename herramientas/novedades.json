@@ -1,6 +1,81 @@
 [
  {
   "fecha": "2026-11-07",
+  "app": "tele",
+  "version": "Tele 1.0",
+  "titulo": "FRIDAY llega a la tele",
+  "resumen": "La app nueva para teles LG: la cara de FRIDAY en grande, el clima, tus recordatorios, cuentos y trivia en familia. Le hablás desde el celu.",
+  "items": [
+   [
+    "Se une con un código",
+    "Abrís FRIDAY en la tele, te muestra un código y lo escribís en el celu. Listo: se conecta con tus aparatos."
+   ],
+   [
+    "Le hablás desde el celu",
+    "En Casa y familia → La tele, le decís algo y contesta en la tele, con su voz."
+   ],
+   [
+    "Cuentos y trivia",
+    "Un cuento para dormir en grande, leído en voz alta, y una trivia para jugar en familia con el control remoto."
+   ],
+   [
+    "Los recordatorios suenan en la tele",
+    "Si estás en el living, te enterás igual."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-07",
+  "app": "celu",
+  "version": "Móvil 5.3",
+  "titulo": "Casa, familia y estudio",
+  "resumen": "¿Qué cocino? con una foto a la heladera, remedios que avisan a la familia, recados, cuentos, juegos, la tarea explicada y «Oye Siri, Friday».",
+  "items": [
+   [
+    "¿Qué cocino?",
+    "Sacale una foto a la heladera y te propone tres comidas con lo que hay. La que elegís, la tablet te la guía paso a paso."
+   ],
+   [
+    "Tu familia en FRIDAY",
+    "Cada uno con su cuenta. «Avisale a mamá que llego tarde» le suena en el celu, y comparten una lista."
+   ],
+   [
+    "Remedios con aviso",
+    "Te recuerda el remedio. Si en media hora no marcás «Ya lo tomé», le avisa a quien vos elijas."
+   ],
+   [
+    "Cuentos, juegos y la tarea",
+    "«Contame un cuento para Juli», trivia, adiviná el animal, mímica, y la tarea explicada paso a paso con una foto, sin darte la respuesta de una."
+   ],
+   [
+    "Plantas",
+    "Una foto a la planta: qué es, cómo está y cada cuánto regarla (te avisa)."
+   ],
+   [
+    "Oye Siri, Friday",
+    "Hablale desde el auto, con los AirPods o el reloj: te recuerda cosas, anota en la lista y le manda recados a tu familia."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-07",
+  "app": "casa",
+  "version": "Casa 6.2",
+  "titulo": "La receta y los cuentos, desde el celu",
+  "resumen": "La receta que elegís en el celu aparece en la tablet para cocinar paso a paso, y los cuentos se leen en grande.",
+  "items": [
+   [
+    "La receta del celu",
+    "Elegís qué cocinar en el celu y la tablet te la dicta paso a paso: «siguiente», «repetí», «timer»."
+   ],
+   [
+    "Cuentos en la tablet",
+    "El cuento que inventás en el celu se lee en voz alta en la tablet."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-07",
   "app": "compu",
   "version": "104.05",
   "titulo": "Tu cuenta de BufaLabs",

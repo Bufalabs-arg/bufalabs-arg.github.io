@@ -5,7 +5,7 @@ import html
 
 MES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto',
        'septiembre', 'octubre', 'noviembre', 'diciembre']
-APP = {'compu': 'Compu', 'celu': 'Celu', 'casa': 'Tablet'}
+APP = {'compu': 'Compu', 'celu': 'Celu', 'casa': 'Tablet', 'tele': 'Tele'}
 e = html.escape
 
 
