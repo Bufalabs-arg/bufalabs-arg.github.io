@@ -2,6 +2,60 @@
  {
   "fecha": "2026-11-07",
   "app": "tele",
+  "version": "Tele 1.1",
+  "titulo": "La tele, de toda la familia",
+  "resumen": "FRIDAY Tele ahora saluda a la familia y trae el resumen del día, noticias, música y videos, temporizador, modo ambiente y más animaciones.",
+  "items": [
+   [
+    "Saluda a la familia",
+    "«Buenas tardes, los Bufager»: la tele es de todos, no de una persona."
+   ],
+   [
+    "Buen día",
+    "El clima de cinco días, lo que tienen hoy y los titulares, en grande y en voz alta. A la mañana aparece solo."
+   ],
+   [
+    "Música y videos",
+    "«Poné Soda Stereo en la tele» desde el celu, o elegí en la tele: música tranqui, folklore, rock nacional, para los chicos."
+   ],
+   [
+    "Temporizador y noticias",
+    "Un timer con un aro que se va vaciando, y las noticias en tarjetas."
+   ],
+   [
+    "Los recados de la familia",
+    "Lo que le mandan a toda la familia aparece en la tele."
+   ],
+   [
+    "Más fluida",
+    "Pantallas que entran suaves, confeti cuando aciertan en la trivia y un modo ambiente que cuida la pantalla."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-07",
+  "app": "celu",
+  "version": "Móvil 5.4",
+  "titulo": "La tele, desde el celu",
+  "resumen": "Pedile cosas a la tele desde el celu: «poné música en la tele», «mostrame las noticias en la tele», «timer de 10 minutos en la tele».",
+  "items": [
+   [
+    "Todo «en la tele»",
+    "Si terminás lo que decís con «en la tele», se lo pasa a FRIDAY Tele."
+   ],
+   [
+    "Atajos",
+    "En Casa y familia → La tele: buen día, noticias, música, timer y ambiente, a un toque."
+   ],
+   [
+    "La familia en la tele",
+    "Si armaste tu familia en FRIDAY, la tele ve los recados para todos."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-07",
+  "app": "tele",
   "version": "Tele 1.0",
   "titulo": "FRIDAY llega a la tele",
   "resumen": "La app nueva para teles LG: la cara de FRIDAY en grande, el clima, tus recordatorios, cuentos y trivia en familia. Le hablás desde el celu.",
