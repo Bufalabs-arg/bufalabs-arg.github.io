@@ -1,5 +1,47 @@
 [
  {
+  "fecha": "2026-11-08",
+  "app": "celu",
+  "version": "Móvil 5.5",
+  "titulo": "Hablarle a la tablet, fácil",
+  "resumen": "Como un walkie-talkie: tocás «Hablarle a la tablet», hablás, la tablet contesta en voz alta y en el celu ves lo que te dijo.",
+  "items": [
+   [
+    "Con la misma cuenta, ya está",
+    "Si la tablet entró con tu misma cuenta de BufaLabs, se conectan solas. Sin códigos ni QR."
+   ],
+   [
+    "Un micrófono grande",
+    "Tocás y hablás. Lo que contesta la tablet aparece escrito en el celu (y, si querés, también suena en el celu)."
+   ],
+   [
+    "Sin modos raros",
+    "Cerrás y el celu vuelve a ser el celu. Ya no hay que decir «volvé»."
+   ],
+   [
+    "O de una",
+    "«Decile a la tablet que ponga música» o «apagá las luces en la tablet», sin abrir nada."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-08",
+  "app": "casa",
+  "version": "Casa 6.3",
+  "titulo": "Te contesta también en el celu",
+  "resumen": "Lo que la tablet te contesta en voz alta te llega escrito al celu que le habló. Y «Hablame desde el celu» ahora se explica en dos pasos.",
+  "items": [
+   [
+    "La respuesta, en el celu",
+    "Si le hablaste desde otra pieza, igual ves lo que te dijo."
+   ],
+   [
+    "Más fácil de unir",
+    "Entrás con tu cuenta de BufaLabs en la tablet y listo."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-07",
   "app": "tele",
   "version": "Tele 1.1",

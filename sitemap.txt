@@ -73,3 +73,5 @@ https://bufalabs-arg.github.io/novedades/movil-5-3/
 https://bufalabs-arg.github.io/novedades/casa-6-2/
 https://bufalabs-arg.github.io/novedades/tele-1-1/
 https://bufalabs-arg.github.io/novedades/movil-5-4/
+https://bufalabs-arg.github.io/novedades/movil-5-5/
+https://bufalabs-arg.github.io/novedades/casa-6-3/
