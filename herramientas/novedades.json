@@ -1,5 +1,30 @@
 [
  {
+  "fecha": "2026-11-10",
+  "app": "compu",
+  "version": "105.01",
+  "titulo": "Más asistente, más persona",
+  "resumen": "Lo simple lo hace al instante y, si se le traba la cabeza, no se olvida de lo que le pediste: cuando vuelve, lo hace.",
+  "items": [
+   [
+    "Lo simple, al instante",
+    "«Abrí Spotify», «cerrá Chrome», «subí el volumen», «qué hora es», «poné un temporizador de 10 minutos»: lo hace sin pensar, aunque el cerebro esté caído."
+   ],
+   [
+    "Si se le traba la cabeza, no se olvida",
+    "Te lo dice como una persona, se anota lo que le pediste y cuando vuelve lo hace. Si es algo delicado, como mandar un mensaje, primero te pregunta."
+   ],
+   [
+    "Nunca se queda muda",
+    "Si tarda, te avisa y prueba sola por otro lado. No te deja esperando más de medio minuto."
+   ],
+   [
+    "Si no está segura, pregunta",
+    "Cuando el pedido se puede entender de dos formas, te hace una sola pregunta corta en vez de adivinar."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-09",
   "app": "compu",
   "version": "105",
