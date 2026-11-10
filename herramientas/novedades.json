@@ -1,5 +1,34 @@
 [
  {
+  "fecha": "2026-11-09",
+  "app": "compu",
+  "version": "105",
+  "titulo": "FRIDAY en la Mac y más asistente",
+  "resumen": "Llegó FRIDAY para Mac, con tu Calendario, Recordatorios, Notas, Mail y Mensajes. Y en todas las compus FRIDAY se adelanta: te avisa antes de que se lo pidas.",
+  "items": [
+   [
+    "FRIDAY para Mac",
+    "Se instala con una línea en la Terminal, sin contraseña. Abre apps, maneja la música, el volumen, las ventanas y tus archivos."
+   ],
+   [
+    "Tu Calendario y tu Mail",
+    "En la Mac usa los de Apple, sin conectar nada: «¿qué tengo hoy?», «anotame dentista el jueves a las cuatro». Lo que anota aparece en el iPhone."
+   ],
+   [
+    "Recordatorios que suenan en el iPhone",
+    "Lo que le pedís que te recuerde en la Mac va también a la app Recordatorios."
+   ],
+   [
+    "Mensajes por voz",
+    "«Mandale a mamá que llego tarde»: la busca en tus Contactos, te muestra el mensaje y lo manda por iMessage."
+   ],
+   [
+    "Te aviso yo",
+    "En Windows, Linux y Mac: si va a llover, si queda poca batería, si mañana arrancás temprano o si llevás mucho sin parar. Antes de una reunión te ofrece abrir el link. Y probá «armame el día»."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-08",
   "app": "celu",
   "version": "Móvil 5.5",

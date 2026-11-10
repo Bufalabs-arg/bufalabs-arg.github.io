@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Publica una versión de FRIDAY para la compu (Windows y Linux) en la página de BufaLabs.
+"""Publica una versión de FRIDAY para la compu (Windows, Linux y Mac) en la página de BufaLabs.
 
 Para cada sistema arma su aviso firmado (actualizaciones/friday.json para Windows,
 actualizaciones/friday-linux.json para Linux) y copia a actualizaciones/v<versión>/ solo los archivos
@@ -7,8 +7,10 @@ que cambiaron (los que quedaron igual apuntan a la versión donde ya estaban). T
 descargas completas (descargas/FRIDAY-Setup.exe, descargas/FRIDAY.zip y descargas/FRIDAY-linux.tar.gz).
 Antes, compilá todo con codigo-exe/compilar.sh (FRIDAY.exe, friday de Linux y FRIDAY-Setup.exe).
 
-Uso: python3 publicar_pc.py <carpeta de FRIDAY> <repo de la página> <archivo con la clave privada> [windows,linux]
+Uso: python3 publicar_pc.py <carpeta de FRIDAY> <repo de la página> <archivo con la clave privada> [windows,linux,mac]
 La carpeta de FRIDAY tiene friday.html, FRIDAY.exe, codigo-exe/ y linux/ (friday, friday.png, instalar.sh, LEEME.txt).
+Para la Mac: mac/ con friday-mac (universal), main.go (de ahí sale la versión del programa) y FRIDAY-mac.zip
+(los arma build_mac.py, con este mismo friday.html adentro de FRIDAY.app).
 """
 import base64, datetime, hashlib, io, json, os, re, shutil, sys, tarfile, zipfile
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
@@ -26,6 +28,11 @@ SISTEMAS = {
         'manifiesto': 'friday-linux.json', 'exe': 'friday',
         'archivos': {'friday.html': 'friday.html', 'friday': 'linux/friday', 'friday.png': 'linux/friday.png', 'instalar.sh': 'linux/instalar.sh'},
         'descarga': ['friday', 'friday.html', 'friday.png', 'instalar.sh'],
+    },
+    'mac': {
+        'manifiesto': 'friday-mac.json', 'exe': 'friday-mac', 'version_de': 'mac/main.go',
+        'archivos': {'friday.html': 'friday.html', 'friday-mac': 'mac/friday-mac'},
+        'descarga': [],
     },
 }
 
@@ -81,7 +88,16 @@ def publicar(sis, fri, sitio, firmar, ver, grande, exe, nov, ya):
     # la descarga completa, para instalarla de cero
     desc = os.path.join(sitio, 'descargas')
     os.makedirs(desc, exist_ok=True)
-    if sis == 'windows':
+    if sis == 'mac':
+        zp = os.path.join(fri, 'mac', 'FRIDAY-mac.zip')
+        with zipfile.ZipFile(zp) as z:
+            adentro = hashlib.sha256(z.read('FRIDAY.app/Contents/Resources/friday.html')).hexdigest()
+            prog = hashlib.sha256(z.read('FRIDAY.app/Contents/MacOS/friday')).hexdigest()
+        if adentro != huella(os.path.join(fri, 'friday.html')) or prog != huella(os.path.join(fri, 'mac', 'friday-mac')):
+            sys.exit('FRIDAY-mac.zip lleva otro friday.html u otro programa: rearmalo con build_mac.py')
+        shutil.copy2(zp, os.path.join(desc, 'FRIDAY-mac.zip'))
+        print(f'mac: FRIDAY-mac.zip ({os.path.getsize(zp) // 1048576} MB) en descargas.')
+    elif sis == 'windows':
         leeme = os.path.join(desc, 'LEEME.txt')
         zp = os.path.join(desc, 'FRIDAY.zip')
         with zipfile.ZipFile(zp + '.nuevo', 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
@@ -132,7 +148,8 @@ def main(fri, sitio, clave, sistemas='windows,linux'):
     grande = ver.split('.')[0]                                                    # "101" (lo que entienden las FRIDAY viejas)
     nov = json.loads(re.search(r'const NOVEDADES=(\{.*?\});\n', html).group(1))
     assert nov['version'] == ver, 'NOVEDADES no es de esta versión'
-    exe = re.search(r'appVersion\s*=\s*"([\d.]+)"', open(os.path.join(fri, 'codigo-exe', 'main.go')).read()).group(1)
+    def exe_de(sis):
+        return re.search(r'appVersion\s*=\s*"([\d.]+)"', open(os.path.join(fri, SISTEMAS[sis].get('version_de', 'codigo-exe/main.go'))).read()).group(1)
     act = os.path.join(sitio, 'actualizaciones')
     os.makedirs(act, exist_ok=True)
     k = Ed25519PrivateKey.from_private_bytes(base64.b64decode(open(clave).read().strip()))
@@ -143,7 +160,7 @@ def main(fri, sitio, clave, sistemas='windows,linux'):
             for n in os.listdir(os.path.join(act, d)):
                 ya.setdefault((n, huella(os.path.join(act, d, n))), f'{d}/{n}')
     for sis in sistemas.split(','):
-        publicar(sis.strip(), fri, sitio, k.sign, ver, grande, exe, nov, ya)
+        publicar(sis.strip(), fri, sitio, k.sign, ver, grande, exe_de(sis.strip()), nov, ya)
 
 
 if __name__ == '__main__':

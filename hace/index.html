@@ -38,9 +38,9 @@
  {"@type":"WebSite","@id":"https://bufalabs-arg.github.io/#sitio","url":"https://bufalabs-arg.github.io/","name":"BufaLabs","inLanguage":"es-AR","publisher":{"@id":"https://bufalabs-arg.github.io/#bufalabs"}},
  {"@type":"VideoObject","name":"FRIDAY en 30 segundos","description":"FRIDAY, la inteligencia artificial gratis de BufaLabs: investiga por vos, lee tus archivos y te ayuda a estudiar.",
   "thumbnailUrl":"https://bufalabs-arg.github.io/video/friday-30s.jpg","uploadDate":"2026-10-29","duration":"PT30S","contentUrl":"https://bufalabs-arg.github.io/video/friday-30s.mp4","inLanguage":"es-AR","publisher":{"@id":"https://bufalabs-arg.github.io/#bufalabs"}},
- {"@type":"SoftwareApplication","name":"FRIDAY","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 10, Windows 11, Linux, Android, iOS",
+ {"@type":"SoftwareApplication","name":"FRIDAY","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 10, Windows 11, macOS, Linux, Android, iOS",
   "description":"Una inteligencia artificial gratis que te escucha, te habla y hace cosas de verdad en la compu y en el celu.",
-  "softwareVersion":"104.05","inLanguage":"es-AR","url":"https://bufalabs-arg.github.io/","downloadUrl":"https://bufalabs-arg.github.io/descargas/FRIDAY-Setup.exe",
+  "softwareVersion":"105","inLanguage":"es-AR","url":"https://bufalabs-arg.github.io/","downloadUrl":"https://bufalabs-arg.github.io/descargas/FRIDAY-Setup.exe",
   "image":"https://bufalabs-arg.github.io/img/og-friday.png","offers":{"@type":"Offer","price":"0","priceCurrency":"ARS"},"publisher":{"@id":"https://bufalabs-arg.github.io/#bufalabs"}}
 ]}
 </script>
@@ -481,6 +481,7 @@ section.hero{padding-block:0}
 .donde .peso{margin:10px 0 0;color:var(--tinta-3);font-size:15px;min-height:1.4em}
 .donde article.tuya{border:2px solid var(--azul);box-shadow:0 22px 40px -26px rgba(30,79,192,.55);position:relative}
 .donde .tuyat{display:none}
+.donde code.cmd{display:block;margin:6px 0 2px;padding:10px 12px;border-radius:12px;background:var(--tinta,#0E1B3D);color:#E7EEFF;font:600 14px/1.45 ui-monospace,Menlo,Consolas,monospace;overflow-wrap:anywhere;user-select:all}
 .donde article.tuya .tuyat{display:inline-block;margin:0 0 12px;padding:5px 12px;border-radius:999px;background:var(--sol);color:var(--sol-tinta);font:700 14px var(--text)}
 .dudas{margin-top:80px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:clamp(24px,5vw,64px);align-items:start}
 .dudas h2{margin:0;font:800 clamp(34px,4vw,52px)/.95 var(--disp);font-variation-settings:"wdth" 94;letter-spacing:-.015em}
@@ -610,14 +611,14 @@ section.hero{padding-block:0}
   <div class="wrap">
     <div class="hgrid">
       <div class="min0">
-        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>Hablarle a la tablet, fácil · Celu 5.5 y Tablet 6.3</span></a>
+        <a class="ultimo" href="#actualizaciones"><b>Nuevo</b><span>FRIDAY en la Mac y más asistente · Compu 105</span></a>
         <h1><span>FRIDAY</span><span>vive en</span><span>tu casa.</span></h1>
-        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, hecha en Argentina por BufaLabs. Ya va por la versión <span data-ver>104.05</span> y se actualiza sola.</p>
+        <p class="bajada">Una inteligencia artificial que te escucha, te habla y hace cosas de verdad, en la compu y en el celu. Gratis, hecha en Argentina por BufaLabs. Ya va por la versión <span data-ver>105</span> y se actualiza sola.</p>
         <div class="ctas"><a class="btn si" href="#instalar">Instalala gratis</a><a class="btn no" href="#probala">Hablale ahora</a></div>
         <p class="regalo" id="regalo" hidden>Te la pasó alguien que ya la usa. Es gratis: probala acá mismo o instalala.</p>
       </div>
       <div class="ella">
-        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>104.05</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
+        <div class="ellabar"><p class="estado"><i aria-hidden="true"></i>En línea, versión <span data-ver>105</span></p><p class="toca" aria-hidden="true">Tocale la cara: <b id="expN">contenta</b></p></div>
         <button id="cara" class="cara" type="button" aria-label="La cara de FRIDAY. Tocala para cambiarle la expresión."></button>
         <div class="globo" id="globo" aria-live="polite"><q id="gQ">Friday, mirá mi pantalla</q><p id="gR">Veo que el Word se trabó. ¿Lo cierro y lo abro de nuevo?</p></div>
       </div>
@@ -748,7 +749,8 @@ section.hero{padding-block:0}
         <h2 class="titulo oculto">Todas las actualizaciones</h2>
         <div class="filtros" aria-label="Mostrar"><button class="on" data-f="" aria-pressed="true">Todas</button><button data-f="compu" aria-pressed="false">Compu</button><button data-f="celu" aria-pressed="false">Celu</button><button data-f="casa" aria-pressed="false">Tablet</button><button data-f="tele" aria-pressed="false">Tele</button></div>
         <ol class="vlista" id="vlista">
-          <li class="ultima" data-app="celu"><div class="vn"><span class="ver">Móvil 5.5</span><span class="app celu">Celu</span><time datetime="2026-11-08">8 de noviembre</time></div><div class="min0"><h3>Hablarle a la tablet, fácil</h3><p>Como un walkie-talkie: tocás «Hablarle a la tablet», hablás, la tablet contesta en voz alta y en el celu ves lo que te dijo.</p><ul><li><b>Con la misma cuenta, ya está.</b> Si la tablet entró con tu misma cuenta de BufaLabs, se conectan solas. Sin códigos ni QR.</li><li><b>Un micrófono grande.</b> Tocás y hablás. Lo que contesta la tablet aparece escrito en el celu (y, si querés, también suena en el celu).</li><li><b>Sin modos raros.</b> Cerrás y el celu vuelve a ser el celu. Ya no hay que decir «volvé».</li><li><b>O de una.</b> «Decile a la tablet que ponga música» o «apagá las luces en la tablet», sin abrir nada.</li></ul></div></li>
+          <li class="ultima" data-app="compu"><div class="vn"><span class="ver">105</span><span class="app compu">Compu</span><time datetime="2026-11-09">9 de noviembre</time></div><div class="min0"><h3>FRIDAY en la Mac y más asistente</h3><p>Llegó FRIDAY para Mac, con tu Calendario, Recordatorios, Notas, Mail y Mensajes. Y en todas las compus FRIDAY se adelanta: te avisa antes de que se lo pidas.</p><ul><li><b>FRIDAY para Mac.</b> Se instala con una línea en la Terminal, sin contraseña. Abre apps, maneja la música, el volumen, las ventanas y tus archivos.</li><li><b>Tu Calendario y tu Mail.</b> En la Mac usa los de Apple, sin conectar nada: «¿qué tengo hoy?», «anotame dentista el jueves a las cuatro». Lo que anota aparece en el iPhone.</li><li><b>Recordatorios que suenan en el iPhone.</b> Lo que le pedís que te recuerde en la Mac va también a la app Recordatorios.</li><li><b>Mensajes por voz.</b> «Mandale a mamá que llego tarde»: la busca en tus Contactos, te muestra el mensaje y lo manda por iMessage.</li><li><b>Te aviso yo.</b> En Windows, Linux y Mac: si va a llover, si queda poca batería, si mañana arrancás temprano o si llevás mucho sin parar. Antes de una reunión te ofrece abrir el link. Y probá «armame el día».</li></ul></div></li>
+          <li data-app="celu"><div class="vn"><span class="ver">Móvil 5.5</span><span class="app celu">Celu</span><time datetime="2026-11-08">8 de noviembre</time></div><div class="min0"><h3>Hablarle a la tablet, fácil</h3><p>Como un walkie-talkie: tocás «Hablarle a la tablet», hablás, la tablet contesta en voz alta y en el celu ves lo que te dijo.</p><ul><li><b>Con la misma cuenta, ya está.</b> Si la tablet entró con tu misma cuenta de BufaLabs, se conectan solas. Sin códigos ni QR.</li><li><b>Un micrófono grande.</b> Tocás y hablás. Lo que contesta la tablet aparece escrito en el celu (y, si querés, también suena en el celu).</li><li><b>Sin modos raros.</b> Cerrás y el celu vuelve a ser el celu. Ya no hay que decir «volvé».</li><li><b>O de una.</b> «Decile a la tablet que ponga música» o «apagá las luces en la tablet», sin abrir nada.</li></ul></div></li>
           <li data-app="casa"><div class="vn"><span class="ver">Casa 6.3</span><span class="app casa">Tablet</span><time datetime="2026-11-08">8 de noviembre</time></div><div class="min0"><h3>Te contesta también en el celu</h3><p>Lo que la tablet te contesta en voz alta te llega escrito al celu que le habló. Y «Hablame desde el celu» ahora se explica en dos pasos.</p><ul><li><b>La respuesta, en el celu.</b> Si le hablaste desde otra pieza, igual ves lo que te dijo.</li><li><b>Más fácil de unir.</b> Entrás con tu cuenta de BufaLabs en la tablet y listo.</li></ul></div></li>
           <li data-app="tele"><div class="vn"><span class="ver">Tele 1.1</span><span class="app tele">Tele</span><time datetime="2026-11-07">7 de noviembre</time></div><div class="min0"><h3>La tele, de toda la familia</h3><p>FRIDAY Tele ahora saluda a la familia y trae el resumen del día, noticias, música y videos, temporizador, modo ambiente y más animaciones.</p><ul><li><b>Saluda a la familia.</b> «Buenas tardes, los Bufager»: la tele es de todos, no de una persona.</li><li><b>Buen día.</b> El clima de cinco días, lo que tienen hoy y los titulares, en grande y en voz alta. A la mañana aparece solo.</li><li><b>Música y videos.</b> «Poné Soda Stereo en la tele» desde el celu, o elegí en la tele: música tranqui, folklore, rock nacional, para los chicos.</li><li><b>Temporizador y noticias.</b> Un timer con un aro que se va vaciando, y las noticias en tarjetas.</li><li><b>Los recados de la familia.</b> Lo que le mandan a toda la familia aparece en la tele.</li><li><b>Más fluida.</b> Pantallas que entran suaves, confeti cuando aciertan en la trivia y un modo ambiente que cuida la pantalla.</li></ul></div></li>
           <li data-app="celu"><div class="vn"><span class="ver">Móvil 5.4</span><span class="app celu">Celu</span><time datetime="2026-11-07">7 de noviembre</time></div><div class="min0"><h3>La tele, desde el celu</h3><p>Pedile cosas a la tele desde el celu: «poné música en la tele», «mostrame las noticias en la tele», «timer de 10 minutos en la tele».</p><ul><li><b>Todo «en la tele».</b> Si terminás lo que decís con «en la tele», se lo pasa a FRIDAY Tele.</li><li><b>Atajos.</b> En Casa y familia → La tele: buen día, noticias, música, timer y ambiente, a un toque.</li><li><b>La familia en la tele.</b> Si armaste tu familia en FRIDAY, la tele ve los recados para todos.</li></ul></div></li>
@@ -1051,20 +1053,20 @@ section.hero{padding-block:0}
           <details><summary>Puse mi llave y me dice que no anda</summary><p>Copiala entera, sin espacios. Las de Gemini pueden empezar con <b>AQ.</b> o con <b>AIza</b>: las dos sirven. Si sigue igual, creá una nueva y pegala en <b>Ajustes</b> en la compu, o en <b>Más → Cerebro</b> en el celu.</p></details>
           <details><summary>No me escucha</summary><p>Cuando el navegador te pida permiso para el micrófono, tocá <b>Permitir</b>. Decí «Friday» antes de hablarle. En el celu, activá <b>manos libres</b> en <b>Más</b> y te escucha sin tocar nada.</p></details>
           <details><summary>Se equivocó en algo</summary><p>Decile «eso está mal» y contale qué. Se lo guarda y no lo repite. Si un tema es difícil, pedile «pensalo bien» y se toma su tiempo.</p></details>
-          <details><summary>El celu no se une a la compu</summary><p>La compu tiene que estar prendida y con FRIDAY abierta. En la compu, FRIDAY te muestra un código; en el celu lo escaneás o lo escribís, y listo.</p></details>
+          <details><summary>El celu no se une a la compu</summary><p>Entrá con la <b>misma cuenta de BufaLabs</b> (el mismo mail) en los dos: se conectan solos en unos segundos. Si todavía no tenés cuenta, la creás en la compu, en <b>Ajustes → Tu cuenta de BufaLabs</b>. El código de 8 letras sigue andando como plan B.</p></details>
         </div>
       </div>
     </div>
   </section>
-  <a class="sig" href="#instalar" data-ir="instalar"><span class="wrap"><small>Seguí con</small><b>Instalala</b><em>Gratis, en Windows, Linux y el celu.</em></span></a>
+  <a class="sig" href="#instalar" data-ir="instalar"><span class="wrap"><small>Seguí con</small><b>Instalala</b><em>Gratis, en Windows, Mac, Linux y el celu.</em></span></a>
 </div>
 
 <div class="vista" data-vista="instalar" id="v-instalar" hidden>
-  <div class="cab"><div class="wrap"><h1 class="cab-t">Instalala</h1><p class="cab-p">Gratis, en la compu con Windows o con Linux, y en el celu.</p></div></div>
+  <div class="cab"><div class="wrap"><h1 class="cab-t">Instalala</h1><p class="cab-p">Gratis, en la compu (Windows, Mac o Linux) y en el celu.</p></div></div>
   <section class="instalar" id="instalar">
     <div class="wrap">
       <h2 class="titulo oculto">Instalala</h2>
-      <p class="intro">Empezá por la compu, con Windows o con Linux: después el celu se une a ella con un código.</p>
+      <p class="intro">Empezá por la compu, con Windows, Mac o Linux. Después entrá con la misma cuenta de BufaLabs en el celu: se conectan solos.</p>
       <div class="donde">
         <article data-sis="windows"><span class="tuyat">Para esta compu</span><h3>La compu, con Windows</h3><p class="para">Windows 10 u 11</p>
           <ol><li><b>Descargá FRIDAY-Setup</b> y abrilo. Si Windows dice que «protegió su PC», tocá <b>Más información</b> y <b>Ejecutar de todas formas</b>.</li><li>Tocá <b>Instalar</b>. No pide administrador: crea los íconos y queda en <b>Aplicaciones instaladas</b>, como cualquier programa.</li><li>Seguí el tutorial y empezá a hablarle. <b>No hace falta ninguna llave</b>.</li><li>Listo: de ahí en adelante <b>se actualiza sola</b>.</li></ol>
@@ -1075,8 +1077,12 @@ section.hero{padding-block:0}
           <ol><li><b>Descargá FRIDAY</b> y descomprimí el archivo.</li><li>En una terminal, en esa carpeta: <b>sh instalar.sh</b>. No pide contraseña.</li><li>Queda en el <b>menú de aplicaciones</b> y arranca sola. Se abre en Chrome, Edge o Chromium.</li><li>Listo: de ahí en adelante <b>se actualiza sola</b>.</li></ol>
           <a class="btn" href="descargas/FRIDAY-linux.tar.gz" download>Descargar para Linux</a>
           <p class="peso" data-peso="descargas/FRIDAY-linux.tar.gz"></p></article>
+        <article data-sis="mac"><span class="tuyat">Para esta compu</span><h3>La compu, con Mac</h3><p class="para">macOS 11 o más nuevo, con chip de Apple o Intel</p>
+          <ol><li>Abrí la <b>Terminal</b>: ⌘ y espacio, escribí «Terminal» y Enter.</li><li>Pegá esta línea y apretá Enter: <code class="cmd">curl -fsSL https://bufalabs-arg.github.io/mac/instalar.sh | sh</code> No pide contraseña.</li><li>Queda en <b>Aplicaciones</b> y arranca sola. Se abre en Chrome, Edge o Brave.</li><li>La primera vez la Mac te pide permisos: decile que sí. De ahí en adelante <b>se actualiza sola</b>.</li></ol>
+          <a class="btn" href="/mac/">Ver cómo, paso a paso</a>
+          <p class="otra">Usa tu Calendario, Recordatorios, Notas y Mensajes: lo que anota aparece en el iPhone.</p></article>
         <article data-sis="celu"><span class="tuyat">Para este celu</span><h3>El celu</h3><p class="para">Android o iPhone</p>
-          <ol><li>Abrí <b>FRIDAY Móvil</b> en el navegador.</li><li>Agregala a la pantalla principal.</li><li>Unila a la compu con el código que te muestra FRIDAY en la compu.</li></ol>
+          <ol><li>Abrí <b>FRIDAY Móvil</b> en el navegador.</li><li>Agregala a la pantalla principal.</li><li>Entrá con tu misma <a href="/cuenta/">cuenta de BufaLabs</a>: se conecta sola con la compu.</li></ol>
           <a class="btn" href="https://pedropiratita134.github.io/FRIDAY/">Abrir FRIDAY Móvil</a></article>
         <article data-sis="tablet" class="beta"><span class="tuyat">Para esta tablet</span><h3>La tablet <span class="etq">Beta</span></h3><p class="para">Android, con Chrome. Está en pruebas.</p>
           <p class="req">Es una pantalla para manejar la casa: le escribís o le hablás desde el celu. Necesita:</p>
@@ -1106,7 +1112,7 @@ section.hero{padding-block:0}
 <footer>
   <div class="pie"><div class="wrap pgrid">
     <a class="logo" href="#inicio" data-ir="inicio" aria-label="BufaLabs, inicio"><img decoding="async" src="img/bufalabs-logo.svg" width="1623" height="512" loading="lazy" alt="BufaLabs: tecnología, inteligencia artificial"></a>
-    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="opina"><a href="https://g.page/r/CTKDgQ2Ny99xEBM/review" target="_blank" rel="noopener">Contanos qué te pareció en Google</a></p><p class="vers">FRIDAY v<span data-ver>104.05</span>, Móvil 5.5, Casa 6.3 (beta) y Tele 1.1. © 2026 BufaLabs</p><p class="redes"><a href="https://www.youtube.com/@Bufalabs-arg" rel="me noopener" target="_blank">YouTube</a><a href="https://www.instagram.com/bufalabs/" rel="me noopener" target="_blank">Instagram</a><a href="https://x.com/Bufalabs" rel="me noopener" target="_blank">X</a></p><p class="vers"><a href="/novedades/" style="color:inherit">Novedades</a> · <a href="/tutoriales/" style="color:inherit">Tutoriales</a> · <a href="/diferencias/" style="color:inherit">¿En qué se diferencia?</a> · <a href="/jugar/" style="color:inherit">Jugá con FRIDAY</a> · <a href="/en/" hreflang="en" lang="en" style="color:inherit">English</a></p></div>
+    <div class="min0"><p>Un laboratorio chico en Argentina. Hacemos a FRIDAY, una inteligencia artificial para la casa y para vos.</p><p class="opina"><a href="https://g.page/r/CTKDgQ2Ny99xEBM/review" target="_blank" rel="noopener">Contanos qué te pareció en Google</a></p><p class="vers">FRIDAY v<span data-ver>105</span>, Móvil 5.5, Casa 6.3 (beta) y Tele 1.1. © 2026 BufaLabs</p><p class="redes"><a href="https://www.youtube.com/@Bufalabs-arg" rel="me noopener" target="_blank">YouTube</a><a href="https://www.instagram.com/bufalabs/" rel="me noopener" target="_blank">Instagram</a><a href="https://x.com/Bufalabs" rel="me noopener" target="_blank">X</a></p><p class="vers"><a href="/novedades/" style="color:inherit">Novedades</a> · <a href="/tutoriales/" style="color:inherit">Tutoriales</a> · <a href="/diferencias/" style="color:inherit">¿En qué se diferencia?</a> · <a href="/jugar/" style="color:inherit">Jugá con FRIDAY</a> · <a href="/en/" hreflang="en" lang="en" style="color:inherit">English</a></p></div>
   </div></div>
 </footer>
 
@@ -1266,7 +1272,7 @@ document.querySelectorAll('.filtros [data-f]').forEach(b=>b.addEventListener('cl
 // ---- Instalala: la tarjeta de tu aparato, resaltada
 (function(){
   const ua=navigator.userAgent||'', touch=navigator.maxTouchPoints>1;
-  const sis=/Windows/.test(ua)?'windows':/Android/.test(ua)?(/Mobile/.test(ua)?'celu':'tablet'):/iPhone|iPod/.test(ua)?'celu':(/iPad/.test(ua)||(/Macintosh/.test(ua)&&touch))?'tablet':/Linux|X11|CrOS/.test(ua)?'linux':'';
+  const sis=/Windows/.test(ua)?'windows':/Android/.test(ua)?(/Mobile/.test(ua)?'celu':'tablet'):/iPhone|iPod/.test(ua)?'celu':(/iPad/.test(ua)||(/Macintosh/.test(ua)&&touch))?'tablet':/Macintosh|Mac OS X/.test(ua)?'mac':/Linux|X11|CrOS/.test(ua)?'linux':'';
   const a=sis && document.querySelector(`.donde [data-sis="${sis}"]`); if(a) a.classList.add('tuya');
 })();
 // ---- Instalala: cuánto pesa cada descarga

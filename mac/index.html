@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FRIDAY en la Mac · BufaLabs</title>
+<meta name="description" content="Cómo instalar FRIDAY en la Mac con una línea en la Terminal, gratis y sin contraseña. Usa tu Calendario, Recordatorios, Notas, Mail y Mensajes: lo que anota aparece en el iPhone.">
+<link rel="canonical" href="https://bufalabs-arg.github.io/mac/">
+<meta property="og:title" content="FRIDAY en la Mac · BufaLabs">
+<meta property="og:description" content="Cómo instalar FRIDAY en la Mac con una línea en la Terminal, gratis y sin contraseña. Usa tu Calendario, Recordatorios, Notas, Mail y Mensajes: lo que anota aparece en el iPhone.">
+<meta property="og:url" content="https://bufalabs-arg.github.io/mac/">
+<meta property="og:image" content="https://bufalabs-arg.github.io/img/friday-mac.png">
+<meta property="og:site_name" content="BufaLabs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2F6BE3">
+<link rel="icon" type="image/svg+xml" href="/img/bufalabs-icono.svg">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Cómo instalar FRIDAY en la Mac", "inLanguage": "es-AR", "description": "Cómo instalar FRIDAY en la Mac con una línea en la Terminal, gratis y sin contraseña. Usa tu Calendario, Recordatorios, Notas, Mail y Mensajes: lo que anota aparece en el iPhone.", "tool": [{"@type": "HowToTool", "name": "Terminal de macOS"}], "step": [{"@type": "HowToStep", "name": "Abrí la Terminal", "text": "Apretá ⌘ y espacio, escribí Terminal y apretá Enter."}, {"@type": "HowToStep", "name": "Pegá la línea de instalación", "text": "curl -fsSL https://bufalabs-arg.github.io/mac/instalar.sh | sh"}, {"@type": "HowToStep", "name": "Dale los permisos", "text": "La primera vez la Mac pregunta si FRIDAY puede usar el micrófono, el Calendario y Recordatorios: tocá Permitir."}, {"@type": "HowToStep", "name": "Listo", "text": "Entrá con tu cuenta de BufaLabs o pegá tu llave gratis de Groq. Después se actualiza sola."}]}</script>
+<style>:root{--azul:#2F6BE3;--azul-3:#1E4FC0;--tinta:#0E1B3D;--tinta-2:#4A5A7F;--tinta-3:#8A97B4;--papel:#F5F8FF;--papel-2:#E7EEFF;--linea:#D3DDF5;--claro:#E4EDFF;--sol:#FFC93C;--sol-tinta:#2A1C00;
+--disp:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;--text:"Atkinson Hyperlegible",system-ui,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box}html{background:var(--papel)}body{margin:0;background:var(--papel);color:var(--tinta);font:400 19px/1.6 var(--text);-webkit-font-smoothing:antialiased}
+a{color:var(--azul-3);text-underline-offset:3px}
+.barra{background:var(--azul);color:#fff}.barra .in{max-width:1000px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none}.marca img.ico{width:42px;height:42px;border-radius:12px}.marca img.pal{height:23px;width:auto}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--sol);color:var(--sol-tinta);font:700 17px var(--text);text-decoration:none}
+.cab{background:var(--azul);color:#fff;padding:36px 0 52px}.cab .in,main{max-width:1000px;margin:0 auto;padding-inline:20px}
+.cab h1{margin:0;font:800 clamp(40px,7vw,76px)/.95 var(--disp);font-variation-settings:"opsz" 96,"wdth" 92;letter-spacing:-.02em;text-wrap:balance}
+.cab p{margin:16px 0 0;max-width:46ch;color:var(--claro);font-size:20px}.cab .dato{font-size:16px;color:var(--claro);margin:0 0 14px}
+main{padding-block:44px 64px}
+.items{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.items li{background:#fff;border:1px solid var(--linea);border-radius:22px;padding:22px 24px}
+.items h2,.items h3{margin:0 0 6px;font:800 24px/1.2 var(--disp)}.items p{margin:0;color:var(--tinta-2)}
+.lista{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.lista a{display:block;background:#fff;border:1px solid var(--linea);border-radius:20px;padding:18px 22px;text-decoration:none;color:var(--tinta)}
+.lista b{display:block;font:800 22px/1.2 var(--disp)}.lista small{color:var(--tinta-3);font-size:15px}.lista span{display:block;color:var(--tinta-2);margin-top:4px}
+.volver{margin-top:32px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+footer{background:var(--azul-3);color:var(--claro);font-size:15px}footer .in{max-width:1000px;margin:0 auto;padding:22px 20px}
+@media (max-width:560px){.marca img.pal{display:none}}</style>
+<style>
+.foto{display:block;width:100%;height:auto;border-radius:22px;border:1px solid var(--linea);box-shadow:0 18px 50px rgba(14,27,61,.18);margin:0 0 22px}
+.descarga{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;background:#fff;border:1px solid var(--linea);border-radius:24px;padding:20px 22px}
+.descarga p{margin:0;color:var(--tinta-2);flex:1 1 280px}
+.req{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0;padding:0;list-style:none}.req li{background:var(--papel-2);border-radius:999px;padding:8px 14px;font-size:16px;color:var(--tinta)}
+h2.sec{margin:48px 0 14px;font:800 clamp(28px,4.4vw,40px)/1.05 var(--disp);font-variation-settings:"opsz" 96,"wdth" 92;letter-spacing:-.01em}
+.pasos{counter-reset:p;display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.pasos li{counter-increment:p;display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;align-items:start;background:#fff;border:1px solid var(--linea);border-radius:22px;padding:18px 20px}
+.pasos li::before{content:counter(p);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--sol);color:var(--sol-tinta);font:800 24px var(--disp)}
+.pasos b.t{display:block;font:800 21px/1.25 var(--disp)}.pasos p{margin:4px 0 0;color:var(--tinta-2)}
+.ojo{background:#FFF6DA;border:1px solid #F2D27A;border-radius:22px;padding:18px 22px}.ojo p{margin:6px 0 0;color:#5A4300}
+.control{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.control div{background:#fff;border:1px solid var(--linea);border-radius:20px;padding:16px 18px}.control b{display:block;font:800 19px/1.2 var(--disp)}.control span{color:var(--tinta-2)}
+details{background:#fff;border:1px solid var(--linea);border-radius:20px;padding:4px 22px;margin:0 0 10px}
+summary{cursor:pointer;font:800 20px/1.3 var(--disp);padding:14px 0}details p{margin:0 0 16px;color:var(--tinta-2)}
+summary:focus-visible,a:focus-visible{outline:3px solid var(--sol);outline-offset:2px}
+</style><style>
+.cab .fila{display:flex;align-items:center;gap:22px;flex-wrap:wrap}.cab .appico{width:112px;height:112px;flex:none;filter:drop-shadow(0 14px 26px rgba(0,0,0,.35))}
+.term{background:#0E1B3D;color:#E7EEFF;border-radius:24px;padding:20px 22px;box-shadow:0 18px 50px rgba(14,27,61,.22)}
+.term .et{display:block;color:#9FB2DD;font-size:15px;margin:0 0 10px}
+.term .linea{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center}
+.term code{flex:1 1 360px;font:600 17px/1.5 ui-monospace,Menlo,Consolas,monospace;overflow-wrap:anywhere;user-select:all}
+.term code::before{content:"$ ";color:#5BE39B}
+.term button{min-height:48px;padding:0 22px;border:0;border-radius:999px;background:var(--sol);color:var(--sol-tinta);font:700 17px var(--text);cursor:pointer}
+.term button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.term .ok{display:block;min-height:1.4em;margin:10px 0 0;color:#5BE39B;font-size:15px}
+code.chico{font:600 15px ui-monospace,Menlo,Consolas,monospace;background:var(--papel-2);padding:2px 6px;border-radius:6px;overflow-wrap:anywhere}
+</style></head>
+<body>
+<header class="barra"><div class="in"><a class="marca" href="/" aria-label="BufaLabs, inicio"><img class="ico" src="/img/bufalabs-icono.svg" alt=""><img class="pal" src="/img/bufalabs-palabra.svg" alt="BufaLabs"></a><a class="btn" href="/instalar/">Instalala gratis</a></div></header>
+<section class="cab"><div class="in"><p class="dato">Nuevo · FRIDAY 105</p><div class="fila"><img class="appico" src="/img/friday-mac-icono.png" width="112" height="112" alt=""><h1>FRIDAY en la Mac</h1></div><p>Tu asistente en la Mac: abre apps, maneja la música y las ventanas, y usa tu Calendario, Recordatorios, Notas, Mail y Mensajes. Lo que anota te aparece en el iPhone.</p></div></section>
+<main>
+<div class="term"><span class="et" id="etTerm">Pegá esto en la Terminal y apretá Enter</span><div class="linea"><code id="cmd">curl -fsSL https://bufalabs-arg.github.io/mac/instalar.sh | sh</code><button type="button" id="copiar">Copiar</button></div><span class="ok" id="okCopia" role="status" aria-live="polite"></span></div>
+<ul class="req"><li>macOS 11 (Big Sur) o más nuevo</li><li>Chip de Apple (M1, M2, M3, M4…) o Intel</li><li>Chrome, Edge o Brave (recomendado)</li><li>Gratis, sin contraseña</li></ul>
+
+<h2 class="sec">Cómo se instala</h2>
+<ol class="pasos"><li><div><b class="t">Abrí la Terminal</b><p>Apretá <b>⌘ y espacio</b>, escribí <b>Terminal</b> y apretá <b>Enter</b>. Es una ventana para escribir comandos: no hace falta saber usarla.</p></div></li>
+<li><div><b class="t">Pegá la línea y apretá Enter</b><p>La de arriba (tocá <b>Copiar</b> y pegala con <b>⌘V</b>). Baja FRIDAY, la deja en <b>Aplicaciones</b> de tu carpeta y la abre. No pide contraseña y arranca sola cuando prendés la Mac.</p></div></li>
+<li><div><b class="t">Decile que sí a los permisos</b><p>La primera vez, la Mac pregunta si FRIDAY puede usar el micrófono, el Calendario, Recordatorios y otras apps: tocá <b>Permitir</b>. Para que maneje ventanas y el teclado: <b>Ajustes del Sistema → Privacidad y seguridad → Accesibilidad</b> y activá FRIDAY.</p></div></li>
+<li><div><b class="t">Listo</b><p>Entrá con tu <a href="/cuenta/">cuenta de BufaLabs</a> (o pegá tu llave gratis de Groq) y decí «Friday». De ahí en adelante <b>se actualiza sola</b>.</p></div></li></ol>
+
+<div class="ojo" style="margin-top:18px"><b>¿Por qué por la Terminal?</b><p>Para que sea gratis. La Mac frena las apps que se bajan del navegador si no pagaron la firma de Apple; instalada desde la Terminal, abre sin vueltas. El instalador es corto y lo podés leer antes: <a href="/mac/instalar.sh">instalar.sh</a>. Si preferís bajarla a mano: <a href="/descargas/FRIDAY-mac.zip" download>FRIDAY-mac.zip</a>, descomprimila, pasala a Aplicaciones y abrila; si la Mac dice que no la puede verificar, andá a <b>Ajustes del Sistema → Privacidad y seguridad</b> y tocá <b>Abrir igual</b>.</p></div>
+
+<h2 class="sec">Qué hace en la Mac</h2>
+<div class="control"><div><b>📅 Tu agenda</b><span>«¿Qué tengo hoy?», «anotame dentista el jueves a las cuatro». Usa el Calendario de la Mac (el mismo del iPhone) y te avisa antes de cada evento. Si la reunión tiene link, te ofrece abrirla.</span></div>
+<div><b>⏰ Recordatorios</b><span>Lo que le pedís que te recuerde va también a la app Recordatorios: te suena en el iPhone aunque la Mac esté cerrada.</span></div>
+<div><b>💬 Mensajes</b><span>«Mandale a mamá que llego tarde». La busca en tus Contactos, te muestra el mensaje y lo manda por iMessage. Si no querés, lo frenás.</span></div>
+<div><b>📝 Notas y mail</b><span>«Anotá la lista del súper» va a Notas. «¿Tengo mails?» y «leeme el de Mercado Libre», de la app Mail.</span></div>
+<div><b>🎵 Música</b><span>Spotify o Música: pausa, siguiente, qué suena. «Poné Soda Stereo». Mientras te habla, baja la música.</span></div>
+<div><b>🪟 Ventanas</b><span>«Chrome a la izquierda y Spotify a la derecha», «maximizá Word», «mostrame el escritorio».</span></div>
+<div><b>📁 Archivos</b><span>«El último PDF que bajé», «ordená Descargas», «leeme este documento».</span></div>
+<div><b>🔔 Te aviso yo</b><span>Si va a llover, si queda poca batería, si mañana arrancás temprano o si llevás mucho sin parar.</span></div></div>
+
+<h2 class="sec">Preguntas</h2>
+<details><summary>¿Es gratis?</summary><p>Sí, como en Windows y Linux. El cerebro es una llave gratis de Groq, o entrás con tu cuenta de BufaLabs y FRIDAY trae tus llaves.</p></details>
+<details><summary>¿Por qué se abre en Chrome?</summary><p>FRIDAY usa el micrófono y la voz del navegador, y en Chrome, Edge o Brave andan mejor. Se abre en una ventana propia, sin barra de direcciones, como una app. Si no tenés ninguno, se abre en Safari.</p></details>
+<details><summary>¿Qué ve FRIDAY de mi Mac?</summary><p>Solo lo que le pedís, y solo con los permisos que le diste. Tus mails y tu agenda se leen en la Mac y no se guardan en BufaLabs. Los permisos se sacan cuando quieras en <b>Ajustes del Sistema → Privacidad y seguridad</b>.</p></details>
+<details><summary>Algo no anda</summary><p>Decile «Friday, hacé un chequeo»: se prueba sola y te dice qué falla (casi siempre es un permiso). El registro está en <code class="chico">~/Library/Application Support/FRIDAY/friday-log.txt</code>.</p></details>
+<details><summary>¿Cómo la saco?</summary><p>Pegá esto en la Terminal: <code class="chico">curl -fsSL https://bufalabs-arg.github.io/mac/instalar.sh | sh -s -- --desinstalar</code>. Tus datos quedan en tu Mac por si volvés.</p></details>
+
+<div class="volver"><a class="btn" href="#cmd">Instalala</a><a href="/novedades/compu-105/">Qué trae la 105</a><a href="/">Volver al inicio</a></div>
+</main>
+<footer><div class="in">BufaLabs, un laboratorio independiente de Córdoba, Argentina. © 2026 · <a href="https://www.youtube.com/@Bufalabs-arg" rel="me noopener" target="_blank" style="color:inherit">YouTube</a> · <a href="https://www.instagram.com/bufalabs/" rel="me noopener" target="_blank" style="color:inherit">Instagram</a> · <a href="https://x.com/Bufalabs" rel="me noopener" target="_blank" style="color:inherit">X</a> · <a href="https://g.page/r/CTKDgQ2Ny99xEBM/review" target="_blank" rel="noopener" style="color:inherit">Contanos qué te pareció en Google</a></div></footer>
+<script>
+document.getElementById('copiar').onclick=async()=>{{ const t=document.getElementById('cmd').textContent, o=document.getElementById('okCopia');
+  try{{ await navigator.clipboard.writeText(t); o.textContent='Copiado. Ahora pegalo en la Terminal con ⌘V y apretá Enter.'; }}
+  catch(e){{ const r=document.createRange(); r.selectNodeContents(document.getElementById('cmd')); const s=getSelection(); s.removeAllRanges(); s.addRange(r); o.textContent='Quedó marcado: copialo con ⌘C.'; }} }};
+if(!/Macintosh|Mac OS X/.test(navigator.userAgent)) document.getElementById('etTerm').textContent='En la Mac: pegá esto en la Terminal y apretá Enter';
+</script>
+</body>
+</html>
