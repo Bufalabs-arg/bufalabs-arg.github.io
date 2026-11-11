@@ -2,6 +2,31 @@
  {
   "fecha": "2026-11-10",
   "app": "compu",
+  "version": "106.01",
+  "titulo": "Arreglos del metiche y del cerebro",
+  "resumen": "Ya no muestra su borrador en inglés, y el modo metiche te entiende de cualquier forma y mira apenas lo prendés.",
+  "items": [
+   [
+    "Ya no piensa en voz alta",
+    "A veces mostraba en pantalla su borrador en inglés («the user is…») y se quedaba ahí. Ahora ese borrador nunca se ve ni se dice: si un cerebro hace eso, pasa solo al siguiente."
+   ],
+   [
+    "El metiche te entiende",
+    "«Activá el modo muy metiche», «quiero que seas metiche», «poné el metiche a full»: cualquier forma de pedirlo. Y apenas lo prendés, mira lo que estás escribiendo."
+   ],
+   [
+    "No se le pasan las palabras nuevas",
+    "Antes, si escribías poquito entre mirada y mirada, a veces no lo veía. Ahora sí."
+   ],
+   [
+    "«¿Por qué no me dijiste nada?»",
+    "Si esperabas que te marque algo y no lo hizo, preguntale: te cuenta qué pasó y mira de nuevo al toque."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-10",
+  "app": "compu",
   "version": "106",
   "titulo": "FRIDAY metiche",
   "resumen": "Decile «ponete metiche»: mientras escribís mira tu pantalla y si algo está mal te lo señala con su puntero, y si querés lo corrige ella.",
