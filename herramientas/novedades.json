@@ -1,5 +1,55 @@
 [
  {
+  "fecha": "2026-11-11",
+  "app": "celu",
+  "version": "Móvil 5.7",
+  "titulo": "YouTube Music, YouTube y GIFs",
+  "resumen": "Le pedís un tema y te lo abre en YouTube Music o YouTube, sin configurar nada. Y le podés mandar GIFs: los mira y te contesta.",
+  "items": [
+   [
+    "YouTube Music y YouTube, conectados",
+    "«Poné De música ligera en YouTube Music» o «poné el video de Bizarrap en YouTube»: lo busca y te lo abre listo para sonar. Sin cuentas ni configuración."
+   ],
+   [
+    "O que suene acá",
+    "En Música elegís dónde: YouTube Music, YouTube, Spotify o «Acá en FRIDAY», con un reproductor chiquito que manejás con la voz."
+   ],
+   [
+    "Mandale GIFs",
+    "Tocá GIF al lado de donde escribís: buscás uno, lo elegís de tu teclado o de la galería. Ella lo mira, te contesta y a veces te devuelve otro."
+   ],
+   [
+    "A la tablet también",
+    "Si le estás hablando a la tablet, el GIF aparece grande en la pantalla de la casa."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-11",
+  "app": "casa",
+  "version": "Casa 6.5",
+  "titulo": "YouTube Music y GIFs en la tablet",
+  "resumen": "La música anda sin configurar nada, con YouTube Music suena el audio oficial y «el video de…» lo muestra grande.",
+  "items": [
+   [
+    "Música sin configurar nada",
+    "Ya no hace falta el servicio de la casa ni la compu prendida para poner música con YouTube."
+   ],
+   [
+    "YouTube Music",
+    "Elegilo en Ajustes → Música, o decí «en YouTube Music»: busca el audio oficial antes que el en vivo o un cover."
+   ],
+   [
+    "«Poné el video de…»",
+    "Lo muestra grande en la pantalla."
+   ],
+   [
+    "GIFs",
+    "«Mostrame un GIF de gatos», y los que le mandás desde el celu aparecen en grande."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-10",
   "app": "compu",
   "version": "106.01",
