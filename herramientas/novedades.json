@@ -1,6 +1,61 @@
 [
  {
   "fecha": "2026-11-11",
+  "app": "compu",
+  "version": "106.02",
+  "titulo": "Hablale a BufaLabs",
+  "resumen": "Decile «decile a BufaLabs que…» y le manda tu idea, un problema o un saludo a los que la hacemos. Sin tu nombre.",
+  "items": [
+   [
+    "«Decile a BufaLabs que…»",
+    "Ideas de cosas que FRIDAY podría hacer, problemas o un saludo: se lo manda a BufaLabs al toque."
+   ],
+   [
+    "Ella te lo ofrece",
+    "Si le pedís algo que todavía no sabe hacer, te pregunta si querés que se lo mande como idea."
+   ],
+   [
+    "Sin tu nombre",
+    "Va solo lo que le pediste mandar, con la app y la versión. Nada de tus charlas ni tus datos."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-11",
+  "app": "celu",
+  "version": "Móvil 5.8",
+  "titulo": "Hablale a BufaLabs",
+  "resumen": "«Decile a BufaLabs que estaría bueno que…»: tu idea, un problema o un saludo, directo a los que la hacemos.",
+  "items": [
+   [
+    "«Decile a BufaLabs que…»",
+    "Se lo manda al toque, sin pasar por el cerebro."
+   ],
+   [
+    "Ella te lo ofrece",
+    "Si le pedís algo que no sabe hacer, te pregunta si se lo manda a BufaLabs como idea."
+   ],
+   [
+    "Sin tu nombre",
+    "Va solo lo que le pediste mandar."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-11",
+  "app": "casa",
+  "version": "Casa 6.6",
+  "titulo": "La tablet también le habla a BufaLabs",
+  "resumen": "«Decile a BufaLabs que…» también anda en la tablet.",
+  "items": [
+   [
+    "«Decile a BufaLabs que…»",
+    "Ideas, problemas o un saludo para los que la hacemos, sin tu nombre."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-11",
   "app": "celu",
   "version": "Móvil 5.7",
   "titulo": "YouTube Music, YouTube y GIFs",

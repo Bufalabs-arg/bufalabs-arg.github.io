@@ -84,3 +84,6 @@ https://bufalabs-arg.github.io/novedades/casa-6-4/
 https://bufalabs-arg.github.io/novedades/compu-106-01/
 https://bufalabs-arg.github.io/novedades/movil-5-7/
 https://bufalabs-arg.github.io/novedades/casa-6-5/
+https://bufalabs-arg.github.io/novedades/compu-106-02/
+https://bufalabs-arg.github.io/novedades/movil-5-8/
+https://bufalabs-arg.github.io/novedades/casa-6-6/
