@@ -2,6 +2,81 @@
  {
   "fecha": "2026-11-10",
   "app": "compu",
+  "version": "106",
+  "titulo": "FRIDAY metiche",
+  "resumen": "Decile «ponete metiche»: mientras escribís mira tu pantalla y si algo está mal te lo señala con su puntero, y si querés lo corrige ella.",
+  "items": [
+   [
+    "Te marca los errores",
+    "En Word, un mail, Docs o Excel: faltas, datos o cuentas mal, un mail que suena feo. Te lo señala con su puntero en la pantalla."
+   ],
+   [
+    "«¿Lo corrijo?»",
+    "Le decís que sí y lo arregla ella. «Revisame esto» mira al toque, y si querés, las faltas las corrige sola."
+   ],
+   [
+    "Oído metiche",
+    "Si en la charla alguien dice un dato que está mal, se mete: «Perdón que me meta: es Canberra». En una reunión te lo muestra en vez de decirlo."
+   ],
+   [
+    "Sabe cuándo no mirar",
+    "Nunca mira el banco, contraseñas ni pestañas privadas. Lo que escucha se borra al minuto y medio."
+   ],
+   [
+    "Y aprende de vos",
+    "«Deshacé eso», «no, Spotify» (y la próxima ya sabe), lo de siempre lo hace sola si querés, y «¿qué hiciste hoy?»."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-10",
+  "app": "celu",
+  "version": "Móvil 5.6",
+  "titulo": "Más asistente, más persona",
+  "resumen": "Si se le traba la cabeza no se olvida, «deshacé eso», y te avisa sola si va a llover o te queda poca batería.",
+  "items": [
+   [
+    "Si se le traba la cabeza, no se olvida",
+    "Si se cae el cerebro o internet, se anota lo que le pediste y cuando vuelve lo hace sola. Lo delicado te lo pregunta antes."
+   ],
+   [
+    "«Deshacé eso»",
+    "Borra el recordatorio o el temporizador que acaba de poner."
+   ],
+   [
+    "Te aviso yo",
+    "Si va a llover en las próximas horas, si al celu le queda poca batería o si mañana arrancás temprano."
+   ],
+   [
+    "Lo simple, al instante",
+    "La hora, el día, un temporizador, abrir Spotify o YouTube: sin pensar. Y «¿qué hiciste hoy?»."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-10",
+  "app": "casa",
+  "version": "Casa 6.4",
+  "titulo": "La tablet tampoco se olvida",
+  "resumen": "Si se le traba la cabeza, lo anota y lo hace cuando vuelve. Y «deshacé eso» saca el timer, la nota o lo que agregó a la lista.",
+  "items": [
+   [
+    "No se olvida",
+    "Si se cae el cerebro, se anota lo que le pediste y cuando vuelve lo hace."
+   ],
+   [
+    "«Deshacé eso»",
+    "Saca el timer, el recordatorio, la nota o lo último que agregó a la lista."
+   ],
+   [
+    "Te aviso yo",
+    "Si va a llover en las próximas horas, lo dice en voz alta."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-10",
+  "app": "compu",
   "version": "105.01",
   "titulo": "Más asistente, más persona",
   "resumen": "Lo simple lo hace al instante y, si se le traba la cabeza, no se olvida de lo que le pediste: cuando vuelve, lo hace.",
