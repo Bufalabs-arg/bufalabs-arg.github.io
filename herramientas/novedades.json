@@ -1,5 +1,80 @@
 [
  {
+  "fecha": "2026-11-12",
+  "app": "compu",
+  "version": "106.05",
+  "titulo": "Se acuerda y anota sola",
+  "resumen": "Sabe qué es «eso»: copiame eso, anotá lo que dijiste, mandale eso a BufaLabs. Y notas y recordatorios hablando.",
+  "items": [
+   [
+    "Se acuerda de lo que dijeron",
+    "«Copiame eso», «anotá lo que dijiste», «mandale tu idea a BufaLabs», «recordame eso mañana a las 8»."
+   ],
+   [
+    "Notas y recordatorios hablando",
+    "«Anotá que…», «recordame mañana a las 9 llamar a Juan». Si no le decís cuándo, te pregunta."
+   ],
+   [
+    "«Tomá nota»",
+    "Le dictás y cuando terminás decís «listo»."
+   ],
+   [
+    "«¿Qué dijiste?»",
+    "Te repite lo último que te dijo."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-12",
+  "app": "celu",
+  "version": "Móvil 5.9",
+  "titulo": "Dictale notas y recordatorios",
+  "resumen": "Hablás y queda guardado: notas, recordatorios y dictados largos, que aparecen al toque en la tablet. Y se acuerda de qué es «eso».",
+  "items": [
+   [
+    "Notas y recordatorios hablando",
+    "«Anotá que el wifi es…», «recordame mañana a las 9 llamar a Juan». Si no le decís cuándo, te pregunta."
+   ],
+   [
+    "«Tomá nota»",
+    "Le dictás todo lo que quieras sin tocar la pantalla, y cuando terminás decís «listo»."
+   ],
+   [
+    "Aparece en la tablet",
+    "Lo que le dictás al celu aparece al toque en la tablet de la casa, y ella te avisa."
+   ],
+   [
+    "Se acuerda de lo que dijeron",
+    "«Copiame eso», «anotá lo que dijiste», «mandale tu idea a BufaLabs»."
+   ],
+   [
+    "Acceso directo «Dictar una nota»",
+    "En Android, mantené apretado el ícono de FRIDAY y elegí «Dictar una nota»."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-12",
+  "app": "casa",
+  "version": "Casa 6.7",
+  "titulo": "Lo que dictás en el celu, al toque en la tablet",
+  "resumen": "Las notas y recordatorios que le dictás al celu aparecen al instante en la tablet, con aviso. Y entiende «anotá que…» y «recordame…».",
+  "items": [
+   [
+    "Al toque desde el celu",
+    "Lo que le dictás al celu aparece en la tablet y ella te lo dice."
+   ],
+   [
+    "Notas y recordatorios hablando",
+    "«Anotá que…» y «recordame mañana a las 8…» también acá."
+   ],
+   [
+    "Se acuerda de lo que dijeron",
+    "«Anotá eso», «¿qué dijiste?» y «mandale eso a BufaLabs»."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-11",
   "app": "compu",
   "version": "106.02",
