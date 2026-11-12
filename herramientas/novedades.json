@@ -17,6 +17,10 @@
    [
     "Sin tu nombre",
     "Va solo lo que le pediste mandar, con la app y la versión. Nada de tus charlas ni tus datos."
+   ],
+   [
+    "Solo lo que vos digas",
+    "Si le decís «decile una recomendación a BufaLabs» sin decir cuál, te pregunta qué querés que les diga y lo manda tal cual. Nunca inventa el mensaje."
    ]
   ]
  },
@@ -38,6 +42,10 @@
    [
     "Sin tu nombre",
     "Va solo lo que le pediste mandar."
+   ],
+   [
+    "Solo lo que vos digas",
+    "Si le decís «decile una recomendación a BufaLabs» sin decir cuál, te pregunta qué querés que les diga y lo manda tal cual. Nunca inventa el mensaje."
    ]
   ]
  },
