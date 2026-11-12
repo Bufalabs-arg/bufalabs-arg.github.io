@@ -1,0 +1,39 @@
+# FRIDAY para Linux como Flatpak.
+# Empaqueta el programa ya publicado (descargas/FRIDAY-linux.tar.gz, el mismo que baja instalar.sh).
+#   flatpak-builder --user --install --force-clean build flatpak/io.github.bufalabs_arg.FRIDAY.yml
+app-id: io.github.bufalabs_arg.FRIDAY
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+command: friday
+finish-args:
+  # la página de FRIDAY se abre en tu navegador y habla con el programa por 127.0.0.1:8765
+  - --share=network
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+  # FRIDAY maneja la compu (abrir programas, ventanas, teclado, volumen): eso se hace afuera de la caja
+  - --talk-name=org.freedesktop.Flatpak
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.mpris.MediaPlayer2.*
+  # tus archivos (buscar, leer, ordenar Descargas) y los datos de FRIDAY (~/.local/share/FRIDAY)
+  - --filesystem=home
+  - --filesystem=xdg-config/autostart:create
+modules:
+  - name: friday
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 friday /app/bin/friday
+      - install -Dm644 friday.html /app/share/friday/friday.html
+      - install -Dm644 friday.png /app/share/friday/friday.png
+      - install -Dm644 friday.png /app/share/icons/hicolor/256x256/apps/io.github.bufalabs_arg.FRIDAY.png
+      - install -Dm644 io.github.bufalabs_arg.FRIDAY.desktop /app/share/applications/io.github.bufalabs_arg.FRIDAY.desktop
+      - install -Dm644 io.github.bufalabs_arg.FRIDAY.metainfo.xml /app/share/metainfo/io.github.bufalabs_arg.FRIDAY.metainfo.xml
+    sources:
+      - type: archive
+        path: ../descargas/FRIDAY-linux.tar.gz
+      - type: file
+        path: io.github.bufalabs_arg.FRIDAY.desktop
+      - type: file
+        path: io.github.bufalabs_arg.FRIDAY.metainfo.xml

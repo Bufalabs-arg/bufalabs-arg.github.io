@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.bufalabs_arg.FRIDAY</id>
+  <name>FRIDAY</name>
+  <summary>Asistente con voz que hace cosas de verdad en tu compu</summary>
+  <developer id="io.github.bufalabs_arg">
+    <name>BufaLabs</name>
+  </developer>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <description>
+    <p>FRIDAY es la asistente de BufaLabs, hecha en Argentina. Le hablás y te contesta con voz, y además hace cosas en tu compu:</p>
+    <ul>
+      <li>Abre y cierra programas, acomoda ventanas, escribe por vos y busca tus archivos.</li>
+      <li>Pone música en Spotify o YouTube y maneja el volumen.</li>
+      <li>Lee tu agenda de Google y tu Gmail, y te anota eventos.</li>
+      <li>Maneja las luces y enchufes de Smart Life y la tele LG.</li>
+      <li>Te manda avisos y recordatorios al celu, y se comparte con FRIDAY Móvil.</li>
+    </ul>
+    <p>Es gratis. Tus datos quedan en tu compu.</p>
+  </description>
+  <launchable type="desktop-id">io.github.bufalabs_arg.FRIDAY.desktop</launchable>
+  <url type="homepage">https://bufalabs-arg.github.io/</url>
+  <url type="help">https://bufalabs-arg.github.io/ayuda/</url>
+  <content_rating type="oars-1.1"/>
+  <categories>
+    <category>Utility</category>
+  </categories>
+  <requires>
+    <internet>always</internet>
+  </requires>
+  <releases>
+    <release version="4.0" date="2026-11-12">
+      <description>
+        <p>FRIDAY para Linux nueva: Spotify, Google, la casa, la tele LG, WhatsApp, avisos al celu y el paquete Flatpak.</p>
+      </description>
+    </release>
+  </releases>
+</component>

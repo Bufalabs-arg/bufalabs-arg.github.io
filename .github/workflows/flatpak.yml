@@ -1,0 +1,46 @@
+name: Paquete Flatpak de FRIDAY
+# Cuando se publica una FRIDAY para Linux nueva (descargas/FRIDAY-linux.tar.gz), arma el paquete Flatpak
+# con ese mismo programa y lo deja en descargas/FRIDAY.flatpak.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'descargas/FRIDAY-linux.tar.gz'
+      - 'flatpak/**'
+      - '.github/workflows/flatpak.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: flatpak
+  cancel-in-progress: true
+jobs:
+  flatpak:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    container:
+      image: ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-25.08
+      options: --privileged
+    steps:
+      - uses: actions/checkout@v4
+      - uses: flathub-infra/flatpak-github-actions/flatpak-builder@master
+        with:
+          bundle: FRIDAY.flatpak
+          manifest-path: flatpak/io.github.bufalabs_arg.FRIDAY.yml
+          cache-key: friday-${{ hashFiles('descargas/FRIDAY-linux.tar.gz', 'flatpak/**') }}
+          upload-artifact: false
+      - name: Revisar el paquete
+        run: |
+          ls -la FRIDAY.flatpak
+          test "$(stat -c %s FRIDAY.flatpak)" -gt 1000000
+      - name: Dejarlo en descargas
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          cp FRIDAY.flatpak descargas/FRIDAY.flatpak
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add descargas/FRIDAY.flatpak
+          git diff --cached --quiet && exit 0
+          git commit -m "Paquete Flatpak de FRIDAY para Linux"
+          git pull --rebase origin main
+          git push origin HEAD:main

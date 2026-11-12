@@ -2,6 +2,31 @@
  {
   "fecha": "2026-11-12",
   "app": "compu",
+  "version": "106.06",
+  "titulo": "FRIDAY para Linux, nueva",
+  "resumen": "En Linux hace lo mismo que en Windows: Spotify, tu agenda y tu Gmail, la casa, la tele, WhatsApp y avisos al celu. Se instala con una línea.",
+  "items": [
+   [
+    "Igual que en Windows",
+    "Spotify con tu cuenta, tu agenda y tu Gmail de Google, luces y enchufes de Smart Life, la tele LG, WhatsApp y avisos al celu."
+   ],
+   [
+    "Se instala con una línea",
+    "Pegás una línea en la terminal y listo, sin contraseña. Si faltan herramientas, te pregunta si las instala."
+   ],
+   [
+    "FRIDAY en la tele, desde Linux",
+    "«Mostrame las noticias en la tele» también anda con la compu Linux."
+   ],
+   [
+    "Chequeo para Linux",
+    "Decile «hacé un chequeo»: te dice qué falta y te da el comando para instalarlo."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-12",
+  "app": "compu",
   "version": "106.05",
   "titulo": "Se acuerda y anota sola",
   "resumen": "Sabe qué es «eso»: copiame eso, anotá lo que dijiste, mandale eso a BufaLabs. Y notas y recordatorios hablando.",

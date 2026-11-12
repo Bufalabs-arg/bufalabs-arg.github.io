@@ -1,0 +1,20 @@
+[Desktop Entry]
+Type=Application
+Name=FRIDAY
+GenericName=Asistente con inteligencia artificial
+Comment=La asistente de BufaLabs: te escucha, te habla y hace cosas de verdad en tu compu
+Exec=friday
+Icon=io.github.bufalabs_arg.FRIDAY
+Terminal=false
+Categories=Utility;Accessibility;
+Keywords=friday;asistente;bufalabs;ia;voz;assistant;
+StartupNotify=false
+Actions=actualizar;apagar;
+
+[Desktop Action actualizar]
+Name=Buscar actualizaciones
+Exec=friday --actualizar
+
+[Desktop Action apagar]
+Name=Apagar FRIDAY
+Exec=friday --apagar

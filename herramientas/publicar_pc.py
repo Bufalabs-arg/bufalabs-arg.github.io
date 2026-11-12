@@ -25,7 +25,7 @@ SISTEMAS = {
         'descarga': ['FRIDAY.exe', 'friday.html', 'bufalabs.ico', 'friday.ico', 'INSTALAR-FRIDAY.bat', 'instalar-voz.bat'],
     },
     'linux': {
-        'manifiesto': 'friday-linux.json', 'exe': 'friday',
+        'manifiesto': 'friday-linux.json', 'exe': 'friday', 'version_de': 'linux/main.go',
         'archivos': {'friday.html': 'friday.html', 'friday': 'linux/friday', 'friday.png': 'linux/friday.png', 'instalar.sh': 'linux/instalar.sh'},
         'descarga': ['friday', 'friday.html', 'friday.png', 'instalar.sh'],
     },
