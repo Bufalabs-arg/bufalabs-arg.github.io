@@ -62,9 +62,14 @@ def isla_mas_nueva(fri):
 
 def publicar(sis, fri, sitio, firmar, ver, grande, exe, nov, ya):
     cfg = SISTEMAS[sis]
-    if sis == 'windows' and isla_mas_nueva(fri) and os.environ.get('ISLA_EN_MANIFIESTO') == '1':   # FRIDAY.exe 3.20 rechaza archivos que no conoce: no va
-        n = isla_mas_nueva(fri)   # va con su versión en el nombre: así nunca se pisa la que está andando
-        cfg = dict(cfg, archivos=dict(cfg['archivos'], **{n: n}), descarga=cfg['descarga'] + [n])
+    if sis == 'windows' and isla_mas_nueva(fri):
+        # La isla NO va en el manifiesto: FRIDAY.exe 3.20 rechaza las actualizaciones con archivos que no conoce.
+        # Va en FRIDAY.zip y suelta en descargas/; la instala INSTALAR-FRIDAY.bat (que sí se actualiza y tiene su huella).
+        n = isla_mas_nueva(fri)
+        cfg = dict(cfg, descarga=cfg['descarga'] + [n])
+        shutil.copy2(os.path.join(fri, n), os.path.join(sitio, 'descargas', n))
+        bat = open(os.path.join(fri, 'INSTALAR-FRIDAY.bat'), encoding='latin-1').read()
+        assert huella(os.path.join(fri, n)).upper() in bat, 'INSTALAR-FRIDAY.bat no tiene la huella de ' + n
     act = os.path.join(sitio, 'actualizaciones')
     prev = os.path.join(act, cfg['manifiesto'])
     if os.path.exists(prev):
@@ -119,7 +124,7 @@ def publicar(sis, fri, sitio, firmar, ver, grande, exe, nov, ya):
             if os.path.exists(leeme):
                 z.write(leeme, 'FRIDAY/LEEME.txt')
             for n in cfg['descarga']:
-                p = os.path.join(fri, cfg['archivos'][n])
+                p = os.path.join(fri, cfg['archivos'].get(n, n))
                 if os.path.exists(p):
                     z.write(p, 'FRIDAY/' + n)
         os.replace(zp + '.nuevo', zp)

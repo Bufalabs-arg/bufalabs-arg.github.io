@@ -2,6 +2,23 @@
  {
   "fecha": "2026-11-13",
   "app": "compu",
+  "version": "106.09",
+  "titulo": "La isla llega sola",
+  "resumen": "FRIDAY baja la isla nueva de arriba de la pantalla, la revisa y la abre sola. Después arranca con Windows.",
+  "items": [
+   [
+    "Sin hacer nada",
+    "La próxima vez que abrís FRIDAY baja la isla, revisa que sea la de BufaLabs y la abre. Si ves un segundo una ventanita, es eso."
+   ],
+   [
+    "Si FRIDAY está en C:\\FRIDAY",
+    "Doble clic una vez en INSTALAR-FRIDAY y listo: instala la isla y la deja para que arranque sola."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-13",
+  "app": "compu",
   "version": "106.08",
   "titulo": "La isla nueva",
   "resumen": "La barra de arriba de la pantalla, hecha de nuevo: de vidrio, con los ojos de FRIDAY, los mensajes de WhatsApp, Discord y Telegram, y un panel con la hora, la música con su letra, un timer de foco y la agenda.",
