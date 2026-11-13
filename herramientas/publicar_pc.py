@@ -9,6 +9,7 @@ Antes, compilá todo con codigo-exe/compilar.sh (FRIDAY.exe, friday de Linux y F
 
 Uso: python3 publicar_pc.py <carpeta de FRIDAY> <repo de la página> <archivo con la clave privada> [windows,linux,mac]
 La carpeta de FRIDAY tiene friday.html, FRIDAY.exe, codigo-exe/ y linux/ (friday, friday.png, instalar.sh, LEEME.txt).
+En Windows también va la isla (FRIDAY-Isla-<versión>.exe, la más nueva que haya en la carpeta de FRIDAY).
 Para la Mac: mac/ con friday-mac (universal), main.go (de ahí sale la versión del programa) y FRIDAY-mac.zip
 (los arma build_mac.py, con este mismo friday.html adentro de FRIDAY.app).
 """
@@ -49,8 +50,21 @@ def tup(v):
     return tuple(int(x) for x in str(v).split('.'))
 
 
+def isla_mas_nueva(fri):
+    """FRIDAY-Isla-<versión>.exe (la isla de arriba de la pantalla): la más nueva que haya en la carpeta."""
+    mejor = None
+    for n in os.listdir(fri):
+        m = re.fullmatch(r'FRIDAY-Isla-([\d.]+)\.exe', n)
+        if m and (mejor is None or tup(m.group(1)) > tup(mejor[1])):
+            mejor = (n, m.group(1))
+    return mejor and mejor[0]
+
+
 def publicar(sis, fri, sitio, firmar, ver, grande, exe, nov, ya):
     cfg = SISTEMAS[sis]
+    if sis == 'windows' and isla_mas_nueva(fri):
+        n = isla_mas_nueva(fri)   # va con su versión en el nombre: así nunca se pisa la que está andando
+        cfg = dict(cfg, archivos=dict(cfg['archivos'], **{n: n}), descarga=cfg['descarga'] + [n])
     act = os.path.join(sitio, 'actualizaciones')
     prev = os.path.join(act, cfg['manifiesto'])
     if os.path.exists(prev):

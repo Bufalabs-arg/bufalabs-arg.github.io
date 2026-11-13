@@ -10,6 +10,8 @@ CÓMO INSTALARLA
 4. Seguí el tutorial. Te pide una llave gratis de Groq (el cerebro): se saca en
    console.groq.com → API Keys.
 5. Opcional: instalar-voz.bat descarga una voz local para hablar sin internet.
+6. La isla de arriba de la pantalla es FRIDAY-Isla-…exe: FRIDAY la abre sola. Si te pide
+   abrirla a mano, doble clic una vez y listo (después arranca sola con Windows).
 
 Para la tablet y el celu: https://bufalabs-arg.github.io/#instalar
 

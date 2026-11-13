@@ -1,5 +1,34 @@
 [
  {
+  "fecha": "2026-11-13",
+  "app": "compu",
+  "version": "106.08",
+  "titulo": "La isla nueva",
+  "resumen": "La barra de arriba de la pantalla, hecha de nuevo: de vidrio, con los ojos de FRIDAY, los mensajes de WhatsApp, Discord y Telegram, y un panel con la hora, la música con su letra, un timer de foco y la agenda.",
+  "items": [
+   [
+    "Una isla de verdad",
+    "De vidrio esmerilado, arriba al medio. Se estira como una gota cuando le hablás, cuando piensa, cuando arranca un tema o un timer, y se vuelve a achicar sola."
+   ],
+   [
+    "WhatsApp, Discord y Telegram",
+    "Si lo prendés (Ajustes → Isla → «Avisos de apps»), los mensajes aparecen en la isla con el color de cada app. Tocás el aviso y se abre la app. Y podés preguntarle «¿quién me escribió?»."
+   ],
+   [
+    "Un panel al pasar el mouse",
+    "La hora en grande, la música con sus botones, un timer de foco de 25 minutos, lo próximo de la agenda y el clima. Abajo, las pestañas Inicio, Música, Avisos y Clima."
+   ],
+   [
+    "La letra de las canciones",
+    "En la pestaña Música la letra del tema va pasando sola, renglón por renglón."
+   ],
+   [
+    "No molesta",
+    "No sale en las capturas ni cuando compartís pantalla, no te roba el foco, se esconde con los juegos y las películas en pantalla completa, y casi no gasta la compu."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-12",
   "app": "compu",
   "version": "106.07",
