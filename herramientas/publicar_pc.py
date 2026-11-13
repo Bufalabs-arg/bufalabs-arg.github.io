@@ -62,7 +62,7 @@ def isla_mas_nueva(fri):
 
 def publicar(sis, fri, sitio, firmar, ver, grande, exe, nov, ya):
     cfg = SISTEMAS[sis]
-    if sis == 'windows' and isla_mas_nueva(fri):
+    if sis == 'windows' and isla_mas_nueva(fri) and os.environ.get('ISLA_EN_MANIFIESTO') == '1':   # FRIDAY.exe 3.20 rechaza archivos que no conoce: no va
         n = isla_mas_nueva(fri)   # va con su versión en el nombre: así nunca se pisa la que está andando
         cfg = dict(cfg, archivos=dict(cfg['archivos'], **{n: n}), descarga=cfg['descarga'] + [n])
     act = os.path.join(sitio, 'actualizaciones')
