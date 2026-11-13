@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-13",
   "app": "compu",
+  "version": "106.10",
+  "titulo": "Linux, mucho mejor",
+  "resumen": "En Linux FRIDAY habla con la voz de Elena (en Microsoft Edge), acomoda ventanas en KDE con Wayland y Mercado Libre ya no se queda en nada.",
+  "items": [
+   [
+    "Elena también en Linux",
+    "La voz de Elena viene con Microsoft Edge: FRIDAY se abre en Edge y, si no lo tenés, lo instala con un toque (Ajustes → Cómo habla). Para hablar sin internet está Daniela."
+   ],
+   [
+    "Ventanas en KDE",
+    "En KDE Plasma con Wayland pone una ventana a un lado, la maximiza, divide la pantalla en dos y muestra el escritorio."
+   ],
+   [
+    "Mercado Libre",
+    "Mercado Libre frena las búsquedas automáticas: FRIDAY busca las publicaciones por otro lado y, si no aparecen, te abre la búsqueda en el navegador."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-13",
+  "app": "compu",
   "version": "106.09",
   "titulo": "La isla llega sola",
   "resumen": "FRIDAY baja la isla nueva de arriba de la pantalla, la revisa y la abre sola. Después arranca con Windows.",
