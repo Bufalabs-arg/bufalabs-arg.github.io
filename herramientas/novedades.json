@@ -2,6 +2,81 @@
  {
   "fecha": "2026-11-12",
   "app": "compu",
+  "version": "106.07",
+  "titulo": "Mirá esta foto",
+  "resumen": "Mandale fotos, GIFs o videos (clip, arrastrar o Ctrl+V): los mira y te contesta. Adivina lugares y te deja el mapa. Y una animación nueva cuando piensa.",
+  "items": [
+   [
+    "Fotos, GIFs y videos",
+    "Tocá el clip, arrastralas encima de FRIDAY o pegalas con Ctrl+V. Hasta 4 juntas."
+   ],
+   [
+    "«¿Cómo se llamaba el bar?»",
+    "Busca pistas en la foto (carteles, vasos, la carta), usa la ubicación guardada en la foto y lo que hay cerca, y confirma en Google. Te dice qué tan segura está."
+   ],
+   [
+    "Seguí preguntando",
+    "«¿Y dónde queda?», «¿qué dice el cartel?»: se acuerda de la foto un rato."
+   ],
+   [
+    "Se nota cuando piensa",
+    "Aros que giran alrededor de su cara, chispas de ideas, y arriba te dice qué está haciendo."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-12",
+  "app": "celu",
+  "version": "Móvil 6.0",
+  "titulo": "Mirá esta foto",
+  "resumen": "Mandale fotos (varias juntas), GIFs o un video cortito: los mira y te contesta. Le mandás la foto de un lugar y te dice dónde es, con el mapa.",
+  "items": [
+   [
+    "Fotos, GIFs y videos",
+    "Con el clip: hasta 4 fotos juntas, GIFs o un video cortito. Las mira y te contesta lo que le preguntes."
+   ],
+   [
+    "«¿Cómo se llamaba el bar?»",
+    "Busca pistas en la foto, usa la ubicación guardada y lo que hay cerca, y te deja el mapa."
+   ],
+   [
+    "Seguí preguntando",
+    "«¿Y dónde queda?», «¿qué dice el cartel?», «traducime eso»."
+   ],
+   [
+    "Sin Gemini también",
+    "Si no tenés la llave de Gemini, las mira con Groq."
+   ],
+   [
+    "Se nota cuando piensa",
+    "Una animación nueva alrededor de su cara, y en la charla te dice qué está haciendo."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-12",
+  "app": "casa",
+  "version": "Casa 6.8",
+  "titulo": "Mirá esta foto, en la tablet",
+  "resumen": "Un botón nuevo al lado de donde se escribe: le mandás fotos, GIFs o videos y te dice qué ve o dónde es. Y un halo que gira cuando piensa.",
+  "items": [
+   [
+    "Fotos desde la tablet",
+    "Tocá el botón de la imagen al lado de donde se escribe, elegí o sacá la foto y preguntale."
+   ],
+   [
+    "Lugares y mapa",
+    "Le preguntás dónde es y te deja el link al mapa."
+   ],
+   [
+    "Se nota cuando piensa",
+    "Un halo que gira alrededor de su cara."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-12",
+  "app": "compu",
   "version": "106.06",
   "titulo": "FRIDAY para Linux, nueva",
   "resumen": "En Linux hace lo mismo que en Windows: Spotify, tu agenda y tu Gmail, la casa, la tele, WhatsApp y avisos al celu. Se instala con una línea.",
