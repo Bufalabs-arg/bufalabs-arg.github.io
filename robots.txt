@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /mando/
+Disallow: /app/   # la app del celu (espejo de FRIDAY Móvil)
 
 Sitemap: https://bufalabs-arg.github.io/sitemap.xml
 Sitemap: https://bufalabs-arg.github.io/sitemap.txt

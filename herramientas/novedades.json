@@ -1,6 +1,31 @@
 [
  {
   "fecha": "2026-11-14",
+  "app": "celu",
+  "version": "Móvil 6.1",
+  "titulo": "FRIDAY, como app de Android",
+  "resumen": "Ahora FRIDAY se instala en el celu como una app de verdad: te bajás un archivo (FRIDAY.apk) y listo. Sin Play Store y sin cuentas raras.",
+  "items": [
+   [
+    "Un archivo y ya está",
+    "Bajás FRIDAY.apk desde la página, tocás Instalar y te queda el ícono de FRIDAY en el celu."
+   ],
+   [
+    "Es la misma FRIDAY",
+    "Por dentro usa el motor de Chrome, así que la voz, el micrófono, la cámara y los avisos andan igual que en el navegador."
+   ],
+   [
+    "A pantalla completa",
+    "Se abre sin la barra de dirección, como cualquier app."
+   ],
+   [
+    "En iPhone, como siempre",
+    "Apple no deja instalar apps así: en iPhone se agrega desde Safari a la pantalla de inicio y funciona igual."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-14",
   "app": "compu",
   "version": "106.16",
   "titulo": "Que te escuche",

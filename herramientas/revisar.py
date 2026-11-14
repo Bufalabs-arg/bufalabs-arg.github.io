@@ -58,7 +58,7 @@ MAIL = re.compile(rb'[A-Za-z0-9._%+-]+@(?:gmail|hotmail|outlook|yahoo)\.com')
 for p in archivos():
     b = os.path.basename(p).lower()
     if 'privad' in b or b in ('tv-pairing.json', '.env') or b.endswith(('.pem', '.key')): falla(f'{rel(p)}: este archivo no se publica')
-    if os.path.getsize(p) > 3_000_000 or b.endswith(('.png', '.jpg', '.jpeg', '.webp', '.mp4', '.zip', '.exe', '.gz', '.ico', '.woff2')): continue
+    if os.path.getsize(p) > 3_000_000 or b.endswith(('.png', '.jpg', '.jpeg', '.webp', '.mp4', '.zip', '.exe', '.gz', '.ico', '.woff2', '.apk')): continue
     s = open(p, 'rb').read()
     for r in PROHIBIDO:
         if r.search(s): falla(f'{rel(p)}: tiene algo que parece privado ({r.pattern[:30]!r})')

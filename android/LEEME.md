@@ -36,6 +36,16 @@ igual que en el navegador. La app no guarda nada adentro: todo vive en la págin
 cambiara, habría que poner la huella nueva en `.well-known/assetlinks.json` (se pueden tener
 varias a la vez, así las apps ya instaladas siguen andando).
 
+## Cómo saber que el APK es el nuestro
+
+Android revisa solo la firma: si alguien te pasa otro FRIDAY.apk firmado con otra clave, no se
+instala encima del nuestro. La huella de la firma de BufaLabs es
+
+    3C:3F:12:91:DA:AA:9B:55:56:16:E8:C4:56:98:04:4D:C6:C8:3A:A9:BC:39:9A:FB:6C:13:0A:3F:6F:D8:2F:98
+
+(la misma que está en `.well-known/assetlinks.json`), y se mira con
+`java -jar apksigner.jar verify -v --print-certs FRIDAY.apk`.
+
 ## Si algún día cambia la dirección
 
 `android/app/build.gradle` tiene `launchUrl` y `hostName`, y el `AndroidManifest.xml` usa ese
