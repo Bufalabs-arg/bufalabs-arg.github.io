@@ -1,5 +1,18 @@
 [
  {
+  "fecha": "2026-11-14",
+  "app": "compu",
+  "version": "106.11",
+  "titulo": "Elena en Linux, de un toque",
+  "resumen": "Si ya tenés Microsoft Edge en Linux (aunque lo hayas instalado vos), FRIDAY te ofrece abrirse ahí: un toque y habla con Elena.",
+  "items": [
+   [
+    "Si ya tenés Edge",
+    "Ajustes → Cómo habla → «Abrirme en Edge». FRIDAY se abre ahí con la voz de Elena y tus datos pasan solos."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-13",
   "app": "compu",
   "version": "106.10",
