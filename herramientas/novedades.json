@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-14",
   "app": "compu",
+  "version": "106.15",
+  "titulo": "Que hable siempre, y la isla sabe qué suena",
+  "resumen": "Si el navegador no tiene voces en español, FRIDAY se abre en Edge o baja la voz de Daniela: nunca más muda. Y en Linux la isla lee el reproductor de la compu.",
+  "items": [
+   [
+    "Nunca más muda",
+    "En Brave y en Chromium no hay voces en español. FRIDAY se da cuenta: se abre en Edge (donde está Elena) o se baja a Daniela, que anda sin internet."
+   ],
+   [
+    "La isla sabe qué estás escuchando",
+    "Lee el reproductor de la compu (Spotify, YouTube en el navegador, VLC…): el tema, la tapa, por dónde va y la letra. Los botones manejan ese reproductor."
+   ],
+   [
+    "La isla, más linda",
+    "Ojos más grandes y vivos, y mientras suena música queda una islita con la tapa del disco."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-14",
+  "app": "compu",
   "version": "106.14",
   "titulo": "El chequeo mira la isla",
   "resumen": "El informe de FRIDAY te dice si la isla de arriba está andando o por qué no, y avisa cuando el programa de la compu quedó viejo.",
