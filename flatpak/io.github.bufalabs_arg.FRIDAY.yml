@@ -25,6 +25,7 @@ modules:
     buildsystem: simple
     build-commands:
       - install -Dm755 friday /app/bin/friday
+      - install -Dm755 friday-isla /app/bin/friday-isla
       - install -Dm644 friday.html /app/share/friday/friday.html
       - install -Dm644 friday.png /app/share/friday/friday.png
       - install -Dm644 friday.png /app/share/icons/hicolor/256x256/apps/io.github.bufalabs_arg.FRIDAY.png

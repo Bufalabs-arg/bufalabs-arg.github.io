@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-14",
   "app": "compu",
+  "version": "106.12",
+  "titulo": "La isla llega a Linux",
+  "resumen": "En KDE Plasma FRIDAY tiene su isla arriba de la pantalla, con el vidrio esmerilado del propio KDE, los mensajes de Discord, Telegram y WhatsApp Web, y el panel con la música y su letra.",
+  "items": [
+   [
+    "La isla, en Linux",
+    "Los ojos de FRIDAY, lo que dice mientras habla, la música, los timers y el panel al pasar el mouse. En KDE Plasma y los escritorios Wayland que dejan poner capas."
+   ],
+   [
+    "Mensajes arriba",
+    "Prendé «Avisos de apps» en Ajustes → Isla: Discord, Telegram y WhatsApp Web aparecen con su color. No se guardan en ningún lado."
+   ],
+   [
+    "Llega sola",
+    "Viene con la actualización y FRIDAY la abre sola. Quieta casi no gasta: menos del 1 % del procesador."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-14",
+  "app": "compu",
   "version": "106.11",
   "titulo": "Elena en Linux, de un toque",
   "resumen": "Si ya tenés Microsoft Edge en Linux (aunque lo hayas instalado vos), FRIDAY te ofrece abrirse ahí: un toque y habla con Elena.",

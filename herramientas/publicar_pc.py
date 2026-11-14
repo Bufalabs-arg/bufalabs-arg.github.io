@@ -27,8 +27,8 @@ SISTEMAS = {
     },
     'linux': {
         'manifiesto': 'friday-linux.json', 'exe': 'friday', 'version_de': 'linux/main.go',
-        'archivos': {'friday.html': 'friday.html', 'friday': 'linux/friday', 'friday.png': 'linux/friday.png', 'instalar.sh': 'linux/instalar.sh'},
-        'descarga': ['friday', 'friday.html', 'friday.png', 'instalar.sh'],
+        'archivos': {'friday.html': 'friday.html', 'friday': 'linux/friday', 'friday-isla': 'linux/friday-isla', 'friday.png': 'linux/friday.png', 'instalar.sh': 'linux/instalar.sh'},
+        'descarga': ['friday', 'friday-isla', 'friday.html', 'friday.png', 'instalar.sh'],
     },
     'mac': {
         'manifiesto': 'friday-mac.json', 'exe': 'friday-mac', 'version_de': 'mac/main.go',
