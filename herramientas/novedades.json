@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-14",
   "app": "compu",
+  "version": "106.16",
+  "titulo": "Que te escuche",
+  "resumen": "Si el navegador no le dejaba usar el micrófono, FRIDAY se quedaba esperando sin escuchar nada y sin decir por qué. Ahora se da cuenta, lo arregla sola y te avisa.",
+  "items": [
+   [
+    "El micrófono, arreglado solo",
+    "FRIDAY se abre con un perfil propio del navegador, y ahí el micrófono arrancaba sin permiso. Ahora lo deja permitido de entrada, así te escucha desde el primer «Hola»."
+   ],
+   [
+    "Un botón para arreglarlo",
+    "Si algo igual le tapa el micrófono, en Ajustes → Voz y oído aparece «Arreglar el micrófono»: lo acomoda y se vuelve a abrir, sin que toques nada del navegador."
+   ],
+   [
+    "El chequeo lo dice en castellano",
+    "Antes decía «permiso: denied». Ahora te dice si te escucha o no, y qué tocar para arreglarlo."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-14",
+  "app": "compu",
   "version": "106.15",
   "titulo": "Que hable siempre, y la isla sabe qué suena",
   "resumen": "Si el navegador no tiene voces en español, FRIDAY se abre en Edge o baja la voz de Daniela: nunca más muda. Y en Linux la isla lee el reproductor de la compu.",
