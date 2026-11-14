@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   armar:
@@ -65,3 +65,16 @@ jobs:
           path: salida/
           retention-days: 14
           if-no-files-found: error
+
+      # Además del resultado de la corrida, lo dejamos en la rama «apk-sin-firmar»: de ahí lo saca
+      # BufaLabs para firmarlo con su clave (que no está acá). Esa rama se pisa en cada corrida.
+      - name: Dejarlo en la rama apk-sin-firmar
+        run: |
+          set -e
+          git config user.name 'BufaLabs'
+          git config user.email 'bufalabs@users.noreply.github.com'
+          git checkout --orphan apk-sin-firmar
+          git rm -rq --cached . > /dev/null
+          git add -f salida/FRIDAY-sin-firmar.apk salida/apksigner.jar
+          git commit -qm "APK sin firmar (corrida $GITHUB_RUN_ID)"
+          git push -qf origin apk-sin-firmar
