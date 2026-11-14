@@ -1,6 +1,27 @@
 [
  {
   "fecha": "2026-11-14",
+  "app": "compu",
+  "version": "106.17",
+  "titulo": "El micrófono, a la vista",
+  "resumen": "Ahora FRIDAY te dice siempre si te escucha o no, lo prueba cuando se lo pedís y se da cuenta si no hay ningún micrófono enchufado.",
+  "items": [
+   [
+    "Probar el micrófono",
+    "En Ajustes → Voz y oído, arriba de todo, dice si te escucha y hay un botón «Probar el micrófono»: ahí es cuando el navegador te pregunta si lo dejás, y FRIDAY te muestra si entra sonido."
+   ],
+   [
+    "Si no hay micrófono, lo dice",
+    "En muchas compus de escritorio no hay ninguno enchufado. Antes FRIDAY se quedaba esperando sin decir nada; ahora te avisa."
+   ],
+   [
+    "Y lo arregla sola",
+    "En Linux, si el navegador no le dio permiso, FRIDAY se lo deja puesto y se vuelve a abrir lista para escucharte."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-14",
   "app": "celu",
   "version": "Móvil 6.1",
   "titulo": "FRIDAY, como app de Android",
