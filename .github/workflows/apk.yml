@@ -1,0 +1,57 @@
+name: APK de FRIDAY para Android
+
+# Arma el APK (una ventana de Chrome sin barra que abre https://bufalabs-arg.github.io/app/).
+# Sale SIN FIRMAR a propósito: la clave de firma de BufaLabs no está en este repositorio ni en
+# GitHub. El APK que se publica en /descargas/ lo firma BufaLabs aparte, con apksigner.
+
+on:
+  push:
+    paths:
+      - 'android/**'
+      - '.github/workflows/apk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  armar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Armar el APK sin firmar
+        working-directory: android
+        run: gradle --no-daemon assembleRelease
+
+      - name: Dejarlo prolijo (zipalign) y guardar apksigner
+        run: |
+          set -e
+          BT=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          echo "build-tools: $BT"
+          mkdir -p salida
+          APK=$(find android/app/build/outputs/apk/release -name '*.apk' | head -1)
+          echo "APK: $APK"
+          "$BT/zipalign" -p -f 4 "$APK" salida/FRIDAY-sin-firmar.apk
+          "$BT/zipalign" -c -v 4 salida/FRIDAY-sin-firmar.apk | tail -1
+          cp "$BT/lib/apksigner.jar" salida/apksigner.jar
+          java -jar salida/apksigner.jar --version
+          "$BT/aapt2" dump badging salida/FRIDAY-sin-firmar.apk | head -5 || true
+          ls -l salida
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: friday-apk
+          path: salida/
+          retention-days: 14
+          if-no-files-found: error

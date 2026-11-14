@@ -1,0 +1,39 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'io.github.bufalabs_arg.friday'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "io.github.bufalabs_arg.friday"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        resValue "string", "launchUrl", "https://bufalabs-arg.github.io/app/"
+        resValue "string", "hostName", "bufalabs-arg.github.io"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // Sin firma acá a propósito: el APK sale sin firmar y lo firma BufaLabs
+            // con su clave, que no está (ni va a estar) en este repositorio.
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.5.0'
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FRIDAY · Privacidad</title>
+<style>
+:root{--bg:#07101c;--card:#0d1828;--text:#e6f6ff;--muted:#9fb2c6;--acc:#4cc9ff;--line:rgba(76,201,255,.18)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 18px 60px}
+.brand{font:700 14px system-ui;letter-spacing:.45em;color:var(--acc)}
+h1{font-size:30px;margin:10px 0 4px}
+h2{font-size:19px;margin:30px 0 8px;color:var(--acc)}
+p,li{color:var(--muted)}
+b{color:var(--text)}
+.card{border:1px solid var(--line);background:var(--card);border-radius:16px;padding:16px 18px;margin-top:18px}
+a{color:var(--acc)}
+small{color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">FRIDAY</div>
+  <small>Un proyecto de <b>BufaLabs</b></small>
+  <h1>Política de privacidad</h1>
+  <br><small>Última actualización: 14 de noviembre de 2026 (FRIDAY 106.12: la isla también en Linux)</small>
+
+  <div class="card">FRIDAY es un asistente personal que funciona en <b>tu</b> compu, en <b>tu</b> celular y en <b>tu</b> tablet. Lo que guardamos en el servidor de BufaLabs va cifrado con tu clave, así que no lo podemos leer. No juntamos, no vendemos y no compartimos tus datos con nadie.</div>
+
+  <h2>Qué datos usa</h2>
+  <ul>
+    <li><b>Tu cuenta de BufaLabs</b> (tu mail y una clave): para que tu FRIDAY sea el mismo en la compu, el celu y la tablet. Tu mail no se guarda: el servidor solo guarda una huella (un número sacado del mail que no se puede dar vuelta). Tu clave nunca sale de tu aparato.</li>
+    <li><b>Tu memoria, recordatorios, listas y ajustes</b>: se guardan en el servidor de BufaLabs cifrados con tu clave (o con tu código de rescate). Sin tu clave son texto ilegible, también para nosotros.</li>
+    <li><b>Google Calendar</b>: para contarte lo que tenés en tu agenda, anotar los eventos que le pedís, moverlos o borrarlos.</li>
+    <li><b>Gmail</b> (solo lectura): para contarte los mails nuevos importantes y leerte uno cuando se lo pedís. FRIDAY no manda, no contesta, no mueve y no borra mails.</li>
+    <li><b>Tu familia en FRIDAY</b> (si la armás): los nombres, los recados y la lista compartida se guardan en el servidor de BufaLabs cifrados con una llave que solo tienen los aparatos de la familia.</li>
+    <li><b>Remedios con aviso a la familia</b> (si lo activás): para poder avisarle a tu familia si no marcaste «Ya lo tomé», el servidor guarda el nombre del remedio, la hora y a quién avisar, hasta tres días después de cada toma.</li>
+    <li><b>Siri</b> (si lo activás): lo que le decís a Siri pasa por el servidor de BufaLabs y por la inteligencia artificial para contestarte. El servidor guarda tu nombre, tu ciudad y la charla de los últimos 15 minutos (para seguir la conversación), y lo que pediste hasta que abrís FRIDAY en el celu.</li>
+    <li><b>Fotos, GIFs y videos que le mandás</b> (la heladera, una planta, la tarea, el bar donde estuviste): se mandan a la inteligencia artificial (Gemini o Groq, con tu llave) para mirarlos, y no se guardan. De un video o un GIF se mandan unos pocos cuadros, no el archivo entero. Si le preguntás por un lugar, con Gemini puede buscar en Google lo que ve en la foto (por ejemplo, el nombre de un cartel). Si la foto tiene guardada la ubicación donde se sacó y le preguntás por el lugar, FRIDAY manda solo esas coordenadas a OpenStreetMap (Overpass y Nominatim) para saber qué hay cerca; la foto no va ahí. Después de mirarla, FRIDAY se acuerda de la foto en tu aparato unos 20 minutos para que puedas seguir preguntando, y la olvida.</li>
+    <li><b>FRIDAY metiche</b> (solo en la compu y solo si la prendés): mientras escribís, FRIDAY saca una foto de tu pantalla cada tanto y la manda a la inteligencia artificial (Gemini o Groq, con tu llave) para buscar errores. No se guarda. Nunca mira cuando la ventana es de un banco, de contraseñas o una pestaña privada.</li>
+    <li><b>Avisos de apps en la isla</b> (en Windows y en Linux, y solo si los prendés): la isla de arriba de la pantalla lee los avisos que tu compu ya te muestra (WhatsApp, Discord, Telegram y las demás apps) de la lista de avisos de tu propia compu (en Linux, del aviso que cada app le manda al escritorio), para mostrártelos arriba. Quedan solo en la memoria de la compu, los últimos 20, y se borran al cerrar la isla: no se guardan en ningún archivo ni se suben a ningún lado. Si le preguntás a FRIDAY «¿quién me escribió?», esos avisos van a la inteligencia artificial que elegiste (con tu llave) para contestarte.</li>
+    <li><b>Letras de las canciones</b> (en la isla de la compu): para mostrarte la letra del tema que suena, el nombre del tema y del artista se buscan en LRCLIB, un servicio gratis de letras. No va nada más: ni quién sos ni qué más escuchaste.</li>
+    <li><b>Oído metiche</b> (solo en la compu y solo si lo prendés): lo que se dice cerca sin decir «Friday» queda en la memoria de la compu como mucho un minuto y medio; cada tanto ese pedacito de texto (no el audio) se manda a la inteligencia artificial para ver si alguien dijo un dato falso, y se borra.</li>
+    <li><b>YouTube y YouTube Music</b>: cuando le pedís un tema, lo que pediste (solo eso) se busca en YouTube a través del servidor de BufaLabs, y el tema se abre en tu app de YouTube o YouTube Music. FRIDAY no entra a tu cuenta de YouTube.</li>
+    <li><b>GIFs</b>: lo que escribís en el buscador de GIFs va a KLIPY, el servicio que trae los GIFs, con tu propia llave. Si le mandás un GIF de tu galería o tu teclado, FRIDAY mira un cuadro con la inteligencia artificial (Gemini o Groq) para entenderlo, y no lo guarda.</li>
+    <li><b>Mensajes a BufaLabs</b>: si le pedís a FRIDAY que le mande una idea, un problema o un saludo a BufaLabs, va solo ese mensaje, con la app, la versión y un número al azar del aparato (no dice quién sos). Llega al correo de BufaLabs y a su panel. No va tu nombre, tu mail ni tus charlas.</li>
+    <li><b>Memoria de la charla</b>: para entender «copiame eso» o «anotá lo que dijiste», FRIDAY se acuerda de lo último que hablaron, solo en tu aparato y por media hora. Las notas y los recordatorios que le dictás viajan cifrados a tus otros aparatos (la tablet, la compu), como siempre.</li>
+  </ul>
+
+  <h2>Dónde quedan</h2>
+  <ul>
+    <li>Todo se procesa en tu compu (en el programa FRIDAY) o en tu celular. Las llaves de acceso quedan guardadas solo ahí.</li>
+    <li>Lo de tu cuenta de BufaLabs queda en el servidor de BufaLabs (en Cloudflare), cifrado. Las llaves de la inteligencia artificial y tus mails no se suben.</li>
+    <li>Cuando le hablás, el texto de la charla se manda al servicio de inteligencia artificial que vos elegiste en los ajustes (por ejemplo Groq o Gemini), con tu propia llave, para que te pueda contestar.</li>
+    <li>Para que tus aparatos se conecten entre sí, la memoria, los recordatorios y la agenda viajan <b>cifrados</b> por el servicio ntfy: ese servicio solo ve texto ilegible. Los mails nunca salen de la compu.</li>
+  </ul>
+
+  <h2>Uso de los datos de Google</h2>
+  <p>El uso que hace FRIDAY de la información recibida de las APIs de Google cumple con la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Política de datos del usuario de los servicios de API de Google</a>, incluidos los requisitos de uso limitado. Los datos de Google se usan solo para las funciones que vos le pedís a FRIDAY; no se usan para publicidad, no se venden y no se transfieren a terceros.</p>
+
+  <h2>Cómo borrar todo</h2>
+  <ul>
+    <li>En FRIDAY: Ajustes → Tu cuenta de BufaLabs → «Borrar mi cuenta». Borra al instante todo lo guardado en el servidor.</li>
+    <li>En cada aparato: Ajustes → Cerrar sesión, o borrar el perfil.</li>
+    <li>En tu cuenta de Google: <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">myaccount.google.com/connections</a> → FRIDAY → Quitar acceso.</li>
+  </ul>
+
+  <h2>Contacto</h2>
+  <p>FRIDAY es un proyecto de <b>BufaLabs</b>. Para cualquier consulta sobre tu privacidad o tus datos, escribinos a <a href="mailto:bufalabs.ar@gmail.com">bufalabs.ar@gmail.com</a>.</p>
+</main>
+</body>
+</html>

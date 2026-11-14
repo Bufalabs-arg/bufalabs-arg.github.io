@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="hablar"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/atajo_hablar">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.bufalabs_arg.friday"
+            android:targetClass="com.google.androidbrowserhelper.trusted.LauncherActivity"
+            android:data="https://bufalabs-arg.github.io/app/?hablar=1" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="nota"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/atajo_nota">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="io.github.bufalabs_arg.friday"
+            android:targetClass="com.google.androidbrowserhelper.trusted.LauncherActivity"
+            android:data="https://bufalabs-arg.github.io/app/?nota=1" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

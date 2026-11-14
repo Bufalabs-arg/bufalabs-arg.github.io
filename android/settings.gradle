@@ -1,0 +1,18 @@
+// FRIDAY para Android: una ventana de Chrome sin barra (Trusted Web Activity) que abre
+// https://bufalabs-arg.github.io/app/ . El APK no guarda nada: todo vive en la página.
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "FRIDAY"
+include ':app'

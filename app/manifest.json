@@ -1,0 +1,111 @@
+{
+  "id": "./",
+  "name": "FRIDAY",
+  "short_name": "FRIDAY",
+  "description": "Tu asistente con voz, en el celu. Gratis, hecha en Argentina por BufaLabs.",
+  "lang": "es-AR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#030a14",
+  "theme_color": "#030a14",
+  "icons": [
+    {
+      "src": "icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Hablarle",
+      "short_name": "Hablarle",
+      "description": "Abrir FRIDAY escuchándote",
+      "url": "./?hablar=1",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Dictar una nota",
+      "short_name": "Nota",
+      "description": "Abrir FRIDAY para dictarle una nota",
+      "url": "./?nota=1",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Mis gastos",
+      "short_name": "Gastos",
+      "description": "Cuánto gastaste este mes",
+      "url": "./?q=cu%C3%A1nto%20gast%C3%A9%20este%20mes",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    "productivity",
+    "utilities",
+    "lifestyle"
+  ],
+  "launch_handler": {
+    "client_mode": [
+      "navigate-existing",
+      "auto"
+    ]
+  },
+  "screenshots": [
+    {
+      "src": "screens/inicio.webp",
+      "sizes": "780x1560",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "FRIDAY arrancando"
+    },
+    {
+      "src": "screens/clima.webp",
+      "sizes": "780x1560",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Le preguntás el clima y te lo muestra"
+    },
+    {
+      "src": "screens/charla.webp",
+      "sizes": "780x1560",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Charlás con ella por voz o escribiendo"
+    }
+  ]
+}

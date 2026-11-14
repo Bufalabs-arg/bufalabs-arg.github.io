@@ -1,0 +1,14 @@
+[
+ {
+  "relation": [
+   "delegate_permission/common.handle_all_urls"
+  ],
+  "target": {
+   "namespace": "android_app",
+   "package_name": "io.github.bufalabs_arg.friday",
+   "sha256_cert_fingerprints": [
+    "3C:3F:12:91:DA:AA:9B:55:56:16:E8:C4:56:98:04:4D:C6:C8:3A:A9:BC:39:9A:FB:6C:13:0A:3F:6F:D8:2F:98"
+   ]
+  }
+ }
+]

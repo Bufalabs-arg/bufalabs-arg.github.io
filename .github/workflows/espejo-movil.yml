@@ -1,0 +1,44 @@
+name: Espejo de FRIDAY Móvil
+
+# Copia FRIDAY Móvil (el repositorio Pedropiratita134/FRIDAY) a /app/ de este sitio.
+# Esa copia es la que abre la app de Android (el APK), que necesita que la página viva
+# en este dominio para abrirse sin la barra de dirección.
+
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: espejo-movil
+  cancel-in-progress: false
+
+jobs:
+  espejar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Traer FRIDAY Móvil
+        run: git clone --depth 1 https://github.com/Pedropiratita134/FRIDAY.git movil
+
+      - name: Copiar a /app/
+        run: |
+          python3 herramientas/espejo_movil.py movil
+          rm -rf movil
+
+      - name: Guardar si cambió
+        run: |
+          git config user.name 'BufaLabs'
+          git config user.email 'bufalabs@users.noreply.github.com'
+          git add -A app
+          if git diff --cached --quiet; then
+            echo 'El espejo ya estaba al día.'
+          else
+            git commit -m 'Espejo de FRIDAY Móvil en /app/ (para la app de Android)'
+            git push
+          fi
