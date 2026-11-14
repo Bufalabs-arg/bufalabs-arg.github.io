@@ -1,0 +1,57 @@
+name: Revisar la app de Android
+
+# Mira, ya publicado el sitio, que todo lo que necesita la app de Android esté en su lugar:
+# el permiso del dominio (assetlinks), la página del celu y el APK para bajar.
+# Si el permiso no está bien, la app se abre con la barra de dirección arriba.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 7 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: El permiso del dominio (assetlinks.json)
+        run: |
+          set -e
+          curl -fsS https://bufalabs-arg.github.io/.well-known/assetlinks.json -o assetlinks.json
+          cat assetlinks.json
+          python3 - <<'PY'
+          import json, sys
+          j = json.load(open('assetlinks.json'))
+          t = j[0]['target']
+          assert t['package_name'] == 'io.github.bufalabs_arg.friday', t
+          assert any(f.count(':') == 31 for f in t['sha256_cert_fingerprints']), t
+          print('ok  el dominio dice que la app es suya')
+          PY
+
+      - name: Lo que dice Google
+        run: |
+          set -e
+          curl -fsS -G 'https://digitalassetlinks.googleapis.com/v1/statements:list' \
+            --data-urlencode 'source.web.site=https://bufalabs-arg.github.io' \
+            --data-urlencode 'relation=delegate_permission/common.handle_all_urls' -o google.json
+          python3 - <<'PY'
+          import json
+          j = json.load(open('google.json'))
+          if j.get('debugString'):
+              print(j['debugString'][:2000])
+          paquetes = [s.get('target', {}).get('androidApp', {}).get('packageName') for s in j.get('statements', [])]
+          print('apps que ve Google:', paquetes)
+          assert 'io.github.bufalabs_arg.friday' in paquetes, 'Google todavía no ve el permiso'
+          print('ok  Google ve el permiso: la app se abre sin barra de dirección')
+          PY
+
+      - name: La página del celu y el APK
+        run: |
+          set -e
+          curl -fsS -o /dev/null -w 'app/: %{http_code}\n' https://bufalabs-arg.github.io/app/
+          curl -fsS -o apk -w 'FRIDAY.apk: %{http_code} %{size_download} bytes\n' https://bufalabs-arg.github.io/descargas/FRIDAY.apk
+          test "$(stat -c%s apk)" -gt 500000
+          sha256sum apk
