@@ -2,6 +2,23 @@
  {
   "fecha": "2026-11-14",
   "app": "compu",
+  "version": "106.14",
+  "titulo": "El chequeo mira la isla",
+  "resumen": "El informe de FRIDAY te dice si la isla de arriba está andando o por qué no, y avisa cuando el programa de la compu quedó viejo.",
+  "items": [
+   [
+    "«Isla de arriba» en el chequeo",
+    "Decile «hacé un chequeo»: te dice si la isla anda, qué versión tiene o qué le falta."
+   ],
+   [
+    "Si el programa quedó viejo",
+    "La página se actualiza sola; si el programa de la compu se quedó atrás, FRIDAY te avisa y lo actualiza. Y busca actualizaciones cada hora."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-14",
+  "app": "compu",
   "version": "106.13",
   "titulo": "Elegí con qué navegador se abre",
   "resumen": "En Linux, FRIDAY respeta el navegador predeterminado de tu compu, y en Ajustes podés elegir con cuál se abre (Edge para hablar con Elena).",
