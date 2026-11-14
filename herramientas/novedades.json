@@ -2,6 +2,23 @@
  {
   "fecha": "2026-11-14",
   "app": "compu",
+  "version": "106.13",
+  "titulo": "Elegí con qué navegador se abre",
+  "resumen": "En Linux, FRIDAY respeta el navegador predeterminado de tu compu, y en Ajustes podés elegir con cuál se abre (Edge para hablar con Elena).",
+  "items": [
+   [
+    "Vos elegís",
+    "Ajustes → Cómo habla → «Me abro en»: Edge, Brave, Chrome o el que tengas. En automático usa el predeterminado de la compu."
+   ],
+   [
+    "Se da cuenta al toque",
+    "Si instalás un navegador con FRIDAY abierta, lo ve enseguida: antes había que reiniciarla."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-14",
+  "app": "compu",
   "version": "106.12",
   "titulo": "La isla llega a Linux",
   "resumen": "En KDE Plasma FRIDAY tiene su isla arriba de la pantalla, con el vidrio esmerilado del propio KDE, los mensajes de Discord, Telegram y WhatsApp Web, y el panel con la música y su letra.",
