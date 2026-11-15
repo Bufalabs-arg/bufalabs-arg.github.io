@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-15",
   "app": "compu",
+  "version": "106.25",
+  "titulo": "El micrófono en cero",
+  "resumen": "«Tengo permiso pero no me entra nada»: casi siempre es que la compu le dejó al micrófono 0 % de volumen de entrada. Ahora FRIDAY lo nota y te lo sube.",
+  "items": [
+   [
+    "Lo mira y lo acomoda",
+    "Si el micrófono está en cero o silenciado en el sonido de la compu, FRIDAY te lo dice y con un toque lo sube. En Linux lo hace ella sola."
+   ],
+   [
+    "Sin que le pidas",
+    "Si pasa un minuto sin que le entre ningún sonido, se fija y lo arregla, y lo anota en «Lo último que escuchó»."
+   ],
+   [
+    "Y lo dice en castellano",
+    "En Ajustes → Voz y oído y en el chequeo ves a qué volumen está tu micrófono, no solo si le diste permiso."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-15",
+  "app": "compu",
   "version": "106.24",
   "titulo": "Que te escuche de verdad",
   "resumen": "«Probar el micrófono» ahora prueba todo el camino, y si tu micrófono entrega poco volumen FRIDAY se acomoda sola.",
