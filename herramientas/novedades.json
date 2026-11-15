@@ -2,6 +2,31 @@
  {
   "fecha": "2026-11-15",
   "app": "compu",
+  "version": "106.20",
+  "titulo": "La plata",
+  "resumen": "FRIDAY te lleva la cuenta: lo que cobrás, lo que gastás y cuánto te queda este mes. Se lo decís hablando y es la misma cuenta en la compu y en el celu.",
+  "items": [
+   [
+    "Lo que entra y lo que se va",
+    "«Cobré la jubilación», «gasté 3 mil en la farmacia», «¿cuánto me queda?». Lo vas viendo en Encargos: entró, se fue, te queda, y en qué se te va."
+   ],
+   [
+    "Lo de todos los meses",
+    "Cargás una vez la jubilación o la luz con el día que toca y, llegado el día, FRIDAY te pregunta si ya la cobraste o la pagaste: lo anotás con un clic."
+   ],
+   [
+    "La misma cuenta en el celu",
+    "Lo que anotás en la calle con el celu ya está cuando llegás a la compu, y al revés. Viaja cifrado entre tus aparatos, como la lista de compras."
+   ],
+   [
+    "Nació de un pedido",
+    "Alguien escribió a BufaLabs desde FRIDAY Móvil pidiendo poner su jubilación y llevar la cuenta de sus gastos. Esto es eso."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-15",
+  "app": "compu",
   "version": "106.19",
   "titulo": "Precios de verdad",
   "resumen": "Cuando le preguntás cuánto sale algo, mira las publicaciones de Mercado Libre y te dice precios de hoy, en pesos. Y si no encuentra ninguno, busca de nuevo antes de contestar.",
