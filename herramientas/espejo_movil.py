@@ -45,6 +45,9 @@ def espejar(origen, destino):
 if __name__ == '__main__':
     origen = sys.argv[1]
     destino = sys.argv[2] if len(sys.argv) > 2 else os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'app')
+    # el espejo borra lo que sobra, así que nunca puede apuntar a la raíz del sitio
+    if os.path.isdir(os.path.join(destino, '.git')) or os.path.basename(os.path.abspath(destino)) != 'app':
+        sys.exit('el destino tiene que ser la carpeta app/ del sitio, no «%s»' % os.path.abspath(destino))
     os.makedirs(destino, exist_ok=True)
     c = espejar(origen, destino)
     print(f'{len(c)} archivos al día' if c else 'ya estaba al día')

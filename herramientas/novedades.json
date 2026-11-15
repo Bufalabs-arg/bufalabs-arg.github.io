@@ -1,6 +1,23 @@
 [
  {
   "fecha": "2026-11-15",
+  "app": "celu",
+  "version": "Móvil 6.7",
+  "titulo": "«¿Cómo venimos?»",
+  "resumen": "La misma pregunta que en la compu: te cuenta el día entero de una, sin entrar a cada cosa.",
+  "items": [
+   [
+    "El día en una pregunta",
+    "El clima, lo que tenés hoy, cómo viene la plata del mes, qué pagos se vienen y qué falta del changuito."
+   ],
+   [
+    "El buen día ahora sabe de plata",
+    "El saludo de la mañana también te cuenta cómo venís con la plata y las compras. Con el candado puesto no dice ningún número."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-15",
   "app": "compu",
   "version": "106.22",
   "titulo": "El día, de un vistazo",
