@@ -1,6 +1,27 @@
 [
  {
   "fecha": "2026-11-15",
+  "app": "compu",
+  "version": "106.22",
+  "titulo": "El día, de un vistazo",
+  "resumen": "Decile «Friday, ¿cómo venimos?» y te cuenta el día: lo que tenés hoy, cómo viene la plata del mes, qué falta del changuito y qué pagos se vienen. Todo junto, sin entrar a cada cosa.",
+  "items": [
+   [
+    "Te lo cuenta y te lo muestra",
+    "Lo dice en voz alta y además abre una sola hoja con el clima, lo de hoy, la plata del mes y los pagos que se vienen. También está el botón ☀️ arriba a la derecha."
+   ],
+   [
+    "Lo que hizo ella",
+    "Queda anotado lo que FRIDAY fue haciendo (abrir cosas, mandar mensajes, poner música) para que puedas mirar atrás y ver qué pasó mientras no estabas. Queda en tu compu, no se manda a ningún lado."
+   ],
+   [
+    "Con el candado puesto, no muestra plata",
+    "Si tenés el candado en La plata, en el tablero aparece tapada hasta que la abras, y tampoco la dice en voz alta."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-15",
   "app": "celu",
   "version": "Móvil 6.6",
   "titulo": "El candado, como vos quieras",
