@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-15",
   "app": "compu",
+  "version": "106.27",
+  "titulo": "La isla, prolija",
+  "resumen": "La isla de arriba ahora muestra el ícono de verdad de cada app y la foto de quien te escribe, con el nombre que corresponde (en Linux).",
+  "items": [
+   [
+    "Cada aviso con su cara",
+    "Antes, cualquier app que no estuviera en la lista salía con la misma campanita gris. Ahora la isla busca el ícono y el nombre que tiene la app en el menú de aplicaciones, y si el aviso trae la foto de quien escribe, la muestra."
+   ],
+   [
+    "Su voz ya no es «una app más»",
+    "Cuando FRIDAY hablaba, el navegador anunciaba su voz como si fuera música y la isla mostraba algo tipo «Edge · Speech». Eso no aparece más."
+   ],
+   [
+    "Viene con la isla 1.3",
+    "Se actualiza sola junto con FRIDAY; no hay que instalar nada aparte."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-15",
+  "app": "compu",
   "version": "106.26",
   "titulo": "Cuál micrófono",
   "resumen": "Si la compu tiene varias entradas de audio, FRIDAY las prueba todas mientras hablás y se queda con la que de verdad te escucha.",
