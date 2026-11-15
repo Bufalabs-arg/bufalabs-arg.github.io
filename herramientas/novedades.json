@@ -1,5 +1,26 @@
 [
  {
+  "fecha": "2026-11-15",
+  "app": "compu",
+  "version": "106.19",
+  "titulo": "Precios de verdad",
+  "resumen": "Cuando le preguntás cuánto sale algo, mira las publicaciones de Mercado Libre y te dice precios de hoy, en pesos. Y si no encuentra ninguno, busca de nuevo antes de contestar.",
+  "items": [
+   [
+    "«¿Cuánto sale un Tesla?»",
+    "Además de buscar en la web, mira lo que se está vendiendo hoy en Mercado Libre y te da precios de verdad, con el link."
+   ],
+   [
+    "Si no aparece, prueba otra búsqueda",
+    "Antes contestaba con lo primero que encontraba. Ahora, si en todo eso no hay ni un precio, busca distinto; y si igual no está, lo dice en vez de inventar."
+   ],
+   [
+    "Tres buscadores a la vez",
+    "El programa de la compu busca en tres buscadores al mismo tiempo y junta lo mejor de cada uno, sin repetir páginas del mismo sitio. Si uno se cae, los otros tapan el agujero."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-14",
   "app": "compu",
   "version": "106.18",
