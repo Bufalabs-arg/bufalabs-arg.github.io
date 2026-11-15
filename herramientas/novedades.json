@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-15",
   "app": "compu",
+  "version": "106.26",
+  "titulo": "Cuál micrófono",
+  "resumen": "Si la compu tiene varias entradas de audio, FRIDAY las prueba todas mientras hablás y se queda con la que de verdad te escucha.",
+  "items": [
+   [
+    "Buscar mi micrófono",
+    "Un botón en Ajustes → Voz y oído: probás, hablás, y ella elige la entrada que la escucha. Pasa seguido en las compras de escritorio, que tienen micrófono de adelante, de atrás y de línea."
+   ],
+   [
+    "O lo elegís vos",
+    "Ahí mismo está la lista de micrófonos de la compu, como en Discord o en Zoom. Queda guardado."
+   ],
+   [
+    "Y si lo desenchufás, vuelve solo",
+    "Si el micrófono elegido ya no está, usa el de siempre y te avisa, en vez de quedarse sorda."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-15",
+  "app": "compu",
   "version": "106.25",
   "titulo": "El micrófono en cero",
   "resumen": "«Tengo permiso pero no me entra nada»: casi siempre es que la compu le dejó al micrófono 0 % de volumen de entrada. Ahora FRIDAY lo nota y te lo sube.",
