@@ -1,6 +1,23 @@
 [
  {
   "fecha": "2026-11-15",
+  "app": "celu",
+  "version": "Móvil 6.6",
+  "titulo": "El candado, como vos quieras",
+  "resumen": "El candado ahora puede tapar también la hoja de Compras entera, no solo el changuito. Lo elegís vos.",
+  "items": [
+   [
+    "Solo la plata, o la plata y las compras",
+    "En Ajustes de La plata elegís qué tapa el candado. Si elegís las dos, para abrir Compras también hay que desbloquear el celu."
+   ],
+   [
+    "Una vez cada tanto",
+    "Una vez que lo abriste queda abierto cinco minutos, y se cierra solo si dejás el celu. No te lo pide a cada rato mientras hacés las compras."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-15",
   "app": "compu",
   "version": "106.21",
   "titulo": "Candado en la plata",
@@ -16,7 +33,7 @@
    ],
    [
     "En el celu, también el changuito",
-    "La plata y lo que gastaste en el súper quedan con candado. La lista de compras no, que esa la abrís en la góndola."
+    "La plata y lo que gastaste en el súper quedan con candado, y desde la Móvil 6.6 podés tapar también la hoja de Compras entera si querés."
    ]
   ]
  },
