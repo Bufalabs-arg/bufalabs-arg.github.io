@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-15",
   "app": "compu",
+  "version": "106.21",
+  "titulo": "Candado en la plata",
+  "resumen": "Ahora podés pedir que para ver tus cuentas haya que desbloquear la compu o el celu, como siempre: huella, cara, PIN o patrón.",
+  "items": [
+   [
+    "El desbloqueo de siempre",
+    "Lo pide el sistema, no FRIDAY: ella no ve ni guarda tu huella ni tu PIN. Si la compu o el celu no tienen nada de eso, podés poner un PIN propio (se guarda cifrado, el PIN no se guarda)."
+   ],
+   [
+    "Tampoco los dice en voz alta",
+    "Con el candado puesto, si le preguntás cuánto te queda, primero te pide abrirlo. Anotar un gasto sigue siendo al toque, sin números a la vista."
+   ],
+   [
+    "En el celu, también el changuito",
+    "La plata y lo que gastaste en el súper quedan con candado. La lista de compras no, que esa la abrís en la góndola."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-15",
+  "app": "compu",
   "version": "106.20",
   "titulo": "La plata",
   "resumen": "FRIDAY te lleva la cuenta: lo que cobrás, lo que gastás y cuánto te queda este mes. Se lo decís hablando y es la misma cuenta en la compu y en el celu.",
