@@ -1,6 +1,27 @@
 [
  {
   "fecha": "2026-11-15",
+  "app": "compu",
+  "version": "106.23",
+  "titulo": "Decile «Friday» y nada más",
+  "resumen": "Con el oído de Groq, si decías solo «Friday» esperando el «¿sí?», a veces lo dejaba pasar. Arreglado.",
+  "items": [
+   [
+    "Una sola palabra alcanza",
+    "Lo tomaba por «palabra suelta» y se quedaba callada. Ahora, si escucha su nombre, contesta."
+   ],
+   [
+    "El nombre lo decide lo que escuchó",
+    "Antes hacía falta que el navegador llegara a escuchar «Friday» primero. Ahora alcanza con que aparezca en lo que entendió Whisper, que es el que entiende bien."
+   ],
+   [
+    "Y sigue sin contestar cualquier cosa",
+    "La tele y la charla de fondo quedan igual de filtradas: lo único que cambia es cuando dijiste su nombre."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-15",
   "app": "celu",
   "version": "Móvil 6.7",
   "titulo": "«¿Cómo venimos?»",
