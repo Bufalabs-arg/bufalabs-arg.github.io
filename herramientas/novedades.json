@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-15",
   "app": "compu",
+  "version": "106.24",
+  "titulo": "Que te escuche de verdad",
+  "resumen": "«Probar el micrófono» ahora prueba todo el camino, y si tu micrófono entrega poco volumen FRIDAY se acomoda sola.",
+  "items": [
+   [
+    "La prueba prueba de verdad",
+    "Te pide que digas «Friday» y te dice qué pasó: si entró el sonido, si lo reconoció como voz, si se lo mandó al oído y qué entendió. Antes solo miraba si entraba ruido, y por eso podía decir «te escucho» aunque después no contestara."
+   ],
+   [
+    "Si sonás bajito, baja el corte",
+    "FRIDAY tenía un corte fijo para decidir qué es voz. Con un micrófono flojo nunca llegaba, así que nunca arrancaba. Ahora mide cuánto sonás y lo acomoda a tu micrófono, en la prueba y sola mientras la usás."
+   ],
+   [
+    "Y si el sonido se corta, se engancha sola",
+    "A veces el sonido se corta (la compu se suspende, cambiás de micrófono) y quedaba con permiso pero sorda. Ahora se da cuenta, lo dice y se vuelve a enganchar sola."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-15",
+  "app": "compu",
   "version": "106.23",
   "titulo": "Decile «Friday» y nada más",
   "resumen": "Con el oído de Groq, si decías solo «Friday» esperando el «¿sí?», a veces lo dejaba pasar. Arreglado.",
