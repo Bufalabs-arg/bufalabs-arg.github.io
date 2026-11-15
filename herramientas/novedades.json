@@ -2,6 +2,31 @@
  {
   "fecha": "2026-11-14",
   "app": "compu",
+  "version": "106.18",
+  "titulo": "Oído fino",
+  "resumen": "Si no está segura de lo que escuchó, se calla en vez de contestar cualquier cosa. Y busca mejor: arma mejor la pregunta y lee más páginas antes de responder.",
+  "items": [
+   [
+    "Si no está segura, se calla",
+    "Mide qué tan segura está de lo que escuchó (y si sonaste cerca o lejos). Lo dudoso lo deja pasar sin decir nada, en vez de contestar cualquier cosa."
+   ],
+   [
+    "Sabe cuándo no le hablan a ella",
+    "Mientras charlan podés seguir sin decirle «Friday», pero si la voz suena lejos o la frase no se entiende, no la toma: la tele y la charla de al lado dejan de meterse."
+   ],
+   [
+    "Busca mejor",
+    "Le saca el «che, decime» a la pregunta, le pone la fecha cuando hace falta, lee tres páginas de sitios distintos y, si el dato no está, lo dice en vez de inventar."
+   ],
+   [
+    "Te cuenta por qué",
+    "En Ajustes → Voz y oído, «Lo último que escuché» ahora dice por qué dejó pasar algo: «no estaba segura», «sonó lejos», «parecía ruido»."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-14",
+  "app": "compu",
   "version": "106.17",
   "titulo": "El micrófono, a la vista",
   "resumen": "Ahora FRIDAY te dice siempre si te escucha o no, lo prueba cuando se lo pedís y se da cuenta si no hay ningún micrófono enchufado.",
