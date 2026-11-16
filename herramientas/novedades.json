@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-16",
   "app": "compu",
+  "version": "106.30",
+  "titulo": "La barra de tareas, de una",
+  "resumen": "La regla que hace que FRIDAY sea FRIDAY solo vale cuando la ventana se crea. Ahora el botón le da vuelta la ventana y lo ves en el momento.",
+  "items": [
+   [
+    "Se aplica al toque",
+    "Antes había que cerrar y abrir FRIDAY a mano para que valiera. Ahora lo hace ella."
+   ],
+   [
+    "Te muestra con qué nombre se presenta",
+    "En Ajustes → La barra de tareas ves exactamente cómo se identifica la ventana ante el escritorio. Si algo no cuadra, eso es lo que hay que mirar."
+   ],
+   [
+    "También en KDE con X11",
+    "Antes la regla se ponía solo en Wayland. Ahora va en los dos."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-16",
+  "app": "compu",
   "version": "106.29",
   "titulo": "FRIDAY es FRIDAY, no el navegador",
   "resumen": "En la barra de tareas aparecía el navegador en vez de FRIDAY, y «mandar a segundo plano» no hacía nada en Wayland. Las dos cosas, arregladas.",
