@@ -1,5 +1,26 @@
 [
  {
+  "fecha": "2026-11-16",
+  "app": "compu",
+  "version": "106.28",
+  "titulo": "«Hoy» en la barra de arriba",
+  "resumen": "La isla suma una pestaña «Hoy» con lo que te queda del día, la plata del mes y el changuito. Y FRIDAY ya aparece como corresponde en la barra de tareas.",
+  "items": [
+   [
+    "Una pestaña nueva en la isla",
+    "Lo que te queda hoy, cuánto te queda de plata este mes y cuántas cosas faltan del changuito, con el número a la vista en la pestaña. Lo mismo que te cuenta cuando le decís «¿cómo venimos?», pero de un vistazo."
+   ],
+   [
+    "En la barra de tareas, con su nombre",
+    "La ventana de FRIDAY ahora se reconoce como FRIDAY: sale con su ícono y su nombre en la barra de tareas, en vez de quedar suelta o pegada al navegador. Se arregla sola al actualizar."
+   ],
+   [
+    "Con el candado puesto, sin números",
+    "Si tenés el candado en La plata, la isla dice «está con candado» y no muestra ningún monto."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-15",
   "app": "compu",
   "version": "106.27",

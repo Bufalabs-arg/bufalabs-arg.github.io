@@ -9,6 +9,7 @@ Terminal=false
 Categories=Utility;Accessibility;
 Keywords=friday;asistente;bufalabs;ia;voz;assistant;
 StartupNotify=false
+StartupWMClass=FRIDAY
 Actions=actualizar;apagar;
 
 [Desktop Action actualizar]
