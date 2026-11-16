@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-16",
   "app": "compu",
+  "version": "106.29",
+  "titulo": "FRIDAY es FRIDAY, no el navegador",
+  "resumen": "En la barra de tareas aparecía el navegador en vez de FRIDAY, y «mandar a segundo plano» no hacía nada en Wayland. Las dos cosas, arregladas.",
+  "items": [
+   [
+    "Con su nombre en la barra de tareas",
+    "En Wayland el navegador le pone su propia identidad a la ventana, así que abajo te salía «Edge». Ahora FRIDAY le pide a KDE que esa ventana sea FRIDAY: sale con su ícono, su nombre y su lugar propio. Se acomoda sola al actualizar, y hay un botón en Ajustes por si hace falta."
+   ],
+   [
+    "Segundo plano, andando",
+    "Minimizarla no funcionaba en Wayland, porque ningún programa puede tocar la ventana de otro. Ahora se minimiza por KDE, y si no se puede te lo dice en vez de quedarse callada."
+   ],
+   [
+    "Y si la cerrás, vuelve",
+    "Con «vivir en segundo plano» puesto, al prender la compu arranca minimizada en vez de no arrancar, y si cerrás la ventana la abre de nuevo minimizada: sigue escuchando y la barra de arriba no se queda sin datos."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-16",
+  "app": "compu",
   "version": "106.28",
   "titulo": "«Hoy» en la barra de arriba",
   "resumen": "La isla suma una pestaña «Hoy» con lo que te queda del día, la plata del mes y el changuito. Y FRIDAY ya aparece como corresponde en la barra de tareas.",
