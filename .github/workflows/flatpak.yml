@@ -1,6 +1,10 @@
 name: Paquete Flatpak de FRIDAY
 # Cuando se publica una FRIDAY para Linux nueva (descargas/FRIDAY-linux.tar.gz), arma el paquete Flatpak
 # con ese mismo programa y lo deja en descargas/FRIDAY.flatpak.
+#
+# Lo armamos a mano en el runner de siempre, sin el contenedor de Flathub: ahí /var/lib/flatpak vive
+# en un overlayfs y ostree no puede enlazar los archivos que vienen de la imagen, así que actualizar
+# los runtimes fallaba siempre con «Invalid cross-device link». Acá el disco es uno solo y anda.
 on:
   push:
     branches: [main]
@@ -17,34 +21,35 @@ concurrency:
 jobs:
   flatpak:
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
-    container:
-      image: ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-25.08
-      options: --privileged
-    env:
-      # Dentro del contenedor, /github/home viene montado de afuera. Si lo temporal cae en otro
-      # sistema de archivos, ostree no puede mover lo que baja y los runtimes fallan al actualizarse
-      # con «Invalid cross-device link». Lo dejamos al lado de la instalación de flatpak.
-      TMPDIR: /github/home/tmp
+    timeout-minutes: 45
     steps:
-      - name: Preparar lo temporal (y ver dónde está cada cosa)
-        run: |
-          mkdir -p /github/home/tmp
-          for d in /github/home /github/home/.local/share/flatpak /var/lib/flatpak /var/tmp /tmp; do
-            [ -e "$d" ] && printf '%-44s dev=%s\n' "$d" "$(stat -c %d "$d")"
-          done
-          df -h | head -15
       - uses: actions/checkout@v4
-      - uses: flathub-infra/flatpak-github-actions/flatpak-builder@master
-        with:
-          bundle: FRIDAY.flatpak
-          manifest-path: flatpak/io.github.bufalabs_arg.FRIDAY.yml
-          cache-key: friday-${{ hashFiles('descargas/FRIDAY-linux.tar.gz', 'flatpak/**') }}
-          upload-artifact: false
+
+      - name: Instalar flatpak
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends flatpak flatpak-builder
+          flatpak --version && flatpak-builder --version
+          sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+      - name: Bajar el runtime y el SDK
+        run: |
+          sudo flatpak install -y --noninteractive flathub \
+            org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08
+          flatpak list --runtime --columns=application,version,branch
+
+      - name: Armar el paquete
+        run: |
+          sudo flatpak-builder --repo=repo --disable-rofiles-fuse --force-clean \
+            --default-branch=master build flatpak/io.github.bufalabs_arg.FRIDAY.yml
+          sudo flatpak build-bundle repo FRIDAY.flatpak io.github.bufalabs_arg.FRIDAY master
+          sudo chown "$(id -u):$(id -g)" FRIDAY.flatpak
+
       - name: Revisar el paquete
         run: |
           ls -la FRIDAY.flatpak
           test "$(stat -c %s FRIDAY.flatpak)" -gt 1000000
+
       - name: Dejarlo en descargas
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
