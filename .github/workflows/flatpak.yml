@@ -21,7 +21,19 @@ jobs:
     container:
       image: ghcr.io/flathub-infra/flatpak-github-actions:freedesktop-25.08
       options: --privileged
+    env:
+      # Dentro del contenedor, /github/home viene montado de afuera. Si lo temporal cae en otro
+      # sistema de archivos, ostree no puede mover lo que baja y los runtimes fallan al actualizarse
+      # con «Invalid cross-device link». Lo dejamos al lado de la instalación de flatpak.
+      TMPDIR: /github/home/tmp
     steps:
+      - name: Preparar lo temporal (y ver dónde está cada cosa)
+        run: |
+          mkdir -p /github/home/tmp
+          for d in /github/home /github/home/.local/share/flatpak /var/lib/flatpak /var/tmp /tmp; do
+            [ -e "$d" ] && printf '%-44s dev=%s\n' "$d" "$(stat -c %d "$d")"
+          done
+          df -h | head -15
       - uses: actions/checkout@v4
       - uses: flathub-infra/flatpak-github-actions/flatpak-builder@master
         with:
