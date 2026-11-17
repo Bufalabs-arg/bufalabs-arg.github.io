@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-17",
   "app": "compu",
+  "version": "106.32",
+  "titulo": "Elena, sin tener que usar Edge",
+  "resumen": "Elena es una voz de Azure, y hasta ahora FRIDAY la conseguía solo abriéndose dentro de Edge. Ahora se la pide directo, y te anda en cualquier navegador.",
+  "items": [
+   [
+    "La misma voz, por la puerta de adelante",
+    "Sacás una llave gratis de Azure una sola vez (el plan gratis da medio millón de caracteres por mes; FRIDAY usa una pizca) y la pegás en Ajustes → Cómo habla. Listo: Elena en el navegador que uses."
+   ],
+   [
+    "Y si Azure no contesta, igual te habla",
+    "Sin internet, o si Azure se cae, sigue sola con la voz local, sin quedarse muda ni cortar lo que estaba diciendo."
+   ],
+   [
+    "Voz local nueva",
+    "La que habla sin internet ahora suena bastante más natural que la de antes."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-17",
+  "app": "compu",
   "version": "106.31",
   "titulo": "La barra de tareas, en serio esta vez",
   "resumen": "La regla guardaba la identidad de la ventana en minúsculas y KDE la compara respetando las mayúsculas: por eso seguía saliendo el navegador aunque dijera «listo».",
