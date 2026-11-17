@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-17",
   "app": "compu",
+  "version": "106.34",
+  "titulo": "Tus ajustes te siguen",
+  "resumen": "Todo lo tuyo vivía adentro del navegador: si FRIDAY se abría en otro lado, aparecía recién sacada de la caja. Ahora el programa se guarda una copia y te la devuelve sola.",
+  "items": [
+   [
+    "Si FRIDAY se abre en otro lado, llega con todo puesto",
+    "Tus llaves, tus gustos y cómo te trata te siguen, sin volver a cargar nada."
+   ],
+   [
+    "Y es un respaldo",
+    "Si al navegador se le limpian los datos, FRIDAY vuelve como estaba en vez de empezar de cero."
+   ],
+   [
+    "Sin salir de tu compu",
+    "La copia queda en la carpeta de FRIDAY, en esta compu y nada más, y solo la puede leer tu usuario."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-17",
+  "app": "compu",
   "version": "106.33",
   "titulo": "Una voz linda, sin sacar nada nuevo",
   "resumen": "Para la voz de Azure te piden una tarjeta aunque el plan sea gratis. Ahora FRIDAY puede hablar con la misma llave de Gemini que ya usa para pensar.",

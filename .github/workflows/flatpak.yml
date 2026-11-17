@@ -40,10 +40,24 @@ jobs:
 
       - name: Armar el paquete
         run: |
+          # el repositorio que publicamos (el que se agrega en Discover) se va llenando versión a
+          # versión, así que partimos del que ya está en la página en vez de empezar de cero
+          if [ -d flatpak/repo/objects ]; then cp -a flatpak/repo repo; fi
           sudo flatpak-builder --repo=repo --disable-rofiles-fuse --force-clean \
             --default-branch=master build flatpak/io.github.bufalabs_arg.FRIDAY.yml
           sudo flatpak build-bundle repo FRIDAY.flatpak io.github.bufalabs_arg.FRIDAY master
           sudo chown "$(id -u):$(id -g)" FRIDAY.flatpak
+
+      - name: Dejar el repositorio al día (es el que se ve en Discover)
+        run: |
+          # que quede solo la última versión de cada cosa: si no, la página se llena de versiones
+          # viejas que nadie va a instalar
+          sudo flatpak build-update-repo --prune --prune-depth=1 repo
+          sudo chown -R "$(id -u):$(id -g)" repo
+          rm -rf flatpak/repo && mkdir -p flatpak && cp -a repo flatpak/repo
+          rm -rf flatpak/repo/.lock flatpak/repo/tmp
+          du -sh flatpak/repo
+          test -f flatpak/repo/summary
 
       - name: Revisar el paquete
         run: |
@@ -56,7 +70,7 @@ jobs:
           cp FRIDAY.flatpak descargas/FRIDAY.flatpak
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add descargas/FRIDAY.flatpak
+          git add descargas/FRIDAY.flatpak flatpak/repo
           git diff --cached --quiet && exit 0
           git commit -m "Paquete Flatpak de FRIDAY para Linux"
           git pull --rebase origin main

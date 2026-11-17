@@ -1,0 +1,7 @@
+[Flatpak Repo]
+Title=BufaLabs
+Url=https://bufalabs-arg.github.io/flatpak/repo/
+Homepage=https://bufalabs-arg.github.io/
+Comment=Los programas de BufaLabs, con FRIDAY adentro
+Description=Agregás esto una vez y FRIDAY aparece en Discover (o en el centro de aplicaciones que uses), con sus actualizaciones.
+Icon=https://bufalabs-arg.github.io/img/friday-256.png
