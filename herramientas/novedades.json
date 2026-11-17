@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-17",
   "app": "compu",
+  "version": "106.33",
+  "titulo": "Una voz linda, sin sacar nada nuevo",
+  "resumen": "Para la voz de Azure te piden una tarjeta aunque el plan sea gratis. Ahora FRIDAY puede hablar con la misma llave de Gemini que ya usa para pensar.",
+  "items": [
+   [
+    "Habla con la llave que ya tenés",
+    "Si cargaste una llave de Gemini para que FRIDAY piense, ya puede hablar con ella. No hay que sacar nada nuevo ni poner una tarjeta."
+   ],
+   [
+    "Diez voces para probar",
+    "En Ajustes → Cómo habla elegís la que más te guste y la escuchás ahí mismo con el botón «Probar la voz»."
+   ],
+   [
+    "Y si Google no contesta, igual te habla",
+    "Sin internet, o si Google se cae, sigue sola con la voz local, sin quedarse muda ni cortar lo que estaba diciendo."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-17",
+  "app": "compu",
   "version": "106.32",
   "titulo": "Elena, sin tener que usar Edge",
   "resumen": "Elena es una voz de Azure, y hasta ahora FRIDAY la conseguía solo abriéndose dentro de Edge. Ahora se la pide directo, y te anda en cualquier navegador.",
