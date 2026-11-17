@@ -1,5 +1,22 @@
 [
  {
+  "fecha": "2026-11-17",
+  "app": "compu",
+  "version": "106.31",
+  "titulo": "La barra de tareas, en serio esta vez",
+  "resumen": "La regla guardaba la identidad de la ventana en minúsculas y KDE la compara respetando las mayúsculas: por eso seguía saliendo el navegador aunque dijera «listo».",
+  "items": [
+   [
+    "Con el nombre tal cual",
+    "Ahora la regla usa la identidad tal como la escribe el navegador (en el Edge de Flatpak es «com.microsoft.Edge»), sin distinguir mayúsculas."
+   ],
+   [
+    "Y si no puede volver a abrirla, lo dice",
+    "Al acomodarla, FRIDAY cierra y abre su ventana. Si el navegador tarda en soltar todo —pasa con los de Flatpak— espera más y lo intenta de nuevo en vez de dejarte sin ventana."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-16",
   "app": "casa",
   "version": "Casa 6.9",
