@@ -1,6 +1,31 @@
 [
  {
   "fecha": "2026-11-16",
+  "app": "casa",
+  "version": "Casa 6.9",
+  "titulo": "Las tareas de la casa, en serio",
+  "resumen": "Cada tarea con su dibujito y de quién es, separadas por secciones, y ahora se arreglan tocándolas.",
+  "items": [
+   [
+    "Se ve de quién es cada una",
+    "Un dibujito por tarea (el perro, los platos, la cama, la ropa) y la inicial de quien le toca, con su color. Antes todas salían con la misma carita de «?»."
+   ],
+   [
+    "Separadas por secciones",
+    "Hoy · Ya está hecho (con quién la hizo, y Deshacer si te equivocaste) · Otros días · Todas, agrupadas por persona."
+   ],
+   [
+    "Se arreglan tocándolas",
+    "Tocás una tarea y elegís qué es, el dibujito, de quién es, cada cuánto, a qué hora y cuántos puntos vale. Sin depender de que FRIDAY entienda bien."
+   ],
+   [
+    "Y entiende mejor cuando se las dictás",
+    "Si decís «la caca del perro la hace Sofi», lo anota a nombre de Sofi; y si no decís de quién es, te pregunta en vez de dejarla suelta."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-16",
   "app": "compu",
   "version": "106.30",
   "titulo": "La barra de tareas, de una",
