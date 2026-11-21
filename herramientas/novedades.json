@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-21",
   "app": "compu",
+  "version": "106.37",
+  "titulo": "Que termine lo que empezó",
+  "resumen": "Antes hacía una cosa y se paraba a contártela, aunque el trabajo estuviera por la mitad. Ahora mira cómo salió y sigue hasta terminar.",
+  "items": [
+   [
+    "Hace, mira cómo salió y sigue",
+    "Si para terminar lo que le pediste falta un paso más, lo hace, sin volver a preguntarte."
+   ],
+   [
+    "Sin dar vueltas al pedo",
+    "No repite dos veces la misma acción: si ya buscó ese archivo o ya abrió ese programa, sigue para adelante."
+   ],
+   [
+    "Y te cuenta una sola vez",
+    "Cuando terminó, te lo dice en una frase, con lo que pasó de verdad."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-21",
+  "app": "compu",
   "version": "106.36",
   "titulo": "FRIDAY, con su nombre y su cara",
   "resumen": "FRIDAY se abre adentro de Edge, y por eso en la barra de tareas aparecía como una ventana más del navegador. Ahora podés dejarla instalada como una aplicación de verdad, sin perder la voz.",
