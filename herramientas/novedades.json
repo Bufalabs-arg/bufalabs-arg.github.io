@@ -1,5 +1,26 @@
 [
  {
+  "fecha": "2026-11-21",
+  "app": "compu",
+  "version": "106.35",
+  "titulo": "FRIDAY con ventana propia, si querés",
+  "resumen": "FRIDAY puede abrirse en una ventana suya, sin navegador. Viene apagada, porque en esa ventana no está la voz de Elena: la prendés vos cuando quieras.",
+  "items": [
+   [
+    "Su propia ventana, sin navegador",
+    "Aparece como FRIDAY en la barra de tareas (y no como el navegador), el micrófono se lo damos nosotros, y se minimiza y vuelve sin pelear."
+   ],
+   [
+    "Viene apagada, porque te cambia la voz",
+    "Elena es una voz que viene adentro de Edge, así que en la ventana propia no está. Se prende en Ajustes → Cómo se abre, sabiendo que la voz pasa a ser la de Gemini o la local."
+   ],
+   [
+    "Y volvés cuando quieras",
+    "Si no te gusta, la destildás y FRIDAY vuelve a abrirse en el navegador de siempre, con Elena."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-17",
   "app": "compu",
   "version": "106.34",
