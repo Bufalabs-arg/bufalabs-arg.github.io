@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-21",
   "app": "compu",
+  "version": "106.36",
+  "titulo": "FRIDAY, con su nombre y su cara",
+  "resumen": "FRIDAY se abre adentro de Edge, y por eso en la barra de tareas aparecía como una ventana más del navegador. Ahora podés dejarla instalada como una aplicación de verdad, sin perder la voz.",
+  "items": [
+   [
+    "En la barra de tareas dice FRIDAY",
+    "Su ícono, su nombre y su lugar propio, sin barra de direcciones. Y sigue hablando con Elena, porque por debajo sigue siendo Edge."
+   ],
+   [
+    "Un botón y listo",
+    "En Ajustes → Cómo se abre está el botón «Dejar FRIDAY como una app». Si tu navegador lo permite, se hace solo; si no, te deja escritos los dos pasos."
+   ],
+   [
+    "La barra de arriba se va con FRIDAY",
+    "Si cerrás FRIDAY del todo, la barra de arriba se cierra sola en vez de quedarse ahí para siempre."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-21",
+  "app": "compu",
   "version": "106.35",
   "titulo": "FRIDAY con ventana propia, si querés",
   "resumen": "FRIDAY puede abrirse en una ventana suya, sin navegador. Viene apagada, porque en esa ventana no está la voz de Elena: la prendés vos cuando quieras.",
