@@ -42,7 +42,11 @@ jobs:
         run: |
           # el repositorio que publicamos (el que se agrega en Discover) se va llenando versión a
           # versión, así que partimos del que ya está en la página en vez de empezar de cero
-          if [ -d flatpak/repo/objects ]; then cp -a flatpak/repo repo; fi
+          if [ -d flatpak/repo/objects ]; then
+            cp -a flatpak/repo repo
+            # git no guarda carpetas vacías, y ostree las necesita todas para poder podar
+            mkdir -p repo/refs/heads repo/refs/remotes repo/refs/mirrors repo/objects repo/tmp repo/state
+          fi
           sudo flatpak-builder --repo=repo --disable-rofiles-fuse --force-clean \
             --default-branch=master build flatpak/io.github.bufalabs_arg.FRIDAY.yml
           sudo flatpak build-bundle repo FRIDAY.flatpak io.github.bufalabs_arg.FRIDAY master
