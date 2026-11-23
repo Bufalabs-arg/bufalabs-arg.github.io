@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-23",
   "app": "compu",
+  "version": "106.41",
+  "titulo": "Una tecla y te escucha, estés donde estés",
+  "resumen": "Apretás Ctrl+Shift+Espacio en cualquier programa y FRIDAY te escucha. Lo que digas se escribe ahí donde estabas; si empezás diciéndole el nombre, lo toma como una orden.",
+  "items": [
+   [
+    "Sin buscar su ventana ni decirle el nombre",
+    "Funciona en el Word, en el navegador o donde estés escribiendo."
+   ],
+   [
+    "Para escribir hablando",
+    "Un mail largo, un mensaje, una nota: lo decís y aparece escrito y puntuado donde estabas."
+   ],
+   [
+    "La misma tecla para pedirle cosas",
+    "Si empezás con «FRIDAY…», en vez de escribirlo lo hace."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-23",
+  "app": "compu",
   "version": "106.40",
   "titulo": "Que la alarma se note, y que no te diga que hizo algo si no lo hizo",
   "resumen": "Los recordatorios ahora suenan y se ven de verdad: si no estás mirando a FRIDAY, late todo el borde de la pantalla. Y cuando hace cosas en la compu, te cuenta lo que pasó, no lo que intentó.",
