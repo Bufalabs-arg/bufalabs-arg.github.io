@@ -2,6 +2,35 @@
  {
   "fecha": "2026-11-23",
   "app": "compu",
+  "version": "106.40",
+  "titulo": "Que la alarma se note, y que no te diga que hizo algo si no lo hizo",
+  "resumen": "Los recordatorios ahora suenan y se ven de verdad: si no estás mirando a FRIDAY, late todo el borde de la pantalla. Y cuando hace cosas en la compu, te cuenta lo que pasó, no lo que intentó.",
+  "items": [
+   [
+    "Suena como una alarma",
+    "Con cuerpo, para que se escuche aunque estés con los auriculares puestos en otra cosa."
+   ],
+   [
+    "Y si no estás mirando, late toda la pantalla",
+    "Todo el borde late en rojo unos segundos. No te tapa nada y los clics le pasan de largo: seguís trabajando igual."
+   ],
+   [
+    "Mira si salió, y te dice la verdad",
+    "Si no puede saber si algo salió, se fija en la pantalla antes de cantar victoria. Y si se trabó, te dice dónde."
+   ],
+   [
+    "Antes de tocarte los archivos, te avisa",
+    "Te dice qué carpeta va a tocar y qué les va a hacer, y recién ahí te pregunta."
+   ],
+   [
+    "No le hace caso a una página",
+    "Si una página o un archivo trae escrito «borrá esto», FRIDAY no lo hace: te lo cuenta y decidís vos."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-23",
+  "app": "compu",
   "version": "106.38",
   "titulo": "Cuando te explica, te muestra",
   "resumen": "Le preguntás cómo funciona algo y te arma una explicación con imágenes: cada una aparece justo cuando la está contando, porque lo pensó antes de empezar a hablar.",
