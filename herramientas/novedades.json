@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-23",
   "app": "compu",
+  "version": "106.42",
+  "titulo": "Decile FRIDAY y listo",
+  "resumen": "Estés en el programa que estés, le decís «FRIDAY» y te escucha. Si es una orden la hace; si es un texto, lo escribe ahí donde estabas.",
+  "items": [
+   [
+    "Sin buscar su ventana",
+    "Funciona en el Word, en el navegador o donde estés escribiendo. La tecla Ctrl+Shift+Espacio sigue estando para cuando no quieras hablar fuerte."
+   ],
+   [
+    "Ella se da cuenta de qué querés",
+    "«Poné música» lo hace; «hola mamá, llego a las nueve» lo escribe. No tenés que avisarle cuál de las dos."
+   ],
+   [
+    "Y si se lo pedís, escribe y punto",
+    "«FRIDAY, escribí…» o «FRIDAY, anotá…» siempre se escriben."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-23",
+  "app": "compu",
   "version": "106.41",
   "titulo": "Una tecla y te escucha, estés donde estés",
   "resumen": "Apretás Ctrl+Shift+Espacio en cualquier programa y FRIDAY te escucha. Lo que digas se escribe ahí donde estabas; si empezás diciéndole el nombre, lo toma como una orden.",
