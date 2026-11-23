@@ -1,5 +1,26 @@
 [
  {
+  "fecha": "2026-11-23",
+  "app": "compu",
+  "version": "106.38",
+  "titulo": "Cuando te explica, te muestra",
+  "resumen": "Le preguntás cómo funciona algo y te arma una explicación con imágenes: cada una aparece justo cuando la está contando, porque lo pensó antes de empezar a hablar.",
+  "items": [
+   [
+    "Piensa el guion antes de abrir la boca",
+    "Decide qué te va a mostrar en cada parte y lo va buscando mientras arranca, así no hay huecos ni imágenes que no vienen al caso."
+   ],
+   [
+    "Imágenes, esquemas y videos cortos",
+    "Saca lo que muestra de Wikimedia Commons: fotos, diagramas y videitos sin sonido que se repiten solos mientras habla."
+   ],
+   [
+    "Lo que muestra tiene que ver con lo que dice",
+    "Antes elegía la imagen adivinando por las palabras de la frase. Ahora cada una está puesta a propósito en su momento."
+   ]
+  ]
+ },
+ {
   "fecha": "2026-11-21",
   "app": "compu",
   "version": "106.37",
