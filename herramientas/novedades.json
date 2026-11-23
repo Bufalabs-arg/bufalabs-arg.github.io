@@ -2,6 +2,23 @@
  {
   "fecha": "2026-11-23",
   "app": "compu",
+  "version": "106.45",
+  "titulo": "Ahora sí: la barra se actualiza sola de verdad",
+  "resumen": "La barra nueva arrancaba, veía que la vieja seguía abierta y se cerraba sola sin decir nada. Ahora FRIDAY la baja, cierra la vieja y abre la nueva.",
+  "items": [
+   [
+    "Los tres pasos, solos",
+    "Bajar la barra nueva, cerrar la vieja y abrir la nueva. Sin eso del medio no servía de nada."
+   ],
+   [
+    "Y te cuenta en qué paso está",
+    "Queda anotado en «lo que hizo», así se ve dónde se trabó si algo sale mal."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-23",
+  "app": "compu",
   "version": "106.44",
   "titulo": "La barra te muestra lo que entendió",
   "resumen": "Cuando le hablás desde otro programa, la barra de arriba muestra la frase que entendió y si la va a hacer o la va a escribir, antes de que pase nada.",
