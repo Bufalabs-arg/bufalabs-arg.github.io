@@ -2,6 +2,27 @@
  {
   "fecha": "2026-11-23",
   "app": "compu",
+  "version": "106.43",
+  "titulo": "«Escribile a mi mamá» vuelve a ser una orden",
+  "resumen": "Pedirle que le mande un mensaje a alguien volvió a funcionar como siempre: te pregunta qué poner y lo manda. Y la barra de arriba ahora se pone al día sola.",
+  "items": [
+   [
+    "Mandar mensajes es pedirle algo, no dictarle",
+    "«Escribile a mi mamá», «mandale un mensaje a Juan» o «avisale que llego tarde» vuelven a ser órdenes."
+   ],
+   [
+    "La barra de arriba se actualiza sola",
+    "Antes se quedaba vieja para siempre si no corrías el instalador. Ahora se pone al día sin que hagas nada."
+   ],
+   [
+    "Y no te interrumpe",
+    "Si FRIDAY está contestándote o te preguntó algo, lo que digas es para ella y no se escribe en otro lado."
+   ]
+  ]
+ },
+ {
+  "fecha": "2026-11-23",
+  "app": "compu",
   "version": "106.42",
   "titulo": "Decile FRIDAY y listo",
   "resumen": "Estés en el programa que estés, le decís «FRIDAY» y te escucha. Si es una orden la hace; si es un texto, lo escribe ahí donde estabas.",
