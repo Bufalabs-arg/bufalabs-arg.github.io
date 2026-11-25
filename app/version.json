@@ -1,16 +1,21 @@
 {
- "version": "6.7",
- "titulo": "«¿Cómo venimos?»",
+ "version": "7.0",
+ "titulo": "Que se lea de lejos",
  "items": [
   {
-   "icono": "🌅",
-   "titulo": "El día entero, en una pregunta",
-   "texto": "Decile «¿cómo venimos?» y te cuenta el día: el clima, lo que tenés hoy, cómo viene la plata del mes, qué pagos se vienen y qué falta del changuito. Es la misma pregunta que en la compu."
+   "icono": "⏰",
+   "titulo": "Lo que viene, grande y al frente",
+   "texto": "Arriba de todo, qué es lo próximo y en cuánto: «Sacar la basura · en 7 min». Si falta menos de diez minutos se pone en rojo. Antes había que leer la lista de Hoy y hacer la cuenta de cabeza."
   },
   {
-   "icono": "💰",
-   "titulo": "El buen día ahora sabe de plata",
-   "texto": "El saludo de la mañana también te dice cómo venís con la plata y qué te falta comprar. Si tenés el candado puesto, no dice ningún número."
+   "icono": "👓",
+   "titulo": "Los botones se leen de lejos",
+   "texto": "Los íconos eran casi negros y lo que decían abajo tenía letra chiquita. Ahora tienen color de verdad, letra más grande, y lo que está pasando en cada uno («01:53 Cena con Marta») entra entero."
+  },
+  {
+   "icono": "🫧",
+   "titulo": "Y se terminó la pantalla negra",
+   "texto": "El cartel de «Tocá para empezar» tapaba todo y, como el toque recién llega cuando alguien pasa, la tablet se pasaba el día así. Ahora es una chapita abajo que no tapa nada."
   }
  ]
 }

@@ -90,6 +90,20 @@ body.inapp .inicio{opacity:0;transform:scale(.96);pointer-events:none}
 .date{margin:14px 0 0;font:500 22px/1.2 var(--text);color:var(--ink)}
 .greet{margin:4px 0 0;font:400 18px/1.3 var(--text);color:var(--ink-2)}
 .wxrow{display:flex;align-items:center;gap:18px;margin:16px 0 18px;flex-wrap:wrap}
+/* lo que viene: grande, para leerlo de lejos */
+.ahora{display:flex;align-items:center;gap:16px;margin:0 0 16px;padding:16px 20px;border-radius:26px;
+  background:linear-gradient(150deg, color-mix(in srgb,var(--friday) 26%, var(--card)) 0%, var(--card) 80%);
+  border:1px solid color-mix(in srgb,var(--friday) 42%, transparent);box-shadow:var(--shadow)}
+.ahora[hidden]{display:none}
+.ahora.ya{background:linear-gradient(150deg, color-mix(in srgb,var(--alert) 26%, var(--card)) 0%, var(--card) 80%);border-color:color-mix(in srgb,var(--alert) 50%, transparent)}
+.ahora .ic{flex:none;width:52px;height:52px;border-radius:17px;display:grid;place-items:center;font-size:26px;
+  background:color-mix(in srgb,var(--friday) 22%, transparent)}
+.ahora.ya .ic{background:color-mix(in srgb,var(--alert) 22%, transparent)}
+.ahora .tx{flex:1;min-width:0}
+.ahora .tx b{display:block;font:600 24px/1.18 var(--disp);color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ahora .tx small{display:block;margin-top:2px;font-size:17px;color:var(--ink-2)}
+.ahora .en{flex:none;text-align:right;font:600 21px/1.1 var(--disp);color:var(--friday);white-space:nowrap}
+.ahora.ya .en{color:var(--alert)}
 .wxnow{display:flex;align-items:center;gap:10px;color:var(--ink-2);font-size:17px}
 .wxnow svg{width:34px;height:34px}
 .wxnow b{color:var(--ink);font:600 30px/1 var(--disp)}
@@ -130,16 +144,17 @@ body.inapp .inicio{opacity:0;transform:scale(.96);pointer-events:none}
 .grid{display:grid;grid-template-columns:repeat(8,1fr);gap:18px 8px;align-content:start}
 .app-ic{--t:var(--friday);display:flex;flex-direction:column;align-items:center;gap:9px;padding:0;border:0;background:none;cursor:pointer;min-width:0}
 .app-ic .tile{position:relative;width:100%;max-width:108px;aspect-ratio:1;border-radius:32%;display:grid;place-items:center;
-  background:linear-gradient(155deg, color-mix(in srgb,var(--t) 30%, #12203a) 0%, #0D1830 78%);
-  border:1px solid color-mix(in srgb,var(--t) 34%, transparent);
+  background:linear-gradient(155deg, color-mix(in srgb,var(--t) 46%, #16253f) 0%, color-mix(in srgb,var(--t) 16%, #111E36) 85%);
+  border:1px solid color-mix(in srgb,var(--t) 52%, transparent);
   box-shadow:0 1px 0 rgba(255,255,255,.08) inset, 0 18px 34px -22px color-mix(in srgb,var(--t) 70%, #000);
   transition:transform .18s, box-shadow .5s, border-color .5s}
 .app-ic:active .tile{transform:scale(.93)}
-.app-ic .tile svg{width:46%;height:46%;color:var(--t);filter:drop-shadow(0 0 10px color-mix(in srgb,var(--t) 55%, transparent))}
+.app-ic .tile svg{width:48%;height:48%;color:color-mix(in srgb,var(--t) 86%, #fff);filter:drop-shadow(0 0 12px color-mix(in srgb,var(--t) 65%, transparent))}
 .app-ic.live .tile{border-color:var(--t);box-shadow:0 0 0 1px var(--t), 0 0 34px -4px color-mix(in srgb,var(--t) 65%, transparent), 0 1px 0 rgba(255,255,255,.1) inset}
-.app-ic b{font:600 17px/1.1 var(--text);color:var(--ink)}
-.app-ic small{font-size:14px;line-height:1.15;color:var(--ink-2);max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-height:16px;margin-top:-5px}
-.app-ic.live small{color:var(--t)}
+.app-ic b{font:600 19px/1.1 var(--text);color:var(--ink)}
+.app-ic small{font-size:15.5px;line-height:1.18;color:var(--ink-2);max-width:100%;min-height:19px;margin-top:-4px;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-wrap:balance}
+.app-ic.live small{color:color-mix(in srgb,var(--t) 70%, #fff);font-weight:600}
 .app-ic .badge{position:absolute;top:-6px;right:-6px;min-width:28px;height:28px;padding:0 8px;border-radius:14px;background:var(--alert);color:#fff;font:700 15px/28px var(--text);text-align:center;box-shadow:0 0 0 3px var(--void)}
 .app-ic .eq{position:absolute;right:13%;bottom:13%;display:flex;gap:2px;align-items:flex-end;height:13%}
 .app-ic .eq i{width:4px;border-radius:2px;background:var(--t);animation:eq 1s ease-in-out infinite}
@@ -698,11 +713,17 @@ body.ambvid #ytbox iframe{transform:none}
 .setup .sclose{margin-top:14px;font:600 18px var(--text);padding:12px 28px;border-radius:999px;border:0;background:#0B1424;color:#fff}.setup .sclose[hidden]{display:none}
 
 /* ---------- toque inicial ---------- */
-.tap{position:fixed;inset:0;z-index:45;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;border:0;width:100%;
-  background:rgba(6,11,20,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);cursor:pointer}
+.tap{position:fixed;left:50%;bottom:104px;transform:translateX(-50%);z-index:45;display:flex;align-items:center;gap:12px;
+  padding:13px 24px 13px 20px;border-radius:999px;border:1px solid color-mix(in srgb,var(--friday) 55%, transparent);
+  background:color-mix(in srgb,var(--friday) 22%, rgba(10,17,30,.92));color:var(--ink);cursor:pointer;max-width:min(560px,92vw);
+  box-shadow:0 16px 40px -18px rgba(0,0,0,.8); animation:tapLate 2.6s ease-in-out infinite}
+.tap::before{content:"";flex:none;width:11px;height:11px;border-radius:50%;background:var(--friday);box-shadow:0 0 12px var(--friday)}
 .tap[hidden]{display:none}
-.tap b{font:640 42px/1.1 var(--disp)}
-.tap span{color:var(--ink-2);font-size:20px}
+.tap b{font:600 19px/1.15 var(--disp)}
+.tap span{color:var(--ink-2);font-size:16px}
+.tap .tver{display:none}
+@keyframes tapLate{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-4px)}}
+@media (prefers-reduced-motion: reduce){ .tap{animation:none} }
 .toast{visibility:hidden;position:fixed;left:50%;bottom:26px;transform:translate(-50%,calc(100% + 40px));padding:12px 22px;border-radius:999px;background:var(--ink);color:var(--void);font-size:17px;z-index:60;transition:transform .4s;max-width:90vw}
 .toast.on{transform:translate(-50%,0);visibility:visible}
 
@@ -1309,6 +1330,7 @@ var PENSAR=(()=>{
       <p class="date" id="today"></p>
       <p class="greet" id="hello">Hola</p>
       <div class="wxrow"><div class="wxnow" id="wxNow"></div><div class="sun" id="sunNow"></div></div>
+      <button class="ahora" id="ahora" type="button" hidden></button>
       <article class="card" id="cHoy" data-k="hoy"></article>
     </section>
     <section class="apps">
@@ -1359,7 +1381,7 @@ var PENSAR=(()=>{
     <p>Para configurarme, escaneá este código con la cámara de tu celu. No hay que escribir nada acá.</p></div></div>
   <div class="qrbox"><div id="qr"></div><div class="code" id="sCode"></div><div class="st" id="sSt">Esperando al celu…</div><button class="sclose" id="sClose" type="button" hidden>Cancelar</button></div>
 </div>
-<button class="tap" id="tap" hidden><b>Tocá para empezar</b><span>Una sola vez, así puedo hablar. Después me escribís abajo o me hablás desde FRIDAY en el celu.</span><small class="tver" id="tapVer"></small></button>
+<button class="tap" id="tap" hidden><b>Tocá una vez</b><span>así puedo hablarte</span><small class="tver" id="tapVer"></small></button>
 <div class="setbg" id="setBg"></div>
 <aside class="sets" id="sets" aria-label="Ajustes">
   <header><h2>Ajustes</h2><button class="done" id="setX" type="button">Listo</button></header>
@@ -2819,7 +2841,7 @@ Si hay algo, respondé UNA o dos frases cortas, hablándole directo, como lo dir
 // ================================================================ FRIDAY Casa: la tablet de la casa
 // App propia (no necesita la compu). Con la compu prendida suma lo que la compu sabe (avisos, lo que suena),
 // y si no armaste el servicio de Cloudflare, las luces van por la compu.
-const VERSION='6.9';
+const VERSION='7.0';
 const $=id=>document.getElementById(id);
 const LS={ get(k,d){ try{ const v=localStorage.getItem('fp.'+k); return v==null?d:JSON.parse(v); }catch(e){ return d; } },
            set(k,v){ try{ localStorage.setItem('fp.'+k, JSON.stringify(v)); }catch(e){} },
@@ -5238,7 +5260,7 @@ function render(){
     const txt=s>=3600?`${Math.floor(s/3600)}:${z2(Math.floor(s%3600/60))}:${z2(s%60)}`:`${Math.floor(s/60)}:${z2(s%60)}`;
     return `<div class="tpill${left<60000?' urge':''}"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="18" class="bg"/><circle cx="22" cy="22" r="18" class="fg" style="stroke-dasharray:${C.toFixed(1)};stroke-dashoffset:${(C*(1-fr)).toFixed(1)}"/></svg><b>${txt}</b><span>${esc(t.label||'Timer')}</span></div>`; }).join('')
     + (ringing?`<div class="tpill urge ring"><b>¡Listo!</b><span>${esc(ringing.label||'Timer')}</span></div>`:''));
-  renderHoyTo($('cHoy'), innerHeight>innerWidth?5:5, false); renderCasa(); renderMus(); renderShop(); renderStatus(); renderHint(); renderApps(); renderWidgets(); if(os.cur) renderPane(os.cur);
+  renderHoyTo($('cHoy'), innerHeight>innerWidth?5:5, false); renderAhora(); renderCasa(); renderMus(); renderShop(); renderStatus(); renderHint(); renderApps(); renderWidgets(); if(os.cur) renderPane(os.cur);
 }
 const hoyAsk={x:'', until:0};
 function renderHoyTo(box, max, full){
@@ -6292,6 +6314,22 @@ function agItems(){
 function enCuanto(at){ const m=Math.round((at-Date.now())/60000); if(m<1) return 'ahora'; if(m<60) return `en ${m} min`; const h=Math.floor(m/60), r=m%60; if(h<6) return `en ${h} h${r>=10?' '+r+' min':''}`; const d=Math.round((new Date(at).setHours(0,0,0,0)-new Date().setHours(0,0,0,0))/86400000); return d===0?'hoy':d===1?'mañana':`en ${d} días`; }
 function diaTxt(at){ const t0=new Date(); t0.setHours(0,0,0,0); const k=Math.round((new Date(at).setHours(0,0,0,0)-t0)/86400000), d=new Date(at);
   return [k===0?'Hoy':k===1?'Mañana':DIAS[d.getDay()].charAt(0).toUpperCase()+DIAS[d.getDay()].slice(1), `${k<2?DIAS[d.getDay()]+' ':''}${d.getDate()}`]; }
+// Lo que viene: lo primero de la agenda, con la cuenta ya hecha. Si falta menos de diez
+// minutos se pone en rojo, que es cuando deja de ser un dato y pasa a ser un apuro.
+const AHORA_IC={evento:'📅', recordatorio:'⏰', rutina:'🔁', cumple:'🎂'};
+function renderAhora(){
+  const el=$('ahora'); if(!el) return;
+  const x=agItems().find(i=>!i.d && i.at>new Date()) || agItems().find(i=>i.at>new Date());
+  if(!x){ el.hidden=true; el.dataset.h=''; return; }
+  const falta=(x.at-Date.now())/60000, ya=falta<=10;
+  const hora=x.d ? diaTxt(x.at)[0] : x.at.toLocaleTimeString('es-AR',{hour:'2-digit', minute:'2-digit', hour12:false});
+  const h=`<i class="ic">${AHORA_IC[x.tipo]||'•'}</i><span class="tx"><b>${esc(x.t)}</b><small>${hora}${x.sub?' · '+esc(x.sub):''}</small></span><span class="en">${esc(enCuanto(x.at))}</span>`;
+  el.classList.toggle('ya', ya);
+  el.hidden=false;
+  if(el.dataset.h!==h){ el.dataset.h=h; el.innerHTML=h; }
+}
+$('ahora').onclick=()=>{ try{ osOpen('agenda'); }catch(e){} };
+
 function renderAgenda(){
   const el=$('cAgenda'); if(!el) return; const its=agItems(), ask=Date.now()<hoyAsk.until?hoyAsk.x:'';
   const prox=its.find(x=>!x.d && x.at>new Date()) || its[0];
