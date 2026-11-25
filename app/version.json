@@ -1,21 +1,16 @@
 {
- "version": "7.1",
- "titulo": "Lo que está pasando, y una tablet que de noche te deja dormir",
+ "version": "6.7",
+ "titulo": "«¿Cómo venimos?»",
  "items": [
   {
-   "icono": "✨",
-   "titulo": "Lo que está pasando va arriba",
-   "texto": "Si hay música sonando, luces prendidas, algo en la agenda o cosas en el changuito, eso ahora sube a una fila propia arriba de los botones, en grande. Los dieciséis botones quedan donde siempre: en una pantalla colgada uno los busca con la mano."
+   "icono": "🌅",
+   "titulo": "El día entero, en una pregunta",
+   "texto": "Decile «¿cómo venimos?» y te cuenta el día: el clima, lo que tenés hoy, cómo viene la plata del mes, qué pagos se vienen y qué falta del changuito. Es la misma pregunta que en la compu."
   },
   {
-   "icono": "🌙",
-   "titulo": "De noche se apaga sola",
-   "texto": "A partir de las once baja el brillo, y pasada la una de la mañana queda nada más que la hora, apenas visible. Tocás la pantalla y vuelve todo."
-  },
-  {
-   "icono": "🖼️",
-   "titulo": "Y el reloj se mueve despacio",
-   "texto": "Cada cuarto de hora se corre unos pocos píxeles. En una pantalla que está prendida toda la noche, un reloj siempre en el mismo lugar se termina marcando."
+   "icono": "💰",
+   "titulo": "El buen día ahora sabe de plata",
+   "texto": "El saludo de la mañana también te dice cómo venís con la plata y qué te falta comprar. Si tenés el candado puesto, no dice ningún número."
   }
  ]
 }
