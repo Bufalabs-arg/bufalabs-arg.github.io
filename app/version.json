@@ -1,21 +1,21 @@
 {
- "version": "7.0",
- "titulo": "Que se lea de lejos",
+ "version": "7.1",
+ "titulo": "Lo que está pasando, y una tablet que de noche te deja dormir",
  "items": [
   {
-   "icono": "⏰",
-   "titulo": "Lo que viene, grande y al frente",
-   "texto": "Arriba de todo, qué es lo próximo y en cuánto: «Sacar la basura · en 7 min». Si falta menos de diez minutos se pone en rojo. Antes había que leer la lista de Hoy y hacer la cuenta de cabeza."
+   "icono": "✨",
+   "titulo": "Lo que está pasando va arriba",
+   "texto": "Si hay música sonando, luces prendidas, algo en la agenda o cosas en el changuito, eso ahora sube a una fila propia arriba de los botones, en grande. Los dieciséis botones quedan donde siempre: en una pantalla colgada uno los busca con la mano."
   },
   {
-   "icono": "👓",
-   "titulo": "Los botones se leen de lejos",
-   "texto": "Los íconos eran casi negros y lo que decían abajo tenía letra chiquita. Ahora tienen color de verdad, letra más grande, y lo que está pasando en cada uno («01:53 Cena con Marta») entra entero."
+   "icono": "🌙",
+   "titulo": "De noche se apaga sola",
+   "texto": "A partir de las once baja el brillo, y pasada la una de la mañana queda nada más que la hora, apenas visible. Tocás la pantalla y vuelve todo."
   },
   {
-   "icono": "🫧",
-   "titulo": "Y se terminó la pantalla negra",
-   "texto": "El cartel de «Tocá para empezar» tapaba todo y, como el toque recién llega cuando alguien pasa, la tablet se pasaba el día así. Ahora es una chapita abajo que no tapa nada."
+   "icono": "🖼️",
+   "titulo": "Y el reloj se mueve despacio",
+   "texto": "Cada cuarto de hora se corre unos pocos píxeles. En una pantalla que está prendida toda la noche, un reloj siempre en el mismo lugar se termina marcando."
   }
  ]
 }
