@@ -1,16 +1,21 @@
 {
- "version": "6.7",
- "titulo": "«¿Cómo venimos?»",
+ "version": "8.0",
+ "titulo": "La tablet te habla cuando estás ahí",
  "items": [
   {
-   "icono": "🌅",
-   "titulo": "El día entero, en una pregunta",
-   "texto": "Decile «¿cómo venimos?» y te cuenta el día: el clima, lo que tenés hoy, cómo viene la plata del mes, qué pagos se vienen y qué falta del changuito. Es la misma pregunta que en la compu."
+   "icono": "📺",
+   "titulo": "Te contesta por donde estás parado",
+   "texto": "La tablet no tiene micrófono, pero tiene parlantes: puede hablar aunque no pueda escuchar. Si estás lejos de la compu y tocaste la tablet hace poco, el aviso sale por acá, en pantalla y en voz alta. Si estás en la compu, la tablet se calla y te habla la compu."
   },
   {
-   "icono": "💰",
-   "titulo": "El buen día ahora sabe de plata",
-   "texto": "El saludo de la mañana también te dice cómo venís con la plata y qué te falta comprar. Si tenés el candado puesto, no dice ningún número."
+   "icono": "💬",
+   "titulo": "Lo último que te dijo queda a la vista",
+   "texto": "Antes desaparecía apenas terminaba de hablar: si no estabas mirando justo en ese momento, se perdía. Ahora queda escrito grande, para leerlo desde la puerta de la cocina."
+  },
+  {
+   "icono": "🌤️",
+   "titulo": "El clima, del tamaño que corresponde",
+   "texto": "Era una línea chiquita debajo de la fecha. En una pantalla de pared el clima es lo segundo que mirás después de la hora."
   }
  ]
 }
