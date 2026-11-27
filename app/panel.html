@@ -90,9 +90,9 @@ body.inapp .inicio{opacity:0;transform:scale(.96);pointer-events:none}
 .date{margin:14px 0 0;font:500 22px/1.2 var(--text);color:var(--ink)}
 .greet{margin:4px 0 0;font:400 18px/1.3 var(--text);color:var(--ink-2)}
 .wxrow{display:flex;align-items:center;gap:18px;margin:16px 0 18px;flex-wrap:wrap}
-.wxnow{display:flex;align-items:center;gap:12px;color:var(--ink-2);font-size:19px}
-.wxnow svg{width:52px;height:52px}
-.wxnow b{color:var(--ink);font:600 54px/1 var(--disp);letter-spacing:-.02em}
+.wxnow{display:flex;align-items:center;gap:10px;color:var(--ink-2);font-size:17px}
+.wxnow svg{width:34px;height:34px}
+.wxnow b{color:var(--ink);font:600 30px/1 var(--disp)}
 .sun{display:flex;align-items:center;gap:10px;color:var(--ink-2);font-size:15px;white-space:nowrap}
 .sun svg{width:52px;height:20px;overflow:visible}
 .sun .arc{fill:none;stroke:rgba(157,176,201,.5);stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
@@ -325,20 +325,6 @@ body.noticiero .dock,body.noticiero .talk{visibility:hidden}
 .ctl .todo{flex:0 0 auto;padding:12px 18px;border-radius:20px;border:1px solid var(--edge);background:var(--card);color:var(--ink);font:600 16px var(--text);cursor:pointer}
 .tips button{background:none;font-family:inherit;cursor:pointer}
 .widgets{display:flex;gap:14px}.widgets>*{flex:1 1 0}.widgets>.wnews{flex-grow:1.6}
-/* Lo último que te dijo. Antes esto desaparecía cuando terminaba de hablar: si no estabas
-   mirando justo en ese momento, se perdió. En una pantalla de pared eso no sirve de nada.
-   Ahora se queda, y es lo que llena el hueco que había abajo a la derecha. */
-.dijo{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;
-  padding:26px 30px 24px;border-radius:30px;border:1px solid var(--edge);
-  background:linear-gradient(180deg,rgba(255,255,255,.012),rgba(255,255,255,.045));
-  opacity:0;transform:translateY(10px);transition:opacity .5s,transform .5s}
-.dijo.on{opacity:1;transform:none}
-.dijo .q{display:flex;align-items:center;gap:10px;color:var(--ink-3);font:600 15px/1 var(--text);letter-spacing:.04em;text-transform:uppercase}
-.dijo .q i{width:7px;height:7px;border-radius:50%;background:var(--friday);font-style:normal;flex:none}
-.dijo p{margin:0;font:420 34px/1.28 var(--disp);color:var(--ink);letter-spacing:-.015em;
-  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
-.dijo.viejo p{color:var(--ink-2)}
-@media (max-height:620px){ .dijo p{font-size:26px;-webkit-line-clamp:3} .dijo{padding:18px 22px} }
 .widgets:empty{display:none}
 .wnews{position:relative;display:flex;align-items:center;gap:14px;padding:12px;border-radius:22px;border:1px solid var(--edge);background:var(--card);color:var(--ink);text-align:left;cursor:pointer;min-width:0;min-height:104px}
 .wnews>img,.wnews>.nofoto{flex:none;width:118px;height:80px;border-radius:14px;object-fit:cover}
@@ -1331,7 +1317,6 @@ var PENSAR=(()=>{
       <div class="widgets" id="widgets"></div>
       <div class="mini" id="mini" hidden><i class="art" id="miniArt"></i><div><b id="miniT"></b><small id="miniA"></small></div><button type="button" id="miniPP" aria-label="Pausa"></button></div>
       <div class="tips" id="tips"></div>
-      <div class="dijo" id="dijo" hidden><div class="q"><i></i><span id="dijoQ">Te dije</span></div><p id="dijoT"></p></div>
     </section>
   </main>
   <section class="win" id="win" aria-hidden="true">
@@ -2834,7 +2819,7 @@ Si hay algo, respondé UNA o dos frases cortas, hablándole directo, como lo dir
 // ================================================================ FRIDAY Casa: la tablet de la casa
 // App propia (no necesita la compu). Con la compu prendida suma lo que la compu sabe (avisos, lo que suena),
 // y si no armaste el servicio de Cloudflare, las luces van por la compu.
-const VERSION='8.0';
+const VERSION='6.9';
 const $=id=>document.getElementById(id);
 const LS={ get(k,d){ try{ const v=localStorage.getItem('fp.'+k); return v==null?d:JSON.parse(v); }catch(e){ return d; } },
            set(k,v){ try{ localStorage.setItem('fp.'+k, JSON.stringify(v)); }catch(e){} },
@@ -3536,7 +3521,6 @@ const speakingNow=()=>tts.on || tts.q.length>0 || Date.now()-tts.lastEnd<600;
 function say(text, emo){
   if(Turno.callado()) return;   // lo está contestando la compu
   stopTalk(); capReset(); tts.shown=spokenForm(text); capText(tts.shown);
-  try{ mostrarDijo(text); }catch(e){}
   if(emo) faceSet(emo, 2600);
   const parts=tts.shown.match(/[^.!?¡¿]+[.!?]*\s*|.+$/g)||[tts.shown];
   for(const p of parts) speakChunk(p);
@@ -3581,21 +3565,6 @@ function capTrack(it, offs, durMs, clock){
   cap.trk=setInterval(()=>{ const el=clock(); let k=0; while(k<offs.length && offs[k]<=el+60) k++; capSay(it.base+Math.min(k, it.n)); if(k>=offs.length) capStop(); }, 70);
 }
 function capChunk(it){ capStop(); capSay(it.base+it.n); }
-// Lo último que dijo queda a la vista. No es el historial: es la última cosa, grande, para
-// que la leas desde la puerta de la cocina sin tocar nada.
-let dijoAt=0, dijoViejoT=null;
-function mostrarDijo(txt){
-  const t=String(txt||'').trim(); if(!t) return;
-  const d=$('dijo'); if(!d) return;
-  $('dijoT').textContent = t.length>260 ? t.slice(0,257)+'…' : t;
-  $('dijoQ').textContent = 'Te dije';
-  dijoAt=Date.now(); d.hidden=false; d.classList.remove('viejo');
-  requestAnimationFrame(()=>d.classList.add('on'));
-  clearTimeout(dijoViejoT);
-  // a los diez minutos se apaga un poco, pero no se va: sigue siendo lo último que pasó
-  dijoViejoT=setTimeout(()=>{ d.classList.add('viejo'); $('dijoQ').textContent='Hace un rato'; }, 10*60000);
-}
-
 function capDone(){ capSay(cap.words.length); $('her').classList.add('done'); clearTimeout(cap.fadeT); cap.fadeT=setTimeout(()=>{ if(!speakingNow()) $('her').classList.add('fade'); }, 20000); }
 
 // ---------------------------------------------------------------- estado en pantalla
@@ -4286,29 +4255,6 @@ function addAviso(a, speak){
   const h=new Date().getHours(), noche=h>=23||h<7||durmiendo();
   if(speak && a.v && (!noche || a.u) && Date.now()>protoSt.silencioUntil) setTimeout(()=>{ if(!speakingNow()) say(a.v, a.u?'surprised':'happy'); }, 1400);
 }
-
-// ------------------------------------------------------- «estoy acá», para que FRIDAY lo sepa
-//
-// La tablet no tiene micrófono, pero sí tiene parlantes: puede HABLAR aunque no pueda escuchar.
-// Lo único que faltaba para aprovechar eso era que la compu supiera cuándo estás parado
-// adelante. Sin sensores ni cámara: alcanza con avisar cuándo la tocaste y si la pantalla está
-// despierta. Si no estás en la compu y tocaste la tablet hace poco, estás en la tablet.
-let cercaUlt=0;
-function avisarCerca(forzar){
-  try{
-    if(document.hidden) return;
-    const ahora=Date.now();
-    if(!forzar && ahora-cercaUlt<45000) return;
-    cercaUlt=ahora;
-    const pc=pcDev(); if(!pc || !FSync.on()) return;
-    FSync.send({k:'cerca', to:pc, toco:Math.round((ahora-(os.tocoAt||0))/1000)});
-  }catch(e){}
-}
-try{
-  addEventListener('pointerdown', ()=>{ os.tocoAt=Date.now(); avisarCerca(true); }, {passive:true, capture:true});
-  document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) avisarCerca(true); });
-  setInterval(()=>avisarCerca(false), 45000);
-}catch(e){}
 
 // ---------------------------------------------------------------- la casa (Smart Life por el servicio de Cloudflare; si no, por la compu)
 const casa={ devs:LS.get('casaDevs',[]), at:LS.get('casaAt',0), via:'', busy:null };
